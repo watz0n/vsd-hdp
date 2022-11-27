@@ -66,12 +66,12 @@ Progress Images:
 
 Installation Source:
 > https://sourceforge.net/projects/ngspice/files/ng-spice-rework/38/
-
+Download File:
 > ngspice-38.tar.gz
 
 Installation Guide:
 > https://github.com/ngspice/ngspice/blob/master/INSTALL
-
+Chapter:
 > 1.2 Install from tarball (e.g. ngspice-26.tar.gz)
 
 Installation Flow:
