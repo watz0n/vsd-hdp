@@ -30,6 +30,7 @@ $ sudo make install
 ```
 
 Progress Images:
+
 ![t1y1](images/day0-tool1-yosys1.png)
 ![t1y2](images/day0-tool1-yosys2.png)
 ![t1y3](images/day0-tool1-yosys3.png)
@@ -55,6 +56,7 @@ $ sudo make install
 ```
 
 Progress Images:
+
 ![t2y1](images/day0-tool2-opensta1.png)
 ![t2y2](images/day0-tool2-opensta2.png)
 ![t2y3](images/day0-tool2-opensta3.png)
@@ -82,6 +84,7 @@ $ sudo make install
 ```
 
 Progress Images:
+
 ![t3y1](images/day0-tool3-ngspice1.png)
 ![t3y2](images/day0-tool3-ngspice2.png)
 ![t3y3](images/day0-tool3-ngspice3.png)
