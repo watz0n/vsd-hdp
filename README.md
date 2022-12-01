@@ -307,3 +307,173 @@ Progress Images:
 ![d2l4p2](images/day2-lab4-p2.png)
 
 ------
+
+## Day3
+
+Goals:
+1. Combinational Logic Synthesis Optimization
+2. Sequential Logic Synthesis Optimization
+
+Lecture-Notes:
+* Optimization for reducing Area and Power
+    * Constant Propagation
+        * Sequential Logic need to consider reset/set if identical to D-pin behavior
+    * Boolean Logic Optimization
+        * K-MAP, Quine-McCluskey
+* State Optimization
+    * Cloning, Physical Aware for Placement Graph Optimization
+    * Retiming, make combinational logic delay is nearly equality in multi-phase pipe-line
+* Unused output optimization, remove no output dependency resources
+
+### Day3-Lab1: Combinational Logic Optimization - Synthesis
+
+Work-Flow:
+```
+$ cd verilog_files
+$ yosys
+> read_liberty -lib ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+> read_verilog opt_check.v
+> synth -top opt_check
+> opt_clean -purge
+> abc -liberty  ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+> show
+> read_verilog opt_check2.v
+> synth -top opt_check2
+> opt_clean -purge
+> abc -liberty  ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+> show
+> read_verilog opt_check3.v
+> synth -top opt_check3
+> opt_clean -purge
+> abc -liberty  ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+> show
+//--- Multiple Modules, need flatten
+> read_verilog opt_check4.v
+> synth -top opt_check4
+> flatten
+> opt_clean -purge
+> abc -liberty  ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+> show
+```
+
+Progress Images:
+
+![ ](images/day3-lab1-p1.png)
+![ ](images/day3-lab1-p2.png)
+![ ](images/day3-lab1-p3.png)
+![ ](images/day3-lab1-p4.png)
+![ ](images/day3-lab1-p5.png)
+![ ](images/day3-lab1-p6.png)
+
+### Day3-Lab2: Sequential Logic Optimization - Simulation
+
+Work-Flow:
+```
+$ iverilog dff_const1.v tb_dff_const1.v
+$ ./a.out
+$ gtkwave tb_dff_const1.vcd
+$ iverilog dff_const2.v tb_dff_const2.v
+$ ./a.out
+$ gtkwave tb_dff_const2.vcd
+```
+
+Progress Images:
+
+![ ](images/day3-lab2-p1.png)
+![ ](images/day3-lab2-p2.png)
+
+### Day3-Lab3: Sequential Logic Optimization - Synthesis
+
+Work-Flow:
+```
+$ yosys
+> read_liberty -lib ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+> read_verilog dff_const1.v
+> synth -top dff_const1
+> dfflibmap -liberty ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+> abc -liberty  ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+> show
+> read_verilog dff_const2.v
+> synth -top dff_const2
+> abc -liberty  ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+> show
+```
+
+Progress Images:
+
+![ ](images/day3-lab3-p1.png)
+![ ](images/day3-lab3-p2.png)
+![ ](images/day3-lab3-p3.png)
+![ ](images/day3-lab3-p4.png)
+
+### Day3-Lab4: Stack Flip-Flop - Simulation
+
+Work-Flow:
+```
+$ iverilog dff_const3.v tb_dff_const3.v
+$ ./a.out
+$ gtkwave tb_dff_const3.vcd
+$ iverilog dff_const4.v tb_dff_const4.v
+$ ./a.out
+$ gtkwave tb_dff_const4.vcd
+$ iverilog dff_const5.v tb_dff_const5.v
+$ ./a.out
+$ gtkwave tb_dff_const5.vcd
+```
+
+Progress Images:
+
+![ ](images/day3-lab4-p1.png)
+![ ](images/day3-lab4-p2.png)
+![ ](images/day3-lab4-p3.png)
+
+### Day3-Lab5: Stack Flip-Flop - Synthesis
+
+Work-Flow:
+```
+$ yosys
+> read_liberty -lib ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+> read_verilog dff_const3.v
+> synth -top dff_const3
+> dfflibmap -liberty ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+> abc -liberty  ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+> show
+> read_verilog dff_const4.v
+> synth -top dff_const4
+> dfflibmap -liberty ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+> abc -liberty  ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+> show
+> read_verilog dff_const5.v
+> synth -top dff_const5
+> dfflibmap -liberty ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+> abc -liberty  ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+> show
+```
+![ ](images/day3-lab5-p1.png)
+![ ](images/day3-lab5-p2.png)
+![ ](images/day3-lab5-p3.png)
+
+### Day3-Lab6: Unused Output - Synthesis
+
+Work-Flow:
+```
+$ yosys
+> read_liberty -lib ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+> read_verilog counter_opt.v
+> synth -top counter_opt
+> dfflibmap -liberty ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+> abc -liberty  ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+> show
+> read_verilog counter_opt2.v
+> synth -top counter_opt2
+> dfflibmap -liberty ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+> abc -liberty  ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+> show
+```
+![ ](images/day3-lab6-p1.png)
+![ ](images/day3-lab6-p2.png)
+![ ](images/day3-lab6-p3.png)
+![ ](images/day3-lab6-p4.png)
+![ ](images/day3-lab6-p5.png)
+
+------
