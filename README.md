@@ -471,10 +471,10 @@ $ yosys
 
 Progress Images:
 
-![d3l61]](images/day3-lab6-p1.png)
-![d3l62]](images/day3-lab6-p2.png)
-![d3l63]](images/day3-lab6-p3.png)
-![d3l64]](images/day3-lab6-p4.png)
-![d3l65]](images/day3-lab6-p5.png)
+![d3l61](images/day3-lab6-p1.png)
+![d3l62](images/day3-lab6-p2.png)
+![d3l63](images/day3-lab6-p3.png)
+![d3l64](images/day3-lab6-p4.png)
+![d3l65](images/day3-lab6-p5.png)
 
 ------
