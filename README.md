@@ -2,8 +2,6 @@ A repository for recording VSD-HDP program as below program link.
 
 Program: [SKY130-based ASIC Design Projects](https://www.vlsisystemdesign.com/hdp/)
 
-Progress-Status: [hdp-pregress-status.md](hdp-pregress-status.md)
-
 - watz0n (Watson Huang), wats0n.edx@gmail.com
 
 ------
@@ -358,12 +356,12 @@ $ yosys
 
 Progress Images:
 
-![ ](images/day3-lab1-p1.png)
-![ ](images/day3-lab1-p2.png)
-![ ](images/day3-lab1-p3.png)
-![ ](images/day3-lab1-p4.png)
-![ ](images/day3-lab1-p5.png)
-![ ](images/day3-lab1-p6.png)
+![d3l1p1](images/day3-lab1-p1.png)
+![d3l1p2](images/day3-lab1-p2.png)
+![d3l1p3](images/day3-lab1-p3.png)
+![d3l1p4](images/day3-lab1-p4.png)
+![d3l1p5](images/day3-lab1-p5.png)
+![d3l1p6](images/day3-lab1-p6.png)
 
 ### Day3-Lab2: Sequential Logic Optimization - Simulation
 
@@ -379,8 +377,8 @@ $ gtkwave tb_dff_const2.vcd
 
 Progress Images:
 
-![ ](images/day3-lab2-p1.png)
-![ ](images/day3-lab2-p2.png)
+![d3l2p1](images/day3-lab2-p1.png)
+![d3l2p2](images/day3-lab2-p2.png)
 
 ### Day3-Lab3: Sequential Logic Optimization - Synthesis
 
@@ -401,10 +399,10 @@ $ yosys
 
 Progress Images:
 
-![ ](images/day3-lab3-p1.png)
-![ ](images/day3-lab3-p2.png)
-![ ](images/day3-lab3-p3.png)
-![ ](images/day3-lab3-p4.png)
+![d3l3p1](images/day3-lab3-p1.png)
+![d3l3p2](images/day3-lab3-p2.png)
+![d3l3p3](images/day3-lab3-p3.png)
+![d3l3p4](images/day3-lab3-p4.png)
 
 ### Day3-Lab4: Stack Flip-Flop - Simulation
 
@@ -423,9 +421,9 @@ $ gtkwave tb_dff_const5.vcd
 
 Progress Images:
 
-![ ](images/day3-lab4-p1.png)
-![ ](images/day3-lab4-p2.png)
-![ ](images/day3-lab4-p3.png)
+![d3l4p1](images/day3-lab4-p1.png)
+![d3l4p2](images/day3-lab4-p2.png)
+![d3l4p3](images/day3-lab4-p3.png)
 
 ### Day3-Lab5: Stack Flip-Flop - Synthesis
 
@@ -449,9 +447,9 @@ $ yosys
 > abc -liberty  ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
 > show
 ```
-![ ](images/day3-lab5-p1.png)
-![ ](images/day3-lab5-p2.png)
-![ ](images/day3-lab5-p3.png)
+![d3l5p1](images/day3-lab5-p1.png)
+![d3l5p2](images/day3-lab5-p2.png)
+![d3l5p3](images/day3-lab5-p3.png)
 
 ### Day3-Lab6: Unused Output - Synthesis
 
@@ -470,10 +468,13 @@ $ yosys
 > abc -liberty  ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
 > show
 ```
-![ ](images/day3-lab6-p1.png)
-![ ](images/day3-lab6-p2.png)
-![ ](images/day3-lab6-p3.png)
-![ ](images/day3-lab6-p4.png)
-![ ](images/day3-lab6-p5.png)
+
+Progress Images:
+
+![d3l61]](images/day3-lab6-p1.png)
+![d3l62]](images/day3-lab6-p2.png)
+![d3l63]](images/day3-lab6-p3.png)
+![d3l64]](images/day3-lab6-p4.png)
+![d3l65]](images/day3-lab6-p5.png)
 
 ------
