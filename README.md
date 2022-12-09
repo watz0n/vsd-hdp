@@ -38,9 +38,9 @@ $ sudo make install
 
 Progress Images:
 
-![d0t1i1](images/day0-tool1-yosys1.png)
-![d0t1i2](images/day0-tool1-yosys2.png)
-![d0t1i3](images/day0-tool1-yosys3.png)
+![d0t1i1](images/day0-tool1-yosys1.png)<br />
+![d0t1i2](images/day0-tool1-yosys2.png)<br />
+![d0t1i3](images/day0-tool1-yosys3.png)<br />
 
 ### Tool: OpenSTA
 
@@ -64,10 +64,10 @@ $ sudo make install
 
 Progress Images:
 
-![d0t2i1](images/day0-tool2-opensta1.png)
-![d0t2i2](images/day0-tool2-opensta2.png)
-![d0t2i3](images/day0-tool2-opensta3.png)
-![d0t2i4](images/day0-tool2-opensta4.png)
+![d0t2i1](images/day0-tool2-opensta1.png)<br />
+![d0t2i2](images/day0-tool2-opensta2.png)<br />
+![d0t2i3](images/day0-tool2-opensta3.png)<br />
+![d0t2i4](images/day0-tool2-opensta4.png)<br />
 
 ### Tool: ngspice
 
@@ -94,9 +94,9 @@ $ sudo make install
 
 Progress Images:
 
-![d0t3i1](images/day0-tool3-ngspice1.png)
-![d0t3i2](images/day0-tool3-ngspice2.png)
-![d0t3i3](images/day0-tool3-ngspice3.png)
+![d0t3i1](images/day0-tool3-ngspice1.png)<br />
+![d0t3i2](images/day0-tool3-ngspice2.png)<br />
+![d0t3i3](images/day0-tool3-ngspice3.png)<br />
 
 ------
 
@@ -140,9 +140,9 @@ $ sudo make install
 
 Progress Images:
 
-![d1t4i1](images/day1-tool4-iverilog1.png)
-![d1t4i2](images/day1-tool4-iverilog2.png)
-![d1t4i3](images/day1-tool4-iverilog3.png)
+![d1t4i1](images/day1-tool4-iverilog1.png)<br />
+![d1t4i2](images/day1-tool4-iverilog2.png)<br />
+![d1t4i3](images/day1-tool4-iverilog3.png)<br />
 
 ### Tool: gtkwave
 
@@ -155,7 +155,7 @@ $ sudo apt install libcanberra-gtk-module libcanberra-gtk3-module gtkwave
 
 Progress Images:
 
-![d1t5i1](images/day1-tool5-gtkwave1.png)
+![d1t5i1](images/day1-tool5-gtkwave1.png)<br />
 
 
 ### Day1-Lab1: Logic Cell Simulation
@@ -170,7 +170,7 @@ $ gtkwave tb_good_mux.vcd
 
 Progress Images:
 
-![d1l1p1](images/day1-lab1-p1.png)
+![d1l1p1](images/day1-lab1-p1.png)<br />
 
 ### Day1-Lab2: Logic Cell Synthesis
 
@@ -192,9 +192,9 @@ $ yosys
 
 Progress Images:
 
-![d1l2p1](images/day1-lab2-p1.png)
-![d1l2p2](images/day1-lab2-p2.png)
-![d1l2p3](images/day1-lab2-p3.png)
+![d1l2p1](images/day1-lab2-p1.png)<br />
+![d1l2p2](images/day1-lab2-p2.png)<br />
+![d1l2p3](images/day1-lab2-p3.png)<br />
 
 ------
 
@@ -228,8 +228,8 @@ $ yosys
 
 Progress Images:
 
-![d2l1p1](images/day2-lab1-p1.png)
-![d2l1p2](images/day2-lab1-p2.png)
+![d2l1p1](images/day2-lab1-p1.png)<br />
+![d2l1p2](images/day2-lab1-p2.png)<br />
 
 ### Day2-Lab2: Flip-Flop (Sequential Logic) Simulation
 
@@ -248,9 +248,9 @@ $ gtkwave tb_dff_syncres.vcd
 
 Progress Images:
 
-![d2l2p1](images/day2-lab2-p1.png)
-![d2l2p2](images/day2-lab2-p2.png)
-![d2l2p3](images/day2-lab2-p3.png)
+![d2l2p1](images/day2-lab2-p1.png)<br />
+![d2l2p2](images/day2-lab2-p2.png)<br />
+![d2l2p3](images/day2-lab2-p3.png)<br />
 
 ### Day2-Lab3: Flip-Flop (Sequential Logic) Synthesis
 
@@ -277,9 +277,9 @@ $ yosys
 
 Progress Images:
 
-![d2l3p1](images/day2-lab3-p1.png)
-![d2l3p2](images/day2-lab3-p2.png)
-![d2l3p3](images/day2-lab3-p3.png)
+![d2l3p1](images/day2-lab3-p1.png)<br />
+![d2l3p2](images/day2-lab3-p2.png)<br />
+![d2l3p3](images/day2-lab3-p3.png)<br />
 
 ### Day2-Lab4: Interesting Optimization
 
@@ -301,8 +301,8 @@ $ yosys
 
 Progress Images:
 
-![d2l4p1](images/day2-lab4-p1.png)
-![d2l4p2](images/day2-lab4-p2.png)
+![d2l4p1](images/day2-lab4-p1.png)<br />
+![d2l4p2](images/day2-lab4-p2.png)<br />
 
 ------
 
@@ -356,12 +356,12 @@ $ yosys
 
 Progress Images:
 
-![d3l1p1](images/day3-lab1-p1.png)
-![d3l1p2](images/day3-lab1-p2.png)
-![d3l1p3](images/day3-lab1-p3.png)
-![d3l1p4](images/day3-lab1-p4.png)
-![d3l1p5](images/day3-lab1-p5.png)
-![d3l1p6](images/day3-lab1-p6.png)
+![d3l1p1](images/day3-lab1-p1.png)<br />
+![d3l1p2](images/day3-lab1-p2.png)<br />
+![d3l1p3](images/day3-lab1-p3.png)<br />
+![d3l1p4](images/day3-lab1-p4.png)<br />
+![d3l1p5](images/day3-lab1-p5.png)<br />
+![d3l1p6](images/day3-lab1-p6.png)<br />
 
 ### Day3-Lab2: Sequential Logic Optimization - Simulation
 
@@ -377,8 +377,8 @@ $ gtkwave tb_dff_const2.vcd
 
 Progress Images:
 
-![d3l2p1](images/day3-lab2-p1.png)
-![d3l2p2](images/day3-lab2-p2.png)
+![d3l2p1](images/day3-lab2-p1.png)<br />
+![d3l2p2](images/day3-lab2-p2.png)<br />
 
 ### Day3-Lab3: Sequential Logic Optimization - Synthesis
 
@@ -399,10 +399,10 @@ $ yosys
 
 Progress Images:
 
-![d3l3p1](images/day3-lab3-p1.png)
-![d3l3p2](images/day3-lab3-p2.png)
-![d3l3p3](images/day3-lab3-p3.png)
-![d3l3p4](images/day3-lab3-p4.png)
+![d3l3p1](images/day3-lab3-p1.png)<br />
+![d3l3p2](images/day3-lab3-p2.png)<br />
+![d3l3p3](images/day3-lab3-p3.png)<br />
+![d3l3p4](images/day3-lab3-p4.png)<br />
 
 ### Day3-Lab4: Stack Flip-Flop - Simulation
 
@@ -421,9 +421,9 @@ $ gtkwave tb_dff_const5.vcd
 
 Progress Images:
 
-![d3l4p1](images/day3-lab4-p1.png)
-![d3l4p2](images/day3-lab4-p2.png)
-![d3l4p3](images/day3-lab4-p3.png)
+![d3l4p1](images/day3-lab4-p1.png)<br />
+![d3l4p2](images/day3-lab4-p2.png)<br />
+![d3l4p3](images/day3-lab4-p3.png)<br />
 
 ### Day3-Lab5: Stack Flip-Flop - Synthesis
 
@@ -447,9 +447,12 @@ $ yosys
 > abc -liberty  ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
 > show
 ```
-![d3l5p1](images/day3-lab5-p1.png)
-![d3l5p2](images/day3-lab5-p2.png)
-![d3l5p3](images/day3-lab5-p3.png)
+
+Progress Images:
+
+![d3l5p1](images/day3-lab5-p1.png)<br />
+![d3l5p2](images/day3-lab5-p2.png)<br />
+![d3l5p3](images/day3-lab5-p3.png)<br />
 
 ### Day3-Lab6: Unused Output - Synthesis
 
@@ -471,10 +474,323 @@ $ yosys
 
 Progress Images:
 
-![d3l61](images/day3-lab6-p1.png)
-![d3l62](images/day3-lab6-p2.png)
-![d3l63](images/day3-lab6-p3.png)
-![d3l64](images/day3-lab6-p4.png)
-![d3l65](images/day3-lab6-p5.png)
+![d3l61](images/day3-lab6-p1.png)<br />
+![d3l62](images/day3-lab6-p2.png)<br />
+![d3l63](images/day3-lab6-p3.png)<br />
+![d3l64](images/day3-lab6-p4.png)<br />
+![d3l65](images/day3-lab6-p5.png)<br />
+
+------
+
+## Day4
+
+Goals:
+1. Gate-Level Simulation Flow
+2. Behavior (RTL) v.s. Synthesis (Gate) simulate result mismatch issue
+
+Lecture-Notes:
+* Ensuring the timing requirement is met for Gate-Level Models with delay-annotated.
+* Behavior (RTL) v.s. Synthesis (Gate) Simulation Mismatch
+    1. Missing sensitivity list
+        * always@(sensitivity-list), usually apply always(*), (*) means evaluate all chagnes in statements
+    2. Blocking v.s. Non-Blocking Assignment
+    3. Non-Standard (non-synthsizable) Verilog coding
+* Blocking v.s. Non-Blocking
+    * Blocking evaluate statements in order sequence, may incur latch to hold previous evaluated result
+    * Non-Blocking evaluate statements in the same time, if LHS has multiple evaluations, use last/bottom one
+* Use Non-Blocking for sequential circuit coding is perform better synthesis quality
+
+### Day4-Lab1: Gate-Level Simulation (GLS)
+
+Work-Flow:
+```
+$ iverilog ternary_operator_mux.v tb_ternary_operator_mux.v
+$ ./a.out
+$ gtkwave tb_ternary_operator_mux.vcd
+$ yosys
+> read_liberty -lib ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+> read_verilog ternary_operator_mux.v
+> synth -top ternary_operator_mux
+> abc -liberty  ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+> write_verilog -noattr ternary_operator_mux_net.v
+> show
+
+$ iverilog ../my_lib/verilog_model/primitives.v ../my_lib/verilog_model/sky130_fd_sc_hd.v ternary_operator_mux_net.v tb_ternary_operator_mux.v
+$ ./a.out
+$ gtkwave tb_ternary_operator_mux.vcd
+
+```
+
+Progress Images:
+
+![d4l1p1](images/day4-lab1-p1.png)<br />
+![d4l1p2](images/day4-lab1-p2.png)<br />
+![d4l1p3](images/day4-lab1-p3.png)<br />
+
+### Day4-Lab2: Bad MUX Synthsis-Behavior Mismatch
+
+Work-Flow:
+```
+$ iverilog bad_mux.v tb_bad_mux.v
+$ ./a.out
+$ gtkwave tb_bad_mux.vcd
+$ yosys
+> read_liberty -lib ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+> read_verilog bad_mux.v
+> synth -top bad_mux
+> abc -liberty  ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+> write_verilog -noattr bad_mux_net.v
+> show
+
+$ iverilog ../my_lib/verilog_model/primitives.v ../my_lib/verilog_model/sky130_fd_sc_hd.v bad_mux_net.v tb_bad_mux.v
+$ ./a.out
+$ gtkwave tb_bad_mux.vcd
+```
+
+Progress Images:
+
+![d4l2p1](images/day4-lab2-p1.png)<br />
+![d4l2p2](images/day4-lab2-p2.png)<br />
+![d4l2p3](images/day4-lab2-p3.png)<br />
+
+### Day4-Lab3: Synthsis-Behavior Simulation Mismatch for Blocking Statement
+
+Work-Flow:
+```
+$ iverilog blocking_caveat.v tb_blocking_caveat.v
+$ ./a.out
+$ gtkwave tb_blocking_mux.vcd
+$ yosys
+> read_liberty -lib ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+> read_verilog blocking_caveat.v
+> synth -top blocking_caveat
+> abc -liberty  ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+> write_verilog -noattr blocking_caveat_net.v
+> show
+
+$ iverilog ../my_lib/verilog_model/primitives.v ../my_lib/verilog_model/sky130_fd_sc_hd.v blocking_caveat_net.v tb_blocking_caveat.v
+$ ./a.out
+$ gtkwave tb_blocking_mux.vcd
+//--- test expect behavior simulation
+$ iverilog blocking_caveat_exp.v tb_blocking_caveat.v
+$ ./a.out
+$ gtkwave tb_blocking_mux.vcd
+```
+
+Progress Images:
+
+![d4l3p1](images/day4-lab3-p1.png)<br />
+![d4l3p2](images/day4-lab3-p2.png)<br />
+![d4l3p3](images/day4-lab3-p3.png)<br />
+
+Test Expect-Behavior RTL simulation:
+
+![d4l3p4](images/day4-lab3-p4.png)<br />
+![d4l3p5](images/day4-lab3-p5.png)<br />
+
+------
+
+## Day5
+
+Goals:
+1. If-Else/Case Statement Usage and Malfunctional Style
+2. For-Loop/For-Generate Usage
+
+Lecture-Notes:
+* If-Else Statement
+    1. priority logic, may lead to long stack multiplexers
+    2. Incomplete If-Else statement would produce `inferred latches`
+```
+if(cnd1)
+    y=a;
+else if(cnd2)
+    y=b;
+```
+![d5lcp1](images/day5-lec-p1.png)<br />
+
+* Case Statement
+    1. balanced multiplexer to reduce gate delay
+    2. Imcomplete case statements would produce `inferred latches`
+        * without default keyword and conditions not complete
+        * LHS under each conditions are not identical
+    3. Malfunction from overlapping case conditions
+        * be careful with `?` (any-value) in conditions
+        * overlapping means multiple conditions are evaluated at same time
+
+* For-Loop
+    * evaluating expressions for wide MUX/deMUX
+```
+//--- 2:1 MUX by case
+
+output y;
+input i0,i1;
+
+always@(*) begin
+    case(sel)
+        1'b0: y=i0;
+        i'b1: y=i1;
+    endcase
+end
+
+//--- 32:1 MUX by For-Loop
+
+output       y;
+input [31:0] inp;
+
+integer i;
+always@(*) begin
+    for(i=0; i<32; i=i+1) begin
+        if(i==sel)
+            y=inp[i];
+    end
+end
+
+//--- 1:8 deMUX by For-Loop
+
+output [7:0] out;
+input        inp;
+
+integer i;
+always@(*) begin
+    out[7:0] = 8'h0;
+    for(i=0; i<8; i=i+1) begin
+        if(i==sel)
+            out=inp;
+    end
+end
+
+```
+    
+* For-Generate
+    * instantiating multiple same source modules
+
+```
+output [7:0] y;
+input  [7:0] in1, in2;
+
+genvar i;
+generate
+    for(i=0; i<8; i=i+1) begin
+        and u_and(.a(in1[i]), .b(in2[i]), .c(y[i]))
+    end
+endgenerate
+
+```
+
+### Day5-Lab1: Imcomplete If-Else Statements
+
+Work-Flow:
+```
+$ iverilog incomp_if.v tb_incomp_if.v
+$ ./a.out
+$ gtkwave tb_incomp_if.vcd
+$ yosys
+> read_liberty -lib ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+> read_verilog incomp_if.v
+> synth -top incomp_if
+> abc -liberty  ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+> show
+
+$ iverilog incomp_if2.v tb_incomp_if2.v
+$ ./a.out
+$ gtkwave tb_incomp_if2.vcd
+$ yosys
+> read_liberty -lib ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+> read_verilog incomp_if2.v
+> synth -top incomp_if2
+> abc -liberty  ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+> show
+```
+
+Progress Images:
+
+![d5l1p1](images/day5-lab1-p1.png)<br />
+![d5l1p2](images/day5-lab1-p2.png)<br />
+![d5l1p3](images/day5-lab1-p3.png)<br />
+![d5l1p4](images/day5-lab1-p4.png)<br />
+
+### Day5-Lab2: Incomplete Case Statements
+
+Work-Flow:
+```
+$ iverilog incomp_case.v tb_incomp_case.v
+$ ./a.out
+$ gtkwave tb_incomp_case.vcd
+$ yosys
+> read_liberty -lib ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+> read_verilog incomp_case.v
+> synth -top incomp_case
+> abc -liberty  ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+> show
+
+$ iverilog comp_case.v tb_comp_case.v
+$ ./a.out
+$ gtkwave tb_comp_case.vcd
+$ yosys
+> read_liberty -lib ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+> read_verilog comp_case.v
+> synth -top comp_case
+> abc -liberty  ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+> show
+
+$ yosys
+> read_liberty -lib ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+> read_verilog partial_case_assign.v
+> synth -top partial_case_assign
+> abc -liberty  ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+> show
+
+$ iverilog bad_case.v tb_bad_case.v
+$ ./a.out
+$ gtkwave tb_bad_case.vcd
+$ yosys
+> read_liberty -lib ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+> read_verilog bad_case.v
+> synth -top bad_case
+> abc -liberty  ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+> write_verilog -noattr bad_case_net.v
+$ iverilog ../my_lib/verilog_model/primitives.v ../my_lib/verilog_model/sky130_fd_sc_hd.v bad_case_net.v tb_bad_case.v
+$ ./a.out
+$ gtkwave tb_bad_case.vcd
+
+```
+
+Progress Images:
+
+![d5l2p1](images/day5-lab2-p1.png)<br />
+![d5l2p2](images/day5-lab2-p2.png)<br />
+![d5l2p3](images/day5-lab2-p3.png)<br />
+![d5l2p4](images/day5-lab2-p4.png)<br />
+![d5l2p5](images/day5-lab2-p5.png)<br />
+![d5l2p6](images/day5-lab2-p6.png)<br />
+![d5l2p7](images/day5-lab2-p7.png)<br />
+![d5l2p8](images/day5-lab2-p8.png)<br />
+
+### Day5-Lab3: For Loop and For Generate
+
+Work-Flow:
+```
+$ iverilog mux_generate.v tb_mux_generate.v
+$ ./a.out
+$ gtkwave tb_mux_generate.vcd
+
+$ iverilog demux_case.v tb_demux_case.v
+$ ./a.out
+$ gtkwave tb_demux_case.vcd
+$ iverilog demux_generate.v tb_demux_generate.v
+$ ./a.out
+$ gtkwave tb_demux_generate.vcd
+
+$ iverilog fa.v rca.v tb_rca.v
+$ ./a.out
+$ gtkwave tb_rca.vcd
+
+```
+
+Progress Images:
+
+![d5l3p1](images/day5-lab3-p1.png)<br />
+![d5l3p2](images/day5-lab3-p2.png)<br />
+![d5l3p3](images/day5-lab3-p3.png)<br />
 
 ------
