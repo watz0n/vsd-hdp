@@ -17,6 +17,9 @@ Quick-Link:<br />
 [Day3](#Day3)<br />
 [Day4](#Day4)<br />
 [Day5](#Day5)<br />
+[Day6](#Day6)<br />
+[Day7](#Day7)<br />
+[Day8](#Day8)<br />
 
 ------
 
@@ -802,5 +805,260 @@ Progress Images:
 ![d5l3p1](images/day5-lab3-p1.png)<br />
 ![d5l3p2](images/day5-lab3-p2.png)<br />
 ![d5l3p3](images/day5-lab3-p3.png)<br />
+
+------
+
+## Day6
+
+Topic: Design Preparation 
+
+Goals:
+    1. Synthesizable RTL and Testbench Ready
+    2. Behavior and Synthesis Simlation Consistancy
+
+Status: In-progress, development-stage brief: [project.md](project.md)
+
+------
+
+## Day7
+
+Topic: Basic SDC constraints
+
+Goals:
+1. Logic Synthesis Flow by Design-Compiler from Synopsys
+2. Basic Logic Synthesis knowledge introduction
+
+Lecture-Note:
+
+    * Logic Synthesis
+        1. RTL+.LIB->Netlist(Gates)
+        2. .LIB is collection of logic modules from same function but different strengeh/timing variation
+            * Need Cells that work fast enough to meet required performance (setup-time)
+            * Need Cells that work slow enough to avoid contamination (hold-time)
+    * Design Compiler
+        1. SDC, synopsys design constraints, industry standard constraint for EDA automation
+        2. .LIB, design library which contains the standard cell information
+        3. .DB, same as .LIB for DC import related libraries
+        4. .DDC, Synopsys's proprietary format for libraries
+        5. SDC for timing-constraint, UPF for power-constraint
+    * Design(RTL) + Library (.DB) + SDC -> Verilog Netlist + DDC + Synthesis Reports
+    * Implementation Flow for ASIC
+        `[RTL]->[SYN]->[DFT]->[FP]->[CTS]->[PnR]->[GDS]`
+    * DC Synthesis Flow:
+        1. Read STD Cell/Tech .lib
+        2. Read Design (Verilog/VHDL, Design .LIB)
+        3. Read Design Constraints (SDC)
+        4. Link the Design
+        5. Synthesize the Design
+        6. Generate Report and Analyze QoR
+    * Library Name : `sky130_fd_sc_hd_tt_025C_1v80.lib`
+        * fd -> fundary, sc -> standard cell, hd->high-density, tt->typical-typical, 025C-> 25 degree temperature, 1v80->1.8V
+    * PVT -> Power/Voltage/Temerature
+        * PVT corner -> typical/fast/slow
+    * DC Operation Flow
+```
+    $dc_shell
+    >read_verilog lab1.v
+    >read_db sky130.db
+    >set link_library {* sky130.db}
+    >link
+    >compile
+    >write -f verilog -out lib1_net_sky130.v
+    >write -f ddc -out lib1.ddc
+```
+    * Design Visison
+```
+    $design_vision
+    >start gui
+    //---
+    >read_ddc lab1.ddc
+    //--- Use GTECH (gech.db) /standard.sldb
+    >read_verlog lib1_net_sky130.v
+```
+    * Start-up Script to set environment
+        * File-Name: `.synopsys_dc.setup`, put in home directory
+
+    * TCL Quick Reference
+```
+    * set a [ expr $a + $b ]
+    * if { cond } { true-stat } else { false-stat }
+    * echo "hello world"
+    * while { cond } { loop-stat }
+    * for { init } {  cond } { end-op } { loop-stat }
+    * foreach <var-name> <list-name> { statements }
+    //DC only
+    * foreach <var-name> <collection-name> { statements }
+    * get_lib_cells */*and* > get collection
+    * source script.tcl
+```
+
+    * STA
+        * Max (Setup) and Min (Hold) delay constraints
+        * Delay for Cells:
+            1. Input Transition (Driving Slew-Rate)
+            2. Output Load (Capcitance)
+        * Timing Arc
+            * Combinational Cell: input port to output port changes elasped time
+            * Sequential Cell:
+                1. Clock to Q -> DFF
+                2. Clock to D + D to Q -> D-Latch (DLAT)
+        
+        * Timing-Path:
+            * Start Point : 1. Input-Port 2. Clock Pin of Register
+            * End Point : 1. Output-Port 2. D Pin of Register
+        
+        * Timing-Path Constraint:
+            * REG2REG: Clock Constraint
+            * REG2OUT: Output External Delay + Clock Constraint
+            * IN2REG: Input External Delay + Clock Constraint
+        
+        * IO Constraint:
+            * Delay isn't ideal as zero -> Consider input transition and output load
+            * Rule of Thumb: 70% Eternal Delay, 30% Internal Delay from Clock constraint
+        
+        * .LIB Timing:
+            * `default_+max_transition` in ps
+            * C_load = C_pin+C_net+SUM(C_input_cap) -> max capcitance limit
+            * Add buffer to balance high fanout driving strength
+        
+        * Delay Model Table
+            * X-Axis: Output Load (pf)
+            * Y-Axis: Input Transition (ns)
+        
+        * Unateness -> If only 1-pin changes, if output pin has same behavior
+            * Positive: AND, OR
+            * Negative: NOT, NAND, NOR
+            * Non: XOR, DFF
+
+
+------
+
+## Day8
+
+Topic: Advanced SDC contraints
+
+Goals:
+1. Clock/Input/Output Constraint Details
+2. Useful DC commands
+
+Lecture-Note:
+    
+    * Constraint for Clock
+        * Before CTS, clock is an ideal network for Synthesis stage
+        * Post-CTS generate real clock
+    * Clock Generation
+        1. Oscillator
+        2. PLL
+        3. External Clock Source
+    * Real Clock : Ideal Clock + Jitter + Skew
+        * Jitter : physical world stochastic behavior
+        * Skew : Routing topographical delay
+    * Clock Modeling
+        1. Period
+        2. Source Latency
+        3. Clock Network Latency
+        4. Clock Skew
+        5. Jitter
+    * Clock Skew+Jitter => Clock Uncertainty
+
+    * Define `net` : connecting of two or more pins or ports in target design region
+
+    * DC-Shell Operations
+```
+    > get_ports *clk*;
+    > get_ports * -filter "direction == in";
+    > get_ports * -filter "direction == out";
+    > get_clocks * -filter "period > 10";
+    > get_attribute [ get_clocks my_clk ] period ;
+    > get_attribute [ get_clocks my_clk ] is_generated ;
+    > report_clocks my_clk ;
+```
+    * Hierarchical/Physical Cell/PIn
+```
+    > get_cells * -hier
+    > get_attribute [ get_cells <cell-name> ] is_hierarchical
+```
+    * Clock Constraint
+        * Uncertainty in different stage
+            * Jitter+Skew for CTS
+            * Jitter only for PnR
+```
+    > create_clock -name <clk-name> -period <time> [get_ports <clk-port>] ;
+    > set_clock_latency <time> <clk-name>
+    > create_clock -name <clk-name> -period <time> [get_ports <clk-port>] -wave { <rise-time-point> <fall-time-point> } ;
+```
+    * Input IO Modeling
+```
+    > set_input_delay -max <time> -clock [get_clocks <clk-name>] [get_ports <port-name>] ;
+    > set_input_delay -min <time> -clock [get_clocks <clk-name>] [get_ports <port-name>] ;
+    > set_input_transition -max <unit> [get_ports <port-name>]
+    > set_input_transition -min <unit> [get_ports <port-name>]
+```
+    * Output IO Modeling
+```
+    > set_output_delay -max <time> -clock [get_clocks <clk_name>] [get_ports <port-name>]
+    > set_output_delay -min <time> -clock [get_clocks <clk_name>] [get_ports <port-name>]
+    > set_output_load -max <cap_unit> [get_ports <port-name>]
+    > set_output_load -min <cap_unit> [get_ports <port-name>]
+```
+    * DC-Shell Lab
+``` 
+    > get_cells/get_ports/get_nets/get_clocks/get_pins
+    > all_connected <net-name>
+    > regex <pattern> <expression> # return 1 when pattern match expression, otherwise 0
+    > get_attribnute [get_pins <pin-name>] clock # report if this is clock pin
+    > get_attribnute [get_pins <pin-name>] clocks # report clocks reach to this pin
+    > current_design # report name of top module
+    > report_clocks *
+    > remove_clock <clk_name>
+```
+    * Clock Network Modeling
+```
+    > set_clock_latency -source <time> [get_clocks <clk_name>] # source latency (clock source)
+    > set_clock_latency <time> [get_clocks <clk_name>] # network latency (to top module)
+    > set_clock_uncertainty -setup <time> [get_clocks <clk_name>]
+    > set_clock_uncertainty -hold <time> [get_clocks <clk_name>]
+    > report_timing
+    > report_timing -to <pin-name>
+    > report_timing -to <pin-name> -delay min
+    > report_timing -from <pin-name>
+    > report_timing -verbose
+    > report_port -verbose
+    > report_timing -from <pin-name> -trans -net -cap -nosplit
+    > report_timing -from <pin-name> -trans -net -cap -nosplit -delay_type min # Hold time
+    > set_input_transition -max <amount> [get_ports <port-name>]
+    > set_input_transition -min <amount> [get_ports <port-name>]
+        # add input transition, input pin data arrival time is increased
+    > set_load -max <amount> [get_ports <port-name>]
+    > set_load -min <amount> [get_ports <port-name>]
+        # add output load, output pin data arrival time is increased
+```
+    * Generated Clock
+        * Handle clock physically variation like long-delay from input to output port.
+```
+    > create_generated_clock -name <gen-clk-name> -master [get_clocks <base-clk>] -source [get_port <src-port>] -div 1 [get_ports <dst-port>]
+    > reset_design # restart a new design
+    > get_generated_clocks
+```
+    * Constraint for pure combinational path from input to output port
+        1. set_max_latency
+        2. virtual clock
+```
+    > set_max_latency <time> -from [get_ports <input>] -to [get_ports <output>]
+    > create_clock -name <vclk> -period <time> # if path has no clock definition point, virtual clock inferred
+
+    > set_input_delay -max <time> -clock [get_clocks <vclk>] [get_ports <input>]
+    > set_output_delay -max <time> -clock [get_clocks <vclk>] [get_ports <output>]
+    > set_input_delay -max <time> -clock [get_clocks <vclk>] -clock_fall [get_ports <input>] # for virtual negedge sampling DFF
+    > set_output_delay -max <time> -clock [get_clocks <vclk>] -clock_fall [get_ports <output>] # for virtual negedge sampling DFF
+    
+    > set_driving_cell -lib_cell <lib_cell_name> <ports>
+
+    > all_inputs/all_outputs/all_clocks/all_registers
+    > all_fanout -from <pin/port name> (-endpoints_only -flat)
+    > all_fanin -to <pin/port name> (-endpoints_only -flat)
+    > get_cells -of_objects [get_pins <pin-name>]
+    > report_timing -to <output-port> -sig <unit> # report decimal number
+```
 
 ------
