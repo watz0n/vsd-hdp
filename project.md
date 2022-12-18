@@ -116,8 +116,10 @@ Gtkwave Waveform:<br />
 ![prj_cpu_tb_pass2](images/prj-rv151-cpu_tb-pass2.png)<br />
 
 Reference:
+```
 [1] David A. Patterson and John L. Hennessy. 2017. Computer Organization and Design RISC-V Edition: The Hardware Software Interface (1st. ed.). Morgan Kaufmann Publishers Inc., San Francisco, CA, USA.
 [2] David Patterson and Andrew Waterman. 2017. The RISC-V Reader: An Open Architecture Atlas (1st. ed.). Strawberry Canyon
 [3] FPGA Project from Berkeley EECS 151 Fall 2022, https://github.com/EECS150/fpga_project_skeleton_fa22/blob/master/spec/EECS151_FPGA_Project_Fa22.pdf
- 
+```
+
 ------
