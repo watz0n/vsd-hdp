@@ -22,7 +22,8 @@ Require resource from VSD-IP:
 
 ------
 
-Development Progress
+Development Progress:
+
     * RV32I 3-Stage CPU core passed `cpu_tb` tests.
 
 From cpu_tb.log:
