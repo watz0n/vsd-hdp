@@ -162,6 +162,79 @@ Synthesis Progress:<br />
 [6] Verilog Netlist Snippet<br />
 ![prj_syn_rslt01](images/prj-rv151-syn-rslt06.png)<br />
 
+Synthesis Statistics:<br />
+```
+=== rv151_core ===
+
+   Number of wires:               4880
+   Number of wire bits:           5609
+   Number of public wires:          52
+   Number of public wire bits:     781
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:               2032
+     sky130_fd_sc_hd__a2111oi_0      7
+     sky130_fd_sc_hd__a211o_1        5
+     sky130_fd_sc_hd__a211oi_1      21
+     sky130_fd_sc_hd__a21boi_0       6
+     sky130_fd_sc_hd__a21o_1        21
+     sky130_fd_sc_hd__a21oi_1      210
+     sky130_fd_sc_hd__a221o_1       35
+     sky130_fd_sc_hd__a221oi_1      21
+     sky130_fd_sc_hd__a222oi_1       1
+     sky130_fd_sc_hd__a22o_1        33
+     sky130_fd_sc_hd__a22oi_1       31
+     sky130_fd_sc_hd__a311o_1        2
+     sky130_fd_sc_hd__a311oi_1       8
+     sky130_fd_sc_hd__a31o_1         3
+     sky130_fd_sc_hd__a31oi_1       16
+     sky130_fd_sc_hd__a32oi_1        4
+     sky130_fd_sc_hd__and2_0        13
+     sky130_fd_sc_hd__and3_1        12
+     sky130_fd_sc_hd__clkinv_1      61
+     sky130_fd_sc_hd__dfrtp_1      166
+     sky130_fd_sc_hd__dfstp_2        1
+     sky130_fd_sc_hd__maj3_1        10
+     sky130_fd_sc_hd__mux2_1        55
+     sky130_fd_sc_hd__mux2i_1       77
+     sky130_fd_sc_hd__nand2_1      228
+     sky130_fd_sc_hd__nand2b_1      31
+     sky130_fd_sc_hd__nand3_1       42
+     sky130_fd_sc_hd__nand3b_1       3
+     sky130_fd_sc_hd__nand4_1        7
+     sky130_fd_sc_hd__nand4b_1       5
+     sky130_fd_sc_hd__nand4bb_1      1
+     sky130_fd_sc_hd__nor2_1       296
+     sky130_fd_sc_hd__nor2b_1       31
+     sky130_fd_sc_hd__nor3_1        73
+     sky130_fd_sc_hd__nor3b_1        4
+     sky130_fd_sc_hd__nor4_1        10
+     sky130_fd_sc_hd__o2111ai_1      4
+     sky130_fd_sc_hd__o211ai_1      22
+     sky130_fd_sc_hd__o21a_1        10
+     sky130_fd_sc_hd__o21ai_0      214
+     sky130_fd_sc_hd__o21ba_1        1
+     sky130_fd_sc_hd__o21bai_1       7
+     sky130_fd_sc_hd__o221ai_1      11
+     sky130_fd_sc_hd__o22a_1         2
+     sky130_fd_sc_hd__o22ai_1       19
+     sky130_fd_sc_hd__o2bb2ai_1      2
+     sky130_fd_sc_hd__o311a_1        1
+     sky130_fd_sc_hd__o311ai_0       8
+     sky130_fd_sc_hd__o31a_1         2
+     sky130_fd_sc_hd__o31ai_1       11
+     sky130_fd_sc_hd__o32a_1         4
+     sky130_fd_sc_hd__o32ai_1        2
+     sky130_fd_sc_hd__or2_0         17
+     sky130_fd_sc_hd__or3_1         13
+     sky130_fd_sc_hd__or3b_1         1
+     sky130_fd_sc_hd__or4_1          4
+     sky130_fd_sc_hd__or4b_1         1
+     sky130_fd_sc_hd__xnor2_1       96
+     sky130_fd_sc_hd__xor2_1        30
+```
+
 Fixed Gate Simulation Issue:<br />
 [1] Mapped DFF List<br />
 ![prj_syn_fix1](images/prj-rv151-syn-fix01.png)<br />
