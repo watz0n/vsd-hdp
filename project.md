@@ -22,9 +22,14 @@ Require resource from VSD-IP:
 
 ------
 
-Development Progress:
+Development Progress (@221217):
 
-    * RV32I 3-Stage CPU core passed `cpu_tb` tests.
+    - [x] RV32I 3-Stage CPU core RTL passed `cpu_tb` tests
+        - rv151_core.v
+        - rv151_alu.v
+        - rv151_brh.v
+        - rv151_ctl.v
+        - rv151_imm.v
 
 From cpu_tb.log:
 ```
@@ -122,5 +127,58 @@ Reference:
 [2] David Patterson and Andrew Waterman. 2017. The RISC-V Reader: An Open Architecture Atlas (1st. ed.). Strawberry Canyon
 [3] FPGA Project from Berkeley EECS 151 Fall 2022, https://github.com/EECS150/fpga_project_skeleton_fa22/blob/master/spec/EECS151_FPGA_Project_Fa22.pdf
 ```
+
+------
+
+Development Progress (@221224):
+
+    - [x] Synthesis RTL to Gate Netlist by Yosys, Done
+    - [x] Modified cpu_tb start from IMEM (0x10000000) to BIOS-RAM (0x40000000)
+    - [x] Perform Gate Simulation
+
+Synthesis Steps:
+```
+> read_liberty -lib ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+> read_verilog ./src/riscv_core/rv151_core.v ./src/riscv_core/rv151_alu.v ./src/riscv_core/rv151_imm.v ./src/riscv_core/rv151_brh.v ./src/riscv_core/rv151_ctl.v
+> synth -top rv151_core
+> dfflibmap -liberty ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+> flatten
+> opt_clean -purge
+> abc -liberty ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+> write_verilog -noattr rv151_core_syn.v
+```
+
+Synthesis Progress:<br />
+[1] Synthesis Utilization<br />
+![prj_syn_rslt01](images/prj-rv151-syn-rslt01.png)<br />
+[2] DFF Mapping<br />
+![prj_syn_rslt01](images/prj-rv151-syn-rslt02.png)<br />
+[3] Flatten and Optimization<br />
+![prj_syn_rslt01](images/prj-rv151-syn-rslt03.png)<br />
+[4] ABC Technology Mapping<br />
+![prj_syn_rslt01](images/prj-rv151-syn-rslt04.png)<br />
+[5] Write Verilog Netlist<br />
+![prj_syn_rslt01](images/prj-rv151-syn-rslt05.png)<br />
+[6] Verilog Netlist Snippet<br />
+![prj_syn_rslt01](images/prj-rv151-syn-rslt06.png)<br />
+
+Fixed Gate Simulation Issue:<br />
+[1] Mapped DFF List<br />
+![prj_syn_fix1](images/prj-rv151-syn-fix01.png)<br />
+[2] Fix Reset DFF missed connections<br />
+![prj_syn_fix2](images/prj-rv151-syn-fix02.png)<br />
+[3] Fix Set DFF missed connections<br />
+![prj_syn_fix3](images/prj-rv151-syn-fix03.png)<br />
+
+Simulation Result:<br />
+[1] RTL Simulation Pass<br />
+![prj_cpu_tb_bios_rtl1](images/prj-rv151-cpu_tb_bios_rtl1.png)<br />
+[2] RTL Simulation File-List<br />
+![prj_cpu_tb_bios_rtl2](images/prj-rv151-cpu_tb_bios_rtl2.png)<br />
+[3] Gate Simulation Pass<br />
+![prj_cpu_tb_bios_syn1](images/prj-rv151-cpu_tb_bios_syn1.png)<br />
+[4] Gate Simulation File-List<br />
+![prj_cpu_tb_bios_syn2](images/prj-rv151-cpu_tb_bios_syn2.png)<br />
+
 
 ------

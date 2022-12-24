@@ -818,6 +818,8 @@ Goals:
 
 Status: In-progress, development-stage brief: [project.md](project.md)
 
+Next-Move: Import Sky130 OpenRAM instance
+
 ------
 
 ## Day7
