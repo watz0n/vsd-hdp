@@ -24,12 +24,12 @@ Require resource from VSD-IP:
 
 Development Progress (@221217):
 
-    - [x] RV32I 3-Stage CPU core RTL passed `cpu_tb` tests
-        - rv151_core.v
-        - rv151_alu.v
-        - rv151_brh.v
-        - rv151_ctl.v
-        - rv151_imm.v
+- [x] RV32I 3-Stage CPU core RTL passed `cpu_tb` tests
+    - rv151_core.v
+    - rv151_alu.v
+    - rv151_brh.v
+    - rv151_ctl.v
+    - rv151_imm.v
 
 From cpu_tb.log:
 ```
@@ -132,9 +132,9 @@ Reference:
 
 Development Progress (@221224):
 
-    - [x] Synthesis RTL to Gate Netlist by Yosys, Done
-    - [x] Modified cpu_tb start from IMEM (0x10000000) to BIOS-RAM (0x40000000)
-    - [x] Perform Gate Simulation
+- [x] Synthesis RTL to Gate Netlist by Yosys, Done
+- [x] Modified cpu_tb start from IMEM (0x10000000) to BIOS-RAM (0x40000000)
+- [x] Perform Gate Simulation
 
 Synthesis Steps:
 ```
