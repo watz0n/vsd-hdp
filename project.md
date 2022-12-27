@@ -132,7 +132,7 @@ Reference:
 
 Development Progress (@221224):
 
-- [x] Synthesis RTL to Gate Netlist by Yosys, Done
+- [x] Synthesis RTL to Gate Netlist by Yosys
 - [x] Modified cpu_tb start from IMEM (0x10000000) to BIOS-RAM (0x40000000)
 - [x] Perform Gate Simulation
 

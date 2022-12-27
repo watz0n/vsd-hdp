@@ -904,16 +904,21 @@ Lecture-Note:
             * Sequential Cell:
                 1. Clock to Q -> DFF
                 2. Clock to D + D to Q -> D-Latch (DLAT)
+
+![lds01](images/lec-dc-sta01.png)<br />
         
         * Timing-Path:
             * Start Point : 1. Input-Port 2. Clock Pin of Register
             * End Point : 1. Output-Port 2. D Pin of Register
+![lds02](images/lec-dc-sta02.png)<br />          
         
         * Timing-Path Constraint:
             * REG2REG: Clock Constraint
             * REG2OUT: Output External Delay + Clock Constraint
             * IN2REG: Input External Delay + Clock Constraint
-        
+
+![lds03](images/lec-dc-sta03.png)<br />
+
         * IO Constraint:
             * Delay isn't ideal as zero -> Consider input transition and output load
             * Rule of Thumb: 70% Eternal Delay, 30% Internal Delay from Clock constraint
@@ -965,6 +970,8 @@ Lecture-Note:
 
     * Define `net` : connecting of two or more pins or ports in target design region
 
+![lds04](images/lec-dc-sta04.png)<br />  
+
     * DC-Shell Operations
 ```
     > get_ports *clk*;
@@ -1003,6 +1010,8 @@ Lecture-Note:
     > set_output_load -max <cap_unit> [get_ports <port-name>]
     > set_output_load -min <cap_unit> [get_ports <port-name>]
 ```
+![lds05](images/lec-dc-sta05.png)<br />  
+
     * DC-Shell Lab
 ``` 
     > get_cells/get_ports/get_nets/get_clocks/get_pins
@@ -1045,6 +1054,9 @@ Lecture-Note:
     * Constraint for pure combinational path from input to output port
         1. set_max_latency
         2. virtual clock
+
+![lds06](images/lec-dc-sta06.png)<br />  
+
 ```
     > set_max_latency <time> -from [get_ports <input>] -to [get_ports <output>]
     > create_clock -name <vclk> -period <time> # if path has no clock definition point, virtual clock inferred
@@ -1061,6 +1073,23 @@ Lecture-Note:
     > all_fanin -to <pin/port name> (-endpoints_only -flat)
     > get_cells -of_objects [get_pins <pin-name>]
     > report_timing -to <output-port> -sig <unit> # report decimal number
+```
+
+    * Multi-Cycle Path
+
+![lds07](images/lec-dc-sta07.png)<br />
+    
+    * Output Isolation between External and Internal Path
+
+![lds08](images/lec-dc-sta08.png)<br />  
+
+```
+    > set_multicycle_path -setup <num> -from <pin/port> -to <pin/port>
+    > set_multicycle_path -hold <num> -from <pin/port> -to <pin/port>
+    > set_false_path -from <pin/port> -to <pin/port>
+    > set_false_path -through <net/pin>
+    > set_isolate_ports -type buffer <output-ports>
+    // retiming applied in compile option, not SDC command
 ```
 
 ------
