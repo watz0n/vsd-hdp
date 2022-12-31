@@ -358,6 +358,6 @@ report_checks
 ```
 
 [1] OpenSTA Result (8MHz Clock)<br />
-![prj_sta_rslt1](images\prj-rv151-sta-rslt01.png)<br />
+![prj_sta_rslt1](images/prj-rv151-sta-rslt01.png)<br />
 
 ------
