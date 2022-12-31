@@ -255,11 +255,11 @@ Simulation Result:<br />
 
 ------
 
-Development Progress (@221224):
+Development Progress (@221231):
 
 - [x] Update PDK to Sky130 latest
 - [x] Compile OpenRAM
-- [ ] Perform OpenSTA Analysis
+- [x] Perform OpenSTA Analysis
 
 
 * Install Sky130-PDK and OpenRAM
@@ -300,14 +300,10 @@ $ export OPENRAM_TECH="/mnt/d/project/OpenRAM/technology"
 $ python3 $OPENRAM_HOME/openram.py hdpsram_sky130_32x2048_1rw.py
 ```
 
-* OpenRAM configure file, hdpsram_sky130_32x2048_1rw.py
+* OpenRAM configure file, hdpsram_sky130_32x128_1rw1r.py
 ```
-"""
-Single port, 2 kbytes SRAM, with byte write, useful for RISC-V processor main
-memory.
-"""
 word_size = 32 # Bits
-num_words = 2048
+num_words = 128
 human_byte_size = "{:.0f}kbytes".format((word_size * num_words)/1024/8)
 
 # Allow byte writes
@@ -315,18 +311,16 @@ write_size = 8 # Bits
 
 # Single port
 num_rw_ports = 1
-num_r_ports = 0
+num_r_ports = 1
 num_w_ports = 0
-num_spare_rows = 1
-num_spare_cols = 1
-ports_human = '1rw'
+ports_human = '1rw1r'
 
 tech_name = "sky130"
 
-#nominal_corner_only = True
-process_corners = ["SS", "TT", "FF"]
-supply_voltages = [ 1.8 ]
-temperatures = [ 25 ]
+nominal_corner_only = True
+# process_corners = ["SS", "TT", "FF"]
+# supply_voltages = [ 1.8 ]
+# temperatures = [ 25 ]
 
 route_supplies = "ring"
 check_lvsdrc = False
@@ -337,5 +331,33 @@ output_path = "macro/{output_name}".format(**locals())
 
 ```
 
+* Yosys Synthesis with OpenRAM library
+```
+read_liberty -lib /mnt/d/project/pdk/sky130A/libs.ref/sky130_fd_sc_hd/lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+read_liberty -lib /mnt/d/project/OpenRAM/macro/hdp_sky130_sram_0kbytes_1rw1r_32x128_8/hdp_sky130_sram_0kbytes_1rw1r_32x128_8_TT_1p8V_25C.lib
+read_verilog ./src/io_circuits/uart.v ./src/io_circuits/uart_receiver.v ./src/io_circuits/uart_transmitter.v
+read_verilog ./src/riscv_core/rv151_cpu.v ./src/riscv_core/rv151_core.v ./src/riscv_core/rv151_rgf.v ./src/riscv_core/rv151_alu.v ./src/riscv_core/rv151_imm.v ./src/riscv_core/rv151_brh.v ./src/riscv_core/rv151_ctl.v
+synth -top rv151_cpu
+dfflibmap -liberty /mnt/d/project/pdk/sky130A/libs.ref/sky130_fd_sc_hd/lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+flatten
+opt_clean -purge
+abc -liberty /mnt/d/project/pdk/sky130A/libs.ref/sky130_fd_sc_hd/lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+write_verilog -noattr rv151_cpu_syn.v
+```
+
+* OpenSTA TCL Script
+```
+read_liberty /mnt/d/project/pdk/sky130A/libs.ref/sky130_fd_sc_hd/lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+read_liberty /mnt/d/project/OpenRAM/macro/hdp_sky130_sram_0kbytes_1rw1r_32x128_8/hdp_sky130_sram_0kbytes_1rw1r_32x128_8_TT_1p8V_25C.lib
+read_verilog rv151_cpu_syn.v
+link_design rv151_cpu
+create_clock -name clk -period 125 { clk }
+set_input_delay -clock clk 0 { serial_in }
+set_output_delay -clock clk 0 { serial_out }
+report_checks
+```
+
+[1] OpenSTA Result (8MHz Clock)<br />
+![prj_sta_rslt1](images\prj-rv151-sta-rslt01.png)<br />
 
 ------
