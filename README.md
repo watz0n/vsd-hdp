@@ -89,6 +89,11 @@ Installation Source:
 Download File:
 > ngspice-38.tar.gz
 
+Additional Dependency:
+```
+$ sudo apt install libxaw7-dev
+```
+
 Installation Guide:
 > https://github.com/ngspice/ngspice/blob/master/INSTALL
 Chapter:
@@ -818,7 +823,7 @@ Goals:
 
 Status: In-progress, development-stage brief: [project.md](project.md)
 
-Next-Move: Import Sky130 OpenRAM instance
+To-Be-Done: Update summary result in here while finalized process
 
 ------
 
@@ -1091,5 +1096,331 @@ Lecture-Note:
     > set_isolate_ports -type buffer <output-ports>
     // retiming applied in compile option, not SDC command
 ```
+
+------
+
+## Day9
+
+Topic: Contraint Development
+
+Goals:
+    1. Try the ideal Timing Constraint for Project Design
+    2. Analysis OpenSTA results to tune the constraint for design
+
+Status: In-progress, development-stage brief: [project.md](project.md)
+
+To-Be-Done: Update summary result in here while finalized process
+
+------
+
+## Day10
+
+Topic: Introduction to STA and importance of MOSFETs in STA/EDA
+
+Goals:
+    1. Fundamental N/P MOSFET Simulation from SPICE model
+    2. Know the pitfall on standard cell from basic circuit element (MOSFET)
+
+Lecture Notes:
+
+* Circuit Design
+    * Fundamental combination from N/P MOSFETs to Funcational Gate Cells
+    * Analysis Delay and Safe-Margin by SPICE system
+    * Get Delay-Table `f(Input-Slew,Output-Load)` from SPICE modelling to verify STA correctness
+* N-MOS
+    * P-Substract, n+ Diffusion Region
+    * Isolation Region (SiO2), PolySi or Metal Gate
+    * 4-Terminal element, G (Gate), S (Source), D (Drain), B (Body)
+* Threshold Voltage
+    * Vs=0, Vd=0, Vgs large enough to perform `Strong Inversion` point `(Vt)`, diode B-S and B-D are off
+    * Increase Vgs, electrons from `n+` are drawn to the region under gate `G` as strong inversion
+    * The conductivity of S-D path is modulated by Vgs strength
+    * Add Vsb voltage, additional potential is required for strong inversion
+    * `Vto` means threshold voltage at Vsb=0, a function of manufacturing process
+
+* SPICE Simulation
+
+SPICE File: day1_nfet_idvds_L1p2_W1p8.spice
+```
+*Model Description
+.param temp=27
+
+*Including sky130 library files
+.lib "sky130_fd_pr/models/sky130.lib.spice" tt
+
+*Netlist Description
+XM1 Vdd n1 0 0 sky130_fd_pr__nfet_01v8 w=1.8 l=1.2
+R1 n1 in 55
+Vdd vdd 0 1.8V
+Vin in 0 1.8V
+
+*simulation commands
+.op
+.dc Vdd 0 1.8 0.1 Vin 0 1.8 0.2
+
+.control
+run
+display
+setplot dc1
+.endc
+
+.end
+
+```
+
+[1] SPICE NMOS id/vds Diagram<br />
+![d10l1p1](images/day10_lab1_p1.png)<br />  
+
+------
+
+## Day11
+
+Topic: Basics of NMOS Drain current (Id) vs Drain-to-source Voltage (Vds)
+
+Goals:
+    1. Syntax and Parameters for SPICE modelling
+    2. Graphically Id to Vds, Id to Vgs relationship from SPICE
+
+* Resistive Operation
+    * At Vgs>Vt condition with small Vds
+    * Affect by Effective Channel Length
+    * Currents in this condition
+        * Drift Current, from the difference of potential voltage
+        * Diffusion Current, from the difference of carrier concentration
+    * Id = `Kn'*(W/L)*((Vgs-Vt)*Vds-(Vds**2)/2)` = `Kn*((Vgs-Vt)*Vds-(Vds**2)/2)`
+        * `Kn'`, as porocess transconductance
+        * `Kn=Kn'*(W/L)`, as gain factor
+    * While `(Vgs-Vt)>>Vds`, Id ~= `Kn*((Vgs-Vt)*Vds)`, linear function by Vds
+* Saturation Region
+    * Pinch-Off from `(Vgs-Vds)<=Vt`, electron channel under the gate begins to disappear
+    * Channel Voltage clamp to (Vgs-Vt)
+        * Id(sat) = `Kn((Vgs-Vt)*(Vgs-Vt)-((Vgs-Vt)**2)/2)` = `Kn/2*(Vgs-Vt)**2`
+    * Seems a perfect current source from equation, but affected by  Vds in reality
+        * Id(sat) = `Kn/2*((Vgs-Vt)**2)*(1+lambda*Vds)`
+
+* SPICE Simulation
+
+SPICE File: day2_nfet_idvds_L0p25_W0p375.spice
+```
+*Model Description
+.param temp=27
+
+*Including sky130 library files
+.lib "sky130_fd_pr/models/sky130.lib.spice" tt
+
+*Netlist Description
+XM1 Vdd n1 0 0 sky130_fd_pr__nfet_01v8 w=0.375 l=0.25
+R1 n1 in 55
+Vdd vdd 0 1.8V
+Vin in 0 1.8V
+
+*simulation commands
+.op
+.dc Vdd 0 1.8 0.1 Vin 0 1.8 0.2
+
+.control
+run
+display
+setplot dc1
+.endc
+
+.end
+```
+
+SPICE File: day2_nfet_idvgs_L0p25_W0p375.spice
+```
+*Model Description
+.param temp=27
+
+*Including sky130 library files
+.lib "sky130_fd_pr/models/sky130.lib.spice" tt
+
+*Netlist Description
+XM1 Vdd n1 0 0 sky130_fd_pr__nfet_01v8 w=0.375 l=0.25
+R1 n1 in 55
+Vdd vdd 0 1.8V
+Vin in 0 1.8V
+
+*simulation commands
+.op
+*remove Vdd variation
+.dc Vin 0 1.8 0.1 
+
+.control
+run
+display
+setplot dc1
+.endc
+
+.end
+```
+
+[1] SPICE NMOS id/vds Diagram, small area but keep same ratio from day10 <br />
+![d11l1p1](images/day11_lab1_p1.png)<br />  
+
+[2] SPICE NMOS id/vgs Diagram <br />
+![d11l2p1](images/day11_lab2_p1.png)<br />  
+
+------
+
+## Day12 
+
+Topic: Velocity Saturation and basics of CMOS inverter VTC
+
+Goals:
+    1. Velocity Saturation from Channel Length Difference
+    2. Voltage-Transfer Characteristics (VTC) for CMOS inverter
+
+* Velocity Saturation Effect
+    * Long-Channel (>250nm)
+    * Short-Channel (<250nm)
+    * Id = `Kn*((Vgt-Vmin)-(Vmin**2)/2)*(1+lambda*Vds)`
+    * Vmin = `min(Vgt, Vds, Vd(Sat))`
+
+|Long-Chan. |Short-Chan.|
+|-----------|-----------|
+|Cut-Off    |Cut-Off    |
+|Resistive  |Resistive  |
+|           |Vel-Sat    |
+|Saturation |Saturation |
+
+* Voltage-Transfer Characteristics (VTC)
+    * Transistor
+        * Switch Off when `|Vgs|<|Vt|`
+        * Switch On when `|Vgs|>|Vt|`
+    * CMOS inverter => NOT Gate, PMOS+NMOS
+
+* Assume CMOS inverter in 0-2V range
+
+|Vin |Vout|PMOS|NMOS|
+|----|----|----|----|
+|0   |2   |LIN |OFF |
+|~0.5|~1.5|LIN |SAT |
+|1   |1   |SAT |SAT |
+|~1.5|~0.5|SAT |LIN |
+|2   |0   |OFF |LIN |
+
+* SPICE Simulation
+
+[1] Long-Channel vs Short-Channel<br />
+![d12l1p1](images/day12_lab1_p1.png)<br />  
+
+SPICE File: day3_inv_vtc_W0p084_W0n084.spice
+```
+*Model Description
+.param temp=27
+
+
+*Including sky130 library files
+.lib "sky130_fd_pr/models/sky130.lib.spice" tt
+
+*Netlist Description
+XM1 out in vdd vdd sky130_fd_pr__pfet_01v8 w=0.84 l=0.15
+XM2 out in 0 0 sky130_fd_pr__nfet_01v8 w=0.84 l=0.15
+Cload out 0 50fF
+Vdd vdd 0 1.8V
+Vin in 0 1.8V
+
+*simulation commands
+.op
+.dc Vin 0 1.8 0.01
+
+.control
+run
+setplot dc1
+display
+.endc
+
+.end
+```
+[2] VTC from identical (W/L) P/NMOS<br />
+![d12l2p1](images/day12_lab2_p1.png)<br />  
+
+------
+
+## Day13
+
+Topic: CMOS Switching threshold and dynamic simulations
+
+Goals:
+    1. Switching Threshold and Quality for CMOS inverter
+    2. Switching Transition Delay Timing
+
+* Switching Threshold
+    * `Vm`, should near the middle of VTC on CMOS inverter
+    * `Vm` = `R`*Vdd/(1+`R`), `R`=`(Rp*(Wp/Lp)*Vdp)/(Rn*(Wn/Ln)*Vdn)`
+
+* Transition Delay
+    * Rise-Delay, Input 0 then Output 1
+    * Fall-Delay, Input 1 then Output 0
+    * Find balanced rise/fall delay based on fixed `(Wp/Lp)`, search in variable `(Wn/Ln)`
+    * From Device Physics, Ron(PMOS) ~= 2.5*Ron(NMOS)
+    * Regular inverter/buffer preferred for data-path
+
+* SPICE Simulation
+
+SPICE File: day3_inv_vtc_W0p084_W0n036.spice
+```
+*Model Description
+.param temp=27
+
+*Including sky130 library files
+.lib "sky130_fd_pr/models/sky130.lib.spice" tt
+
+*Netlist Description
+XM1 out in vdd vdd sky130_fd_pr__pfet_01v8 w=0.84 l=0.15
+XM2 out in 0 0 sky130_fd_pr__nfet_01v8 w=0.36 l=0.15
+Cload out 0 50fF
+Vdd vdd 0 1.8V
+Vin in 0 1.8V
+
+*simulation commands
+.op
+.dc Vin 0 1.8 0.01
+
+.control
+run
+setplot dc1
+display
+.endc
+
+.end
+```
+
+[1] VTC from Balanced P/NMOS Driving Strength<br />
+![d13l1p1](images/day13_lab1_p1.png)<br />  
+
+SPICE File: day3_inv_tran_W0p084_W0n036.spice
+```
+*Model Description
+.param temp=27
+
+*Including sky130 library files
+.lib "sky130_fd_pr/models/sky130.lib.spice" tt
+
+*Netlist Description
+XM1 out in vdd vdd sky130_fd_pr__pfet_01v8 w=0.84 l=0.15
+XM2 out in 0 0 sky130_fd_pr__nfet_01v8 w=0.36 l=0.15
+Cload out 0 50fF
+Vdd vdd 0 1.8V
+Vin in 0 PULSE(0V 1.8V 0 0.1ns 0.1ns 2ns 4ns)
+
+*simulation commands
+.tran 1n 10n
+
+.control
+run
+.endc
+
+.end
+```
+
+[2] Inverter Switching Transition Diagram<br />
+![d13l2p1](images/day13_lab2_p1.png)<br />  
+
+|ITEM      |TIME (ns) |
+|----------|----------|
+|Rise-Delay| 0.34693  |
+|Fall-Delay| 0.26531  |
 
 ------
