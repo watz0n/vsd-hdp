@@ -253,5 +253,89 @@ Simulation Result:<br />
 [4] Gate Simulation File-List<br />
 ![prj_cpu_tb_bios_syn2](images/prj-rv151-cpu_tb_bios_syn2.png)<br />
 
+------
+
+Development Progress (@221224):
+
+- [x] Update PDK to Sky130 latest
+- [x] Compile OpenRAM
+- [ ] Perform OpenSTA Analysis
+
+
+* Install Sky130-PDK and OpenRAM
+```
+//-- PDK Root-Path
+$ cd /mnt/d/project/pdk
+
+//--- Install SKY130 PDK
+$ git clone https://github.com/google/skywater-pdk.git
+$ cd skywater-pdk
+$ SUBMODULE_VERSION=latest make submodules -j3 || make submodules -j1
+$ //--- Second time for python depndency issue
+$ SUBMODULE_VERSION=latest make submodules -j3 || make submodules -j1
+$ make timing
+$ cd ..
+
+//--- Install open_sdk for sky130A library
+$ git clone git://opencircuitdesign.com/open_pdks
+$ cd open_pdks
+$ ./configure --enable-sky130-pdk=/mnt/d/project/pdk/skywater-pdk
+$ make
+$ cp -R sky130/sky130A /mnt/d/project/pdk
+$ cd ..
+
+//--- Install sky130 sram libraries for OpenRAM
+$ git clone https://github.com/vlsida/sky130_fd_bd_sram.git
+
+```
+
+* OpenRAM Compile Memory
+```
+cd /mnt/d/project/OpenRAM
+
+$ export PDK_ROOT="/mnt/d/project/pdk"
+$ export OPENRAM_HOME="/mnt/d/project/OpenRAM/compiler"
+$ export OPENRAM_TECH="/mnt/d/project/OpenRAM/technology"
+
+$ python3 $OPENRAM_HOME/openram.py hdpsram_sky130_32x2048_1rw.py
+```
+
+* OpenRAM configure file, hdpsram_sky130_32x2048_1rw.py
+```
+"""
+Single port, 2 kbytes SRAM, with byte write, useful for RISC-V processor main
+memory.
+"""
+word_size = 32 # Bits
+num_words = 2048
+human_byte_size = "{:.0f}kbytes".format((word_size * num_words)/1024/8)
+
+# Allow byte writes
+write_size = 8 # Bits
+
+# Single port
+num_rw_ports = 1
+num_r_ports = 0
+num_w_ports = 0
+num_spare_rows = 1
+num_spare_cols = 1
+ports_human = '1rw'
+
+tech_name = "sky130"
+
+#nominal_corner_only = True
+process_corners = ["SS", "TT", "FF"]
+supply_voltages = [ 1.8 ]
+temperatures = [ 25 ]
+
+route_supplies = "ring"
+check_lvsdrc = False
+uniquify = True
+
+output_name = "hdp_{tech_name}_sram_{human_byte_size}_{ports_human}_{word_size}x{num_words}_{write_size}".format(**locals())
+output_path = "macro/{output_name}".format(**locals())
+
+```
+
 
 ------
