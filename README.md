@@ -1108,8 +1108,8 @@ Lecture-Note:
 Topic: Contraint Development
 
 Goals:
-    1. Try the ideal Timing Constraint for Project Design
-    2. Analysis OpenSTA results to tune the constraint for design
+1. Try the ideal Timing Constraint for Project Design
+2. Analysis OpenSTA results to tune the constraint for design
 
 Status: In-progress, development-stage brief: [project.md](project.md)
 
@@ -1122,11 +1122,10 @@ To-Be-Done: Update summary result in here while finalized process
 Topic: Introduction to STA and importance of MOSFETs in STA/EDA
 
 Goals:
-    1. Fundamental N/P MOSFET Simulation from SPICE model
-    2. Know the pitfall on standard cell from basic circuit element (MOSFET)
+1. Fundamental N/P MOSFET Simulation from SPICE model
+2. Know the pitfall on standard cell from basic circuit element (MOSFET)
 
 Lecture Notes:
-
 * Circuit Design
     * Fundamental combination from N/P MOSFETs to Funcational Gate Cells
     * Analysis Delay and Safe-Margin by SPICE system
@@ -1182,9 +1181,10 @@ setplot dc1
 Topic: Basics of NMOS Drain current (Id) vs Drain-to-source Voltage (Vds)
 
 Goals:
-    1. Syntax and Parameters for SPICE modelling
-    2. Graphically Id to Vds, Id to Vgs relationship from SPICE
+1. Syntax and Parameters for SPICE modelling
+2. Graphically Id to Vds, Id to Vgs relationship from SPICE
 
+Lecture-Note:
 * Resistive Operation
     * At Vgs>Vt condition with small Vds
     * Affect by Effective Channel Length
@@ -1272,9 +1272,10 @@ setplot dc1
 Topic: Velocity Saturation and basics of CMOS inverter VTC
 
 Goals:
-    1. Velocity Saturation from Channel Length Difference
-    2. Voltage-Transfer Characteristics (VTC) for CMOS inverter
+1. Velocity Saturation from Channel Length Difference
+2. Voltage-Transfer Characteristics (VTC) for CMOS inverter
 
+Lecture-Note:
 * Velocity Saturation Effect
     * Long-Channel (>250nm)
     * Short-Channel (<250nm)
@@ -1347,9 +1348,10 @@ display
 Topic: CMOS Switching threshold and dynamic simulations
 
 Goals:
-    1. Switching Threshold and Quality for CMOS inverter
-    2. Switching Transition Delay Timing
+1. Switching Threshold and Quality for CMOS inverter
+2. Switching Transition Delay Timing
 
+Lecture-Note:
 * Switching Threshold
     * `Vm`, should near the middle of VTC on CMOS inverter
     * `Vm` = `R`*Vdd/(1+`R`), `R`=`(Rp*(Wp/Lp)*Vdp)/(Rn*(Wn/Ln)*Vdn)`
