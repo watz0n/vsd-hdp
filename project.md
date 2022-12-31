@@ -359,5 +359,7 @@ report_checks
 
 [1] OpenSTA Result (8MHz Clock)<br />
 ![prj_sta_rslt1](images/prj-rv151-sta-rslt01.png)<br />
+[2] OpenSTA Result, Memory Output is Falling-Edge Sampling<br />
+![prj_sta_rslt2](images/prj-rv151-sta-rslt02.png)<br />
 
 ------
