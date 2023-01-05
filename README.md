@@ -1430,3 +1430,190 @@ run
 |Fall-Delay| 0.26531  |
 
 ------
+
+## Day14
+
+Topic: CMOS Noise Margin robustness evaluation
+
+Goals:
+1. Inverter Gate Noise Margin
+
+Lecture-Note:
+* Noise Margin
+    * Preserve Noise Margin to against environmental noise
+```
+    NMH = VOH-VIH
+    NML = VIL-VOL
+```
+![d13lcp1](images/day14_lec_p1.png)<br /> 
+
+* SPICE Simulation
+SPICE File: day4_inv_noisemargin_wp1_wn036.spice
+```
+*Model Description
+.param temp=27
+
+*Including sky130 library files
+.lib "sky130_fd_pr/models/sky130.lib.spice" tt
+
+*Netlist Description
+
+XM1 out in vdd vdd sky130_fd_pr__pfet_01v8 w=1 l=0.15
+XM2 out in 0 0 sky130_fd_pr__nfet_01v8 w=0.36 l=0.15
+
+Cload out 0 50fF
+
+Vdd vdd 0 1.8V
+Vin in 0 1.8V
+
+*simulation commands
+
+.op
+.dc Vin 0 1.8 0.01
+
+.control
+run
+setplot dc1
+display
+.endc
+
+.end
+```
+
+[1] Inverter Switching Transition Diagram<br />
+![d14l1p1](images/day14_lab1_p1.png)<br />  
+
+|ITEM      | Voltage  |
+|----------|----------|
+|VOH       | 1.72273  |
+|VOL       | 0.104545 |
+|VIH       | 0.983607 |
+|VIL       | 0.75819  |
+|NMH       | 0.739123 |
+|NML       | 0.653645 |
+
+------
+
+## Day15
+
+Topic: CMOS power supply and device variation robustness evaluation
+
+Goals:
+1. Inverter Robustness on Power Supply Scaling
+2. Inverter Robustness on Process Variation
+
+Lecture-Note:
+* Power Supply Scaling
+    * |Gain| = |Vout(VIH)-Vout(VIL)|/|VIH-VIL|
+    * Advantage :
+        1. Increase in Gain (~50% improvement)
+        2. Reduction in Energy (~90% improvement, from Energy=`1/2*C*Vdd**2`)
+    * Disadvantage :
+        1. Performance Impact on dymanic transition (increasing large delay)
+* Process Variation
+    * Etching, layout shape variation, not expect rectangle formation
+    * Oxide Thickness, not uniformly thickness on Oxide layer
+* Device Variation
+    * Shift in Vm
+    * Variation in NMH/NML
+    * Operation of `Gate` is intact
+
+* SPICE Simulation
+SPICE File: day5_inv_supplyvariation_Wp1_Wn036.spice
+```
+*Model Description
+.param temp=27
+
+*Including sky130 library files
+.lib "sky130_fd_pr/models/sky130.lib.spice" tt
+
+*Netlist Description
+
+XM1 out in vdd vdd sky130_fd_pr__pfet_01v8 w=1 l=0.15
+XM2 out in 0 0 sky130_fd_pr__nfet_01v8 w=0.36 l=0.15
+
+Cload out 0 50fF
+
+Vdd vdd 0 1.8V
+Vin in 0 1.8V
+
+.control
+
+let powersupply = 1.8
+alter Vdd = powersupply
+	let voltagesupplyvariation = 0
+	dowhile voltagesupplyvariation < 6
+	dc Vin 0 1.8 0.01
+	let powersupply = powersupply - 0.2
+	alter Vdd = powersupply
+	let voltagesupplyvariation = voltagesupplyvariation + 1
+      end
+ 
+plot dc1.out vs in dc2.out vs in dc3.out vs in dc4.out vs in dc5.out vs in dc6.out vs in xlabel "input voltage(V)" ylabel "output voltage(V)" title "Inveter dc characteristics as a function of supply voltage"
+
+.endc
+
+.end
+```
+
+[1] Power-Supply Scaling<br />
+![d15l1p1](images/day15_lab1_p1.png)<br />  
+
+|GAIN    |Ratio  |
+|--------|-------|
+|dc1.out |7.1697 |
+|dc6.out |8.9009 |
+
+
+SPICE File: day5_inv_devicevariation_wpv_wnv.spice
+```
+*Model Description
+.param temp=27
+
+*Including sky130 library files
+.lib "sky130_fd_pr/models/sky130.lib.spice" tt
+
+*Netlist Description
+
+XM1 out in vdd vdd sky130_fd_pr__pfet_01v8 w=0.84 l=0.15
+XM2 out in 0 0 sky130_fd_pr__nfet_01v8 w=0.36 l=0.15
+
+Cload out 0 50fF
+
+Vdd vdd 0 1.8V
+Vin in 0 1.8V
+
+*simulation commands
+
+.control
+
+    let nmoswidth = 0.36
+    alter m.xm2.msky130_fd_pr__nfet_01v8 w = nmoswidth
+    let pmoswidth = 1.2
+    alter m.xm1.msky130_fd_pr__pfet_01v8 w = pmoswidth
+
+    let widthVariation = 0
+    dowhile widthVariation < 5
+        echo "nmos width: $&nmoswidth u"
+        echo "pmos width: $&pmoswidth u"
+        *** dc analysis
+        dc vin 0 1.8 0.01
+        *** change to next env.
+        let nmoswidth = nmoswidth + 0.32
+        let pmoswidth = pmoswidth - 0.12
+        alter @m.xm2.msky130_fd_pr__nfet_01v8[W] = nmoswidth
+        alter @m.xm1.msky130_fd_pr__pfet_01v8[W] = pmoswidth
+        let widthVariation = widthVariation + 1
+    end
+
+    plot dc1.out vs in dc2.out vs in dc3.out vs in dc4.out vs in dc5.out vs in xlabel "input voltage(V)" ylabel "output voltage(V)" title "Inveter dc characteristics as a function of P/NMOS width"
+
+.endc
+
+.end
+```
+
+[2] Device Variation<br />
+![d15l2p1](images/day15_lab2_p1.png)<br />  
+
+------
