@@ -9,6 +9,7 @@ Quick-Link:<br />
 [Progress 221217](#PRG221217)<br />
 [Progress 221224](#PRG221224)<br />
 [Progress 221231](#PRG221231)<br />
+[Progress 230107](#PRG230107)<br />
 
 ------
 
@@ -379,5 +380,66 @@ report_checks
 ![prj_sta_rslt1](images/prj-rv151-sta-rslt01.png)<br />
 [2] OpenSTA Result, Memory Output is Falling-Edge Sampling<br />
 ![prj_sta_rslt2](images/prj-rv151-sta-rslt02.png)<br />
+
+------
+
+### PRG230107
+
+Development Progress (@230107):
+
+- [x] Add Bios Configuration SPI from no ROM library in SkyWater-130nm 
+- [x] Compile OpenRAM 8KB 1/2 Ports for BIOS/Instruction/Data Memory
+- [x] Fix OpenRAM verilog behavior to simulate in iverilog
+- [x] Add OpenRAM output sampling registers to improve synthesis frequency from 8MHz to 12.5MHz
+- [x] Add Clock-Group to seperate main clock and spi clock analysis
+- [x] Perform OpenSTA Analysis, option with `-path_delay min`
+
+* Yosys Synthesis Script
+```
+
+read_liberty -lib /mnt/d/project/pdk/sky130A/libs.ref/sky130_fd_sc_hd/lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+read_liberty -lib /mnt/d/project/OpenRAM/macro/hdp_sky130_sram_8kbytes_1rw1r_32x2048_8/hdp_sky130_sram_8kbytes_1rw1r_32x2048_8_TT_1p8V_25C.lib
+read_liberty -lib /mnt/d/project/OpenRAM/macro/hdp_sky130_sram_8kbytes_1rw_32x2048_8/hdp_sky130_sram_8kbytes_1rw_32x2048_8_TT_1p8V_25C.lib
+read_verilog ./src/io_circuits/uart.v ./src/io_circuits/uart_receiver.v ./src/io_circuits/uart_transmitter.v
+read_verilog ./src/io_circuits/bspi.v ./src/io_circuits/bspi_aff.v ./src/io_circuits/bspi_bif.v ./src/io_circuits/bspi_oif.v
+read_verilog ./src/riscv_core/rv151_soc.v ./src/riscv_core/rv151_core.v ./src/riscv_core/rv151_rgf.v ./src/riscv_core/rv151_alu.v ./src/riscv_core/rv151_imm.v ./src/riscv_core/rv151_brh.v ./src/riscv_core/rv151_ctl.v
+synth -top rv151_soc
+dfflibmap -liberty /mnt/d/project/pdk/sky130A/libs.ref/sky130_fd_sc_hd/lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+flatten
+opt_clean -purge
+abc -liberty /mnt/d/project/pdk/sky130A/libs.ref/sky130_fd_sc_hd/lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+write_verilog -noattr ./syn/rv151_soc_syn.v
+
+```
+
+* OpenSTA Analysis Script
+```
+
+read_liberty /mnt/d/project/pdk/sky130A/libs.ref/sky130_fd_sc_hd/lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+read_liberty /mnt/d/project/OpenRAM/macro/hdp_sky130_sram_8kbytes_1rw1r_32x2048_8/hdp_sky130_sram_8kbytes_1rw1r_32x2048_8_TT_1p8V_25C.lib
+read_liberty /mnt/d/project/OpenRAM/macro/hdp_sky130_sram_8kbytes_1rw_32x2048_8/hdp_sky130_sram_8kbytes_1rw_32x2048_8_TT_1p8V_25C.lib
+
+read_verilog ./syn/rv151_soc_syn.v
+
+link_design rv151_soc
+
+create_clock -name clk -period 100 { clk }
+create_clock -name sck -period 100 { io_sck }
+
+set_input_delay -clock clk 0 { serial_in }
+set_output_delay -clock clk 0 { serial_out }
+
+set_input_delay -clock sck 0 { io_scs io_sdi }
+set_output_delay -clock sck 0 { io_sdo }
+
+set_clock_groups -name grp_clks -physically_exclusive -group { clk } -group { sck }
+
+set_false_path -from { io_bcf }
+
+report_checks -digits 4 -no_line_splits -path_delay min > ./syn/opensta_min_path.log
+report_checks -digits 4 -no_line_splits -path_delay max > ./syn/opensta_max_path.log
+
+exit
+```
 
 ------
