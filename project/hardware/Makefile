@@ -17,6 +17,7 @@ sim-syn/%.fst: sim/%.v $(SYN)
 	@cd sim && $(IVERILOG) $(IVERILOG_OPTS) -DSYN -o $*_syn.tbi $*.v $(SYN) && $(VVP) $*_syn.tbi -fst |& tee $*.log
 
 clean-all: clean-sim clean-syn clean-sta
+	@rm -rf lib/sky130/*.lib
 
 clean-sim:
 	@rm -rf sim/*.tbi sim/*.fst sim/*.log
