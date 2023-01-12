@@ -1,6 +1,7 @@
-# VSD-HDP Project Proposal
-- wats0n.edx@gmail.com(Watson Huang)
-------
+# VSD-HDP Project Progress
+
+* Author: wats0n.edx@gmail.com (Watson Huang)
+* Project Design-Report: [design_report.md](reports/design_report.md)
 
 ------
 
@@ -19,9 +20,13 @@ Project Name: HDP-RV151
 
 Description: 
 
-Implement RV151 from [UCB-EECS151 project](https://github.com/EECS150/fpga_project_skeleton_fa22), which contain following items:
-1. A RISC-V core base on RV32I specification, build 3-Stage Pipeline
-2. UART TX/RX, target 115200bps baud-rate, add configure-register for changing baud-rate.
+RV151 Design-Spec from [UCB-EECS151 project](https://github.com/EECS150/fpga_project_skeleton_fa22), which contain following items:
+1. RISCV RV32I test-benches and Software Build Scripts
+2. UART TX/RX test-bench, target 115200bps baud-rate
+
+To-be-done Items:
+1. Build 3-Stage Pipeline Architecture from scratch
+2. Add UART baud-rate configure-register from differenet CPU Clock
 
 Draft Data-Path Diagram:
 ![prj_pipleline](images/prj-rv151-pipeline.png)<br />

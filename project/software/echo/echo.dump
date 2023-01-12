@@ -1,0 +1,82 @@
+
+echo.elf:     file format elf32-littleriscv
+
+
+Disassembly of section .note.gnu.build-id:
+
+10000000 <.note.gnu.build-id>:
+10000000:	0004                	0x4
+10000002:	0000                	unimp
+10000004:	0014                	0x14
+10000006:	0000                	unimp
+10000008:	00000003          	lb	x0,0(x0) # 0 <_start-0x10000024>
+1000000c:	00554e47          	fmsub.s	f28,f10,f5,f0,rmm
+10000010:	e9d2                	fsw	f20,208(x2)
+10000012:	1d32                	slli	x26,x26,0x2c
+10000014:	d65c                	sw	x15,44(x12)
+10000016:	b6be                	fsd	f15,360(x2)
+10000018:	1b28                	addi	x10,x2,440
+1000001a:	1981                	addi	x19,x19,-32
+1000001c:	ae3e                	fsd	f15,280(x2)
+1000001e:	87cc                	0x87cc
+10000020:	b36e6bab          	0xb36e6bab
+
+Disassembly of section .text:
+
+10000024 <_start>:
+10000024:	10001137          	lui	x2,0x10001
+10000028:	004000ef          	jal	x1,1000002c <main>
+
+1000002c <main>:
+1000002c:	ff010113          	addi	x2,x2,-16 # 10000ff0 <main+0xfc4>
+10000030:	00812623          	sw	x8,12(x2)
+10000034:	01010413          	addi	x8,x2,16
+10000038:	00000013          	nop
+1000003c:	800007b7          	lui	x15,0x80000
+10000040:	0007a783          	lw	x15,0(x15) # 80000000 <main+0x6fffffd4>
+10000044:	0027f793          	andi	x15,x15,2
+10000048:	fe078ae3          	beqz	x15,1000003c <main+0x10>
+1000004c:	800007b7          	lui	x15,0x80000
+10000050:	00478793          	addi	x15,x15,4 # 80000004 <main+0x6fffffd8>
+10000054:	0007a703          	lw	x14,0(x15)
+10000058:	100007b7          	lui	x15,0x10000
+1000005c:	1ff78793          	addi	x15,x15,511 # 100001ff <main+0x1d3>
+10000060:	0ff77713          	andi	x14,x14,255
+10000064:	00e78023          	sb	x14,0(x15)
+10000068:	00000013          	nop
+1000006c:	800007b7          	lui	x15,0x80000
+10000070:	0007a783          	lw	x15,0(x15) # 80000000 <main+0x6fffffd4>
+10000074:	0017f793          	andi	x15,x15,1
+10000078:	fe078ae3          	beqz	x15,1000006c <main+0x40>
+1000007c:	100007b7          	lui	x15,0x10000
+10000080:	1ff78793          	addi	x15,x15,511 # 100001ff <main+0x1d3>
+10000084:	0007c783          	lbu	x15,0(x15)
+10000088:	0ff7f713          	andi	x14,x15,255
+1000008c:	800007b7          	lui	x15,0x80000
+10000090:	00878793          	addi	x15,x15,8 # 80000008 <main+0x6fffffdc>
+10000094:	00e7a023          	sw	x14,0(x15)
+10000098:	fa1ff06f          	j	10000038 <main+0xc>
+
+Disassembly of section .comment:
+
+00000000 <.comment>:
+   0:	3a434347          	fmsub.d	f6,f6,f4,f7,rmm
+   4:	2820                	fld	f8,80(x8)
+   6:	6255                	lui	x4,0x15
+   8:	6e75                	lui	x28,0x1d
+   a:	7574                	flw	f13,108(x10)
+   c:	3920                	fld	f8,112(x10)
+   e:	342e                	fld	f8,232(x2)
+  10:	302e                	fld	f0,232(x2)
+  12:	312d                	jal	fffffc3c <main+0xeffffc10>
+  14:	6275                	lui	x4,0x1d
+  16:	6e75                	lui	x28,0x1d
+  18:	7574                	flw	f13,108(x10)
+  1a:	7e31                	lui	x28,0xfffec
+  1c:	3032                	fld	f0,296(x2)
+  1e:	302e                	fld	f0,232(x2)
+  20:	2934                	fld	f13,80(x10)
+  22:	3920                	fld	f8,112(x10)
+  24:	342e                	fld	f8,232(x2)
+  26:	302e                	fld	f0,232(x2)
+	...

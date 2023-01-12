@@ -1,0 +1,20 @@
+
+read_liberty -lib ./lib/sky130/sky130_fd_sc_hd__tt_025C_1v80.lib
+read_liberty -lib ./lib/openram/hdp_sky130_sram_8kbytes_1rw1r_32x2048_8_TT_1p8V_25C.lib
+read_liberty -lib ./lib/openram/hdp_sky130_sram_8kbytes_1rw_32x2048_8_TT_1p8V_25C.lib
+read_verilog ./src/rtl/io/uart.v ./src/rtl/io/uart_receiver.v ./src/rtl/io/uart_transmitter.v
+read_verilog ./src/rtl/io/bspi.v ./src/rtl/io/bspi_aff.v ./src/rtl/io/bspi_bif.v ./src/rtl/io/bspi_oif.v
+read_verilog ./src/rtl/core/rv151_soc.v ./src/rtl/core/rv151_core.v ./src/rtl/core/rv151_rgf.v ./src/rtl/core/rv151_alu.v ./src/rtl/core/rv151_imm.v ./src/rtl/core/rv151_brh.v ./src/rtl/core/rv151_ctl.v
+
+synth -top rv151_soc
+dfflibmap -liberty ./lib/sky130/sky130_fd_sc_hd__tt_025C_1v80.lib
+flatten 
+opt_clean -purge
+abc -liberty ./lib/sky130/sky130_fd_sc_hd__tt_025C_1v80.lib
+write_verilog -noattr ./syn/rv151_soc_syn.v
+
+tee -o ./syn/ys_util_full.log stat -liberty ./lib/sky130/sky130_fd_sc_hd__tt_025C_1v80.lib -liberty ./lib/openram/hdp_sky130_sram_8kbytes_1rw1r_32x2048_8_TT_1p8V_25C.lib -liberty ./lib/openram/hdp_sky130_sram_8kbytes_1rw_32x2048_8_TT_1p8V_25C.lib
+
+tee -o ./syn/ys_util_sdcl.log stat -liberty ./lib/sky130/sky130_fd_sc_hd__tt_025C_1v80.lib
+
+clean
