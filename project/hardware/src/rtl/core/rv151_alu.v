@@ -1,3 +1,6 @@
+// Copyright 2023 Hwa-Shan (Watson) Huang
+// Author: watson.edx@gmail.com
+
 module rv151_alu(
     input   [31:0] alu_i1,
     input   [31:0] alu_i2,
