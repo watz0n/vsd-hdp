@@ -1,5 +1,8 @@
-"""
+# Copyright 2023 Hwa-Shan (Watson) Huang
+# Author: watson.edx@gmail.com
 
+"""
+OpenRAM configuration file for single-port 8KB SRAM
 """
 word_size = 32 # Bits
 num_words = 2048
@@ -16,13 +19,12 @@ num_spare_rows = 1
 num_spare_cols = 1
 ports_human = '1rw'
 
-# include with sky130_sram_common.py
-# import os
-# exec(open(os.path.join(os.path.dirname(__file__), 'sky130_sram_common.py')).read())
-
 tech_name = "sky130"
 
+#=== Only has TT lib, but it's analytical_delay
 #nominal_corner_only = True
+
+#=== Generate TT/FF/SS lib, but all are analytical_delay
 # Or you can specify particular corners
 # Process corners to characterize
 process_corners = [ "TT" ]
