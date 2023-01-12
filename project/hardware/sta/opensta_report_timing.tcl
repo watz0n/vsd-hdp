@@ -1,3 +1,5 @@
+# Copyright 2023 Hwa-Shan (Watson) Huang
+# Author: watson.edx@gmail.com
 
 read_verilog ./syn/rv151_soc_syn.v
 

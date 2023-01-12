@@ -1,3 +1,6 @@
+// Copyright 2023 Hwa-Shan (Watson) Huang
+// Author: watson.edx@gmail.com
+
 module rv151_soc #(
     //parameter CPU_CLOCK_FREQ = 50_000_000,
     parameter CPU_CLOCK_FREQ = 10_000_000,

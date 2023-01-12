@@ -1,3 +1,6 @@
+// Copyright 2023 Hwa-Shan (Watson) Huang
+// Author: watson.edx@gmail.com
+
 module rv151_core#(
     parameter PC_RST_VAL = 32'h40000000
 )(

@@ -1,3 +1,6 @@
+// Copyright 2023 Hwa-Shan (Watson) Huang
+// Author: watson.edx@gmail.com
+
 module rv151_imm(
     input   [31:0] imm_it, //instruction
     input   [2:0]  imm_tp, //type

@@ -1,3 +1,6 @@
+// Copyright 2023 Hwa-Shan (Watson) Huang
+// Author: watson.edx@gmail.com
+
 module rv151_ctl(
 
     input          ctl_ifv,

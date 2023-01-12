@@ -1,3 +1,6 @@
+// Copyright 2023 Hwa-Shan (Watson) Huang
+// Author: watson.edx@gmail.com
+
 module rv151_bch(
     input   [31:0]  bch_c1,
     input   [31:0]  bch_c2,

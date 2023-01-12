@@ -1,3 +1,5 @@
+# Copyright 2023 Hwa-Shan (Watson) Huang
+# Author: watson.edx@gmail.com
 
 read_liberty -lib ./lib/sky130/sky130_fd_sc_hd__tt_025C_1v80.lib
 read_liberty -lib ./lib/openram/hdp_sky130_sram_8kbytes_1rw1r_32x2048_8_TT_1p8V_25C.lib
