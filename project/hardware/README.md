@@ -8,13 +8,13 @@
 
 ```
 //Test RV32I functionality, RTL simulation only
-$ make sim/cpu_tb_bmem.v
+$ make sim/cpu_tb_bmem.fst
 
 //Test BSPI load to BIOS-MEM behavior
-$ make sim/bspi_tb_bmem.v
+$ make sim/bspi_tb_bmem.fst
 
 //Test UART Echo from RX to TX
-$ make sim/echo_tb_bmem.v
+$ make sim/echo_tb_bmem.fst
 ```
 
 > Synthesis (Yosys) :
@@ -27,10 +27,10 @@ $ make syn
 
 ```
 //Test BSPI load to BIOS-MEM behavior
-$ make sim-syn/bspi_tb_bmem.v
+$ make sim-syn/bspi_tb_bmem.fst
 
 //Test UART Echo from RX to TX
-$ make sim-syn/echo_tb_bmem.v
+$ make sim-syn/echo_tb_bmem.fst
 ```
 
 > STA :
