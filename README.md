@@ -2,7 +2,10 @@ A repository for recording VSD-HDP program as below program link.
 
 Program: [SKY130-based ASIC Design Projects](https://www.vlsisystemdesign.com/hdp/)
 
-- watz0n (Watson Huang), wats0n.edx@gmail.com
+* watz0n (Watson Huang), wats0n.edx@gmail.com
+
+Project-Database: [HDP-RV151](project/README.md)<br />
+Project-Progress: [project.md](project.md)<br />
 
 ------
 
@@ -27,6 +30,7 @@ Quick-Link:<br />
 [Day13](#Day13)<br />
 [Day14](#Day14)<br />
 [Day15](#Day15)<br />
+[Day16](#Day16)<br />
 
 ------
 
@@ -825,12 +829,13 @@ Progress Images:
 Topic: Design Preparation 
 
 Goals:
-    1. Synthesizable RTL and Testbench Ready
-    2. Behavior and Synthesis Simlation Consistancy
+1. Synthesizable RTL and Testbench Ready
+2. Behavior and Synthesis Simlation Consistancy
 
-Status: In-progress, development-stage brief: [project.md](project.md)
-
-To-Be-Done: Update summary result in here while finalized process
+Status: Design RTL-Code Fixed 
+* development-stage progress: [project.md](project.md)
+* design database: [project/README.md](project/README.md)
+* design report: [design_report.md](reports/design_report.md)
 
 ------
 
@@ -1114,9 +1119,10 @@ Goals:
 1. Try the ideal Timing Constraint for Project Design
 2. Analysis OpenSTA results to tune the constraint for design
 
-Status: In-progress, development-stage brief: [project.md](project.md)
-
-To-Be-Done: Update summary result in here while finalized process
+Status:
+* development-stage progress: [project.md](project.md)
+* design database: [project/README.md](project/README.md)
+* design report: [design_report.md](reports/design_report.md)
 
 ------
 
@@ -1618,5 +1624,19 @@ Vin in 0 1.8V
 
 [2] Device Variation<br />
 ![d15l2p1](images/day15_lab2_p1.png)<br />  
+
+------
+
+## Day16
+
+Topic: Post synthesis STA checks for your design on ss,ff,tt corners
+
+Goals:
+1. Perform OpenSTA in different corner to collect PVT-Corner statistics
+
+Status:
+
+[1] PVT Corners for rv151_soc @10MHz <br />
+![d16s1](reports/220112/rpt-pvt-sta-mc.png)<br />
 
 ------
