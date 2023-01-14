@@ -4,7 +4,7 @@ Program: [SKY130-based ASIC Design Projects](https://www.vlsisystemdesign.com/hd
 
 * watz0n (Watson Huang), wats0n.edx@gmail.com
 
-Project-Database: [HDP-RV151](project/README.md)<br />
+Project-Database: [HDP-RV151](project)<br />
 Project-Progress: [project.md](project.md)<br />
 
 ------

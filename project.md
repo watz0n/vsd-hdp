@@ -456,7 +456,7 @@ Development Progress (@230107):
 
 - [x] Complete RTL/SYN behavior simulation for BSPI/UART module
 - [x] Perform Multi-Corner Report for PVT Analysis
-- [x] Organize HDP-RV151 project database in [project](project/README.md) directory
+- [x] Organize HDP-RV151 project database in [project](project) directory
 - [x] Draft [Design Report](reports/design_report.md) for HDP-RV151
 
 Multi-Corner Report (230112):
