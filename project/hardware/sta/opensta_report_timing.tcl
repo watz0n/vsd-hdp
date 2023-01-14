@@ -1,6 +1,9 @@
 # Copyright 2023 Hwa-Shan (Watson) Huang
 # Author: watson.edx@gmail.com
 
+# This file is cope with other script files which defiend corner library.
+# e.g. opensta_delay_calc_tt.tcl
+
 read_verilog ./syn/rv151_soc_syn.v
 
 link_design rv151_soc
@@ -18,10 +21,6 @@ set_clock_groups -name grp_clks -physically_exclusive -group { clk } -group { sc
 
 set_false_path -from { io_bcf }
 set_false_path -to { io_hlt io_irc }
-
-#report_checks -digits 4 -no_line_splits -path_delay min > ./syn/opensta_min_path.log
-#report_checks -digits 4 -no_line_splits -path_delay max > ./syn/opensta_max_path.log
-#report_checks
 
 #WNS
 report_worst_slack -digits 4 -max >wns.log
