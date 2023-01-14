@@ -1632,7 +1632,7 @@ Vin in 0 1.8V
 Topic: Post synthesis STA checks for your design on ss,ff,tt corners
 
 Goals:
-1. Perform OpenSTA in different corner to collect PVT-Corner statistics
+1. Perform OpenSTA in different corners to collect PVT-Corner statistics
 
 Status:
 
