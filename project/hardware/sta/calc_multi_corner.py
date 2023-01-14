@@ -102,18 +102,24 @@ for l in lst_libcnr:
     if(len(l)>ml_cnr):
         ml_cnr = len(l);
 
+ft_wns=[];
 ml_wns=len(lb_wns);
 for l in lst_wns:
+    ft_wns += [float(l)];
     if(len(l)>ml_wns):
         ml_wns = len(l);
 
+ft_whs=[];
 ml_whs=len(lb_whs);
 for l in lst_whs:
+    ft_whs += [float(l)];
     if(len(l)>ml_whs):
         ml_whs = len(l);
 
+ft_tns=[];
 ml_tns=len(lb_tns);
 for l in lst_tns:
+    ft_tns += [float(l)];
     if(len(l)>ml_tns):
         ml_tns = len(l);
 
@@ -128,3 +134,35 @@ fd.write("|{}|{}|{}|{}|\n".format("-"*ml_cnr, "-"*(ml_wns), "-"*(ml_whs), "-"*(m
 for i in range(len(lst_libcnr)):
     fd.write("|{}|{}|{}|{}|\n".format(lst_libcnr[i].ljust(ml_cnr), lst_wns[i].ljust(ml_wns), lst_whs[i].ljust(ml_whs), lst_tns[i].ljust(ml_tns)));
 fd.close();
+
+
+# Ref: https://stackoverflow.com/questions/14762181/adding-a-y-axis-label-to-secondary-y-axis-in-matplotlib
+# Ref: https://stackoverflow.com/questions/5484922/secondary-axis-with-twinx-how-to-add-to-legend
+
+ft_x = range(len(lst_libcnr));
+
+import matplotlib.pyplot as plt
+import matplotlib.ticker as ticker
+
+fig, ax1 = plt.subplots();
+ax2 = ax1.twinx();
+
+ax1.plot(ft_x, ft_wns, label="WNS", color="b");
+ax2.plot(ft_x, ft_whs, label="WHS", color="g");
+
+ax1.yaxis.set_minor_locator(ticker.AutoMinorLocator());
+ax2.yaxis.set_minor_locator(ticker.AutoMinorLocator());
+
+ax1.set_ylabel("WNS Time (ns)");
+ax2.set_ylabel("WHS Time (ns)");
+
+ax1.set_xticks(ft_x);
+ax1.set_xticklabels(lst_libcnr, rotation=70);
+ax1.set_xlabel("Corner (.lib)");
+
+fig.legend(loc="lower right");
+
+plt.title("PVT Mutli-Corner Analysis");
+plt.tight_layout();
+plt.savefig("./sta/log/calc_multi_corner_pvt.png");
+plt.show();
