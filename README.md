@@ -1636,7 +1636,7 @@ Goals:
 
 Status:
 
-[1] PVT Corner Summary for rv151_soc @10MHz, [OpenSTA Script](project\hardware\sta\opensta_report_timing.tcl) (230112) <br />
+[1] PVT Corner Summary for rv151_soc @10MHz, [OpenSTA Script](project/hardware/sta/opensta_report_timing.tcl) (230112) <br />
 ![d16s1](reports/220112/rpt-pvt-sta-mc.png)<br />
 
 ------

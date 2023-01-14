@@ -459,7 +459,7 @@ Development Progress (@230107):
 - [x] Organize HDP-RV151 project database in [project](project) directory
 - [x] Draft [Design Report](reports/design_report.md) for HDP-RV151
 
-[1] PVT Corner Summary for rv151_soc @10MHz, [OpenSTA Script](project\hardware\sta\opensta_report_timing.tcl) (230112):
+[1] PVT Corner Summary for rv151_soc @10MHz, [OpenSTA Script](project/hardware/sta/opensta_report_timing.tcl) (230112):
 
 |PVT-CORNER  |WNS      |WHS   |TNS        |
 |------------|---------|------|-----------|
