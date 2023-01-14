@@ -1,6 +1,5 @@
 module uart_receiver #(
     parameter CLOCK_FREQ = 125_000_000,
-    parameter BAUD_RATE = 115_200,
     parameter MIN_BDRT = 9_600,
     parameter BAUD_BITS = $clog2((CLOCK_FREQ+(MIN_BDRT/2)-1) / (MIN_BDRT/2))
 )(
@@ -15,10 +14,6 @@ module uart_receiver #(
 
     input serial_in
 );
-    // See diagram in the lab guide
-    //localparam SYMBOL_EDGE_TIME = CLOCK_FREQ / BAUD_RATE;
-    //localparam SAMPLE_TIME = SYMBOL_EDGE_TIME / 2;
-    //localparam CLOCK_COUNTER_WIDTH= $clog2(SYMBOL_EDGE_TIME);
 
     localparam CLOCK_COUNTER_WIDTH = BAUD_BITS; //with baud_edge input
 
@@ -34,25 +29,14 @@ module uart_receiver #(
 
     //--|Signal Assignments|------------------------------------------------------
 
-    // Goes high at every symbol edge
-    /* verilator lint_off WIDTH */
-    //assign symbol_edge = clock_counter == (SYMBOL_EDGE_TIME - 1);
     assign symbol_edge = clock_counter == (baud_edge - 1); //with baud_edge input
-    /* lint_on */
 
-    // Goes high halfway through each symbol
-    /* verilator lint_off WIDTH */
-    //assign sample = clock_counter == SAMPLE_TIME;
     assign sample = clock_counter == {1'b0, baud_edge[BAUD_BITS-1:1]}; //with baud_edge input
-    /* lint_on */
 
-    // Goes high when it is time to start receiving a new character
     assign start = !serial_in && !rx_running;
 
-    // Goes high while we are receiving a character
     assign rx_running = bit_counter != 4'd0;
 
-    // Outputs
     assign data_out = rx_shift[8:1];
     assign data_out_valid = has_byte && !rx_running;
 
@@ -75,15 +59,17 @@ module uart_receiver #(
     end
 
     //--|Shift Register|----------------------------------------------------------
+
     always @(posedge clk) begin
         if (sample && rx_running) rx_shift <= {serial_in, rx_shift[9:1]};
     end
 
     //--|Extra State For Ready/Valid|---------------------------------------------
-    // This block and the has_byte signal aren't needed in the uart_transmitter
+
     always @ (posedge clk) begin
         if (reset) has_byte <= 1'b0;
         else if (bit_counter == 1 && symbol_edge) has_byte <= 1'b1;
         else if (data_out_ready) has_byte <= 1'b0;
     end
+
 endmodule

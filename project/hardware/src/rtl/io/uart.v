@@ -1,6 +1,5 @@
 module uart #(
     parameter CLOCK_FREQ = 125_000_000,
-    parameter BAUD_RATE = 115_200,
     parameter MIN_BDRT = 9_600,
     parameter BAUD_BITS = $clog2((CLOCK_FREQ+(MIN_BDRT/2)-1) / (MIN_BDRT/2))
 ) (
@@ -30,7 +29,7 @@ module uart #(
 
     uart_transmitter #(
         .CLOCK_FREQ(CLOCK_FREQ),
-        .BAUD_RATE(BAUD_RATE)
+        .MIN_BDRT(MIN_BDRT)
     ) uatransmit (
         .clk(clk),
         .reset(reset),
@@ -43,7 +42,7 @@ module uart #(
 
     uart_receiver #(
         .CLOCK_FREQ(CLOCK_FREQ),
-        .BAUD_RATE(BAUD_RATE)
+        .MIN_BDRT(MIN_BDRT)
     ) uareceive (
         .clk(clk),
         .reset(reset),
@@ -53,4 +52,5 @@ module uart #(
         .data_out_ready(data_out_ready),
         .serial_in(serial_in_reg)
     );
+    
 endmodule

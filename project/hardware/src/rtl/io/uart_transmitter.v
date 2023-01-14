@@ -1,6 +1,5 @@
 module uart_transmitter #(
     parameter CLOCK_FREQ = 125_000_000,
-    parameter BAUD_RATE = 115_200,
     parameter MIN_BDRT = 9_600,
     parameter BAUD_BITS = $clog2((CLOCK_FREQ+(MIN_BDRT/2)-1) / (MIN_BDRT/2))
 )(
@@ -15,10 +14,6 @@ module uart_transmitter #(
 
     output serial_out
 );
-    // See diagram in the lab guide
-    //localparam SYMBOL_EDGE_TIME    = CLOCK_FREQ / BAUD_RATE;
-    //localparam CLOCK_COUNTER_WIDTH = $clog2(SYMBOL_EDGE_TIME);
-
     //with baud_edge input
     localparam CLOCK_COUNTER_WIDTH = BAUD_BITS;
 

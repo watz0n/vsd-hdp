@@ -311,7 +311,6 @@ module rv151_soc #(
     wire uart_tx_data_in_ready;
     uart #(
         .CLOCK_FREQ(CPU_CLOCK_MAX),
-        .BAUD_RATE(BAUD_RATE),
         .MIN_BDRT(MIN_BDRT)
     ) uart (
         .clk(clk),
