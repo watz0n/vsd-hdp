@@ -31,6 +31,11 @@ Quick-Link:<br />
 [Day14](#Day14)<br />
 [Day15](#Day15)<br />
 [Day16](#Day16)<br />
+[Day17](#Day17)<br />
+[Day18](#Day18)<br />
+[Day19](#Day19)<br />
+[Day20](#Day20)<br />
+[Day21](#Day21)<br />
 
 ------
 
@@ -1662,5 +1667,631 @@ Status:
 
 [3] PVT Corner Line-Chart for rv151_soc @10MHz (230114)<br />
 ![d16s2](reports/230114/calc_multi_corner_pvt.png)<br />
+
+------
+
+## Day17
+
+Topic: Inception of open-source EDA, OpenLANE and Sky130 PDK
+
+Goals:
+1. Known the basic Physical Implementation concepts, include RTL-to-GDS flow and IC-Package
+
+Lecture-Notes:
+
+* Package QFN-48
+    * Quad Flat No-lead
+    * Package = Wire-Bond + Chip-Die
+    * Chip-Die = Chip-Core + Pad-ring
+    * Chip-Core = Foundry-IPs + Harden-Macros
+
+* RISCV Architecture
+    * C/Cpp -> Binary Code -> Circuit in Layout
+
+* From SOftware Application to Hardware
+    * App -> Compiler -> Assembler -> Application Binary Code (ELF or EXE)
+
+* Operation-System, Hardware start Application Binary Code from OS fetch from storage device
+    1. Handle IO driver Service
+    2. Memory Management
+    3. Low-Level System Interface (Program Loader)
+
+* OpenLane Overview
+    * Digital ASIC Desgin: RTL IP's + EDA Tools + PDK Data
+    * PDK : Interface between FAB and the designer, Process Design Kit, include:
+        * Process Design Rule: DRC, LVS, PEX
+        * Device Models
+        * Digital Standard Cell Libraries
+        * I/O Libraries
+    * Is 130nm Fast? Yes, Intel P4EE @3.46GHz (Q4'04)
+
+* OpenLane ASIC Flow : (RTL+PDK) -> |SYN| -> |FP+PP| -> |Place| -> |CTS| -> |Route| -> |Sign-Off| -> (GDS-II)
+    * SYN: Synthesis, Convert RTL to circuit from Standard Cell Library (SCL)
+        * Standard Cells have regular layout
+    * FP+PP: Floor-Planning + Power-Planning
+        * Floor-Planning : Partition the chip-die between different IPs, Macros, and I/O Pads
+        * Power-Planning : Share VDD by multiple power pads to power rings/straps (use upper metal layer)
+    * Place: Placement, place the std-cells on floorplan rows, aligned with the pitch
+        * Global Place: IP/Macros may overlapped
+        * Detailed Place: Align to rows/columns definition
+    * CTS: Clock Tree Synthesis, create a clock distribution network
+        * To deliver the clock to all sequential elements
+        * With small intrinsic skew in practical, zero is hard to achieve
+        * Usually a Tree structure (H, X, ...)
+    * Route: Routing, Implement the interconnect using the available metal layers
+        * Metal tracks from a routing grid
+        * Divide and Conquer huge routing grid
+            * Global Routing : Generate Routing Guides
+            * Detailed Routing : Use the routing guides to implement the actual wires
+    * Sign-Off:
+        1. Physical Verifications
+            1. Design Rules Checking (DRC)
+            2. Layout v.s. Schematic (LVS)
+        2. Timing Verifications
+            * Static Timing Analysis (STA)
+
+* OpenLane Introduction:
+    * Started as an Open-Source Flow fro a True Open-Source Tape-Out Experiment (striVe)
+    * Main-Goal: Produce a clean GDS-II with no human intervention flow
+        * `clean` means no LVS violations, no DRC violations, and no Timing violations
+    * Can be used with harden Macros and Chips
+    * Modes of operation: Autonomous or Interactive
+    * Design Space Exploration, find the best setting of flow configuration
+        * Feasible to be used for regression testing (CI)
+
+* OpenLane ASIC Flow:
+    * Synthesis: yosys+abc
+    * Post-Synth STA: OpenSTA
+    * DFT Insertion: Fault DFT
+    * FP + Place + Global-Route + CTS: OpenROAD
+    * Fake Antenna(Ant.) Diode Insertion: OpenROAD
+    * LEC: yosys
+    * Detailed-Route: TritonRoute
+    * Fack Ant. Diode Swapping Script
+    * RC Extraction
+    * Post-Route STA: OpenSTA
+    * Physical Verification: Magic and netgen
+    * GDS2 Streaming: Magic
+
+* OpenROAD: Automated PnR (Place-and-Route)
+    * Floor/Power Planning
+    * End Decoupling Capcitors and Tap-Cells insertion
+    * Placement: Global and Detailed
+    * Post Placement Optimization
+    * Clock-Tree Synthesis (CTS)
+    * Routing: Global and Detailed
+
+* LEC (Logic Equivalence Check)
+    * Verify modified netlist
+        * Post-CTS
+        * Post-Placement Optimization
+    * Formally confirm that the function didn't change after flow modifying the netlist
+
+* Antenna Didoe: Antenna Rules Violation
+    * When a metal wire segment is fabricated, it can act as antenna, especially long-wire
+        * Reactive ion etching causes charge to accumulate on wires
+        * Transister gates can be damaged during fabrication
+    * Solution:
+        1. Bridging attaches a higer layer bridge (Router awareness, hard to achieve)
+        2. Add antenna diode cell to leak away charges, which cell is provided by std-cell library
+    * Preventive Apporach
+        * Add a fake antenna diode next to every cell input after placement
+        * Run the Antenna Checker (Magic) on the routed layout
+        * If checker report a violation on cell input pin, replace the fake diode cell by a real one
+
+* RC Extraction: DEF2SPEF
+* DRC: Magic, and do SPICE extraction from layout
+* LVS: Magic and netgen, extracted spice v.s. verilog netlist
+
+* OpenLane Tutorial:
+    * sky130A/lib.ref/ -> process design libraries information
+    * sky130/lib.tech/ -> technology information for EDA-tools
+
+* OpenLane Operation:
+```
+    $ ./flow.tcl -interactive
+    % package require openlane 0.9
+  # prepare picorv32a environment from <oipenlane>/designs/picorv32a/config.tcl 
+    % prep -design picorv32a
+  # generate "runs" directory -> check runs/<date>_<time>/config.tcl
+    $ run synthesis
+  # check result netlist: runs/<date>_<time>/synthesis/<deisgn>.synthesis.v
+  # check synth-stat report:                /reports/synthesis/yosys_2_stat.rpt
+  # check timing report:                                      /opensta_main.timing.rpt
+```
+
+------
+
+## Day18
+
+Topic: Understand importance of good floorplan vs bad floorplan and introduction to library cells
+
+Goals:
+1. Known the things about Floor-Planning
+2. Known the cell statistics to affect Floor-Planning
+
+Lecture-Notes:
+
+* Utilization Factor and Aspect
+    * Utilization Factor = (Area Occupied by Netlist)/(Total Area of the Core)
+    * Aspect Ratio = (Height of Core)/(Width of Core)
+
+* Pre-placed cells, i.e. Hard-Macro or Block-Box Cells
+    * Arrangement of these IP's in a chip is referred as Floor-Planning
+
+* Define location of pre-placed cells
+
+* De-coupling Capacitors
+    * Alleviate voltage-drop from circuit switches to currput noise-margin limitation
+    * De-couples main voltage supplier to responsible cells
+    * Replenish the decoupling capcitor after circuit switches
+
+* Power-Planning
+    * De-coupling limitation: single voltage source may leakage through multiple de-coupling region
+    * Solution: multiple voltage source, i.e. power mesh
+
+* Pin-Placement
+    * Place pins near the target/source macro/std-cells
+
+* OpenLane Operation
+
+```
+  # openlane/configurations/README.md, floorplan.tcl
+    % run floorplan
+  # FP_IO_MODE (same distribution length or nearnest)
+  # FP_IO_VMETAL N (use metal N+1)
+  # FP_IO_HMETAL M (use metal M+1)
+  # results in <design>/runs/<date>_<time>/logs/floorplan/ioPlacer.log
+  #                                       /config.tcl
+  # DIEAREA in:                           /result/floorplan/<design>.floorplan.def
+
+  # Magic open DEF file
+    $ magic -T sky130A.tech lef read .../merged.lef def read .../<design>.floorplan.def
+```
+
+* Bind netlist with physical cells
+    1. Get cell actual layout
+    2. Get Cell actual timing
+
+* Optimize Placement
+    * Estimate wire length and capcitance, then insert buffer (repeater) to adjust timing
+    * Quick Timing Analysis with ideal clocks
+
+* OpenLane Operation
+
+```
+    % run placement
+  # result in <design>/runs/<date>_<time>/results/placement/
+  # Magic open DEF file
+    $ magic -T sky130A.tech lef read .../merged.lef def read .../<design>.placement.def
+  # Note: power-grid generated before routing
+```
+
+* Cell-Design Flow
+    * Analysis different function, size, Vt lead to corresponding delay, power, area
+    * Cell-Design Input: PDKs
+        * DRC & LVS rules (Tech-File)
+        * SPICE models (SPICE parameters)
+        * User-Defined Spec.
+            1. Cell-Height(Width)
+            2. Supply Voltage
+            3. Metal Layers
+            4. Pin Location
+            5. Drawn Gate-Length
+    * Cell-Deisgn Steps:
+        1. Circuit Design:
+            1. Circuit Function
+            2. PMOS/NMOS Modelling
+        2. Layout Design:
+            1. Desire PMOS/NMOS network graph
+            2. Apply Euler's Path (Go-Through Once) and stick diagram
+        3. Characterization
+            1. Extract to SPICE netlist from layout information
+            2. Software: GUNA
+            3. Timing Threshold Definitions(for Buffer):
+                * slew_low_rise
+                * slew_high_rise
+                * slew_low_fall
+                * slew_high_fall
+                * in_rise
+                * in_fall
+                * out_rist
+                * out_fall
+            4. Propagation Delay:
+                * Rise: out_rise-in_rise
+                * Fall: out_fall-in_fall
+            5. Transition Time:
+                * Rise: slew_high_rise-slew_low_rise
+                * Fall: slew_low_fall-slew_high_fall
+    * Cell-Design Output:
+        1. CDL (Circuit Description Language)
+        2. GDS-II, LEF, Extraced SPICE Netlist
+        3. Timing, Noise, Power, .libs, Function
+
+------
+
+## Day19
+
+Topic: Design and characterize one library cell using Magic Layout tool and ngspice
+
+Goals:
+1. CMOS Process Introduction
+2. Cell-Design for SPICE Extration 
+
+Lecture-Notes:
+
+* OpenLane Operation
+
+```
+    # make io-placer stack as std-cells
+    %set ::env(FP_IO_MODE) 2
+    %run floorplan
+```
+
+* 16-Mask CMOS Process
+    1. Select a substract (P-type, high resistivity (5~50ohms), doping level(`10**13 cm**2`), orientation(100))
+        * Substract doping should be less than `well` doping
+    2. Create active region for transistors
+        * ~40nm of SiO2 + ~80nm of Si3N4 + ~1um Photo-Resist
+        * Mask1 + UV-Light
+        * Washed out + Si3N4 Etched
+        * Photo-Resist Chemically Removed, residue SI3N4and SiO2
+        * Placed in oxidation furnace, field of SiO2 is grownn for isolation area
+            * LOCOS, local oxidation of silicon
+        * Si3N4 stripped by using hot phosphoric acid
+    3. N-Well and P-Well Formation
+        * Photo-Resist + Mask2 + UV-Light + Wash-OUt
+        * Ion Implantation (Boron, ~200KeV), formating P-Well + Si3N4 etched
+        * Photo-Resist + Mask3 + UV-Light + Wash-Out
+        * Ion Implantation (Phosphorous, ~400KeV), formating N-Well + Si3N4 etched
+        * High Temperature Furnace, drive-in diffusion
+    4. Formation of `Gate` (Na(doping concentration), Cox(oxide capcitance)) -> Control Vt
+        * Photo-Resist + Mask4
+        * Ion Implantation (Boron, ~60KeV) on P-Well Region (P-Layer)
+        * Photo-Resist + Mask5
+        * Ion Implantation (Arsenic) on N-Well Region (N-Layer)
+        * Origional Oxide etched/stripped by using dilute hydrofluoric (HF) solution
+        * Re-grown high quality oxide layer (~10um thin), remove defected by process
+        * ~0.4um polysilicon layer
+        * Photo-Resist + Mask6 to mark `Gate` area
+        * Wash-Out polysilicon with UV-Light
+    5. Lightly Doped Drain (LDD) Formation
+        * Photo-Resist + Mask7, Phosphorous(lightly doped) in P-Well to form N-implant region around `Gate`
+        * Photo-Resist + Mask8, Boron(lightly doped) in N-Well to form P-implant region around `Gate`
+        * ~0.1um Si3N4 or SiO2 + Plasma anisotropic etching, add side-wall spacer
+    6. Source and Drain Formation
+        * Photo-Resist + Mask9, Arsenic(75KeV, N+ implant) in P-Well Region, enhance LDD region
+        * Photo-Resist + Mask10, Boron(50KeV, P+ implant) in N-Well Region, enhance LDD region
+        * High Temperature furnace, high temperature annealing
+    7. Form contacts and interconnections (local)
+        * Etch thin oxide in HF Solution
+        * Deposit titanium(very low resistance) on wafer surface, using sputtering
+            * sputtering: Argon(Ar+) gas to smash Ti to spreading on substrate
+        * Wafer heated at about 650~700 C-degree, with N2 ambient for 60 secs, result low resistant TiSi2 (low resistant from SiO2 on `Gate`) and TiN (local-layer)
+        * Photo-Resist + Mask11, form local TiN connections
+        * TiN is etched using RCA cleaning, form required local connections under mask11
+    8. Higher Level Metal Formation
+        * 1um of SiO2, which doped with phosphorous or boron, deposited on wafer surface
+        * Chemical mechanical polishing (CMP) technique for planarizing wafer surface
+        * Photo-Resist + Mask12, etch vertical contact path to local TiN
+        * Aluminum (Al) layer deposition
+        * Photo-Resist + Mask13, then Plasma-Etch Al layer
+        * SiO2 surface deposit + Mask14 for contact holes + TiN with Tungsten + Al-layer
+        * repeat to Mask15, final with dielectric (Si3N4)  to protect the chip
+        * Use Mask16 to etch contact hole to bond-wire connect pin
+
+* Lab on Extracting SPICE form Layout
+
+```
+  # in `vsdstdcelldesign`
+    $ magic -T sky130A.tech sky130_inv.mag &
+  # Technology LEF: only available metal layer, via/contact information and DRC for placer and router
+  # Extract SPICE in magic tkcon:
+    % extract all -> sky130_inv.ext
+    % ext2spice cthresh 0 rthresh 0
+    % ext2spice -> generate sky130_inv.spice
+```
+
+* Lab to modify SPICE file:
+
+```
+  # change scale
+    .option scale=1000 -> scale=0.01u
+  # add model library
+    .include ./libs/pshort.lib
+    .include ./libs/nshort.lib
+  # modify model name
+    pshort -> pshort_model
+    nshort -> nshort_model
+  # add VDD/GND/Vin
+    VDD VPWR 0 3.3V
+    VSS VGND 0 0V
+    Va A VGND PULSE(0V 3.3V 0 0.1ns 0.1ns 2ns 4ns)
+  # add analysis command
+    .tran 1n 20n
+    .control
+    run
+    .endc
+    .end
+  # perform ngspice simulation
+  $ ngspice sky130_inv.spice
+  > plot y vs tims a
+```
+
+* Lab-Exercise: Magic DRC
+    * Website: opencircuitdesign.com/magic/
+        * Technology File: Magic Technology File Format
+            1. DRC section
+            2. Cifoutput section 
+    * Lab-File: http://opencircuitdesign.com/open_pdks/archive/drc_test.tgz
+
+```
+    $ magic -d XR
+  # "Open" -> "met3.mag", errors in SkyWater SKY130 Process Design Rules, Periphery Rules
+  # fix poly.9 error => poly and polyres are too close
+  # reload magic tech file
+    % tech load sky130A.tech
+```
+
+------
+
+## Day20
+
+Topic: Pre-layout timing analysis and importance of good clock tree
+
+Goals:
+1. Known Routing Grid informations
+2. How to add new std-cell in OpenLane
+3. How Clock-Tree Synthesis works
+
+Lecture-Notes:
+
+* Lab: convert grid info to track info
+    * LEF file: reduced GDS information, only contains ports(power, ground, input, output) for digital PnR flow.
+    * Guide-Line
+        1. input/output port must line-up on the intersection of horizontal/vertical tracks
+        2. width/height of standard cell should be multiple of horizontal/vertical pitch
+
+```
+  # pdks/sky130A/libs.tech/popenlane/sky130_fd_sc_hd/tracks.info
+    li1 X 0.23 0.46 # Horizontal Track(0.23) Pitch(0.46)
+    li1 Y 0.17 0.34 # Vertical   Track(0.17) Pitch(0.34)
+  # adjust magic grid display
+    % grid 0.46um 0.34um 0.23um 0.17um
+```
+
+* Lab: generate LEF file
+
+```
+    $ magic -T sky130A.tech sky130_vsdinv.mag &
+    % lef write -> sky130_vsdinv.lef
+  # Points in LEF File: SIGNAL/POWER, INPUT/OUTPUT
+```
+
+* Lab: include new cell in synthesis
+    1. copy sky130_vsdinv.lef to picorv32a/src
+    2. add include new lef script in my_base.sdc
+    3. apply timing .lib: sky130_fd_sc_hd__fast/slow/typical.lib
+    4. modify config.tcl
+
+```
+  # openlane
+    % package require openlane 0.9
+    % prep -design picorv32a -tag <date>_<time> -overwrite
+    % set_left ...
+    % add_lefs -src ...
+    % run synthesis
+  # yosys summary contain sky130_vsdinv
+```
+
+* Introduction to delay tables
+    * Power Aware CTS -> Apply clock-gating cells to disable circuit switching while gated
+    * Observation:
+        * At every level, each node driving same load
+        * Identical buffer at same level
+    * Practical:
+        * Apply delay table to adjust buffer performance to meet timing
+    * If input-slew/output-load in the middle of table elements, derive result by linear approximation
+
+* Lab: fix slack from new vsdinv cell
+    * SYNTH_STRATEGY = 1:timing/2:balance/3:area
+
+```
+    % set ::env(SYNTH_STRATEGY) 1
+    % set ::env(SYNTH_BUFFERING) 1
+    % set ::env(SYNTH_SIZING) 1
+    % run synthesis
+    % run floorplan
+    % run placement
+
+    $ magic -T sky130A.tech lef read .../merged.lef def read .../<design>.placement.def
+  # find sky130_vsdinv cell
+```
+
+* Timing Analysis (Ideal Clock)
+    * Jitter: clock source variation, modelling as "uncertainty"
+    * T:period, Tc: combinational-delay, Ts: Setup-Time, Tq: C-to-Q delay, Tsu: Jitter(uncertainty)
+    * Ideal-Clock: Tc < T-Ts-Tq
+    * With-Jitter: Tc < T-Ts-Tq-Tsu
+
+* Lab: Post-Synth Timing Analysis
+    * pre_sta.conf -> OpenSTA analysis script
+    * my_base.sdc -> I/O, Clock adn slew/load definitions
+        * ::env(SYNTH_DRIVING_CELL) sky130_fd_sc_hd__inv_8
+        * ::env(SYNTH_DRIVING_CELL_PIN) Y
+        * ::env(SYNTH_CAP_LOAD) 17.65 (fF) <- from synthesis lib, find pin:A capcitance
+
+```
+    $ sta pre_sta.conf
+  # optimize synthesis to reduce setup violation
+    % set ::env(SYNTH_MAX_FANOUT) 4
+    % run synthesis
+    % report_net -connections <net-name> => Driver-Pins/Load-Pins
+    % replace <inst-name> <lib-cell-name>
+    % report_checks -fields {net cap slew input_pins} -digits 4
+```
+
+* Clock-Tree Synthesis
+    * Direct/Shortest Route to clock-pin: hard to balance skew
+    * H-Tree : Got to the mid-point of clock-pins, then spread to sub-group of clock-pins, till touch all clock pin
+        * Minimize skew for add balanced clock buffer
+    
+* Clock Net Shielding
+    * Clock Net got glitch without shielding, from huge coupling capacitance by PWR/GND (high overlapping area)
+    * Clock Net Crosstalk affect normal transition slew-rate, increase clock net delay
+
+* Lab: Steps to run CTS using TritonCTS
+
+```
+    % write_verilog <design>_eco.v
+    % run floorplan
+    % run placement
+    % run cts
+  # generate <design>_synthesis_cts.v
+  # <openlane-root>/scripts/tcl_commands/cts.tcl
+  #                /scripts/openroad/or_cts.tcl
+  # ::env(CTS_ROOT_BUFFER) => sky130_fd_sc_hd__clkbuf_16
+  # ::env(CTS_MAX_CAP) => CTS_ROOT_BUFFER output port load-cap
+```
+
+* Timing Analysis (Read Clock)
+    * Skew: Physical buffer unbalance between sequential logics
+    * Td1: Clock-Net to launch FF clock-pin delay
+    * Td2: Clock-Net to capture FF clock-pin delay
+    * H: capture FF hold-time
+    * Setup Analysis: (Tc+Td1) < (T+Td2-Ts-Tsu)
+    * Slack (setup) : Data Require Time (T+Td2-Ts-Tsu) - Data Arrival Time (Tc+Td1)
+    * Hold Analysis: (Tc+Td1) > (H + Td2)
+    * Slack (hold) : Data Arrival Time (Tc+Td1) - Data Require Time (H + Td2)
+
+* Lab: OpenLane analysis post-CTS timing
+
+```
+    % openroad -> use same env variable in openlane
+    % read_lef .../merged.lef
+    % read_def .../<design>.cts.lef
+    % write_db <design>_cts.db
+    % read_liberty -max $::env(LIB_MAX)
+    % read_liberty -min $::env(LIB_MIN)
+    % link_design <design-top>
+    % read_sdc .../my_Base.sdc
+    % set_propagated_clock [all_clocks]
+    $ report_checks -path_delay min-max -format full_clock_expanded -digits 4
+  # upper command produce false analysis from ff/ss analysis by tt synthesis
+```
+
+* Lab: Analysis TT timing
+
+```
+    % exit -> back to openlane
+    % openroad
+    % read_db <design>_cts.db
+    % read_liberty $::env(LIB_SYNTH_COMPLETE)
+    % link_design <design-top>
+    % read_sdc .../my_Base.sdc
+    % set_propagated_clock [all_clocks]
+    $ report_checks -path_delay min-max -format full_clock_expanded -digits 4
+```
+
+* Lab: Change Clock Buffer Effect
+
+```
+    % set ::env(CTS_CLK_BUFFER_LIST) [ lreplace $::env(CTS_CLK_BUFFER_LIST) 0 0 ]
+    % set ::env(CURRENT_DEF) .../placement/<design>.placement.def -> back to placement.def
+    % run cts
+  # Timing Report for skew
+    % report_clock_skew -hold
+    % report_clock_skew -setup
+  # add back to clock buffer list
+    % set ::env(CTS_CLK_BUFFER_LIST) [ linsert $::env(CTS_CLK_BUFFER_LIST) 0 sky130_..._clkbuf_1 ]
+```
+
+------
+
+## Day21
+
+Topic: Final steps for RTL2GDS
+
+Goals:
+1. Known basic of routing algorithm
+2. Generate Power-Delivery Network
+3. Extract SPEF from post-route netlist
+
+Lecture-Notes:
+
+* Maze Routing - Lee's Algorithm (Lee 1961)
+    * Routing: Connection of two points in shortest path
+    * No qblique routing path, only up,down,left,right in Lee's algorithm
+
+* DRC Clean
+    * Wire Width (at least)
+    * Wire Pitch (distance from middle of lines)
+    * Wire Spacing (space between nearest wire border)
+    * Via Width (contact min width)
+    * Via Spacing
+
+* Parasitic Extraction
+    * SPEF format for wire's RC information
+
+* Lab: Steps to build power distribution network
+
+```
+    % prep -design <design> -tag <date>_<time> -> apply config.tcl and DEF file
+    % gen_pdn
+  # std-cell Rails: Width: 0.480, Pitch: 2.720
+    % echo $::env(CURRENT_DEF) -> .../floorplan/pdn.def
+```
+
+* Lab: OpenLane Route
+
+```
+    % run routing
+  # routing parameters
+  # GLB_RT_MAXLAYER
+  # GLB_RT_ADJUSTMENT
+  # ROUTING_STRATEGY: 0 ~ 3, 0: less optimize, but drc-clean
+```
+
+* Routing in OpenLane/OpenRoad
+    1. FastRoute (Global)
+    2. TritonRoute (Detailed)
+
+* TritonRoute
+    1. honor the preproicessed route guide (from fast-route)
+    2. assume route guide satisfy inter-guide connectivity
+    3. MILP-based panel-routing scheme
+        1. intra-layer parallel
+        2. inter-layer sequential
+
+* Preprocessed route guide
+    * intial global route guide only have 1 layer information, modify to multi-layer guides
+        * should have unit width
+        * should be in the preferred direction in each layer (e.g. M1 prefer vertical, M2 prefer horizontal)
+
+* Inter-guide connectivity:
+    * Two route guide are connected if:
+        1. They are on the same metal layer with touching edges
+        2. they are on neighboring metal layer with non-zero vertically overlapped area
+    * Unconnected terminal should have it's pin shape overlapped by a route guide
+
+* Detailed Route Problem Statement:
+    * Input: LEF, DEF, Preprocessed route guide
+    * Output: Detailed routing solution with optimized wire-length and via-count
+    * Constraint: Route guide honoring, connectivity constraint and design rules
+    * Handling Connectivity: minimized routing resource usage in routing guide
+    * Access Point (AP) : An on-grid point on the metal layer of the route guide, target lower/upper layer segment, pins and I/O ports
+    * Access Point Cluster (APC) : An union of all APs from same sources
+    * .../touting/fastroute.guide -> `eoi[<number>]` -> net
+
+* Lab: SPEF-EXTRACTOR
+
+```
+    $ .../SPEF_EXTRACTOR/main.py .../merged.lef .../<design>.def
+  # generated <design>.spef in <design>.def directory
+    
+  # before routing netlist
+  # <design>/runs/.../results/synthesis/<design>.synthesis_diode.v -> inserted antenna diode
+  #                                    /<design>.synthesis_preroute.v -> before route netlist
+```
 
 ------
