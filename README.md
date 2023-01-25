@@ -1800,6 +1800,11 @@ Lecture-Notes:
   # check timing report:                                      /opensta_main.timing.rpt
 ```
 
+[1] OpenLane Prepare Design<br />
+![ol_p01](images/lab_ol_p01.png)<br />
+[2] OpenLane Timing Report<br />
+![ol_p02](images/lab_ol_p02.png)<br />
+
 ------
 
 ## Day18
@@ -1849,6 +1854,14 @@ Lecture-Notes:
     $ magic -T sky130A.tech lef read .../merged.lef def read .../<design>.floorplan.def
 ```
 
+[1] OpenLane Placement<br />
+> FP_IO_HMETAL/FP_IO_VMETAL has been deprecated, as [OpenLane Doc](https://openlane.readthedocs.io/en/latest/reference/configuration.html#deprecated-i-o-layer-variables)<br />
+![ol_p03](images/lab_ol_p03.png)<br />
+
+[2] OpenLane Floor-Plane, Horizontal I/O Metal-Layer<br />
+> Apply FP_IO_HLAYER/FP_IO_VLAYER as new I/O Metal-Layer statement<br />
+![ol_p04](images/lab_ol_p04.png)<br />
+
 * Bind netlist with physical cells
     1. Get cell actual layout
     2. Get Cell actual timing
@@ -1866,6 +1879,9 @@ Lecture-Notes:
     $ magic -T sky130A.tech lef read .../merged.lef def read .../<design>.placement.def
   # Note: power-grid generated before routing
 ```
+
+[3] OpenLane Placement<br />
+![ol_p05](images/lab_ol_p05.png)<br />
 
 * Cell-Design Flow
     * Analysis different function, size, Vt lead to corresponding delay, power, area
@@ -1992,6 +2008,9 @@ Lecture-Notes:
     % ext2spice -> generate sky130_inv.spice
 ```
 
+[1] sky130_inv spice extraction<br />
+![sd_p01](images/lab_sd_p01.png)<br />
+
 * Lab to modify SPICE file:
 
 ```
@@ -2001,8 +2020,8 @@ Lecture-Notes:
     .include ./libs/pshort.lib
     .include ./libs/nshort.lib
   # modify model name
-    pshort -> pshort_model
-    nshort -> nshort_model
+    pshort -> pshort_model.0
+    nshort -> nshort_model.0
   # add VDD/GND/Vin
     VDD VPWR 0 3.3V
     VSS VGND 0 0V
@@ -2017,6 +2036,11 @@ Lecture-Notes:
   $ ngspice sky130_inv.spice
   > plot y vs tims a
 ```
+
+[2] Modified sky130_inv.spice<br />
+![sd_p02](images/lab_sd_p02.png)<br />
+[3] Vin and Vout Timing Diagram<br />
+![sd_p03](images/lab_sd_p03.png)<br />
 
 * Lab-Exercise: Magic DRC
     * Website: opencircuitdesign.com/magic/
@@ -2068,11 +2092,16 @@ Lecture-Notes:
   # Points in LEF File: SIGNAL/POWER, INPUT/OUTPUT
 ```
 
+[1] Export LEF file from sky130_vsdinv.mag<br />
+![ol_p06](images/lab_ol_p06.png)<br />
+
 * Lab: include new cell in synthesis
     1. copy sky130_vsdinv.lef to picorv32a/src
     2. add include new lef script in my_base.sdc
     3. apply timing .lib: sky130_fd_sc_hd__fast/slow/typical.lib
     4. modify config.tcl
+
+> Note: Openlane changed config.tcl to config.json in latest version 
 
 ```
   # openlane
@@ -2083,6 +2112,14 @@ Lecture-Notes:
     % run synthesis
   # yosys summary contain sky130_vsdinv
 ```
+
+[2] Modify config.json from Lab statement<br />
+![ol_p07](images/lab_ol_p07.png)<br />
+[3] Perform synthesis with new config.json<br />
+![ol_p08](images/lab_ol_p08.png)<br />
+[4] Checked synthesis result with sky130_vsdinv<br />
+![ol_p09](images/lab_ol_p09.png)<br />
+
 
 * Introduction to delay tables
     * Power Aware CTS -> Apply clock-gating cells to disable circuit switching while gated
@@ -2097,9 +2134,6 @@ Lecture-Notes:
     * SYNTH_STRATEGY = 1:timing/2:balance/3:area
 
 ```
-    % set ::env(SYNTH_STRATEGY) 1
-    % set ::env(SYNTH_BUFFERING) 1
-    % set ::env(SYNTH_SIZING) 1
     % run synthesis
     % run floorplan
     % run placement
@@ -2107,6 +2141,9 @@ Lecture-Notes:
     $ magic -T sky130A.tech lef read .../merged.lef def read .../<design>.placement.def
   # find sky130_vsdinv cell
 ```
+
+[5] Found sky130_vsdinv in placement DEF<br />
+![ol_p10](images/lab_ol_p10.png)<br />
 
 * Timing Analysis (Ideal Clock)
     * Jitter: clock source variation, modelling as "uncertainty"
@@ -2124,12 +2161,24 @@ Lecture-Notes:
 ```
     $ sta pre_sta.conf
   # optimize synthesis to reduce setup violation
+    % set ::env(SYNTH_STRATEGY) 1
+    % set ::env(SYNTH_BUFFERING) 1
+    % set ::env(SYNTH_SIZING) 1
     % set ::env(SYNTH_MAX_FANOUT) 4
     % run synthesis
     % report_net -connections <net-name> => Driver-Pins/Load-Pins
     % replace <inst-name> <lib-cell-name>
     % report_checks -fields {net cap slew input_pins} -digits 4
 ```
+
+[6] Change Driving Cell and Max Fanout<br />
+![ol_p11](images/lab_ol_p11.png)<br />
+
+[7] Check driving cell changes in STA log, right column is changed result<br />
+![ol_p12](images/lab_ol_p12.png)<br />
+
+[8] Check slack changes in STA log, right column is changed result<br />
+![ol_p13](images/lab_ol_p13.png)<br />
 
 * Clock-Tree Synthesis
     * Direct/Shortest Route to clock-pin: hard to balance skew
@@ -2153,6 +2202,9 @@ Lecture-Notes:
   # ::env(CTS_ROOT_BUFFER) => sky130_fd_sc_hd__clkbuf_16
   # ::env(CTS_MAX_CAP) => CTS_ROOT_BUFFER output port load-cap
 ```
+
+[9] Run TritonCTS<br />
+![ol_p14](images/lab_ol_p14.png)<br />
 
 * Timing Analysis (Read Clock)
     * Skew: Physical buffer unbalance between sequential logics
@@ -2192,6 +2244,9 @@ Lecture-Notes:
     % set_propagated_clock [all_clocks]
     $ report_checks -path_delay min-max -format full_clock_expanded -digits 4
 ```
+
+[10] STA report after CTS, timing clean<br />
+![ol_p15](images/lab_ol_p15.png)<br />
 
 * Lab: Change Clock Buffer Effect
 
@@ -2241,6 +2296,11 @@ Lecture-Notes:
   # std-cell Rails: Width: 0.480, Pitch: 2.720
     % echo $::env(CURRENT_DEF) -> .../floorplan/pdn.def
 ```
+[1] Perform Power-Delivery Network (PDN)<br />
+![ol_p16](images/lab_ol_p16.png)<br />
+
+[2] DEF file after performing PDN<br />
+![ol_p17](images/lab_ol_p17.png)<br />
 
 * Lab: OpenLane Route
 
@@ -2251,6 +2311,9 @@ Lecture-Notes:
   # GLB_RT_ADJUSTMENT
   # ROUTING_STRATEGY: 0 ~ 3, 0: less optimize, but drc-clean
 ```
+
+[3] Run Routing, but ROUTING_STRATEGY has been deprecated in new OpenLane<br />
+![ol_p18](images/lab_ol_p18.png)<br />
 
 * Routing in OpenLane/OpenRoad
     1. FastRoute (Global)
@@ -2293,5 +2356,11 @@ Lecture-Notes:
   # <design>/runs/.../results/synthesis/<design>.synthesis_diode.v -> inserted antenna diode
   #                                    /<design>.synthesis_preroute.v -> before route netlist
 ```
+
+[4] Extract SPEF by `run_parasitics_sta` command in new OpenLane<br />
+![ol_p19](images/lab_ol_p19.png)<br />
+
+[5] Nominal Corner SPEF from OpenRCX in new OpenLane<br />
+![ol_p20](images/lab_ol_p20.png)<br />
 
 ------
