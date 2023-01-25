@@ -67,9 +67,9 @@ $ sudo make install
 
 Progress Images:
 
-![d0t1i1](https://raw.githubusercontent.com/watz0n/vsd-hdp/main/images/day0-tool1-yosys1.png)<br />
-![d0t1i2](https://raw.githubusercontent.com/watz0n/vsd-hdp/main/images/day0-tool1-yosys2.png)<br />
-![d0t1i3](https://raw.githubusercontent.com/watz0n/vsd-hdp/main/images/day0-tool1-yosys3.png)<br />
+![d0t1i1](images/day0-tool1-yosys1.png)<br />
+![d0t1i2](images/day0-tool1-yosys2.png)<br />
+![d0t1i3](images/day0-tool1-yosys3.png)<br />
 
 ### Tool: OpenSTA
 
@@ -93,10 +93,10 @@ $ sudo make install
 
 Progress Images:
 
-![d0t2i1](https://raw.githubusercontent.com/watz0n/vsd-hdp/main/images/day0-tool2-opensta1.png)<br />
-![d0t2i2](https://raw.githubusercontent.com/watz0n/vsd-hdp/main/images/day0-tool2-opensta2.png)<br />
-![d0t2i3](https://raw.githubusercontent.com/watz0n/vsd-hdp/main/images/day0-tool2-opensta3.png)<br />
-![d0t2i4](https://raw.githubusercontent.com/watz0n/vsd-hdp/main/images/day0-tool2-opensta4.png)<br />
+![d0t2i1](images/day0-tool2-opensta1.png)<br />
+![d0t2i2](images/day0-tool2-opensta2.png)<br />
+![d0t2i3](images/day0-tool2-opensta3.png)<br />
+![d0t2i4](images/day0-tool2-opensta4.png)<br />
 
 ### Tool: ngspice
 
@@ -128,9 +128,9 @@ $ sudo make install
 
 Progress Images:
 
-![d0t3i1](https://raw.githubusercontent.com/watz0n/vsd-hdp/main/images/day0-tool3-ngspice1.png)<br />
-![d0t3i2](https://raw.githubusercontent.com/watz0n/vsd-hdp/main/images/day0-tool3-ngspice2.png)<br />
-![d0t3i3](https://raw.githubusercontent.com/watz0n/vsd-hdp/main/images/day0-tool3-ngspice3.png)<br />
+![d0t3i1](images/day0-tool3-ngspice1.png)<br />
+![d0t3i2](images/day0-tool3-ngspice2.png)<br />
+![d0t3i3](images/day0-tool3-ngspice3.png)<br />
 
 ------
 
@@ -174,9 +174,9 @@ $ sudo make install
 
 Progress Images:
 
-![d1t4i1](https://raw.githubusercontent.com/watz0n/vsd-hdp/main/images/day1-tool4-iverilog1.png)<br />
-![d1t4i2](https://raw.githubusercontent.com/watz0n/vsd-hdp/main/images/day1-tool4-iverilog2.png)<br />
-![d1t4i3](https://raw.githubusercontent.com/watz0n/vsd-hdp/main/images/day1-tool4-iverilog3.png)<br />
+![d1t4i1](images/day1-tool4-iverilog1.png)<br />
+![d1t4i2](images/day1-tool4-iverilog2.png)<br />
+![d1t4i3](images/day1-tool4-iverilog3.png)<br />
 
 ### Tool: gtkwave
 
@@ -189,7 +189,7 @@ $ sudo apt install libcanberra-gtk-module libcanberra-gtk3-module gtkwave
 
 Progress Images:
 
-![d1t5i1](https://raw.githubusercontent.com/watz0n/vsd-hdp/main/images/day1-tool5-gtkwave1.png)<br />
+![d1t5i1](images/day1-tool5-gtkwave1.png)<br />
 
 
 ### Day1-Lab1: Logic Cell Simulation
@@ -204,7 +204,7 @@ $ gtkwave tb_good_mux.vcd
 
 Progress Images:
 
-![d1l1p1](https://raw.githubusercontent.com/watz0n/vsd-hdp/main/images/day1-lab1-p1.png)<br />
+![d1l1p1](images/day1-lab1-p1.png)<br />
 
 ### Day1-Lab2: Logic Cell Synthesis
 
@@ -226,9 +226,9 @@ $ yosys
 
 Progress Images:
 
-![d1l2p1](https://raw.githubusercontent.com/watz0n/vsd-hdp/main/images/day1-lab2-p1.png)<br />
-![d1l2p2](https://raw.githubusercontent.com/watz0n/vsd-hdp/main/images/day1-lab2-p2.png)<br />
-![d1l2p3](https://raw.githubusercontent.com/watz0n/vsd-hdp/main/images/day1-lab2-p3.png)<br />
+![d1l2p1](images/day1-lab2-p1.png)<br />
+![d1l2p2](images/day1-lab2-p2.png)<br />
+![d1l2p3](images/day1-lab2-p3.png)<br />
 
 ------
 
@@ -262,8 +262,8 @@ $ yosys
 
 Progress Images:
 
-![d2l1p1](https://raw.githubusercontent.com/watz0n/vsd-hdp/main/images/day2-lab1-p1.png)<br />
-![d2l1p2](https://raw.githubusercontent.com/watz0n/vsd-hdp/main/images/day2-lab1-p2.png)<br />
+![d2l1p1](images/day2-lab1-p1.png)<br />
+![d2l1p2](images/day2-lab1-p2.png)<br />
 
 ### Day2-Lab2: Flip-Flop (Sequential Logic) Simulation
 
@@ -282,9 +282,9 @@ $ gtkwave tb_dff_syncres.vcd
 
 Progress Images:
 
-![d2l2p1](https://raw.githubusercontent.com/watz0n/vsd-hdp/main/images/day2-lab2-p1.png)<br />
-![d2l2p2](https://raw.githubusercontent.com/watz0n/vsd-hdp/main/images/day2-lab2-p2.png)<br />
-![d2l2p3](https://raw.githubusercontent.com/watz0n/vsd-hdp/main/images/day2-lab2-p3.png)<br />
+![d2l2p1](images/day2-lab2-p1.png)<br />
+![d2l2p2](images/day2-lab2-p2.png)<br />
+![d2l2p3](images/day2-lab2-p3.png)<br />
 
 ### Day2-Lab3: Flip-Flop (Sequential Logic) Synthesis
 
@@ -311,9 +311,9 @@ $ yosys
 
 Progress Images:
 
-![d2l3p1](https://raw.githubusercontent.com/watz0n/vsd-hdp/main/images/day2-lab3-p1.png)<br />
-![d2l3p2](https://raw.githubusercontent.com/watz0n/vsd-hdp/main/images/day2-lab3-p2.png)<br />
-![d2l3p3](https://raw.githubusercontent.com/watz0n/vsd-hdp/main/images/day2-lab3-p3.png)<br />
+![d2l3p1](images/day2-lab3-p1.png)<br />
+![d2l3p2](images/day2-lab3-p2.png)<br />
+![d2l3p3](images/day2-lab3-p3.png)<br />
 
 ### Day2-Lab4: Interesting Optimization
 
@@ -335,8 +335,8 @@ $ yosys
 
 Progress Images:
 
-![d2l4p1](https://raw.githubusercontent.com/watz0n/vsd-hdp/main/images/day2-lab4-p1.png)<br />
-![d2l4p2](https://raw.githubusercontent.com/watz0n/vsd-hdp/main/images/day2-lab4-p2.png)<br />
+![d2l4p1](images/day2-lab4-p1.png)<br />
+![d2l4p2](images/day2-lab4-p2.png)<br />
 
 ------
 
@@ -390,12 +390,12 @@ $ yosys
 
 Progress Images:
 
-![d3l1p1](https://raw.githubusercontent.com/watz0n/vsd-hdp/main/images/day3-lab1-p1.png)<br />
-![d3l1p2](https://raw.githubusercontent.com/watz0n/vsd-hdp/main/images/day3-lab1-p2.png)<br />
-![d3l1p3](https://raw.githubusercontent.com/watz0n/vsd-hdp/main/images/day3-lab1-p3.png)<br />
-![d3l1p4](https://raw.githubusercontent.com/watz0n/vsd-hdp/main/images/day3-lab1-p4.png)<br />
-![d3l1p5](https://raw.githubusercontent.com/watz0n/vsd-hdp/main/images/day3-lab1-p5.png)<br />
-![d3l1p6](https://raw.githubusercontent.com/watz0n/vsd-hdp/main/images/day3-lab1-p6.png)<br />
+![d3l1p1](images/day3-lab1-p1.png)<br />
+![d3l1p2](images/day3-lab1-p2.png)<br />
+![d3l1p3](images/day3-lab1-p3.png)<br />
+![d3l1p4](images/day3-lab1-p4.png)<br />
+![d3l1p5](images/day3-lab1-p5.png)<br />
+![d3l1p6](images/day3-lab1-p6.png)<br />
 
 ### Day3-Lab2: Sequential Logic Optimization - Simulation
 
@@ -411,8 +411,8 @@ $ gtkwave tb_dff_const2.vcd
 
 Progress Images:
 
-![d3l2p1](https://raw.githubusercontent.com/watz0n/vsd-hdp/main/images/day3-lab2-p1.png)<br />
-![d3l2p2](https://raw.githubusercontent.com/watz0n/vsd-hdp/main/images/day3-lab2-p2.png)<br />
+![d3l2p1](images/day3-lab2-p1.png)<br />
+![d3l2p2](images/day3-lab2-p2.png)<br />
 
 ### Day3-Lab3: Sequential Logic Optimization - Synthesis
 
@@ -433,10 +433,10 @@ $ yosys
 
 Progress Images:
 
-![d3l3p1](https://raw.githubusercontent.com/watz0n/vsd-hdp/main/images/day3-lab3-p1.png)<br />
-![d3l3p2](https://raw.githubusercontent.com/watz0n/vsd-hdp/main/images/day3-lab3-p2.png)<br />
-![d3l3p3](https://raw.githubusercontent.com/watz0n/vsd-hdp/main/images/day3-lab3-p3.png)<br />
-![d3l3p4](https://raw.githubusercontent.com/watz0n/vsd-hdp/main/images/day3-lab3-p4.png)<br />
+![d3l3p1](images/day3-lab3-p1.png)<br />
+![d3l3p2](images/day3-lab3-p2.png)<br />
+![d3l3p3](images/day3-lab3-p3.png)<br />
+![d3l3p4](images/day3-lab3-p4.png)<br />
 
 ### Day3-Lab4: Stack Flip-Flop - Simulation
 
@@ -455,9 +455,9 @@ $ gtkwave tb_dff_const5.vcd
 
 Progress Images:
 
-![d3l4p1](https://raw.githubusercontent.com/watz0n/vsd-hdp/main/images/day3-lab4-p1.png)<br />
-![d3l4p2](https://raw.githubusercontent.com/watz0n/vsd-hdp/main/images/day3-lab4-p2.png)<br />
-![d3l4p3](https://raw.githubusercontent.com/watz0n/vsd-hdp/main/images/day3-lab4-p3.png)<br />
+![d3l4p1](images/day3-lab4-p1.png)<br />
+![d3l4p2](images/day3-lab4-p2.png)<br />
+![d3l4p3](images/day3-lab4-p3.png)<br />
 
 ### Day3-Lab5: Stack Flip-Flop - Synthesis
 
@@ -484,9 +484,9 @@ $ yosys
 
 Progress Images:
 
-![d3l5p1](https://raw.githubusercontent.com/watz0n/vsd-hdp/main/images/day3-lab5-p1.png)<br />
-![d3l5p2](https://raw.githubusercontent.com/watz0n/vsd-hdp/main/images/day3-lab5-p2.png)<br />
-![d3l5p3](https://raw.githubusercontent.com/watz0n/vsd-hdp/main/images/day3-lab5-p3.png)<br />
+![d3l5p1](images/day3-lab5-p1.png)<br />
+![d3l5p2](images/day3-lab5-p2.png)<br />
+![d3l5p3](images/day3-lab5-p3.png)<br />
 
 ### Day3-Lab6: Unused Output - Synthesis
 
@@ -508,11 +508,11 @@ $ yosys
 
 Progress Images:
 
-![d3l61](https://raw.githubusercontent.com/watz0n/vsd-hdp/main/images/day3-lab6-p1.png)<br />
-![d3l62](https://raw.githubusercontent.com/watz0n/vsd-hdp/main/images/day3-lab6-p2.png)<br />
-![d3l63](https://raw.githubusercontent.com/watz0n/vsd-hdp/main/images/day3-lab6-p3.png)<br />
-![d3l64](https://raw.githubusercontent.com/watz0n/vsd-hdp/main/images/day3-lab6-p4.png)<br />
-![d3l65](https://raw.githubusercontent.com/watz0n/vsd-hdp/main/images/day3-lab6-p5.png)<br />
+![d3l61](images/day3-lab6-p1.png)<br />
+![d3l62](images/day3-lab6-p2.png)<br />
+![d3l63](images/day3-lab6-p3.png)<br />
+![d3l64](images/day3-lab6-p4.png)<br />
+![d3l65](images/day3-lab6-p5.png)<br />
 
 ------
 
@@ -557,9 +557,9 @@ $ gtkwave tb_ternary_operator_mux.vcd
 
 Progress Images:
 
-![d4l1p1](https://raw.githubusercontent.com/watz0n/vsd-hdp/main/images/day4-lab1-p1.png)<br />
-![d4l1p2](https://raw.githubusercontent.com/watz0n/vsd-hdp/main/images/day4-lab1-p2.png)<br />
-![d4l1p3](https://raw.githubusercontent.com/watz0n/vsd-hdp/main/images/day4-lab1-p3.png)<br />
+![d4l1p1](images/day4-lab1-p1.png)<br />
+![d4l1p2](images/day4-lab1-p2.png)<br />
+![d4l1p3](images/day4-lab1-p3.png)<br />
 
 ### Day4-Lab2: Bad MUX Synthsis-Behavior Mismatch
 
@@ -583,9 +583,9 @@ $ gtkwave tb_bad_mux.vcd
 
 Progress Images:
 
-![d4l2p1](https://raw.githubusercontent.com/watz0n/vsd-hdp/main/images/day4-lab2-p1.png)<br />
-![d4l2p2](https://raw.githubusercontent.com/watz0n/vsd-hdp/main/images/day4-lab2-p2.png)<br />
-![d4l2p3](https://raw.githubusercontent.com/watz0n/vsd-hdp/main/images/day4-lab2-p3.png)<br />
+![d4l2p1](images/day4-lab2-p1.png)<br />
+![d4l2p2](images/day4-lab2-p2.png)<br />
+![d4l2p3](images/day4-lab2-p3.png)<br />
 
 ### Day4-Lab3: Synthsis-Behavior Simulation Mismatch for Blocking Statement
 
@@ -613,14 +613,14 @@ $ gtkwave tb_blocking_mux.vcd
 
 Progress Images:
 
-![d4l3p1](https://raw.githubusercontent.com/watz0n/vsd-hdp/main/images/day4-lab3-p1.png)<br />
-![d4l3p2](https://raw.githubusercontent.com/watz0n/vsd-hdp/main/images/day4-lab3-p2.png)<br />
-![d4l3p3](https://raw.githubusercontent.com/watz0n/vsd-hdp/main/images/day4-lab3-p3.png)<br />
+![d4l3p1](images/day4-lab3-p1.png)<br />
+![d4l3p2](images/day4-lab3-p2.png)<br />
+![d4l3p3](images/day4-lab3-p3.png)<br />
 
 Test Expect-Behavior RTL simulation:
 
-![d4l3p4](https://raw.githubusercontent.com/watz0n/vsd-hdp/main/images/day4-lab3-p4.png)<br />
-![d4l3p5](https://raw.githubusercontent.com/watz0n/vsd-hdp/main/images/day4-lab3-p5.png)<br />
+![d4l3p4](images/day4-lab3-p4.png)<br />
+![d4l3p5](images/day4-lab3-p5.png)<br />
 
 ------
 
@@ -640,7 +640,7 @@ if(cnd1)
 else if(cnd2)
     y=b;
 ```
-![d5lcp1](https://raw.githubusercontent.com/watz0n/vsd-hdp/main/images/day5-lec-p1.png)<br />
+![d5lcp1](images/day5-lec-p1.png)<br />
 
 * Case Statement
     1. balanced multiplexer to reduce gate delay
@@ -738,10 +738,10 @@ $ yosys
 
 Progress Images:
 
-![d5l1p1](https://raw.githubusercontent.com/watz0n/vsd-hdp/main/images/day5-lab1-p1.png)<br />
-![d5l1p2](https://raw.githubusercontent.com/watz0n/vsd-hdp/main/images/day5-lab1-p2.png)<br />
-![d5l1p3](https://raw.githubusercontent.com/watz0n/vsd-hdp/main/images/day5-lab1-p3.png)<br />
-![d5l1p4](https://raw.githubusercontent.com/watz0n/vsd-hdp/main/images/day5-lab1-p4.png)<br />
+![d5l1p1](images/day5-lab1-p1.png)<br />
+![d5l1p2](images/day5-lab1-p2.png)<br />
+![d5l1p3](images/day5-lab1-p3.png)<br />
+![d5l1p4](images/day5-lab1-p4.png)<br />
 
 ### Day5-Lab2: Incomplete Case Statements
 
@@ -791,14 +791,14 @@ $ gtkwave tb_bad_case.vcd
 
 Progress Images:
 
-![d5l2p1](https://raw.githubusercontent.com/watz0n/vsd-hdp/main/images/day5-lab2-p1.png)<br />
-![d5l2p2](https://raw.githubusercontent.com/watz0n/vsd-hdp/main/images/day5-lab2-p2.png)<br />
-![d5l2p3](https://raw.githubusercontent.com/watz0n/vsd-hdp/main/images/day5-lab2-p3.png)<br />
-![d5l2p4](https://raw.githubusercontent.com/watz0n/vsd-hdp/main/images/day5-lab2-p4.png)<br />
-![d5l2p5](https://raw.githubusercontent.com/watz0n/vsd-hdp/main/images/day5-lab2-p5.png)<br />
-![d5l2p6](https://raw.githubusercontent.com/watz0n/vsd-hdp/main/images/day5-lab2-p6.png)<br />
-![d5l2p7](https://raw.githubusercontent.com/watz0n/vsd-hdp/main/images/day5-lab2-p7.png)<br />
-![d5l2p8](https://raw.githubusercontent.com/watz0n/vsd-hdp/main/images/day5-lab2-p8.png)<br />
+![d5l2p1](images/day5-lab2-p1.png)<br />
+![d5l2p2](images/day5-lab2-p2.png)<br />
+![d5l2p3](images/day5-lab2-p3.png)<br />
+![d5l2p4](images/day5-lab2-p4.png)<br />
+![d5l2p5](images/day5-lab2-p5.png)<br />
+![d5l2p6](images/day5-lab2-p6.png)<br />
+![d5l2p7](images/day5-lab2-p7.png)<br />
+![d5l2p8](images/day5-lab2-p8.png)<br />
 
 ### Day5-Lab3: For Loop and For Generate
 
@@ -823,9 +823,9 @@ $ gtkwave tb_rca.vcd
 
 Progress Images:
 
-![d5l3p1](https://raw.githubusercontent.com/watz0n/vsd-hdp/main/images/day5-lab3-p1.png)<br />
-![d5l3p2](https://raw.githubusercontent.com/watz0n/vsd-hdp/main/images/day5-lab3-p2.png)<br />
-![d5l3p3](https://raw.githubusercontent.com/watz0n/vsd-hdp/main/images/day5-lab3-p3.png)<br />
+![d5l3p1](images/day5-lab3-p1.png)<br />
+![d5l3p2](images/day5-lab3-p2.png)<br />
+![d5l3p3](images/day5-lab3-p3.png)<br />
 
 ------
 
@@ -927,19 +927,19 @@ Lecture-Note:
                 1. Clock to Q -> DFF
                 2. Clock to D + D to Q -> D-Latch (DLAT)
 
-![lds01](https://raw.githubusercontent.com/watz0n/vsd-hdp/main/images/lec-dc-sta01.png)<br />
+![lds01](images/lec-dc-sta01.png)<br />
         
         * Timing-Path:
             * Start Point : 1. Input-Port 2. Clock Pin of Register
             * End Point : 1. Output-Port 2. D Pin of Register
-![lds02](https://raw.githubusercontent.com/watz0n/vsd-hdp/main/images/lec-dc-sta02.png)<br />          
+![lds02](images/lec-dc-sta02.png)<br />          
         
         * Timing-Path Constraint:
             * REG2REG: Clock Constraint
             * REG2OUT: Output External Delay + Clock Constraint
             * IN2REG: Input External Delay + Clock Constraint
 
-![lds03](https://raw.githubusercontent.com/watz0n/vsd-hdp/main/images/lec-dc-sta03.png)<br />
+![lds03](images/lec-dc-sta03.png)<br />
 
         * IO Constraint:
             * Delay isn't ideal as zero -> Consider input transition and output load
@@ -992,7 +992,7 @@ Lecture-Note:
 
     * Define `net` : connecting of two or more pins or ports in target design region
 
-![lds04](https://raw.githubusercontent.com/watz0n/vsd-hdp/main/images/lec-dc-sta04.png)<br />  
+![lds04](images/lec-dc-sta04.png)<br />  
 
     * DC-Shell Operations
 ```
@@ -1032,7 +1032,7 @@ Lecture-Note:
     > set_output_load -max <cap_unit> [get_ports <port-name>]
     > set_output_load -min <cap_unit> [get_ports <port-name>]
 ```
-![lds05](https://raw.githubusercontent.com/watz0n/vsd-hdp/main/images/lec-dc-sta05.png)<br />  
+![lds05](images/lec-dc-sta05.png)<br />  
 
     * DC-Shell Lab
 ``` 
@@ -1077,7 +1077,7 @@ Lecture-Note:
         1. set_max_latency
         2. virtual clock
 
-![lds06](https://raw.githubusercontent.com/watz0n/vsd-hdp/main/images/lec-dc-sta06.png)<br />  
+![lds06](images/lec-dc-sta06.png)<br />  
 
 ```
     > set_max_latency <time> -from [get_ports <input>] -to [get_ports <output>]
@@ -1099,11 +1099,11 @@ Lecture-Note:
 
     * Multi-Cycle Path
 
-![lds07](https://raw.githubusercontent.com/watz0n/vsd-hdp/main/images/lec-dc-sta07.png)<br />
+![lds07](images/lec-dc-sta07.png)<br />
     
     * Output Isolation between External and Internal Path
 
-![lds08](https://raw.githubusercontent.com/watz0n/vsd-hdp/main/images/lec-dc-sta08.png)<br />  
+![lds08](images/lec-dc-sta08.png)<br />  
 
 ```
     > set_multicycle_path -setup <num> -from <pin/port> -to <pin/port>
@@ -1186,7 +1186,7 @@ setplot dc1
 ```
 
 [1] SPICE NMOS id/vds Diagram<br />
-![d10l1p1](https://raw.githubusercontent.com/watz0n/vsd-hdp/main/images/day10_lab1_p1.png)<br />  
+![d10l1p1](images/day10_lab1_p1.png)<br />  
 
 ------
 
@@ -1274,10 +1274,10 @@ setplot dc1
 ```
 
 [1] SPICE NMOS id/vds Diagram, small area but keep same ratio from day10 <br />
-![d11l1p1](https://raw.githubusercontent.com/watz0n/vsd-hdp/main/images/day11_lab1_p1.png)<br />  
+![d11l1p1](images/day11_lab1_p1.png)<br />  
 
 [2] SPICE NMOS id/vgs Diagram <br />
-![d11l2p1](https://raw.githubusercontent.com/watz0n/vsd-hdp/main/images/day11_lab2_p1.png)<br />  
+![d11l2p1](images/day11_lab2_p1.png)<br />  
 
 ------
 
@@ -1322,7 +1322,7 @@ Lecture-Note:
 * SPICE Simulation
 
 [1] Long-Channel vs Short-Channel<br />
-![d12l1p1](https://raw.githubusercontent.com/watz0n/vsd-hdp/main/images/day12_lab1_p1.png)<br />  
+![d12l1p1](images/day12_lab1_p1.png)<br />  
 
 SPICE File: day3_inv_vtc_W0p084_W0n084.spice
 ```
@@ -1353,7 +1353,7 @@ display
 .end
 ```
 [2] VTC from identical (W/L) P/NMOS<br />
-![d12l2p1](https://raw.githubusercontent.com/watz0n/vsd-hdp/main/images/day12_lab2_p1.png)<br />  
+![d12l2p1](images/day12_lab2_p1.png)<br />  
 
 ------
 
@@ -1408,7 +1408,7 @@ display
 ```
 
 [1] VTC from Balanced P/NMOS Driving Strength<br />
-![d13l1p1](https://raw.githubusercontent.com/watz0n/vsd-hdp/main/images/day13_lab1_p1.png)<br />  
+![d13l1p1](images/day13_lab1_p1.png)<br />  
 
 SPICE File: day3_inv_tran_W0p084_W0n036.spice
 ```
@@ -1436,7 +1436,7 @@ run
 ```
 
 [2] Inverter Switching Transition Diagram<br />
-![d13l2p1](https://raw.githubusercontent.com/watz0n/vsd-hdp/main/images/day13_lab2_p1.png)<br />  
+![d13l2p1](images/day13_lab2_p1.png)<br />  
 
 |ITEM      |TIME (ns) |
 |----------|----------|
@@ -1459,7 +1459,7 @@ Lecture-Note:
     NMH = VOH-VIH
     NML = VIL-VOL
 ```
-![d13lcp1](https://raw.githubusercontent.com/watz0n/vsd-hdp/main/images/day14_lec_p1.png)<br /> 
+![d13lcp1](images/day14_lec_p1.png)<br /> 
 
 * SPICE Simulation
 SPICE File: day4_inv_noisemargin_wp1_wn036.spice
@@ -1495,7 +1495,7 @@ display
 ```
 
 [1] Inverter Switching Transition Diagram<br />
-![d14l1p1](https://raw.githubusercontent.com/watz0n/vsd-hdp/main/images/day14_lab1_p1.png)<br />  
+![d14l1p1](images/day14_lab1_p1.png)<br />  
 
 |ITEM      | Voltage  |
 |----------|----------|
@@ -1571,7 +1571,7 @@ plot dc1.out vs in dc2.out vs in dc3.out vs in dc4.out vs in dc5.out vs in dc6.o
 ```
 
 [1] Power-Supply Scaling<br />
-![d15l1p1](https://raw.githubusercontent.com/watz0n/vsd-hdp/main/images/day15_lab1_p1.png)<br />  
+![d15l1p1](images/day15_lab1_p1.png)<br />  
 
 |GAIN    |Ratio  |
 |--------|-------|
@@ -1628,7 +1628,7 @@ Vin in 0 1.8V
 ```
 
 [2] Device Variation<br />
-![d15l2p1](https://raw.githubusercontent.com/watz0n/vsd-hdp/main/images/day15_lab2_p1.png)<br />  
+![d15l2p1](images/day15_lab2_p1.png)<br />  
 
 ------
 
@@ -1801,9 +1801,9 @@ Lecture-Notes:
 ```
 
 [1] OpenLane Prepare Design<br />
-![ol_p01](https://raw.githubusercontent.com/watz0n/vsd-hdp/main/images/lab_ol_p01.png)<br />
+![ol_p01](images/lab_ol_p01.png)<br />
 [2] OpenLane Timing Report<br />
-![ol_p02](https://raw.githubusercontent.com/watz0n/vsd-hdp/main/images/lab_ol_p02.png)<br />
+![ol_p02](images/lab_ol_p02.png)<br />
 
 ------
 
@@ -1856,11 +1856,11 @@ Lecture-Notes:
 
 [1] OpenLane Placement<br />
 > FP_IO_HMETAL/FP_IO_VMETAL has been deprecated, as [OpenLane Doc](https://openlane.readthedocs.io/en/latest/reference/configuration.html#deprecated-i-o-layer-variables)<br />
-![ol_p03](https://raw.githubusercontent.com/watz0n/vsd-hdp/main/images/lab_ol_p03.png)<br />
+![ol_p03](images/lab_ol_p03.png)<br />
 
 [2] OpenLane Floor-Plane, Horizontal I/O Metal-Layer<br />
 > Apply FP_IO_HLAYER/FP_IO_VLAYER as new I/O Metal-Layer statement<br />
-![ol_p04](https://raw.githubusercontent.com/watz0n/vsd-hdp/main/images/lab_ol_p04.png)<br />
+![ol_p04](images/lab_ol_p04.png)<br />
 
 * Bind netlist with physical cells
     1. Get cell actual layout
@@ -1881,7 +1881,7 @@ Lecture-Notes:
 ```
 
 [3] OpenLane Placement<br />
-![ol_p05](https://raw.githubusercontent.com/watz0n/vsd-hdp/main/images/lab_ol_p05.png)<br />
+![ol_p05](images/lab_ol_p05.png)<br />
 
 * Cell-Design Flow
     * Analysis different function, size, Vt lead to corresponding delay, power, area
@@ -2009,7 +2009,7 @@ Lecture-Notes:
 ```
 
 [1] sky130_inv spice extraction<br />
-![sd_p01](https://raw.githubusercontent.com/watz0n/vsd-hdp/main/images/lab_sd_p01.png)<br />
+![sd_p01](images/lab_sd_p01.png)<br />
 
 * Lab to modify SPICE file:
 
@@ -2038,9 +2038,9 @@ Lecture-Notes:
 ```
 
 [2] Modified sky130_inv.spice<br />
-![sd_p02](https://raw.githubusercontent.com/watz0n/vsd-hdp/main/images/lab_sd_p02.png)<br />
+![sd_p02](images/lab_sd_p02.png)<br />
 [3] Vin and Vout Timing Diagram<br />
-![sd_p03](https://raw.githubusercontent.com/watz0n/vsd-hdp/main/images/lab_sd_p03.png)<br />
+![sd_p03](images/lab_sd_p03.png)<br />
 
 * Lab-Exercise: Magic DRC
     * Website: opencircuitdesign.com/magic/
@@ -2093,7 +2093,7 @@ Lecture-Notes:
 ```
 
 [1] Export LEF file from sky130_vsdinv.mag<br />
-![ol_p06](https://raw.githubusercontent.com/watz0n/vsd-hdp/main/images/lab_ol_p06.png)<br />
+![ol_p06](images/lab_ol_p06.png)<br />
 
 * Lab: include new cell in synthesis
     1. copy sky130_vsdinv.lef to picorv32a/src
@@ -2114,11 +2114,11 @@ Lecture-Notes:
 ```
 
 [2] Modify config.json from Lab statement<br />
-![ol_p07](https://raw.githubusercontent.com/watz0n/vsd-hdp/main/images/lab_ol_p07.png)<br />
+![ol_p07](images/lab_ol_p07.png)<br />
 [3] Perform synthesis with new config.json<br />
-![ol_p08](https://raw.githubusercontent.com/watz0n/vsd-hdp/main/images/lab_ol_p08.png)<br />
+![ol_p08](images/lab_ol_p08.png)<br />
 [4] Checked synthesis result with sky130_vsdinv<br />
-![ol_p09](https://raw.githubusercontent.com/watz0n/vsd-hdp/main/images/lab_ol_p09.png)<br />
+![ol_p09](images/lab_ol_p09.png)<br />
 
 
 * Introduction to delay tables
@@ -2143,7 +2143,7 @@ Lecture-Notes:
 ```
 
 [5] Found sky130_vsdinv in placement DEF<br />
-![ol_p10](https://raw.githubusercontent.com/watz0n/vsd-hdp/main/images/lab_ol_p10.png)<br />
+![ol_p10](images/lab_ol_p10.png)<br />
 
 * Timing Analysis (Ideal Clock)
     * Jitter: clock source variation, modelling as "uncertainty"
@@ -2172,13 +2172,13 @@ Lecture-Notes:
 ```
 
 [6] Change Driving Cell and Max Fanout<br />
-![ol_p11](https://raw.githubusercontent.com/watz0n/vsd-hdp/main/images/lab_ol_p11.png)<br />
+![ol_p11](images/lab_ol_p11.png)<br />
 
 [7] Check driving cell changes in STA log, right column is changed result<br />
-![ol_p12](https://raw.githubusercontent.com/watz0n/vsd-hdp/main/images/lab_ol_p12.png)<br />
+![ol_p12](images/lab_ol_p12.png)<br />
 
 [8] Check slack changes in STA log, right column is changed result<br />
-![ol_p13](https://raw.githubusercontent.com/watz0n/vsd-hdp/main/images/lab_ol_p13.png)<br />
+![ol_p13](images/lab_ol_p13.png)<br />
 
 * Clock-Tree Synthesis
     * Direct/Shortest Route to clock-pin: hard to balance skew
@@ -2204,7 +2204,7 @@ Lecture-Notes:
 ```
 
 [9] Run TritonCTS<br />
-![ol_p14](https://raw.githubusercontent.com/watz0n/vsd-hdp/main/images/lab_ol_p14.png)<br />
+![ol_p14](images/lab_ol_p14.png)<br />
 
 * Timing Analysis (Read Clock)
     * Skew: Physical buffer unbalance between sequential logics
@@ -2246,7 +2246,7 @@ Lecture-Notes:
 ```
 
 [10] STA report after CTS, timing clean<br />
-![ol_p15](https://raw.githubusercontent.com/watz0n/vsd-hdp/main/images/lab_ol_p15.png)<br />
+![ol_p15](images/lab_ol_p15.png)<br />
 
 * Lab: Change Clock Buffer Effect
 
@@ -2297,10 +2297,10 @@ Lecture-Notes:
     % echo $::env(CURRENT_DEF) -> .../floorplan/pdn.def
 ```
 [1] Perform Power-Delivery Network (PDN)<br />
-![ol_p16](https://raw.githubusercontent.com/watz0n/vsd-hdp/main/images/lab_ol_p16.png)<br />
+![ol_p16](images/lab_ol_p16.png)<br />
 
 [2] DEF file after performing PDN<br />
-![ol_p17](https://raw.githubusercontent.com/watz0n/vsd-hdp/main/images/lab_ol_p17.png)<br />
+![ol_p17](images/lab_ol_p17.png)<br />
 
 * Lab: OpenLane Route
 
@@ -2313,7 +2313,7 @@ Lecture-Notes:
 ```
 
 [3] Run Routing, but ROUTING_STRATEGY has been deprecated in new OpenLane<br />
-![ol_p18](https://raw.githubusercontent.com/watz0n/vsd-hdp/main/images/lab_ol_p18.png)<br />
+![ol_p18](images/lab_ol_p18.png)<br />
 
 * Routing in OpenLane/OpenRoad
     1. FastRoute (Global)
@@ -2358,9 +2358,9 @@ Lecture-Notes:
 ```
 
 [4] Extract SPEF by `run_parasitics_sta` command in new OpenLane<br />
-![ol_p19](https://raw.githubusercontent.com/watz0n/vsd-hdp/main/images/lab_ol_p19.png)<br />
+![ol_p19](images/lab_ol_p19.png)<br />
 
 [5] Nominal Corner SPEF from OpenRCX in new OpenLane<br />
-![ol_p20](https://raw.githubusercontent.com/watz0n/vsd-hdp/main/images/lab_ol_p20.png)<br />
+![ol_p20](images/lab_ol_p20.png)<br />
 
 ------
