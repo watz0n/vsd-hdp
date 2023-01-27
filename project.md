@@ -481,7 +481,7 @@ Development Progress (@230114):
 |tt_025C_1v80|49.1989  |0.0998|0.0000     |
 |tt_100C_1v80|49.2170  |0.1041|0.0000     |
 
-[2] PVT Line-Chart
+[2] PVT Line-Chart<br />
 ![pvt_lc](reports/230114/calc_multi_corner_pvt.png)<br />
 
 ------
