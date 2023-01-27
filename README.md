@@ -36,7 +36,7 @@ Quick-Link:<br />
 [Day19](#Day19)<br />
 [Day20](#Day20)<br />
 [Day21](#Day21)<br />
-[Day23-28](#Day23-28)<br />
+[Day22-28](#Day22-28)<br />
 ------
 
 ## Day0
@@ -2365,8 +2365,9 @@ Lecture-Notes:
 
 ------
 
-## Day23-28
+## Day22-28
 
+Day 22 - Full RTL2GDS for your design
 Day 23 & 24 - Post placement pre CTS STA checks for your design on ss,ff,tt corners and tabulate/compare with post-synth<br />
 Day 25 & 26 - Post CTS pre-layout STA checks for your design on ss,ff,tt corners and tabulate/compare with pre-CTS<br />
 Day 27 & 28 - Post layout STA checks for your design on ss,ff,tt corners and tabulate/compare with pre-payout<br />
