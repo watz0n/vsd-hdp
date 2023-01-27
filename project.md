@@ -452,7 +452,7 @@ exit
 
 ### PRG230114
 
-Development Progress (@230107):
+Development Progress (@230114):
 
 - [x] Complete RTL/SYN behavior simulation for BSPI/UART module
 - [x] Perform Multi-Corner Report for PVT Analysis
@@ -479,5 +479,39 @@ Development Progress (@230107):
 |ss_n40C_1v76|48.1734  |0.1504|0.0000     |
 |tt_025C_1v80|49.1989  |0.0998|0.0000     |
 |tt_100C_1v80|49.2170  |0.1041|0.0000     |
+
+[2] PVT Line-Chart
+![pvt_lc](reports/230114/calc_multi_corner_pvt.png)<br />
+
+------
+
+### PRG230127
+
+Development Progress (@230127):
+
+- [x] Prepare HDP-RV151 OpenLane environment
+- [x] Check Sky130 SRAM DRC Magic Issue, done
+
+* HDP-RV151 OpenLane Project File:
+    * [config.json](reports/230127/config.json)
+    * [macro_placement.cfg](reports/230127/macro_placement.cfg)
+    * [base.sdc](reports/230127/base.sdc)
+
+[1] HDP-RV151 Try-Route GDS<br />
+![prj_tr_gds](reports/230127/prj_try-route_gds_230127.png)<br />
+
+* Apply [caravel_user_project](https://github.com/efabless/caravel_user_project) to check SRAM DRC Clean Issue
+    * Brief: Sky130 SRAM Macro in OpenLane is DRC clean with sky130_fd_bd_sram DRC-Rules, but it's not include in OpenLane environment.
+    * Explanation: [Precheck crash with SRAM DRC](https://github.com/efabless/mpw_precheck/issues/180)
+    * Summary: In [MPW-Precheck](https://github.com/efabless/mpw_precheck), Magic report DRC issue, but final result is `All Checks Passed` 
+
+[2] SKY130 SRAM-Macro GDS<br />
+![sky130_gds](reports/230127/sky130_sram_gds_p01.png)<br />
+
+[3] Magic results on SKY130 SRAM-Macro<br />
+![sky130_sm_magic](reports/230127/sky130_sram_drc_p01.png)<br />
+
+[4] Precheck results on SKY130 SRAM-Macro<br />
+![sky130_sm_precheck](reports/230127/sky130_sram_drc_p02.png)<br />
 
 ------

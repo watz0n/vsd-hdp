@@ -36,7 +36,7 @@ Quick-Link:<br />
 [Day19](#Day19)<br />
 [Day20](#Day20)<br />
 [Day21](#Day21)<br />
-
+[Day23-28](#Day23-28)<br />
 ------
 
 ## Day0
@@ -2362,5 +2362,27 @@ Lecture-Notes:
 
 [5] Nominal Corner SPEF from OpenRCX in new OpenLane<br />
 ![ol_p20](images/lab_ol_p20.png)<br />
+
+------
+
+## Day23-28
+
+Day 23 & 24 - Post placement pre CTS STA checks for your design on ss,ff,tt corners and tabulate/compare with post-synth<br />
+Day 25 & 26 - Post CTS pre-layout STA checks for your design on ss,ff,tt corners and tabulate/compare with pre-CTS<br />
+Day 27 & 28 - Post layout STA checks for your design on ss,ff,tt corners and tabulate/compare with pre-payout<br />
+
+* OpenLane Project File:
+    * [config.json](reports/230127/config.json)
+    * [macro_placement.cfg](reports/230127/macro_placement.cfg)
+    * [base.sdc](reports/230127/base.sdc)
+
+[1] HDP-RV151 Try-Route GDS<br />
+![prj_tr_gds](reports/230127/prj_try-route_gds_230127.png)<br />
+
+[2] HDP-RV151 Post-Synth Timing<br />
+![prj_on_sys](reports/230127/prj_ol_synth-sta-log.png)<br />
+
+[3] HDP-RV151 Post-Route Timing<br />
+![prj_ol_prs](reports/230127/prj_ol_post-route-sta-log.png)<br />
 
 ------
