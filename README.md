@@ -2365,12 +2365,14 @@ Lecture-Notes:
 
 ------
 
-## Day22-28
+## Day22-28<br />
 
 Day 22 - Full RTL2GDS for your design
 Day 23 & 24 - Post placement pre CTS STA checks for your design on ss,ff,tt corners and tabulate/compare with post-synth<br />
 Day 25 & 26 - Post CTS pre-layout STA checks for your design on ss,ff,tt corners and tabulate/compare with pre-CTS<br />
 Day 27 & 28 - Post layout STA checks for your design on ss,ff,tt corners and tabulate/compare with pre-payout<br />
+
+* Goal: Apply OpenLane RTL-to-GDS flow on project (HDP-RV151)
 
 * OpenLane Project File:
     * [config.json](reports/230127/config.json)
