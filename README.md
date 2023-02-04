@@ -37,6 +37,7 @@ Quick-Link:<br />
 [Day20](#Day20)<br />
 [Day21](#Day21)<br />
 [Day22-28](#Day22-28)<br />
+[Day29-30](#Day29-30)<br />
 ------
 
 ## Day0
@@ -2387,5 +2388,38 @@ Day 27 & 28 - Post layout STA checks for your design on ss,ff,tt corners and tab
 
 [3] HDP-RV151 Post-Route Timing<br />
 ![prj_ol_prs](reports/230127/prj_ol_post-route-sta-log.png)<br />
+
+------
+
+## Day29-30<br />
+
+Day 29 & 30 - Final tape-out with DRC/LVS checks
+
+* Goal: Port project to [efabless/caravel_user_project](https://github.com/efabless/caravel_user_project) environment and pass MPW-Precheck Process
+
+* MPW-Precheck Project:
+    * [watz0n/mpw_hdp_rv151](https://github.com/watz0n/mpw_hdp_rv151)
+
+* Results:
+    
+    * [1] MPW OpenLane Flow Logs<br />
+    ![rtl-to-gds-log](reports/230204/prj_mpw_openlane-flow_info-log_230204.png)
+    * [2] OpenLane Elasped Time<br />
+    ![rtl-to-gds-time](reports/230204/prj_mpw_openlane-flow_elasped-time_230204.png)
+    * [3] Post-Routing Layout in OpenRoad-GUI<br />
+    ![rtl-to-gds-orgui](reports/230204/prj_mpw_openroad_gui_230202.png)
+    * [4] Sign-Off Layout in Klayout<br />
+    ![rtl-to-gds-klgds](reports/230204/prj_mpw_klayout_gds_230202.png)
+    * [5] Pass MPW-Precheck, include Magic/Klayout DRC-Checks<br />
+    ![rtl-to-gds-prechk](reports/230204/prj_mpw_precheck_pass_230202.png)
+    * [6] STA with RC, min<br />
+    ![rcx-sta-min](reports/230204/prj_mpw_rcxsta-min_230204.png)
+    * [7] STA with RC, max<br />
+    ![rcx-sta-max](reports/230204/prj_mpw_rcxsta-max_230204.png)
+    * [8] STA with RC, nominal<br />
+    ![rcx-sta-nom](reports/230204/prj_mpw_rcxsta-nom_230204.png)
+    * [9] STA with RC, typical<br />
+    ![rcx-sta-typ](reports/230204/prj_mpw_rcxsta-typ_230204.png)
+
 
 ------
