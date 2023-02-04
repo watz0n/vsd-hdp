@@ -2395,7 +2395,7 @@ Day 27 & 28 - Post layout STA checks for your design on ss,ff,tt corners and tab
 
 Day 29 & 30 - Final tape-out with DRC/LVS checks
 
-* Goal: Port project to [efabless/caravel_user_project](https://github.com/efabless/caravel_user_project) environment and pass MPW-Precheck Process
+* Goal: Port project to [efabless/caravel_user_project](https://github.com/efabless/caravel_user_project) environment and pass MPW-Precheck flow
 
 * MPW-Precheck Project:
     * [watz0n/mpw_hdp_rv151](https://github.com/watz0n/mpw_hdp_rv151)
