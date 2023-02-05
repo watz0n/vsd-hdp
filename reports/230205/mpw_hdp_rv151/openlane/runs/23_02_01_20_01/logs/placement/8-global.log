@@ -1,0 +1,2310 @@
+OpenROAD 7f00621cb612fd94e15b35790afe744c89d433a7 
+This program is licensed under the BSD-3 license. See the LICENSE file for details.
+Components of this program may be licensed under more restrictive licenses which must be honored.
+[INFO]: Setting RC values...
+[INFO]: Setting signal min routing layer to: met1 and clock min routing layer to met1. 
+[INFO]: Setting signal max routing layer to: met4 and clock max routing layer to met4. 
+[INFO GPL-0002] DBU: 1000
+[INFO GPL-0003] SiteSize: 460 2720
+[INFO GPL-0004] CoreAreaLxLy: 5520 10880
+[INFO GPL-0005] CoreAreaUxUy: 2914100 3508800
+[INFO GPL-0006] NumInstances: 135749
+[INFO GPL-0007] NumPlaceInstances: 10486
+[INFO GPL-0008] NumFixedInstances: 123367
+[INFO GPL-0009] NumDummyInstances: 1896
+[INFO GPL-0010] NumNets: 11139
+[INFO GPL-0011] NumPins: 36212
+[INFO GPL-0012] DieAreaLxLy: 0 0
+[INFO GPL-0013] DieAreaUxUy: 2920000 3520000
+[INFO GPL-0014] CoreAreaLxLy: 5520 10880
+[INFO GPL-0015] CoreAreaUxUy: 2914100 3508800
+[INFO GPL-0016] CoreArea: 10173980153600
+[INFO GPL-0017] NonPlaceInstsArea: 2015212472800
+[INFO GPL-0018] PlaceInstsArea: 107823411200
+[INFO GPL-0019] Util(%): 1.32
+[INFO GPL-0020] StdInstsArea: 107823411200
+[INFO GPL-0021] MacroInstsArea: 0
+[InitialPlace]  Iter: 1 CG residual: 0.00645990 HPWL: 2148189260
+[InitialPlace]  Iter: 2 CG residual: 0.00003385 HPWL: 897667999
+[InitialPlace]  Iter: 3 CG residual: 0.00000928 HPWL: 875078493
+[InitialPlace]  Iter: 4 CG residual: 0.00000887 HPWL: 873306477
+[InitialPlace]  Iter: 5 CG residual: 0.00000733 HPWL: 869787770
+[INFO GPL-0031] FillerInit: NumGCells: 456129
+[INFO GPL-0032] FillerInit: NumGNets: 11139
+[INFO GPL-0033] FillerInit: NumGPins: 36212
+[INFO GPL-0023] TargetDensity: 0.55
+[INFO GPL-0024] AveragePlaceInstArea: 10282606
+[INFO GPL-0025] IdealBinArea: 18695646
+[INFO GPL-0026] IdealBinCnt: 544189
+[INFO GPL-0027] TotalBinArea: 10173980153600
+[INFO GPL-0028] BinCnt: 512 512
+[INFO GPL-0029] BinSize: 5681 6832
+[INFO GPL-0030] NumBins: 262144
+[NesterovSolve] Iter: 1 overflow: 0.958977 HPWL: 534152077
+[NesterovSolve] Iter: 10 overflow: 0.865836 HPWL: 573483939
+[NesterovSolve] Iter: 20 overflow: 0.798937 HPWL: 600966817
+[NesterovSolve] Iter: 30 overflow: 0.783504 HPWL: 603237829
+[NesterovSolve] Iter: 40 overflow: 0.786733 HPWL: 606446009
+[NesterovSolve] Iter: 50 overflow: 0.798147 HPWL: 611808013
+[NesterovSolve] Iter: 60 overflow: 0.800736 HPWL: 614279990
+[NesterovSolve] Iter: 70 overflow: 0.813105 HPWL: 614756576
+[NesterovSolve] Iter: 80 overflow: 0.819799 HPWL: 614620700
+[NesterovSolve] Iter: 90 overflow: 0.823499 HPWL: 614565368
+[NesterovSolve] Iter: 100 overflow: 0.826247 HPWL: 614307780
+[NesterovSolve] Iter: 110 overflow: 0.828922 HPWL: 613760154
+[NesterovSolve] Iter: 120 overflow: 0.831412 HPWL: 613140214
+[NesterovSolve] Iter: 130 overflow: 0.832204 HPWL: 612764082
+[NesterovSolve] Iter: 140 overflow: 0.831563 HPWL: 613165328
+[NesterovSolve] Iter: 150 overflow: 0.828424 HPWL: 614963964
+[NesterovSolve] Iter: 160 overflow: 0.825646 HPWL: 618954688
+[NesterovSolve] Iter: 170 overflow: 0.822718 HPWL: 625377169
+[NesterovSolve] Iter: 180 overflow: 0.819422 HPWL: 634903939
+[NesterovSolve] Iter: 190 overflow: 0.815249 HPWL: 649650952
+[NesterovSolve] Iter: 200 overflow: 0.808972 HPWL: 676856486
+[NesterovSolve] Iter: 210 overflow: 0.797843 HPWL: 721421062
+[NesterovSolve] Iter: 220 overflow: 0.78386 HPWL: 757496646
+[NesterovSolve] Iter: 230 overflow: 0.764096 HPWL: 760373324
+[NesterovSolve] Iter: 240 overflow: 0.735111 HPWL: 761485281
+[NesterovSolve] Iter: 250 overflow: 0.694086 HPWL: 825887986
+[NesterovSolve] Iter: 260 overflow: 0.677396 HPWL: 804569091
+[NesterovSolve] Iter: 270 overflow: 0.643724 HPWL: 818558580
+[NesterovSolve] Iter: 280 overflow: 0.609487 HPWL: 821673438
+[NesterovSolve] Snapshot saved at iter = 282
+[NesterovSolve] Iter: 290 overflow: 0.564917 HPWL: 822915894
+[NesterovSolve] Iter: 300 overflow: 0.518405 HPWL: 819165946
+[INFO GPL-0100] worst slack 1.9e-08
+[INFO GPL-0103] Weighted 1337 nets.
+[NesterovSolve] Iter: 310 overflow: 0.472407 HPWL: 816657758
+[NesterovSolve] Iter: 320 overflow: 0.42735 HPWL: 779103674
+[NesterovSolve] Iter: 330 overflow: 0.386678 HPWL: 782635853
+[INFO GPL-0100] worst slack 1.91e-08
+[INFO GPL-0103] Weighted 1336 nets.
+[NesterovSolve] Iter: 340 overflow: 0.339729 HPWL: 784402868
+[NesterovSolve] Iter: 350 overflow: 0.302888 HPWL: 782991133
+[NesterovSolve] Iter: 360 overflow: 0.27266 HPWL: 782651500
+[NesterovSolve] Iter: 370 overflow: 0.245218 HPWL: 780263741
+[NesterovSolve] Iter: 380 overflow: 0.219236 HPWL: 777646967
+[INFO GPL-0075] Routability numCall: 1 inflationIterCnt: 1 bloatIterCnt: 0
+[INFO GPL-0036] TileLxLy: 0 0
+[INFO GPL-0037] TileSize: 6900 6900
+[INFO GPL-0038] TileCnt: 423 510
+[INFO GPL-0039] numRoutingLayers: 6
+[INFO GPL-0040] NumTiles: 215730
+[INFO GPL-0063] TotalRouteOverflowH2: 0.10000002384185791
+[INFO GPL-0064] TotalRouteOverflowV2: 168.60956513881683
+[INFO GPL-0065] OverflowTileCnt2: 1236
+[INFO GPL-0066] 0.5%RC: 1.0939852648488388
+[INFO GPL-0067] 1.0%RC: 1.0467139256405857
+[INFO GPL-0068] 2.0%RC: 0.9223082912009768
+[INFO GPL-0069] 5.0%RC: 0.7975017140975869
+[INFO GPL-0070] 0.5rcK: 1.0
+[INFO GPL-0071] 1.0rcK: 1.0
+[INFO GPL-0072] 2.0rcK: 0.0
+[INFO GPL-0073] 5.0rcK: 0.0
+[INFO GPL-0074] FinalRC: 1.0703496
+[NesterovSolve] Iter: 390 overflow: 0.195157 HPWL: 774181335
+[INFO GPL-0100] worst slack 1.91e-08
+[INFO GPL-0103] Weighted 1336 nets.
+[NesterovSolve] Iter: 400 overflow: 0.171098 HPWL: 771062128
+[NesterovSolve] Iter: 410 overflow: 0.148378 HPWL: 766804785
+[NesterovSolve] Iter: 420 overflow: 0.128997 HPWL: 765831363
+[NesterovSolve] Iter: 430 overflow: 0.11237 HPWL: 764806290
+[NesterovSolve] Finished with Overflow: 0.098914
+Setting global connections for newly added cells...
+Writing OpenROAD database to /mnt/d/project/mpw_hdp_rv151/openlane/user_project_wrapper/runs/23_02_01_20_01/tmp/placement/8-global.odb...
+Writing layout to /mnt/d/project/mpw_hdp_rv151/openlane/user_project_wrapper/runs/23_02_01_20_01/tmp/placement/8-global.def...
+[INFO]: Setting RC values...
+min_report
+
+===========================================================================
+report_checks -path_delay min (Hold)
+============================================================================
+Startpoint: io_in[17] (input port clocked by ick)
+Endpoint: _18490_ (removal check against rising-edge clock ick)
+Path Group: **async_default**
+Path Type: min
+
+Fanout     Cap    Slew   Delay    Time   Description
+-----------------------------------------------------------------------------
+                  0.00    0.00    0.00   clock ick (rise edge)
+                          0.00    0.00   clock network delay (ideal)
+                         15.00   15.00 v input external delay
+                  0.00    0.00   15.00 v io_in[17] (in)
+     3    0.24                           io_in[17] (net)
+                  0.25    0.12   15.12 v _12894_/A2 (sky130_fd_sc_hd__o21a_2)
+                  0.08    0.31   15.43 v _12894_/X (sky130_fd_sc_hd__o21a_2)
+     1    0.02                           _07333_ (net)
+                  0.08    0.00   15.43 v _12895_/A (sky130_fd_sc_hd__buf_1)
+                  0.20    0.22   15.65 v _12895_/X (sky130_fd_sc_hd__buf_1)
+     6    0.03                           _07334_ (net)
+                  0.20    0.00   15.66 v _15081_/A (sky130_fd_sc_hd__buf_1)
+                  0.32    0.34   16.00 v _15081_/X (sky130_fd_sc_hd__buf_1)
+    10    0.05                           _02142_ (net)
+                  0.32    0.01   16.01 v _16655_/A (sky130_fd_sc_hd__buf_1)
+                  0.28    0.36   16.37 v _16655_/X (sky130_fd_sc_hd__buf_1)
+    10    0.05                           _02859_ (net)
+                  0.28    0.00   16.37 v _16659_/A (sky130_fd_sc_hd__inv_2)
+                  0.07    0.10   16.47 ^ _16659_/Y (sky130_fd_sc_hd__inv_2)
+     1    0.00                           _00494_ (net)
+                  0.07    0.00   16.47 ^ _18490_/RESET_B (sky130_fd_sc_hd__dfrtp_2)
+                                 16.47   data arrival time
+
+                  0.00    0.00    0.00   clock ick (rise edge)
+                          0.00    0.00   clock network delay (ideal)
+                          0.00    0.00   clock reconvergence pessimism
+                                  0.00 ^ _18490_/CLK (sky130_fd_sc_hd__dfrtp_2)
+                          0.31    0.31   library removal time
+                                  0.31   data required time
+-----------------------------------------------------------------------------
+                                  0.31   data required time
+                                -16.47   data arrival time
+-----------------------------------------------------------------------------
+                                 16.16   slack (MET)
+
+
+Startpoint: io_in[17] (input port clocked by ick)
+Endpoint: _18492_ (removal check against rising-edge clock ick)
+Path Group: **async_default**
+Path Type: min
+
+Fanout     Cap    Slew   Delay    Time   Description
+-----------------------------------------------------------------------------
+                  0.00    0.00    0.00   clock ick (rise edge)
+                          0.00    0.00   clock network delay (ideal)
+                         15.00   15.00 v input external delay
+                  0.00    0.00   15.00 v io_in[17] (in)
+     3    0.24                           io_in[17] (net)
+                  0.25    0.12   15.12 v _12894_/A2 (sky130_fd_sc_hd__o21a_2)
+                  0.08    0.31   15.43 v _12894_/X (sky130_fd_sc_hd__o21a_2)
+     1    0.02                           _07333_ (net)
+                  0.08    0.00   15.43 v _12895_/A (sky130_fd_sc_hd__buf_1)
+                  0.20    0.22   15.65 v _12895_/X (sky130_fd_sc_hd__buf_1)
+     6    0.03                           _07334_ (net)
+                  0.20    0.00   15.66 v _15081_/A (sky130_fd_sc_hd__buf_1)
+                  0.32    0.34   16.00 v _15081_/X (sky130_fd_sc_hd__buf_1)
+    10    0.05                           _02142_ (net)
+                  0.32    0.01   16.01 v _16655_/A (sky130_fd_sc_hd__buf_1)
+                  0.28    0.36   16.37 v _16655_/X (sky130_fd_sc_hd__buf_1)
+    10    0.05                           _02859_ (net)
+                  0.28    0.00   16.37 v _16661_/A (sky130_fd_sc_hd__inv_2)
+                  0.07    0.10   16.47 ^ _16661_/Y (sky130_fd_sc_hd__inv_2)
+     1    0.00                           _00496_ (net)
+                  0.07    0.00   16.47 ^ _18492_/RESET_B (sky130_fd_sc_hd__dfrtp_2)
+                                 16.47   data arrival time
+
+                  0.00    0.00    0.00   clock ick (rise edge)
+                          0.00    0.00   clock network delay (ideal)
+                          0.00    0.00   clock reconvergence pessimism
+                                  0.00 ^ _18492_/CLK (sky130_fd_sc_hd__dfrtp_2)
+                          0.31    0.31   library removal time
+                                  0.31   data required time
+-----------------------------------------------------------------------------
+                                  0.31   data required time
+                                -16.47   data arrival time
+-----------------------------------------------------------------------------
+                                 16.16   slack (MET)
+
+
+Startpoint: io_in[17] (input port clocked by ick)
+Endpoint: _18488_ (removal check against rising-edge clock ick)
+Path Group: **async_default**
+Path Type: min
+
+Fanout     Cap    Slew   Delay    Time   Description
+-----------------------------------------------------------------------------
+                  0.00    0.00    0.00   clock ick (rise edge)
+                          0.00    0.00   clock network delay (ideal)
+                         15.00   15.00 v input external delay
+                  0.00    0.00   15.00 v io_in[17] (in)
+     3    0.24                           io_in[17] (net)
+                  0.25    0.12   15.12 v _12894_/A2 (sky130_fd_sc_hd__o21a_2)
+                  0.08    0.31   15.43 v _12894_/X (sky130_fd_sc_hd__o21a_2)
+     1    0.02                           _07333_ (net)
+                  0.08    0.00   15.43 v _12895_/A (sky130_fd_sc_hd__buf_1)
+                  0.20    0.22   15.65 v _12895_/X (sky130_fd_sc_hd__buf_1)
+     6    0.03                           _07334_ (net)
+                  0.20    0.00   15.66 v _15081_/A (sky130_fd_sc_hd__buf_1)
+                  0.32    0.34   16.00 v _15081_/X (sky130_fd_sc_hd__buf_1)
+    10    0.05                           _02142_ (net)
+                  0.32    0.01   16.01 v _16655_/A (sky130_fd_sc_hd__buf_1)
+                  0.28    0.36   16.37 v _16655_/X (sky130_fd_sc_hd__buf_1)
+    10    0.05                           _02859_ (net)
+                  0.28    0.00   16.37 v _16657_/A (sky130_fd_sc_hd__inv_2)
+                  0.07    0.10   16.47 ^ _16657_/Y (sky130_fd_sc_hd__inv_2)
+     1    0.00                           _00492_ (net)
+                  0.07    0.00   16.47 ^ _18488_/RESET_B (sky130_fd_sc_hd__dfrtp_2)
+                                 16.47   data arrival time
+
+                  0.00    0.00    0.00   clock ick (rise edge)
+                          0.00    0.00   clock network delay (ideal)
+                          0.00    0.00   clock reconvergence pessimism
+                                  0.00 ^ _18488_/CLK (sky130_fd_sc_hd__dfrtp_2)
+                          0.31    0.31   library removal time
+                                  0.31   data required time
+-----------------------------------------------------------------------------
+                                  0.31   data required time
+                                -16.47   data arrival time
+-----------------------------------------------------------------------------
+                                 16.16   slack (MET)
+
+
+Startpoint: io_in[17] (input port clocked by ick)
+Endpoint: _18494_ (removal check against rising-edge clock ick)
+Path Group: **async_default**
+Path Type: min
+
+Fanout     Cap    Slew   Delay    Time   Description
+-----------------------------------------------------------------------------
+                  0.00    0.00    0.00   clock ick (rise edge)
+                          0.00    0.00   clock network delay (ideal)
+                         15.00   15.00 v input external delay
+                  0.00    0.00   15.00 v io_in[17] (in)
+     3    0.24                           io_in[17] (net)
+                  0.25    0.12   15.12 v _12894_/A2 (sky130_fd_sc_hd__o21a_2)
+                  0.08    0.31   15.43 v _12894_/X (sky130_fd_sc_hd__o21a_2)
+     1    0.02                           _07333_ (net)
+                  0.08    0.00   15.43 v _12895_/A (sky130_fd_sc_hd__buf_1)
+                  0.20    0.22   15.65 v _12895_/X (sky130_fd_sc_hd__buf_1)
+     6    0.03                           _07334_ (net)
+                  0.20    0.00   15.66 v _15081_/A (sky130_fd_sc_hd__buf_1)
+                  0.32    0.34   16.00 v _15081_/X (sky130_fd_sc_hd__buf_1)
+    10    0.05                           _02142_ (net)
+                  0.32    0.01   16.01 v _16655_/A (sky130_fd_sc_hd__buf_1)
+                  0.28    0.36   16.37 v _16655_/X (sky130_fd_sc_hd__buf_1)
+    10    0.05                           _02859_ (net)
+                  0.28    0.00   16.37 v _16663_/A (sky130_fd_sc_hd__inv_2)
+                  0.07    0.10   16.47 ^ _16663_/Y (sky130_fd_sc_hd__inv_2)
+     1    0.00                           _00498_ (net)
+                  0.07    0.00   16.47 ^ _18494_/RESET_B (sky130_fd_sc_hd__dfrtp_2)
+                                 16.47   data arrival time
+
+                  0.00    0.00    0.00   clock ick (rise edge)
+                          0.00    0.00   clock network delay (ideal)
+                          0.00    0.00   clock reconvergence pessimism
+                                  0.00 ^ _18494_/CLK (sky130_fd_sc_hd__dfrtp_2)
+                          0.31    0.31   library removal time
+                                  0.31   data required time
+-----------------------------------------------------------------------------
+                                  0.31   data required time
+                                -16.47   data arrival time
+-----------------------------------------------------------------------------
+                                 16.16   slack (MET)
+
+
+Startpoint: io_in[17] (input port clocked by ick)
+Endpoint: _18493_ (removal check against rising-edge clock ick)
+Path Group: **async_default**
+Path Type: min
+
+Fanout     Cap    Slew   Delay    Time   Description
+-----------------------------------------------------------------------------
+                  0.00    0.00    0.00   clock ick (rise edge)
+                          0.00    0.00   clock network delay (ideal)
+                         15.00   15.00 v input external delay
+                  0.00    0.00   15.00 v io_in[17] (in)
+     3    0.24                           io_in[17] (net)
+                  0.25    0.12   15.12 v _12894_/A2 (sky130_fd_sc_hd__o21a_2)
+                  0.08    0.31   15.43 v _12894_/X (sky130_fd_sc_hd__o21a_2)
+     1    0.02                           _07333_ (net)
+                  0.08    0.00   15.43 v _12895_/A (sky130_fd_sc_hd__buf_1)
+                  0.20    0.22   15.65 v _12895_/X (sky130_fd_sc_hd__buf_1)
+     6    0.03                           _07334_ (net)
+                  0.20    0.00   15.66 v _15081_/A (sky130_fd_sc_hd__buf_1)
+                  0.32    0.34   16.00 v _15081_/X (sky130_fd_sc_hd__buf_1)
+    10    0.05                           _02142_ (net)
+                  0.32    0.01   16.01 v _16655_/A (sky130_fd_sc_hd__buf_1)
+                  0.28    0.36   16.37 v _16655_/X (sky130_fd_sc_hd__buf_1)
+    10    0.05                           _02859_ (net)
+                  0.28    0.00   16.37 v _16662_/A (sky130_fd_sc_hd__inv_2)
+                  0.07    0.10   16.47 ^ _16662_/Y (sky130_fd_sc_hd__inv_2)
+     1    0.00                           _00497_ (net)
+                  0.07    0.00   16.47 ^ _18493_/RESET_B (sky130_fd_sc_hd__dfrtp_2)
+                                 16.47   data arrival time
+
+                  0.00    0.00    0.00   clock ick (rise edge)
+                          0.00    0.00   clock network delay (ideal)
+                          0.00    0.00   clock reconvergence pessimism
+                                  0.00 ^ _18493_/CLK (sky130_fd_sc_hd__dfrtp_2)
+                          0.31    0.31   library removal time
+                                  0.31   data required time
+-----------------------------------------------------------------------------
+                                  0.31   data required time
+                                -16.47   data arrival time
+-----------------------------------------------------------------------------
+                                 16.16   slack (MET)
+
+
+Startpoint: _18436_ (rising edge-triggered flip-flop clocked by clk)
+Endpoint: _18502_ (rising edge-triggered flip-flop clocked by clk)
+Path Group: clk
+Path Type: min
+
+Fanout     Cap    Slew   Delay    Time   Description
+-----------------------------------------------------------------------------
+                  0.00    0.00    0.00   clock clk (rise edge)
+                          0.00    0.00   clock network delay (ideal)
+                  0.00    0.00    0.00 ^ _18436_/CLK (sky130_fd_sc_hd__dfrtp_2)
+                  0.04    0.29    0.29 ^ _18436_/Q (sky130_fd_sc_hd__dfrtp_2)
+     1    0.00                           rv151.soc.core.pf_pc4[2] (net)
+                  0.04    0.00    0.29 ^ _18502_/D (sky130_fd_sc_hd__dfrtp_2)
+                                  0.29   data arrival time
+
+                  0.00    0.00    0.00   clock clk (rise edge)
+                          0.00    0.00   clock network delay (ideal)
+                          0.00    0.00   clock reconvergence pessimism
+                                  0.00 ^ _18502_/CLK (sky130_fd_sc_hd__dfrtp_2)
+                         -0.04   -0.04   library hold time
+                                 -0.04   data required time
+-----------------------------------------------------------------------------
+                                 -0.04   data required time
+                                 -0.29   data arrival time
+-----------------------------------------------------------------------------
+                                  0.33   slack (MET)
+
+
+Startpoint: _18445_ (rising edge-triggered flip-flop clocked by clk)
+Endpoint: _18511_ (rising edge-triggered flip-flop clocked by clk)
+Path Group: clk
+Path Type: min
+
+Fanout     Cap    Slew   Delay    Time   Description
+-----------------------------------------------------------------------------
+                  0.00    0.00    0.00   clock clk (rise edge)
+                          0.00    0.00   clock network delay (ideal)
+                  0.00    0.00    0.00 ^ _18445_/CLK (sky130_fd_sc_hd__dfrtp_2)
+                  0.04    0.30    0.30 ^ _18445_/Q (sky130_fd_sc_hd__dfrtp_2)
+     1    0.00                           rv151.soc.core.pf_pc4[11] (net)
+                  0.04    0.00    0.30 ^ _18511_/D (sky130_fd_sc_hd__dfrtp_2)
+                                  0.30   data arrival time
+
+                  0.00    0.00    0.00   clock clk (rise edge)
+                          0.00    0.00   clock network delay (ideal)
+                          0.00    0.00   clock reconvergence pessimism
+                                  0.00 ^ _18511_/CLK (sky130_fd_sc_hd__dfrtp_2)
+                         -0.04   -0.04   library hold time
+                                 -0.04   data required time
+-----------------------------------------------------------------------------
+                                 -0.04   data required time
+                                 -0.30   data arrival time
+-----------------------------------------------------------------------------
+                                  0.33   slack (MET)
+
+
+Startpoint: _18464_ (rising edge-triggered flip-flop clocked by clk)
+Endpoint: _18530_ (rising edge-triggered flip-flop clocked by clk)
+Path Group: clk
+Path Type: min
+
+Fanout     Cap    Slew   Delay    Time   Description
+-----------------------------------------------------------------------------
+                  0.00    0.00    0.00   clock clk (rise edge)
+                          0.00    0.00   clock network delay (ideal)
+                  0.00    0.00    0.00 ^ _18464_/CLK (sky130_fd_sc_hd__dfrtp_2)
+                  0.04    0.30    0.30 ^ _18464_/Q (sky130_fd_sc_hd__dfrtp_2)
+     1    0.00                           rv151.soc.core.pf_pc4[30] (net)
+                  0.04    0.00    0.30 ^ _18530_/D (sky130_fd_sc_hd__dfrtp_2)
+                                  0.30   data arrival time
+
+                  0.00    0.00    0.00   clock clk (rise edge)
+                          0.00    0.00   clock network delay (ideal)
+                          0.00    0.00   clock reconvergence pessimism
+                                  0.00 ^ _18530_/CLK (sky130_fd_sc_hd__dfrtp_2)
+                         -0.04   -0.04   library hold time
+                                 -0.04   data required time
+-----------------------------------------------------------------------------
+                                 -0.04   data required time
+                                 -0.30   data arrival time
+-----------------------------------------------------------------------------
+                                  0.33   slack (MET)
+
+
+Startpoint: _18446_ (rising edge-triggered flip-flop clocked by clk)
+Endpoint: _18512_ (rising edge-triggered flip-flop clocked by clk)
+Path Group: clk
+Path Type: min
+
+Fanout     Cap    Slew   Delay    Time   Description
+-----------------------------------------------------------------------------
+                  0.00    0.00    0.00   clock clk (rise edge)
+                          0.00    0.00   clock network delay (ideal)
+                  0.00    0.00    0.00 ^ _18446_/CLK (sky130_fd_sc_hd__dfrtp_2)
+                  0.04    0.30    0.30 ^ _18446_/Q (sky130_fd_sc_hd__dfrtp_2)
+     1    0.00                           rv151.soc.core.pf_pc4[12] (net)
+                  0.04    0.00    0.30 ^ _18512_/D (sky130_fd_sc_hd__dfrtp_2)
+                                  0.30   data arrival time
+
+                  0.00    0.00    0.00   clock clk (rise edge)
+                          0.00    0.00   clock network delay (ideal)
+                          0.00    0.00   clock reconvergence pessimism
+                                  0.00 ^ _18512_/CLK (sky130_fd_sc_hd__dfrtp_2)
+                         -0.04   -0.04   library hold time
+                                 -0.04   data required time
+-----------------------------------------------------------------------------
+                                 -0.04   data required time
+                                 -0.30   data arrival time
+-----------------------------------------------------------------------------
+                                  0.33   slack (MET)
+
+
+Startpoint: _18444_ (rising edge-triggered flip-flop clocked by clk)
+Endpoint: _18510_ (rising edge-triggered flip-flop clocked by clk)
+Path Group: clk
+Path Type: min
+
+Fanout     Cap    Slew   Delay    Time   Description
+-----------------------------------------------------------------------------
+                  0.00    0.00    0.00   clock clk (rise edge)
+                          0.00    0.00   clock network delay (ideal)
+                  0.00    0.00    0.00 ^ _18444_/CLK (sky130_fd_sc_hd__dfrtp_2)
+                  0.04    0.30    0.30 ^ _18444_/Q (sky130_fd_sc_hd__dfrtp_2)
+     1    0.00                           rv151.soc.core.pf_pc4[10] (net)
+                  0.04    0.00    0.30 ^ _18510_/D (sky130_fd_sc_hd__dfrtp_2)
+                                  0.30   data arrival time
+
+                  0.00    0.00    0.00   clock clk (rise edge)
+                          0.00    0.00   clock network delay (ideal)
+                          0.00    0.00   clock reconvergence pessimism
+                                  0.00 ^ _18510_/CLK (sky130_fd_sc_hd__dfrtp_2)
+                         -0.04   -0.04   library hold time
+                                 -0.04   data required time
+-----------------------------------------------------------------------------
+                                 -0.04   data required time
+                                 -0.30   data arrival time
+-----------------------------------------------------------------------------
+                                  0.33   slack (MET)
+
+
+Startpoint: _18436_ (rising edge-triggered flip-flop clocked by ick)
+Endpoint: _18502_ (rising edge-triggered flip-flop clocked by ick)
+Path Group: ick
+Path Type: min
+
+Fanout     Cap    Slew   Delay    Time   Description
+-----------------------------------------------------------------------------
+                  0.00    0.00    0.00   clock ick (rise edge)
+                          0.00    0.00   clock network delay (ideal)
+                  0.00    0.00    0.00 ^ _18436_/CLK (sky130_fd_sc_hd__dfrtp_2)
+                  0.04    0.29    0.29 ^ _18436_/Q (sky130_fd_sc_hd__dfrtp_2)
+     1    0.00                           rv151.soc.core.pf_pc4[2] (net)
+                  0.04    0.00    0.29 ^ _18502_/D (sky130_fd_sc_hd__dfrtp_2)
+                                  0.29   data arrival time
+
+                  0.00    0.00    0.00   clock ick (rise edge)
+                          0.00    0.00   clock network delay (ideal)
+                          0.00    0.00   clock reconvergence pessimism
+                                  0.00 ^ _18502_/CLK (sky130_fd_sc_hd__dfrtp_2)
+                         -0.04   -0.04   library hold time
+                                 -0.04   data required time
+-----------------------------------------------------------------------------
+                                 -0.04   data required time
+                                 -0.29   data arrival time
+-----------------------------------------------------------------------------
+                                  0.33   slack (MET)
+
+
+Startpoint: _18445_ (rising edge-triggered flip-flop clocked by ick)
+Endpoint: _18511_ (rising edge-triggered flip-flop clocked by ick)
+Path Group: ick
+Path Type: min
+
+Fanout     Cap    Slew   Delay    Time   Description
+-----------------------------------------------------------------------------
+                  0.00    0.00    0.00   clock ick (rise edge)
+                          0.00    0.00   clock network delay (ideal)
+                  0.00    0.00    0.00 ^ _18445_/CLK (sky130_fd_sc_hd__dfrtp_2)
+                  0.04    0.30    0.30 ^ _18445_/Q (sky130_fd_sc_hd__dfrtp_2)
+     1    0.00                           rv151.soc.core.pf_pc4[11] (net)
+                  0.04    0.00    0.30 ^ _18511_/D (sky130_fd_sc_hd__dfrtp_2)
+                                  0.30   data arrival time
+
+                  0.00    0.00    0.00   clock ick (rise edge)
+                          0.00    0.00   clock network delay (ideal)
+                          0.00    0.00   clock reconvergence pessimism
+                                  0.00 ^ _18511_/CLK (sky130_fd_sc_hd__dfrtp_2)
+                         -0.04   -0.04   library hold time
+                                 -0.04   data required time
+-----------------------------------------------------------------------------
+                                 -0.04   data required time
+                                 -0.30   data arrival time
+-----------------------------------------------------------------------------
+                                  0.33   slack (MET)
+
+
+Startpoint: _18464_ (rising edge-triggered flip-flop clocked by ick)
+Endpoint: _18530_ (rising edge-triggered flip-flop clocked by ick)
+Path Group: ick
+Path Type: min
+
+Fanout     Cap    Slew   Delay    Time   Description
+-----------------------------------------------------------------------------
+                  0.00    0.00    0.00   clock ick (rise edge)
+                          0.00    0.00   clock network delay (ideal)
+                  0.00    0.00    0.00 ^ _18464_/CLK (sky130_fd_sc_hd__dfrtp_2)
+                  0.04    0.30    0.30 ^ _18464_/Q (sky130_fd_sc_hd__dfrtp_2)
+     1    0.00                           rv151.soc.core.pf_pc4[30] (net)
+                  0.04    0.00    0.30 ^ _18530_/D (sky130_fd_sc_hd__dfrtp_2)
+                                  0.30   data arrival time
+
+                  0.00    0.00    0.00   clock ick (rise edge)
+                          0.00    0.00   clock network delay (ideal)
+                          0.00    0.00   clock reconvergence pessimism
+                                  0.00 ^ _18530_/CLK (sky130_fd_sc_hd__dfrtp_2)
+                         -0.04   -0.04   library hold time
+                                 -0.04   data required time
+-----------------------------------------------------------------------------
+                                 -0.04   data required time
+                                 -0.30   data arrival time
+-----------------------------------------------------------------------------
+                                  0.33   slack (MET)
+
+
+Startpoint: _18446_ (rising edge-triggered flip-flop clocked by ick)
+Endpoint: _18512_ (rising edge-triggered flip-flop clocked by ick)
+Path Group: ick
+Path Type: min
+
+Fanout     Cap    Slew   Delay    Time   Description
+-----------------------------------------------------------------------------
+                  0.00    0.00    0.00   clock ick (rise edge)
+                          0.00    0.00   clock network delay (ideal)
+                  0.00    0.00    0.00 ^ _18446_/CLK (sky130_fd_sc_hd__dfrtp_2)
+                  0.04    0.30    0.30 ^ _18446_/Q (sky130_fd_sc_hd__dfrtp_2)
+     1    0.00                           rv151.soc.core.pf_pc4[12] (net)
+                  0.04    0.00    0.30 ^ _18512_/D (sky130_fd_sc_hd__dfrtp_2)
+                                  0.30   data arrival time
+
+                  0.00    0.00    0.00   clock ick (rise edge)
+                          0.00    0.00   clock network delay (ideal)
+                          0.00    0.00   clock reconvergence pessimism
+                                  0.00 ^ _18512_/CLK (sky130_fd_sc_hd__dfrtp_2)
+                         -0.04   -0.04   library hold time
+                                 -0.04   data required time
+-----------------------------------------------------------------------------
+                                 -0.04   data required time
+                                 -0.30   data arrival time
+-----------------------------------------------------------------------------
+                                  0.33   slack (MET)
+
+
+Startpoint: _18444_ (rising edge-triggered flip-flop clocked by ick)
+Endpoint: _18510_ (rising edge-triggered flip-flop clocked by ick)
+Path Group: ick
+Path Type: min
+
+Fanout     Cap    Slew   Delay    Time   Description
+-----------------------------------------------------------------------------
+                  0.00    0.00    0.00   clock ick (rise edge)
+                          0.00    0.00   clock network delay (ideal)
+                  0.00    0.00    0.00 ^ _18444_/CLK (sky130_fd_sc_hd__dfrtp_2)
+                  0.04    0.30    0.30 ^ _18444_/Q (sky130_fd_sc_hd__dfrtp_2)
+     1    0.00                           rv151.soc.core.pf_pc4[10] (net)
+                  0.04    0.00    0.30 ^ _18510_/D (sky130_fd_sc_hd__dfrtp_2)
+                                  0.30   data arrival time
+
+                  0.00    0.00    0.00   clock ick (rise edge)
+                          0.00    0.00   clock network delay (ideal)
+                          0.00    0.00   clock reconvergence pessimism
+                                  0.00 ^ _18510_/CLK (sky130_fd_sc_hd__dfrtp_2)
+                         -0.04   -0.04   library hold time
+                                 -0.04   data required time
+-----------------------------------------------------------------------------
+                                 -0.04   data required time
+                                 -0.30   data arrival time
+-----------------------------------------------------------------------------
+                                  0.33   slack (MET)
+
+
+Startpoint: _17899_ (rising edge-triggered flip-flop clocked by sck)
+Endpoint: _17901_ (rising edge-triggered flip-flop clocked by sck)
+Path Group: sck
+Path Type: min
+
+Fanout     Cap    Slew   Delay    Time   Description
+-----------------------------------------------------------------------------
+                  0.00    0.00    0.00   clock sck (rise edge)
+                          0.00    0.00   clock network delay (ideal)
+                  0.00    0.00    0.00 ^ _17899_/CLK (sky130_fd_sc_hd__dfrtp_2)
+                  0.04    0.30    0.30 ^ _17899_/Q (sky130_fd_sc_hd__dfrtp_2)
+     1    0.00                           rv151.soc.bspi.b2o.rwg[0][0] (net)
+                  0.04    0.00    0.30 ^ _17901_/D (sky130_fd_sc_hd__dfrtp_2)
+                                  0.30   data arrival time
+
+                  0.00    0.00    0.00   clock sck (rise edge)
+                          0.00    0.00   clock network delay (ideal)
+                          0.00    0.00   clock reconvergence pessimism
+                                  0.00 ^ _17901_/CLK (sky130_fd_sc_hd__dfrtp_2)
+                         -0.04   -0.04   library hold time
+                                 -0.04   data required time
+-----------------------------------------------------------------------------
+                                 -0.04   data required time
+                                 -0.30   data arrival time
+-----------------------------------------------------------------------------
+                                  0.34   slack (MET)
+
+
+Startpoint: _17900_ (rising edge-triggered flip-flop clocked by sck)
+Endpoint: _17902_ (rising edge-triggered flip-flop clocked by sck)
+Path Group: sck
+Path Type: min
+
+Fanout     Cap    Slew   Delay    Time   Description
+-----------------------------------------------------------------------------
+                  0.00    0.00    0.00   clock sck (rise edge)
+                          0.00    0.00   clock network delay (ideal)
+                  0.00    0.00    0.00 ^ _17900_/CLK (sky130_fd_sc_hd__dfrtp_2)
+                  0.04    0.30    0.30 ^ _17900_/Q (sky130_fd_sc_hd__dfrtp_2)
+     1    0.00                           rv151.soc.bspi.b2o.rwg[0][1] (net)
+                  0.04    0.00    0.30 ^ _17902_/D (sky130_fd_sc_hd__dfrtp_2)
+                                  0.30   data arrival time
+
+                  0.00    0.00    0.00   clock sck (rise edge)
+                          0.00    0.00   clock network delay (ideal)
+                          0.00    0.00   clock reconvergence pessimism
+                                  0.00 ^ _17902_/CLK (sky130_fd_sc_hd__dfrtp_2)
+                         -0.04   -0.04   library hold time
+                                 -0.04   data required time
+-----------------------------------------------------------------------------
+                                 -0.04   data required time
+                                 -0.30   data arrival time
+-----------------------------------------------------------------------------
+                                  0.34   slack (MET)
+
+
+Startpoint: _18028_ (rising edge-triggered flip-flop clocked by sck)
+Endpoint: _18030_ (rising edge-triggered flip-flop clocked by sck)
+Path Group: sck
+Path Type: min
+
+Fanout     Cap    Slew   Delay    Time   Description
+-----------------------------------------------------------------------------
+                  0.00    0.00    0.00   clock sck (rise edge)
+                          0.00    0.00   clock network delay (ideal)
+                  0.00    0.00    0.00 ^ _18028_/CLK (sky130_fd_sc_hd__dfrtp_2)
+                  0.04    0.30    0.30 ^ _18028_/Q (sky130_fd_sc_hd__dfrtp_2)
+     1    0.00                           rv151.soc.bspi.o2b.wrg[0][1] (net)
+                  0.04    0.00    0.30 ^ _18030_/D (sky130_fd_sc_hd__dfrtp_2)
+                                  0.30   data arrival time
+
+                  0.00    0.00    0.00   clock sck (rise edge)
+                          0.00    0.00   clock network delay (ideal)
+                          0.00    0.00   clock reconvergence pessimism
+                                  0.00 ^ _18030_/CLK (sky130_fd_sc_hd__dfrtp_2)
+                         -0.04   -0.04   library hold time
+                                 -0.04   data required time
+-----------------------------------------------------------------------------
+                                 -0.04   data required time
+                                 -0.30   data arrival time
+-----------------------------------------------------------------------------
+                                  0.34   slack (MET)
+
+
+Startpoint: _18027_ (rising edge-triggered flip-flop clocked by sck)
+Endpoint: _18029_ (rising edge-triggered flip-flop clocked by sck)
+Path Group: sck
+Path Type: min
+
+Fanout     Cap    Slew   Delay    Time   Description
+-----------------------------------------------------------------------------
+                  0.00    0.00    0.00   clock sck (rise edge)
+                          0.00    0.00   clock network delay (ideal)
+                  0.00    0.00    0.00 ^ _18027_/CLK (sky130_fd_sc_hd__dfrtp_2)
+                  0.04    0.30    0.30 ^ _18027_/Q (sky130_fd_sc_hd__dfrtp_2)
+     1    0.00                           rv151.soc.bspi.o2b.wrg[0][0] (net)
+                  0.04    0.00    0.30 ^ _18029_/D (sky130_fd_sc_hd__dfrtp_2)
+                                  0.30   data arrival time
+
+                  0.00    0.00    0.00   clock sck (rise edge)
+                          0.00    0.00   clock network delay (ideal)
+                          0.00    0.00   clock reconvergence pessimism
+                                  0.00 ^ _18029_/CLK (sky130_fd_sc_hd__dfrtp_2)
+                         -0.04   -0.04   library hold time
+                                 -0.04   data required time
+-----------------------------------------------------------------------------
+                                 -0.04   data required time
+                                 -0.30   data arrival time
+-----------------------------------------------------------------------------
+                                  0.34   slack (MET)
+
+
+Startpoint: _18573_ (rising edge-triggered flip-flop clocked by sck)
+Endpoint: _18573_ (rising edge-triggered flip-flop clocked by sck)
+Path Group: sck
+Path Type: min
+
+Fanout     Cap    Slew   Delay    Time   Description
+-----------------------------------------------------------------------------
+                  0.00    0.00    0.00   clock sck (rise edge)
+                          0.00    0.00   clock network delay (ideal)
+                  0.00    0.00    0.00 ^ _18573_/CLK (sky130_fd_sc_hd__dfrtp_2)
+                  0.10    0.36    0.36 ^ _18573_/Q (sky130_fd_sc_hd__dfrtp_2)
+     3    0.02                           rv151.soc.bspi.oif.bct[2] (net)
+                  0.10    0.00    0.36 ^ _08500_/A (sky130_fd_sc_hd__xor2_2)
+                  0.03    0.07    0.42 v _08500_/X (sky130_fd_sc_hd__xor2_2)
+     1    0.00                           _01708_ (net)
+                  0.03    0.00    0.42 v _18573_/D (sky130_fd_sc_hd__dfrtp_2)
+                                  0.42   data arrival time
+
+                  0.00    0.00    0.00   clock sck (rise edge)
+                          0.00    0.00   clock network delay (ideal)
+                          0.00    0.00   clock reconvergence pessimism
+                                  0.00 ^ _18573_/CLK (sky130_fd_sc_hd__dfrtp_2)
+                         -0.05   -0.05   library hold time
+                                 -0.05   data required time
+-----------------------------------------------------------------------------
+                                 -0.05   data required time
+                                 -0.42   data arrival time
+-----------------------------------------------------------------------------
+                                  0.47   slack (MET)
+
+
+min_report_end
+max_report
+
+===========================================================================
+report_checks -path_delay max (Setup)
+============================================================================
+Startpoint: io_in[17] (input port clocked by clk)
+Endpoint: _17640_ (recovery check against rising-edge clock clk)
+Path Group: **async_default**
+Path Type: max
+
+Fanout     Cap    Slew   Delay    Time   Description
+-----------------------------------------------------------------------------
+                  0.00    0.00    0.00   clock clk (rise edge)
+                          0.00    0.00   clock network delay (ideal)
+                         30.00   30.00 ^ input external delay
+                  0.00    0.00   30.00 ^ io_in[17] (in)
+     3    0.24                           io_in[17] (net)
+                  0.03    0.01   30.01 ^ _12893_/B_N (sky130_fd_sc_hd__or2b_2)
+                  0.30    0.55   30.56 v _12893_/X (sky130_fd_sc_hd__or2b_2)
+     1    0.12                           _07332_ (net)
+                  0.34    0.08   30.64 v _12894_/B1 (sky130_fd_sc_hd__o21a_2)
+                  0.09    0.30   30.95 v _12894_/X (sky130_fd_sc_hd__o21a_2)
+     1    0.02                           _07333_ (net)
+                  0.09    0.00   30.95 v _12895_/A (sky130_fd_sc_hd__buf_1)
+                  0.20    0.25   31.20 v _12895_/X (sky130_fd_sc_hd__buf_1)
+     6    0.03                           _07334_ (net)
+                  0.20    0.00   31.20 v _15267_/A (sky130_fd_sc_hd__buf_1)
+                  0.38    0.43   31.63 v _15267_/X (sky130_fd_sc_hd__buf_1)
+    10    0.07                           _02203_ (net)
+                  0.38    0.01   31.64 v _15279_/A (sky130_fd_sc_hd__buf_1)
+                  0.59    0.63   32.27 v _15279_/X (sky130_fd_sc_hd__buf_1)
+    10    0.10                           _02205_ (net)
+                  0.60    0.04   32.31 v _15283_/A (sky130_fd_sc_hd__inv_2)
+                  0.11    0.17   32.48 ^ _15283_/Y (sky130_fd_sc_hd__inv_2)
+     1    0.00                           _00292_ (net)
+                  0.11    0.00   32.48 ^ _17640_/RESET_B (sky130_fd_sc_hd__dfrtp_2)
+                                 32.48   data arrival time
+
+                  0.00  100.00  100.00   clock clk (rise edge)
+                          0.00  100.00   clock network delay (ideal)
+                          0.00  100.00   clock reconvergence pessimism
+                                100.00 ^ _17640_/CLK (sky130_fd_sc_hd__dfrtp_2)
+                          0.19  100.19   library recovery time
+                                100.19   data required time
+-----------------------------------------------------------------------------
+                                100.19   data required time
+                                -32.48   data arrival time
+-----------------------------------------------------------------------------
+                                 67.71   slack (MET)
+
+
+Startpoint: io_in[17] (input port clocked by clk)
+Endpoint: _17642_ (recovery check against rising-edge clock clk)
+Path Group: **async_default**
+Path Type: max
+
+Fanout     Cap    Slew   Delay    Time   Description
+-----------------------------------------------------------------------------
+                  0.00    0.00    0.00   clock clk (rise edge)
+                          0.00    0.00   clock network delay (ideal)
+                         30.00   30.00 ^ input external delay
+                  0.00    0.00   30.00 ^ io_in[17] (in)
+     3    0.24                           io_in[17] (net)
+                  0.03    0.01   30.01 ^ _12893_/B_N (sky130_fd_sc_hd__or2b_2)
+                  0.30    0.55   30.56 v _12893_/X (sky130_fd_sc_hd__or2b_2)
+     1    0.12                           _07332_ (net)
+                  0.34    0.08   30.64 v _12894_/B1 (sky130_fd_sc_hd__o21a_2)
+                  0.09    0.30   30.95 v _12894_/X (sky130_fd_sc_hd__o21a_2)
+     1    0.02                           _07333_ (net)
+                  0.09    0.00   30.95 v _12895_/A (sky130_fd_sc_hd__buf_1)
+                  0.20    0.25   31.20 v _12895_/X (sky130_fd_sc_hd__buf_1)
+     6    0.03                           _07334_ (net)
+                  0.20    0.00   31.20 v _15267_/A (sky130_fd_sc_hd__buf_1)
+                  0.38    0.43   31.63 v _15267_/X (sky130_fd_sc_hd__buf_1)
+    10    0.07                           _02203_ (net)
+                  0.38    0.01   31.64 v _15279_/A (sky130_fd_sc_hd__buf_1)
+                  0.59    0.63   32.27 v _15279_/X (sky130_fd_sc_hd__buf_1)
+    10    0.10                           _02205_ (net)
+                  0.60    0.04   32.31 v _15285_/A (sky130_fd_sc_hd__inv_2)
+                  0.11    0.17   32.48 ^ _15285_/Y (sky130_fd_sc_hd__inv_2)
+     1    0.00                           _00294_ (net)
+                  0.11    0.00   32.48 ^ _17642_/RESET_B (sky130_fd_sc_hd__dfrtp_2)
+                                 32.48   data arrival time
+
+                  0.00  100.00  100.00   clock clk (rise edge)
+                          0.00  100.00   clock network delay (ideal)
+                          0.00  100.00   clock reconvergence pessimism
+                                100.00 ^ _17642_/CLK (sky130_fd_sc_hd__dfrtp_2)
+                          0.19  100.19   library recovery time
+                                100.19   data required time
+-----------------------------------------------------------------------------
+                                100.19   data required time
+                                -32.48   data arrival time
+-----------------------------------------------------------------------------
+                                 67.71   slack (MET)
+
+
+Startpoint: io_in[17] (input port clocked by clk)
+Endpoint: _17639_ (recovery check against rising-edge clock clk)
+Path Group: **async_default**
+Path Type: max
+
+Fanout     Cap    Slew   Delay    Time   Description
+-----------------------------------------------------------------------------
+                  0.00    0.00    0.00   clock clk (rise edge)
+                          0.00    0.00   clock network delay (ideal)
+                         30.00   30.00 ^ input external delay
+                  0.00    0.00   30.00 ^ io_in[17] (in)
+     3    0.24                           io_in[17] (net)
+                  0.03    0.01   30.01 ^ _12893_/B_N (sky130_fd_sc_hd__or2b_2)
+                  0.30    0.55   30.56 v _12893_/X (sky130_fd_sc_hd__or2b_2)
+     1    0.12                           _07332_ (net)
+                  0.34    0.08   30.64 v _12894_/B1 (sky130_fd_sc_hd__o21a_2)
+                  0.09    0.30   30.95 v _12894_/X (sky130_fd_sc_hd__o21a_2)
+     1    0.02                           _07333_ (net)
+                  0.09    0.00   30.95 v _12895_/A (sky130_fd_sc_hd__buf_1)
+                  0.20    0.25   31.20 v _12895_/X (sky130_fd_sc_hd__buf_1)
+     6    0.03                           _07334_ (net)
+                  0.20    0.00   31.20 v _15267_/A (sky130_fd_sc_hd__buf_1)
+                  0.38    0.43   31.63 v _15267_/X (sky130_fd_sc_hd__buf_1)
+    10    0.07                           _02203_ (net)
+                  0.38    0.01   31.64 v _15279_/A (sky130_fd_sc_hd__buf_1)
+                  0.59    0.63   32.27 v _15279_/X (sky130_fd_sc_hd__buf_1)
+    10    0.10                           _02205_ (net)
+                  0.60    0.04   32.31 v _15282_/A (sky130_fd_sc_hd__inv_2)
+                  0.11    0.17   32.48 ^ _15282_/Y (sky130_fd_sc_hd__inv_2)
+     1    0.00                           _00291_ (net)
+                  0.11    0.00   32.48 ^ _17639_/RESET_B (sky130_fd_sc_hd__dfrtp_2)
+                                 32.48   data arrival time
+
+                  0.00  100.00  100.00   clock clk (rise edge)
+                          0.00  100.00   clock network delay (ideal)
+                          0.00  100.00   clock reconvergence pessimism
+                                100.00 ^ _17639_/CLK (sky130_fd_sc_hd__dfrtp_2)
+                          0.19  100.19   library recovery time
+                                100.19   data required time
+-----------------------------------------------------------------------------
+                                100.19   data required time
+                                -32.48   data arrival time
+-----------------------------------------------------------------------------
+                                 67.71   slack (MET)
+
+
+Startpoint: io_in[17] (input port clocked by clk)
+Endpoint: _17641_ (recovery check against rising-edge clock clk)
+Path Group: **async_default**
+Path Type: max
+
+Fanout     Cap    Slew   Delay    Time   Description
+-----------------------------------------------------------------------------
+                  0.00    0.00    0.00   clock clk (rise edge)
+                          0.00    0.00   clock network delay (ideal)
+                         30.00   30.00 ^ input external delay
+                  0.00    0.00   30.00 ^ io_in[17] (in)
+     3    0.24                           io_in[17] (net)
+                  0.03    0.01   30.01 ^ _12893_/B_N (sky130_fd_sc_hd__or2b_2)
+                  0.30    0.55   30.56 v _12893_/X (sky130_fd_sc_hd__or2b_2)
+     1    0.12                           _07332_ (net)
+                  0.34    0.08   30.64 v _12894_/B1 (sky130_fd_sc_hd__o21a_2)
+                  0.09    0.30   30.95 v _12894_/X (sky130_fd_sc_hd__o21a_2)
+     1    0.02                           _07333_ (net)
+                  0.09    0.00   30.95 v _12895_/A (sky130_fd_sc_hd__buf_1)
+                  0.20    0.25   31.20 v _12895_/X (sky130_fd_sc_hd__buf_1)
+     6    0.03                           _07334_ (net)
+                  0.20    0.00   31.20 v _15267_/A (sky130_fd_sc_hd__buf_1)
+                  0.38    0.43   31.63 v _15267_/X (sky130_fd_sc_hd__buf_1)
+    10    0.07                           _02203_ (net)
+                  0.38    0.01   31.64 v _15279_/A (sky130_fd_sc_hd__buf_1)
+                  0.59    0.63   32.27 v _15279_/X (sky130_fd_sc_hd__buf_1)
+    10    0.10                           _02205_ (net)
+                  0.60    0.04   32.31 v _15284_/A (sky130_fd_sc_hd__inv_2)
+                  0.11    0.17   32.48 ^ _15284_/Y (sky130_fd_sc_hd__inv_2)
+     1    0.00                           _00293_ (net)
+                  0.11    0.00   32.48 ^ _17641_/RESET_B (sky130_fd_sc_hd__dfrtp_2)
+                                 32.48   data arrival time
+
+                  0.00  100.00  100.00   clock clk (rise edge)
+                          0.00  100.00   clock network delay (ideal)
+                          0.00  100.00   clock reconvergence pessimism
+                                100.00 ^ _17641_/CLK (sky130_fd_sc_hd__dfrtp_2)
+                          0.19  100.19   library recovery time
+                                100.19   data required time
+-----------------------------------------------------------------------------
+                                100.19   data required time
+                                -32.48   data arrival time
+-----------------------------------------------------------------------------
+                                 67.71   slack (MET)
+
+
+Startpoint: io_in[17] (input port clocked by clk)
+Endpoint: _17644_ (recovery check against rising-edge clock clk)
+Path Group: **async_default**
+Path Type: max
+
+Fanout     Cap    Slew   Delay    Time   Description
+-----------------------------------------------------------------------------
+                  0.00    0.00    0.00   clock clk (rise edge)
+                          0.00    0.00   clock network delay (ideal)
+                         30.00   30.00 ^ input external delay
+                  0.00    0.00   30.00 ^ io_in[17] (in)
+     3    0.24                           io_in[17] (net)
+                  0.03    0.01   30.01 ^ _12893_/B_N (sky130_fd_sc_hd__or2b_2)
+                  0.30    0.55   30.56 v _12893_/X (sky130_fd_sc_hd__or2b_2)
+     1    0.12                           _07332_ (net)
+                  0.34    0.08   30.64 v _12894_/B1 (sky130_fd_sc_hd__o21a_2)
+                  0.09    0.30   30.95 v _12894_/X (sky130_fd_sc_hd__o21a_2)
+     1    0.02                           _07333_ (net)
+                  0.09    0.00   30.95 v _12895_/A (sky130_fd_sc_hd__buf_1)
+                  0.20    0.25   31.20 v _12895_/X (sky130_fd_sc_hd__buf_1)
+     6    0.03                           _07334_ (net)
+                  0.20    0.00   31.20 v _15267_/A (sky130_fd_sc_hd__buf_1)
+                  0.38    0.43   31.63 v _15267_/X (sky130_fd_sc_hd__buf_1)
+    10    0.07                           _02203_ (net)
+                  0.38    0.01   31.64 v _15279_/A (sky130_fd_sc_hd__buf_1)
+                  0.59    0.63   32.27 v _15279_/X (sky130_fd_sc_hd__buf_1)
+    10    0.10                           _02205_ (net)
+                  0.60    0.04   32.31 v _15287_/A (sky130_fd_sc_hd__inv_2)
+                  0.11    0.17   32.48 ^ _15287_/Y (sky130_fd_sc_hd__inv_2)
+     1    0.00                           _00296_ (net)
+                  0.11    0.00   32.48 ^ _17644_/RESET_B (sky130_fd_sc_hd__dfrtp_2)
+                                 32.48   data arrival time
+
+                  0.00  100.00  100.00   clock clk (rise edge)
+                          0.00  100.00   clock network delay (ideal)
+                          0.00  100.00   clock reconvergence pessimism
+                                100.00 ^ _17644_/CLK (sky130_fd_sc_hd__dfrtp_2)
+                          0.19  100.19   library recovery time
+                                100.19   data required time
+-----------------------------------------------------------------------------
+                                100.19   data required time
+                                -32.48   data arrival time
+-----------------------------------------------------------------------------
+                                 67.71   slack (MET)
+
+
+Startpoint: rv151.soc.dmem0 (falling edge-triggered flip-flop clocked by clk)
+Endpoint: _17727_ (rising edge-triggered flip-flop clocked by clk)
+Path Group: clk
+Path Type: max
+
+Fanout     Cap    Slew   Delay    Time   Description
+-----------------------------------------------------------------------------
+                  0.00   50.00   50.00   clock clk (fall edge)
+                          0.00   50.00   clock network delay (ideal)
+                  0.00    0.00   50.00 v rv151.soc.dmem0/clk0 (sky130_sram_2kbyte_1rw1r_32x512_8)
+                  0.05    0.96   50.96 v rv151.soc.dmem0/dout0[30] (sky130_sram_2kbyte_1rw1r_32x512_8)
+     1    0.10                           rv151.soc.dmem_dout0[0][30] (net)
+                  0.04    0.05   51.01 v _13798_/A1 (sky130_fd_sc_hd__mux2_2)
+                  0.05    0.27   51.28 v _13798_/X (sky130_fd_sc_hd__mux2_2)
+     1    0.00                           _07941_ (net)
+                  0.05    0.00   51.28 v _13799_/A (sky130_fd_sc_hd__buf_1)
+                  0.02    0.09   51.37 v _13799_/X (sky130_fd_sc_hd__buf_1)
+     1    0.00                           _00090_ (net)
+                  0.02    0.00   51.37 v _17727_/D (sky130_fd_sc_hd__dfxtp_2)
+                                 51.37   data arrival time
+
+                  0.00  100.00  100.00   clock clk (rise edge)
+                          0.00  100.00   clock network delay (ideal)
+                          0.00  100.00   clock reconvergence pessimism
+                                100.00 ^ _17727_/CLK (sky130_fd_sc_hd__dfxtp_2)
+                         -0.11   99.89   library setup time
+                                 99.89   data required time
+-----------------------------------------------------------------------------
+                                 99.89   data required time
+                                -51.37   data arrival time
+-----------------------------------------------------------------------------
+                                 48.52   slack (MET)
+
+
+Startpoint: rv151.soc.dmem0 (falling edge-triggered flip-flop clocked by clk)
+Endpoint: _17728_ (rising edge-triggered flip-flop clocked by clk)
+Path Group: clk
+Path Type: max
+
+Fanout     Cap    Slew   Delay    Time   Description
+-----------------------------------------------------------------------------
+                  0.00   50.00   50.00   clock clk (fall edge)
+                          0.00   50.00   clock network delay (ideal)
+                  0.00    0.00   50.00 v rv151.soc.dmem0/clk0 (sky130_sram_2kbyte_1rw1r_32x512_8)
+                  0.05    0.96   50.96 v rv151.soc.dmem0/dout0[31] (sky130_sram_2kbyte_1rw1r_32x512_8)
+     1    0.10                           rv151.soc.dmem_dout0[0][31] (net)
+                  0.04    0.05   51.01 v _13800_/A1 (sky130_fd_sc_hd__mux2_2)
+                  0.05    0.26   51.28 v _13800_/X (sky130_fd_sc_hd__mux2_2)
+     1    0.00                           _07942_ (net)
+                  0.05    0.00   51.28 v _13801_/A (sky130_fd_sc_hd__buf_1)
+                  0.02    0.09   51.37 v _13801_/X (sky130_fd_sc_hd__buf_1)
+     1    0.00                           _00091_ (net)
+                  0.02    0.00   51.37 v _17728_/D (sky130_fd_sc_hd__dfxtp_2)
+                                 51.37   data arrival time
+
+                  0.00  100.00  100.00   clock clk (rise edge)
+                          0.00  100.00   clock network delay (ideal)
+                          0.00  100.00   clock reconvergence pessimism
+                                100.00 ^ _17728_/CLK (sky130_fd_sc_hd__dfxtp_2)
+                         -0.11   99.89   library setup time
+                                 99.89   data required time
+-----------------------------------------------------------------------------
+                                 99.89   data required time
+                                -51.37   data arrival time
+-----------------------------------------------------------------------------
+                                 48.52   slack (MET)
+
+
+Startpoint: rv151.soc.dmem0 (falling edge-triggered flip-flop clocked by clk)
+Endpoint: _17726_ (rising edge-triggered flip-flop clocked by clk)
+Path Group: clk
+Path Type: max
+
+Fanout     Cap    Slew   Delay    Time   Description
+-----------------------------------------------------------------------------
+                  0.00   50.00   50.00   clock clk (fall edge)
+                          0.00   50.00   clock network delay (ideal)
+                  0.00    0.00   50.00 v rv151.soc.dmem0/clk0 (sky130_sram_2kbyte_1rw1r_32x512_8)
+                  0.05    0.95   50.95 v rv151.soc.dmem0/dout0[29] (sky130_sram_2kbyte_1rw1r_32x512_8)
+     1    0.09                           rv151.soc.dmem_dout0[0][29] (net)
+                  0.04    0.05   51.00 v _13796_/A1 (sky130_fd_sc_hd__mux2_2)
+                  0.05    0.27   51.27 v _13796_/X (sky130_fd_sc_hd__mux2_2)
+     1    0.00                           _07940_ (net)
+                  0.05    0.00   51.27 v _13797_/A (sky130_fd_sc_hd__buf_1)
+                  0.02    0.09   51.36 v _13797_/X (sky130_fd_sc_hd__buf_1)
+     1    0.00                           _00088_ (net)
+                  0.02    0.00   51.36 v _17726_/D (sky130_fd_sc_hd__dfxtp_2)
+                                 51.36   data arrival time
+
+                  0.00  100.00  100.00   clock clk (rise edge)
+                          0.00  100.00   clock network delay (ideal)
+                          0.00  100.00   clock reconvergence pessimism
+                                100.00 ^ _17726_/CLK (sky130_fd_sc_hd__dfxtp_2)
+                         -0.11   99.89   library setup time
+                                 99.89   data required time
+-----------------------------------------------------------------------------
+                                 99.89   data required time
+                                -51.36   data arrival time
+-----------------------------------------------------------------------------
+                                 48.53   slack (MET)
+
+
+Startpoint: rv151.soc.dmem0 (falling edge-triggered flip-flop clocked by clk)
+Endpoint: _17724_ (rising edge-triggered flip-flop clocked by clk)
+Path Group: clk
+Path Type: max
+
+Fanout     Cap    Slew   Delay    Time   Description
+-----------------------------------------------------------------------------
+                  0.00   50.00   50.00   clock clk (fall edge)
+                          0.00   50.00   clock network delay (ideal)
+                  0.00    0.00   50.00 v rv151.soc.dmem0/clk0 (sky130_sram_2kbyte_1rw1r_32x512_8)
+                  0.05    0.95   50.95 v rv151.soc.dmem0/dout0[27] (sky130_sram_2kbyte_1rw1r_32x512_8)
+     1    0.09                           rv151.soc.dmem_dout0[0][27] (net)
+                  0.04    0.05   51.00 v _13791_/A1 (sky130_fd_sc_hd__mux2_2)
+                  0.05    0.27   51.26 v _13791_/X (sky130_fd_sc_hd__mux2_2)
+     1    0.00                           _07937_ (net)
+                  0.05    0.00   51.26 v _13792_/A (sky130_fd_sc_hd__buf_1)
+                  0.02    0.09   51.36 v _13792_/X (sky130_fd_sc_hd__buf_1)
+     1    0.00                           _00086_ (net)
+                  0.02    0.00   51.36 v _17724_/D (sky130_fd_sc_hd__dfxtp_2)
+                                 51.36   data arrival time
+
+                  0.00  100.00  100.00   clock clk (rise edge)
+                          0.00  100.00   clock network delay (ideal)
+                          0.00  100.00   clock reconvergence pessimism
+                                100.00 ^ _17724_/CLK (sky130_fd_sc_hd__dfxtp_2)
+                         -0.11   99.89   library setup time
+                                 99.89   data required time
+-----------------------------------------------------------------------------
+                                 99.89   data required time
+                                -51.36   data arrival time
+-----------------------------------------------------------------------------
+                                 48.53   slack (MET)
+
+
+Startpoint: rv151.soc.dmem0 (falling edge-triggered flip-flop clocked by clk)
+Endpoint: _17723_ (rising edge-triggered flip-flop clocked by clk)
+Path Group: clk
+Path Type: max
+
+Fanout     Cap    Slew   Delay    Time   Description
+-----------------------------------------------------------------------------
+                  0.00   50.00   50.00   clock clk (fall edge)
+                          0.00   50.00   clock network delay (ideal)
+                  0.00    0.00   50.00 v rv151.soc.dmem0/clk0 (sky130_sram_2kbyte_1rw1r_32x512_8)
+                  0.05    0.94   50.94 v rv151.soc.dmem0/dout0[26] (sky130_sram_2kbyte_1rw1r_32x512_8)
+     1    0.09                           rv151.soc.dmem_dout0[0][26] (net)
+                  0.04    0.05   50.99 v _13789_/A1 (sky130_fd_sc_hd__mux2_2)
+                  0.05    0.27   51.26 v _13789_/X (sky130_fd_sc_hd__mux2_2)
+     1    0.00                           _07936_ (net)
+                  0.05    0.00   51.26 v _13790_/A (sky130_fd_sc_hd__buf_1)
+                  0.03    0.09   51.35 v _13790_/X (sky130_fd_sc_hd__buf_1)
+     1    0.00                           _00085_ (net)
+                  0.03    0.00   51.35 v _17723_/D (sky130_fd_sc_hd__dfxtp_2)
+                                 51.35   data arrival time
+
+                  0.00  100.00  100.00   clock clk (rise edge)
+                          0.00  100.00   clock network delay (ideal)
+                          0.00  100.00   clock reconvergence pessimism
+                                100.00 ^ _17723_/CLK (sky130_fd_sc_hd__dfxtp_2)
+                         -0.11   99.89   library setup time
+                                 99.89   data required time
+-----------------------------------------------------------------------------
+                                 99.89   data required time
+                                -51.35   data arrival time
+-----------------------------------------------------------------------------
+                                 48.54   slack (MET)
+
+
+Startpoint: rv151.soc.dmem0 (falling edge-triggered flip-flop clocked by ick)
+Endpoint: _17727_ (rising edge-triggered flip-flop clocked by ick)
+Path Group: ick
+Path Type: max
+
+Fanout     Cap    Slew   Delay    Time   Description
+-----------------------------------------------------------------------------
+                  0.00   50.00   50.00   clock ick (fall edge)
+                          0.00   50.00   clock network delay (ideal)
+                  0.00    0.00   50.00 v rv151.soc.dmem0/clk0 (sky130_sram_2kbyte_1rw1r_32x512_8)
+                  0.05    0.96   50.96 v rv151.soc.dmem0/dout0[30] (sky130_sram_2kbyte_1rw1r_32x512_8)
+     1    0.10                           rv151.soc.dmem_dout0[0][30] (net)
+                  0.04    0.05   51.01 v _13798_/A1 (sky130_fd_sc_hd__mux2_2)
+                  0.05    0.27   51.28 v _13798_/X (sky130_fd_sc_hd__mux2_2)
+     1    0.00                           _07941_ (net)
+                  0.05    0.00   51.28 v _13799_/A (sky130_fd_sc_hd__buf_1)
+                  0.02    0.09   51.37 v _13799_/X (sky130_fd_sc_hd__buf_1)
+     1    0.00                           _00090_ (net)
+                  0.02    0.00   51.37 v _17727_/D (sky130_fd_sc_hd__dfxtp_2)
+                                 51.37   data arrival time
+
+                  0.00  100.00  100.00   clock ick (rise edge)
+                          0.00  100.00   clock network delay (ideal)
+                          0.00  100.00   clock reconvergence pessimism
+                                100.00 ^ _17727_/CLK (sky130_fd_sc_hd__dfxtp_2)
+                         -0.11   99.89   library setup time
+                                 99.89   data required time
+-----------------------------------------------------------------------------
+                                 99.89   data required time
+                                -51.37   data arrival time
+-----------------------------------------------------------------------------
+                                 48.52   slack (MET)
+
+
+Startpoint: rv151.soc.dmem0 (falling edge-triggered flip-flop clocked by ick)
+Endpoint: _17728_ (rising edge-triggered flip-flop clocked by ick)
+Path Group: ick
+Path Type: max
+
+Fanout     Cap    Slew   Delay    Time   Description
+-----------------------------------------------------------------------------
+                  0.00   50.00   50.00   clock ick (fall edge)
+                          0.00   50.00   clock network delay (ideal)
+                  0.00    0.00   50.00 v rv151.soc.dmem0/clk0 (sky130_sram_2kbyte_1rw1r_32x512_8)
+                  0.05    0.96   50.96 v rv151.soc.dmem0/dout0[31] (sky130_sram_2kbyte_1rw1r_32x512_8)
+     1    0.10                           rv151.soc.dmem_dout0[0][31] (net)
+                  0.04    0.05   51.01 v _13800_/A1 (sky130_fd_sc_hd__mux2_2)
+                  0.05    0.26   51.28 v _13800_/X (sky130_fd_sc_hd__mux2_2)
+     1    0.00                           _07942_ (net)
+                  0.05    0.00   51.28 v _13801_/A (sky130_fd_sc_hd__buf_1)
+                  0.02    0.09   51.37 v _13801_/X (sky130_fd_sc_hd__buf_1)
+     1    0.00                           _00091_ (net)
+                  0.02    0.00   51.37 v _17728_/D (sky130_fd_sc_hd__dfxtp_2)
+                                 51.37   data arrival time
+
+                  0.00  100.00  100.00   clock ick (rise edge)
+                          0.00  100.00   clock network delay (ideal)
+                          0.00  100.00   clock reconvergence pessimism
+                                100.00 ^ _17728_/CLK (sky130_fd_sc_hd__dfxtp_2)
+                         -0.11   99.89   library setup time
+                                 99.89   data required time
+-----------------------------------------------------------------------------
+                                 99.89   data required time
+                                -51.37   data arrival time
+-----------------------------------------------------------------------------
+                                 48.52   slack (MET)
+
+
+Startpoint: rv151.soc.dmem0 (falling edge-triggered flip-flop clocked by ick)
+Endpoint: _17726_ (rising edge-triggered flip-flop clocked by ick)
+Path Group: ick
+Path Type: max
+
+Fanout     Cap    Slew   Delay    Time   Description
+-----------------------------------------------------------------------------
+                  0.00   50.00   50.00   clock ick (fall edge)
+                          0.00   50.00   clock network delay (ideal)
+                  0.00    0.00   50.00 v rv151.soc.dmem0/clk0 (sky130_sram_2kbyte_1rw1r_32x512_8)
+                  0.05    0.95   50.95 v rv151.soc.dmem0/dout0[29] (sky130_sram_2kbyte_1rw1r_32x512_8)
+     1    0.09                           rv151.soc.dmem_dout0[0][29] (net)
+                  0.04    0.05   51.00 v _13796_/A1 (sky130_fd_sc_hd__mux2_2)
+                  0.05    0.27   51.27 v _13796_/X (sky130_fd_sc_hd__mux2_2)
+     1    0.00                           _07940_ (net)
+                  0.05    0.00   51.27 v _13797_/A (sky130_fd_sc_hd__buf_1)
+                  0.02    0.09   51.36 v _13797_/X (sky130_fd_sc_hd__buf_1)
+     1    0.00                           _00088_ (net)
+                  0.02    0.00   51.36 v _17726_/D (sky130_fd_sc_hd__dfxtp_2)
+                                 51.36   data arrival time
+
+                  0.00  100.00  100.00   clock ick (rise edge)
+                          0.00  100.00   clock network delay (ideal)
+                          0.00  100.00   clock reconvergence pessimism
+                                100.00 ^ _17726_/CLK (sky130_fd_sc_hd__dfxtp_2)
+                         -0.11   99.89   library setup time
+                                 99.89   data required time
+-----------------------------------------------------------------------------
+                                 99.89   data required time
+                                -51.36   data arrival time
+-----------------------------------------------------------------------------
+                                 48.53   slack (MET)
+
+
+Startpoint: rv151.soc.dmem0 (falling edge-triggered flip-flop clocked by ick)
+Endpoint: _17724_ (rising edge-triggered flip-flop clocked by ick)
+Path Group: ick
+Path Type: max
+
+Fanout     Cap    Slew   Delay    Time   Description
+-----------------------------------------------------------------------------
+                  0.00   50.00   50.00   clock ick (fall edge)
+                          0.00   50.00   clock network delay (ideal)
+                  0.00    0.00   50.00 v rv151.soc.dmem0/clk0 (sky130_sram_2kbyte_1rw1r_32x512_8)
+                  0.05    0.95   50.95 v rv151.soc.dmem0/dout0[27] (sky130_sram_2kbyte_1rw1r_32x512_8)
+     1    0.09                           rv151.soc.dmem_dout0[0][27] (net)
+                  0.04    0.05   51.00 v _13791_/A1 (sky130_fd_sc_hd__mux2_2)
+                  0.05    0.27   51.26 v _13791_/X (sky130_fd_sc_hd__mux2_2)
+     1    0.00                           _07937_ (net)
+                  0.05    0.00   51.26 v _13792_/A (sky130_fd_sc_hd__buf_1)
+                  0.02    0.09   51.36 v _13792_/X (sky130_fd_sc_hd__buf_1)
+     1    0.00                           _00086_ (net)
+                  0.02    0.00   51.36 v _17724_/D (sky130_fd_sc_hd__dfxtp_2)
+                                 51.36   data arrival time
+
+                  0.00  100.00  100.00   clock ick (rise edge)
+                          0.00  100.00   clock network delay (ideal)
+                          0.00  100.00   clock reconvergence pessimism
+                                100.00 ^ _17724_/CLK (sky130_fd_sc_hd__dfxtp_2)
+                         -0.11   99.89   library setup time
+                                 99.89   data required time
+-----------------------------------------------------------------------------
+                                 99.89   data required time
+                                -51.36   data arrival time
+-----------------------------------------------------------------------------
+                                 48.53   slack (MET)
+
+
+Startpoint: rv151.soc.dmem0 (falling edge-triggered flip-flop clocked by ick)
+Endpoint: _17723_ (rising edge-triggered flip-flop clocked by ick)
+Path Group: ick
+Path Type: max
+
+Fanout     Cap    Slew   Delay    Time   Description
+-----------------------------------------------------------------------------
+                  0.00   50.00   50.00   clock ick (fall edge)
+                          0.00   50.00   clock network delay (ideal)
+                  0.00    0.00   50.00 v rv151.soc.dmem0/clk0 (sky130_sram_2kbyte_1rw1r_32x512_8)
+                  0.05    0.94   50.94 v rv151.soc.dmem0/dout0[26] (sky130_sram_2kbyte_1rw1r_32x512_8)
+     1    0.09                           rv151.soc.dmem_dout0[0][26] (net)
+                  0.04    0.05   50.99 v _13789_/A1 (sky130_fd_sc_hd__mux2_2)
+                  0.05    0.27   51.26 v _13789_/X (sky130_fd_sc_hd__mux2_2)
+     1    0.00                           _07936_ (net)
+                  0.05    0.00   51.26 v _13790_/A (sky130_fd_sc_hd__buf_1)
+                  0.03    0.09   51.35 v _13790_/X (sky130_fd_sc_hd__buf_1)
+     1    0.00                           _00085_ (net)
+                  0.03    0.00   51.35 v _17723_/D (sky130_fd_sc_hd__dfxtp_2)
+                                 51.35   data arrival time
+
+                  0.00  100.00  100.00   clock ick (rise edge)
+                          0.00  100.00   clock network delay (ideal)
+                          0.00  100.00   clock reconvergence pessimism
+                                100.00 ^ _17723_/CLK (sky130_fd_sc_hd__dfxtp_2)
+                         -0.11   99.89   library setup time
+                                 99.89   data required time
+-----------------------------------------------------------------------------
+                                 99.89   data required time
+                                -51.35   data arrival time
+-----------------------------------------------------------------------------
+                                 48.54   slack (MET)
+
+
+Startpoint: _18033_ (rising edge-triggered flip-flop clocked by sck')
+Endpoint: io_out[12] (output port clocked by sck)
+Path Group: sck
+Path Type: max
+
+Fanout     Cap    Slew   Delay    Time   Description
+-----------------------------------------------------------------------------
+                  0.00   50.00   50.00   clock sck' (rise edge)
+                          0.00   50.00   clock network delay (ideal)
+                  0.00    0.00   50.00 ^ _18033_/CLK (sky130_fd_sc_hd__dfrtp_2)
+                  0.93    0.94   50.94 ^ _18033_/Q (sky130_fd_sc_hd__dfrtp_2)
+     1    0.20                           io_out[12] (net)
+                  1.01    0.22   51.16 ^ io_out[12] (out)
+                                 51.16   data arrival time
+
+                  0.00  100.00  100.00   clock sck (rise edge)
+                          0.00  100.00   clock network delay (ideal)
+                          0.00  100.00   clock reconvergence pessimism
+                        -30.00   70.00   output external delay
+                                 70.00   data required time
+-----------------------------------------------------------------------------
+                                 70.00   data required time
+                                -51.16   data arrival time
+-----------------------------------------------------------------------------
+                                 18.84   slack (MET)
+
+
+Startpoint: _18041_ (rising edge-triggered flip-flop clocked by sck)
+Endpoint: _18033_ (rising edge-triggered flip-flop clocked by sck')
+Path Group: sck
+Path Type: max
+
+Fanout     Cap    Slew   Delay    Time   Description
+-----------------------------------------------------------------------------
+                  0.00    0.00    0.00   clock sck (rise edge)
+                          0.00    0.00   clock network delay (ideal)
+                  0.00    0.00    0.00 ^ _18041_/CLK (sky130_fd_sc_hd__dfrtp_2)
+                  0.04    0.38    0.38 v _18041_/Q (sky130_fd_sc_hd__dfrtp_2)
+     1    0.00                           rv151.soc.bspi.oif.rsfr[7] (net)
+                  0.04    0.00    0.38 v _18033_/D (sky130_fd_sc_hd__dfrtp_2)
+                                  0.38   data arrival time
+
+                  0.00   50.00   50.00   clock sck' (rise edge)
+                          0.00   50.00   clock network delay (ideal)
+                          0.00   50.00   clock reconvergence pessimism
+                                 50.00 ^ _18033_/CLK (sky130_fd_sc_hd__dfrtp_2)
+                         -0.12   49.88   library setup time
+                                 49.88   data required time
+-----------------------------------------------------------------------------
+                                 49.88   data required time
+                                 -0.38   data arrival time
+-----------------------------------------------------------------------------
+                                 49.49   slack (MET)
+
+
+Startpoint: io_in[15] (input port clocked by sck)
+Endpoint: _18046_ (rising edge-triggered flip-flop clocked by sck)
+Path Group: sck
+Path Type: max
+
+Fanout     Cap    Slew   Delay    Time   Description
+-----------------------------------------------------------------------------
+                  0.00    0.00    0.00   clock sck (rise edge)
+                          0.00    0.00   clock network delay (ideal)
+                         30.00   30.00 v input external delay
+                  0.00    0.00   30.00 v io_in[15] (in)
+     2    0.26                           io_in[15] (net)
+                  0.49    0.26   30.26 v _08498_/A_N (sky130_fd_sc_hd__and2b_2)
+                  0.07    0.41   30.67 ^ _08498_/X (sky130_fd_sc_hd__and2b_2)
+     3    0.01                           _03057_ (net)
+                  0.07    0.00   30.67 ^ _08501_/A (sky130_fd_sc_hd__buf_1)
+                  0.59    0.49   31.15 ^ _08501_/X (sky130_fd_sc_hd__buf_1)
+    10    0.05                           _03059_ (net)
+                  0.59    0.00   31.15 ^ _12877_/S (sky130_fd_sc_hd__mux2_2)
+                  0.05    0.41   31.57 v _12877_/X (sky130_fd_sc_hd__mux2_2)
+     1    0.00                           _07322_ (net)
+                  0.05    0.00   31.57 v _12878_/A (sky130_fd_sc_hd__buf_1)
+                  0.02    0.09   31.66 v _12878_/X (sky130_fd_sc_hd__buf_1)
+     1    0.00                           _01316_ (net)
+                  0.02    0.00   31.66 v _18046_/D (sky130_fd_sc_hd__dfrtp_2)
+                                 31.66   data arrival time
+
+                  0.00  100.00  100.00   clock sck (rise edge)
+                          0.00  100.00   clock network delay (ideal)
+                          0.00  100.00   clock reconvergence pessimism
+                                100.00 ^ _18046_/CLK (sky130_fd_sc_hd__dfrtp_2)
+                         -0.12   99.88   library setup time
+                                 99.88   data required time
+-----------------------------------------------------------------------------
+                                 99.88   data required time
+                                -31.66   data arrival time
+-----------------------------------------------------------------------------
+                                 68.22   slack (MET)
+
+
+Startpoint: io_in[15] (input port clocked by sck)
+Endpoint: _18048_ (rising edge-triggered flip-flop clocked by sck)
+Path Group: sck
+Path Type: max
+
+Fanout     Cap    Slew   Delay    Time   Description
+-----------------------------------------------------------------------------
+                  0.00    0.00    0.00   clock sck (rise edge)
+                          0.00    0.00   clock network delay (ideal)
+                         30.00   30.00 v input external delay
+                  0.00    0.00   30.00 v io_in[15] (in)
+     2    0.26                           io_in[15] (net)
+                  0.49    0.26   30.26 v _08498_/A_N (sky130_fd_sc_hd__and2b_2)
+                  0.07    0.41   30.67 ^ _08498_/X (sky130_fd_sc_hd__and2b_2)
+     3    0.01                           _03057_ (net)
+                  0.07    0.00   30.67 ^ _08501_/A (sky130_fd_sc_hd__buf_1)
+                  0.59    0.49   31.15 ^ _08501_/X (sky130_fd_sc_hd__buf_1)
+    10    0.05                           _03059_ (net)
+                  0.59    0.00   31.15 ^ _12873_/S (sky130_fd_sc_hd__mux2_2)
+                  0.05    0.41   31.57 v _12873_/X (sky130_fd_sc_hd__mux2_2)
+     1    0.00                           _07320_ (net)
+                  0.05    0.00   31.57 v _12874_/A (sky130_fd_sc_hd__buf_1)
+                  0.02    0.09   31.66 v _12874_/X (sky130_fd_sc_hd__buf_1)
+     1    0.00                           _01318_ (net)
+                  0.02    0.00   31.66 v _18048_/D (sky130_fd_sc_hd__dfrtp_2)
+                                 31.66   data arrival time
+
+                  0.00  100.00  100.00   clock sck (rise edge)
+                          0.00  100.00   clock network delay (ideal)
+                          0.00  100.00   clock reconvergence pessimism
+                                100.00 ^ _18048_/CLK (sky130_fd_sc_hd__dfrtp_2)
+                         -0.12   99.88   library setup time
+                                 99.88   data required time
+-----------------------------------------------------------------------------
+                                 99.88   data required time
+                                -31.66   data arrival time
+-----------------------------------------------------------------------------
+                                 68.23   slack (MET)
+
+
+Startpoint: io_in[15] (input port clocked by sck)
+Endpoint: _18045_ (rising edge-triggered flip-flop clocked by sck)
+Path Group: sck
+Path Type: max
+
+Fanout     Cap    Slew   Delay    Time   Description
+-----------------------------------------------------------------------------
+                  0.00    0.00    0.00   clock sck (rise edge)
+                          0.00    0.00   clock network delay (ideal)
+                         30.00   30.00 v input external delay
+                  0.00    0.00   30.00 v io_in[15] (in)
+     2    0.26                           io_in[15] (net)
+                  0.49    0.26   30.26 v _08498_/A_N (sky130_fd_sc_hd__and2b_2)
+                  0.07    0.41   30.67 ^ _08498_/X (sky130_fd_sc_hd__and2b_2)
+     3    0.01                           _03057_ (net)
+                  0.07    0.00   30.67 ^ _08501_/A (sky130_fd_sc_hd__buf_1)
+                  0.59    0.49   31.15 ^ _08501_/X (sky130_fd_sc_hd__buf_1)
+    10    0.05                           _03059_ (net)
+                  0.59    0.00   31.15 ^ _12879_/S (sky130_fd_sc_hd__mux2_2)
+                  0.05    0.41   31.57 v _12879_/X (sky130_fd_sc_hd__mux2_2)
+     1    0.00                           _07323_ (net)
+                  0.05    0.00   31.57 v _12880_/A (sky130_fd_sc_hd__buf_1)
+                  0.02    0.09   31.66 v _12880_/X (sky130_fd_sc_hd__buf_1)
+     1    0.00                           _01315_ (net)
+                  0.02    0.00   31.66 v _18045_/D (sky130_fd_sc_hd__dfrtp_2)
+                                 31.66   data arrival time
+
+                  0.00  100.00  100.00   clock sck (rise edge)
+                          0.00  100.00   clock network delay (ideal)
+                          0.00  100.00   clock reconvergence pessimism
+                                100.00 ^ _18045_/CLK (sky130_fd_sc_hd__dfrtp_2)
+                         -0.12   99.88   library setup time
+                                 99.88   data required time
+-----------------------------------------------------------------------------
+                                 99.88   data required time
+                                -31.66   data arrival time
+-----------------------------------------------------------------------------
+                                 68.23   slack (MET)
+
+
+max_report_end
+check_report
+
+===========================================================================
+report_checks -unconstrained
+============================================================================
+Startpoint: io_in[17] (input port clocked by clk)
+Endpoint: _17640_ (recovery check against rising-edge clock clk)
+Path Group: **async_default**
+Path Type: max
+
+Fanout     Cap    Slew   Delay    Time   Description
+-----------------------------------------------------------------------------
+                  0.00    0.00    0.00   clock clk (rise edge)
+                          0.00    0.00   clock network delay (ideal)
+                         30.00   30.00 ^ input external delay
+                  0.00    0.00   30.00 ^ io_in[17] (in)
+     3    0.24                           io_in[17] (net)
+                  0.03    0.01   30.01 ^ _12893_/B_N (sky130_fd_sc_hd__or2b_2)
+                  0.30    0.55   30.56 v _12893_/X (sky130_fd_sc_hd__or2b_2)
+     1    0.12                           _07332_ (net)
+                  0.34    0.08   30.64 v _12894_/B1 (sky130_fd_sc_hd__o21a_2)
+                  0.09    0.30   30.95 v _12894_/X (sky130_fd_sc_hd__o21a_2)
+     1    0.02                           _07333_ (net)
+                  0.09    0.00   30.95 v _12895_/A (sky130_fd_sc_hd__buf_1)
+                  0.20    0.25   31.20 v _12895_/X (sky130_fd_sc_hd__buf_1)
+     6    0.03                           _07334_ (net)
+                  0.20    0.00   31.20 v _15267_/A (sky130_fd_sc_hd__buf_1)
+                  0.38    0.43   31.63 v _15267_/X (sky130_fd_sc_hd__buf_1)
+    10    0.07                           _02203_ (net)
+                  0.38    0.01   31.64 v _15279_/A (sky130_fd_sc_hd__buf_1)
+                  0.59    0.63   32.27 v _15279_/X (sky130_fd_sc_hd__buf_1)
+    10    0.10                           _02205_ (net)
+                  0.60    0.04   32.31 v _15283_/A (sky130_fd_sc_hd__inv_2)
+                  0.11    0.17   32.48 ^ _15283_/Y (sky130_fd_sc_hd__inv_2)
+     1    0.00                           _00292_ (net)
+                  0.11    0.00   32.48 ^ _17640_/RESET_B (sky130_fd_sc_hd__dfrtp_2)
+                                 32.48   data arrival time
+
+                  0.00  100.00  100.00   clock clk (rise edge)
+                          0.00  100.00   clock network delay (ideal)
+                          0.00  100.00   clock reconvergence pessimism
+                                100.00 ^ _17640_/CLK (sky130_fd_sc_hd__dfrtp_2)
+                          0.19  100.19   library recovery time
+                                100.19   data required time
+-----------------------------------------------------------------------------
+                                100.19   data required time
+                                -32.48   data arrival time
+-----------------------------------------------------------------------------
+                                 67.71   slack (MET)
+
+
+Startpoint: rv151.soc.dmem0 (falling edge-triggered flip-flop clocked by clk)
+Endpoint: _17727_ (rising edge-triggered flip-flop clocked by clk)
+Path Group: clk
+Path Type: max
+
+Fanout     Cap    Slew   Delay    Time   Description
+-----------------------------------------------------------------------------
+                  0.00   50.00   50.00   clock clk (fall edge)
+                          0.00   50.00   clock network delay (ideal)
+                  0.00    0.00   50.00 v rv151.soc.dmem0/clk0 (sky130_sram_2kbyte_1rw1r_32x512_8)
+                  0.05    0.96   50.96 v rv151.soc.dmem0/dout0[30] (sky130_sram_2kbyte_1rw1r_32x512_8)
+     1    0.10                           rv151.soc.dmem_dout0[0][30] (net)
+                  0.04    0.05   51.01 v _13798_/A1 (sky130_fd_sc_hd__mux2_2)
+                  0.05    0.27   51.28 v _13798_/X (sky130_fd_sc_hd__mux2_2)
+     1    0.00                           _07941_ (net)
+                  0.05    0.00   51.28 v _13799_/A (sky130_fd_sc_hd__buf_1)
+                  0.02    0.09   51.37 v _13799_/X (sky130_fd_sc_hd__buf_1)
+     1    0.00                           _00090_ (net)
+                  0.02    0.00   51.37 v _17727_/D (sky130_fd_sc_hd__dfxtp_2)
+                                 51.37   data arrival time
+
+                  0.00  100.00  100.00   clock clk (rise edge)
+                          0.00  100.00   clock network delay (ideal)
+                          0.00  100.00   clock reconvergence pessimism
+                                100.00 ^ _17727_/CLK (sky130_fd_sc_hd__dfxtp_2)
+                         -0.11   99.89   library setup time
+                                 99.89   data required time
+-----------------------------------------------------------------------------
+                                 99.89   data required time
+                                -51.37   data arrival time
+-----------------------------------------------------------------------------
+                                 48.52   slack (MET)
+
+
+Startpoint: rv151.soc.dmem0 (falling edge-triggered flip-flop clocked by ick)
+Endpoint: _17727_ (rising edge-triggered flip-flop clocked by ick)
+Path Group: ick
+Path Type: max
+
+Fanout     Cap    Slew   Delay    Time   Description
+-----------------------------------------------------------------------------
+                  0.00   50.00   50.00   clock ick (fall edge)
+                          0.00   50.00   clock network delay (ideal)
+                  0.00    0.00   50.00 v rv151.soc.dmem0/clk0 (sky130_sram_2kbyte_1rw1r_32x512_8)
+                  0.05    0.96   50.96 v rv151.soc.dmem0/dout0[30] (sky130_sram_2kbyte_1rw1r_32x512_8)
+     1    0.10                           rv151.soc.dmem_dout0[0][30] (net)
+                  0.04    0.05   51.01 v _13798_/A1 (sky130_fd_sc_hd__mux2_2)
+                  0.05    0.27   51.28 v _13798_/X (sky130_fd_sc_hd__mux2_2)
+     1    0.00                           _07941_ (net)
+                  0.05    0.00   51.28 v _13799_/A (sky130_fd_sc_hd__buf_1)
+                  0.02    0.09   51.37 v _13799_/X (sky130_fd_sc_hd__buf_1)
+     1    0.00                           _00090_ (net)
+                  0.02    0.00   51.37 v _17727_/D (sky130_fd_sc_hd__dfxtp_2)
+                                 51.37   data arrival time
+
+                  0.00  100.00  100.00   clock ick (rise edge)
+                          0.00  100.00   clock network delay (ideal)
+                          0.00  100.00   clock reconvergence pessimism
+                                100.00 ^ _17727_/CLK (sky130_fd_sc_hd__dfxtp_2)
+                         -0.11   99.89   library setup time
+                                 99.89   data required time
+-----------------------------------------------------------------------------
+                                 99.89   data required time
+                                -51.37   data arrival time
+-----------------------------------------------------------------------------
+                                 48.52   slack (MET)
+
+
+Startpoint: _18033_ (rising edge-triggered flip-flop clocked by sck')
+Endpoint: io_out[12] (output port clocked by sck)
+Path Group: sck
+Path Type: max
+
+Fanout     Cap    Slew   Delay    Time   Description
+-----------------------------------------------------------------------------
+                  0.00   50.00   50.00   clock sck' (rise edge)
+                          0.00   50.00   clock network delay (ideal)
+                  0.00    0.00   50.00 ^ _18033_/CLK (sky130_fd_sc_hd__dfrtp_2)
+                  0.93    0.94   50.94 ^ _18033_/Q (sky130_fd_sc_hd__dfrtp_2)
+     1    0.20                           io_out[12] (net)
+                  1.01    0.22   51.16 ^ io_out[12] (out)
+                                 51.16   data arrival time
+
+                  0.00  100.00  100.00   clock sck (rise edge)
+                          0.00  100.00   clock network delay (ideal)
+                          0.00  100.00   clock reconvergence pessimism
+                        -30.00   70.00   output external delay
+                                 70.00   data required time
+-----------------------------------------------------------------------------
+                                 70.00   data required time
+                                -51.16   data arrival time
+-----------------------------------------------------------------------------
+                                 18.84   slack (MET)
+
+
+
+===========================================================================
+report_checks --slack_max -0.01
+============================================================================
+No paths found.
+check_report_end
+check_slew
+
+===========================================================================
+ report_check_types -max_slew -max_cap -max_fanout -violators
+============================================================================
+max slew
+
+Pin                                    Limit    Slew   Slack
+------------------------------------------------------------
+rv151.soc.bios_mem0/addr1[1]            0.04    7.62   -7.58 (VIOLATED)
+rv151.soc.bios_mem1/addr1[1]            0.04    7.62   -7.58 (VIOLATED)
+rv151.soc.imem1/addr0[1]                0.04    7.61   -7.57 (VIOLATED)
+rv151.soc.imem0/addr0[1]                0.04    7.61   -7.57 (VIOLATED)
+rv151.soc.dmem1/addr0[1]                0.04    7.61   -7.57 (VIOLATED)
+rv151.soc.dmem0/addr0[1]                0.04    7.61   -7.57 (VIOLATED)
+rv151.soc.bios_mem0/addr1[0]            0.04    7.61   -7.57 (VIOLATED)
+rv151.soc.bios_mem1/addr1[0]            0.04    7.60   -7.56 (VIOLATED)
+rv151.soc.imem1/addr0[0]                0.04    7.60   -7.56 (VIOLATED)
+rv151.soc.imem0/addr0[0]                0.04    7.60   -7.56 (VIOLATED)
+rv151.soc.dmem1/addr0[0]                0.04    7.60   -7.56 (VIOLATED)
+rv151.soc.dmem0/addr0[0]                0.04    7.60   -7.56 (VIOLATED)
+rv151.soc.imem1/addr0[5]                0.04    7.31   -7.27 (VIOLATED)
+rv151.soc.bios_mem0/addr1[5]            0.04    7.31   -7.27 (VIOLATED)
+rv151.soc.dmem1/addr0[5]                0.04    7.31   -7.27 (VIOLATED)
+rv151.soc.bios_mem1/addr1[5]            0.04    7.31   -7.27 (VIOLATED)
+rv151.soc.imem0/addr0[5]                0.04    7.31   -7.27 (VIOLATED)
+rv151.soc.dmem0/addr0[5]                0.04    7.31   -7.27 (VIOLATED)
+rv151.soc.bios_mem0/addr1[2]            0.04    7.21   -7.17 (VIOLATED)
+rv151.soc.imem1/addr0[2]                0.04    7.21   -7.17 (VIOLATED)
+rv151.soc.dmem1/addr0[2]                0.04    7.20   -7.16 (VIOLATED)
+rv151.soc.bios_mem1/addr1[2]            0.04    7.20   -7.16 (VIOLATED)
+rv151.soc.imem0/addr0[2]                0.04    7.20   -7.16 (VIOLATED)
+rv151.soc.dmem0/addr0[2]                0.04    7.20   -7.16 (VIOLATED)
+rv151.soc.imem1/addr0[8]                0.04    6.86   -6.82 (VIOLATED)
+rv151.soc.bios_mem0/addr1[8]            0.04    6.85   -6.81 (VIOLATED)
+rv151.soc.dmem1/addr0[8]                0.04    6.85   -6.81 (VIOLATED)
+rv151.soc.dmem0/addr0[8]                0.04    6.85   -6.81 (VIOLATED)
+rv151.soc.imem0/addr0[8]                0.04    6.85   -6.81 (VIOLATED)
+rv151.soc.bios_mem1/addr1[8]            0.04    6.85   -6.81 (VIOLATED)
+rv151.soc.imem1/wmask0[0]               0.04    5.48   -5.44 (VIOLATED)
+rv151.soc.dmem1/wmask0[0]               0.04    5.47   -5.43 (VIOLATED)
+rv151.soc.imem0/wmask0[0]               0.04    5.47   -5.43 (VIOLATED)
+rv151.soc.dmem0/wmask0[0]               0.04    5.46   -5.42 (VIOLATED)
+rv151.soc.imem1/wmask0[3]               0.04    4.55   -4.51 (VIOLATED)
+rv151.soc.imem1/wmask0[1]               0.04    4.55   -4.51 (VIOLATED)
+rv151.soc.imem0/wmask0[3]               0.04    4.55   -4.51 (VIOLATED)
+rv151.soc.imem0/wmask0[1]               0.04    4.55   -4.51 (VIOLATED)
+rv151.soc.dmem1/wmask0[3]               0.04    4.55   -4.51 (VIOLATED)
+rv151.soc.dmem1/wmask0[1]               0.04    4.55   -4.51 (VIOLATED)
+rv151.soc.dmem0/wmask0[3]               0.04    4.54   -4.50 (VIOLATED)
+rv151.soc.dmem0/wmask0[1]               0.04    4.54   -4.50 (VIOLATED)
+_13026_/A                               1.50    5.71   -4.21 (VIOLATED)
+_13176_/A                               1.50    5.71   -4.21 (VIOLATED)
+_13198_/A                               1.50    5.71   -4.21 (VIOLATED)
+_13209_/A                               1.50    5.71   -4.21 (VIOLATED)
+_13259_/A                               1.50    5.71   -4.21 (VIOLATED)
+_12849_/A0                              1.50    5.71   -4.21 (VIOLATED)
+_18540_/D                               1.50    5.71   -4.21 (VIOLATED)
+_12847_/X                               1.51    5.71   -4.20 (VIOLATED)
+_13199_/B                               1.50    5.70   -4.20 (VIOLATED)
+_13026_/B                               1.50    5.70   -4.20 (VIOLATED)
+_13175_/A                               1.50    5.70   -4.20 (VIOLATED)
+_13209_/B                               1.50    5.70   -4.20 (VIOLATED)
+_12867_/A0                              1.50    5.70   -4.20 (VIOLATED)
+_18539_/D                               1.50    5.70   -4.20 (VIOLATED)
+_12865_/X                               1.51    5.70   -4.19 (VIOLATED)
+_12779_/A0                              1.50    5.48   -3.98 (VIOLATED)
+_13024_/A                               1.50    5.48   -3.98 (VIOLATED)
+_18544_/D                               1.50    5.48   -3.98 (VIOLATED)
+_12776_/X                               1.51    5.48   -3.97 (VIOLATED)
+_12829_/Y                               1.49    5.40   -3.91 (VIOLATED)
+_13025_/A_N                             1.50    5.40   -3.90 (VIOLATED)
+_13208_/A                               1.50    5.40   -3.90 (VIOLATED)
+_12832_/A0                              1.50    5.40   -3.90 (VIOLATED)
+_18541_/D                               1.50    5.40   -3.90 (VIOLATED)
+_12722_/A0                              1.50    5.14   -3.64 (VIOLATED)
+_18547_/D                               1.50    5.14   -3.64 (VIOLATED)
+_12719_/X                               1.51    5.14   -3.63 (VIOLATED)
+rv151.soc.bios_mem0/addr1[3]            0.04    3.35   -3.31 (VIOLATED)
+rv151.soc.imem1/addr0[3]                0.04    3.35   -3.31 (VIOLATED)
+rv151.soc.dmem1/addr0[3]                0.04    3.35   -3.31 (VIOLATED)
+rv151.soc.bios_mem1/addr1[3]            0.04    3.35   -3.31 (VIOLATED)
+rv151.soc.imem0/addr0[3]                0.04    3.34   -3.30 (VIOLATED)
+rv151.soc.dmem0/addr0[3]                0.04    3.34   -3.30 (VIOLATED)
+rv151.soc.imem1/addr0[6]                0.04    3.22   -3.18 (VIOLATED)
+rv151.soc.bios_mem0/addr1[6]            0.04    3.22   -3.18 (VIOLATED)
+rv151.soc.dmem1/addr0[6]                0.04    3.21   -3.17 (VIOLATED)
+rv151.soc.bios_mem1/addr1[6]            0.04    3.21   -3.17 (VIOLATED)
+rv151.soc.imem0/addr0[6]                0.04    3.21   -3.17 (VIOLATED)
+rv151.soc.dmem0/addr0[6]                0.04    3.20   -3.16 (VIOLATED)
+rv151.soc.bios_mem0/addr1[4]            0.04    3.16   -3.12 (VIOLATED)
+rv151.soc.imem1/addr0[4]                0.04    3.15   -3.11 (VIOLATED)
+_13249_/A0                              1.50    4.61   -3.11 (VIOLATED)
+rv151.soc.dmem1/addr0[4]                0.04    3.15   -3.11 (VIOLATED)
+_13222_/A1                              1.50    4.61   -3.11 (VIOLATED)
+_09076_/A1                              1.50    4.61   -3.11 (VIOLATED)
+_09934_/A1                              1.50    4.61   -3.11 (VIOLATED)
+_13039_/A                               1.50    4.61   -3.11 (VIOLATED)
+_13187_/A0                              1.50    4.61   -3.11 (VIOLATED)
+_11556_/A1                              1.50    4.61   -3.11 (VIOLATED)
+_11670_/A1                              1.50    4.61   -3.11 (VIOLATED)
+_13065_/A0                              1.50    4.61   -3.11 (VIOLATED)
+rv151.soc.bios_mem1/addr1[4]            0.04    3.15   -3.11 (VIOLATED)
+rv151.soc.imem0/addr0[4]                0.04    3.14   -3.10 (VIOLATED)
+rv151.soc.dmem0/addr0[4]                0.04    3.14   -3.10 (VIOLATED)
+_09071_/X                               1.51    4.61   -3.10 (VIOLATED)
+_13255_/A0                              1.50    4.58   -3.08 (VIOLATED)
+_13193_/A0                              1.50    4.57   -3.07 (VIOLATED)
+_08926_/A1                              1.50    4.57   -3.07 (VIOLATED)
+_13071_/A0                              1.50    4.57   -3.07 (VIOLATED)
+_13051_/A                               1.50    4.57   -3.07 (VIOLATED)
+_13234_/A1                              1.50    4.57   -3.07 (VIOLATED)
+_11596_/B                               1.50    4.57   -3.07 (VIOLATED)
+_11673_/A2                              1.50    4.57   -3.07 (VIOLATED)
+_08919_/X                               1.51    4.57   -3.06 (VIOLATED)
+_13247_/A0                              1.50    4.56   -3.06 (VIOLATED)
+_11729_/A1                              1.50    4.56   -3.06 (VIOLATED)
+_13035_/A                               1.50    4.56   -3.06 (VIOLATED)
+_13218_/A1                              1.50    4.56   -3.06 (VIOLATED)
+_13185_/A0                              1.50    4.56   -3.06 (VIOLATED)
+_11674_/A2_N                            1.50    4.56   -3.06 (VIOLATED)
+_11670_/B2                              1.50    4.56   -3.06 (VIOLATED)
+_13063_/A0                              1.50    4.56   -3.06 (VIOLATED)
+_11669_/X                               1.51    4.55   -3.05 (VIOLATED)
+_13257_/A0                              1.50    4.55   -3.05 (VIOLATED)
+_13195_/A0                              1.50    4.54   -3.04 (VIOLATED)
+_08668_/A1                              1.50    4.54   -3.04 (VIOLATED)
+_08930_/A1                              1.50    4.54   -3.04 (VIOLATED)
+_13055_/A                               1.50    4.54   -3.04 (VIOLATED)
+_13073_/A0                              1.50    4.54   -3.04 (VIOLATED)
+_13238_/A1                              1.50    4.54   -3.04 (VIOLATED)
+_11595_/A1                              1.50    4.54   -3.04 (VIOLATED)
+_11673_/B1                              1.50    4.54   -3.04 (VIOLATED)
+_08646_/X                               1.51    4.54   -3.03 (VIOLATED)
+_13251_/A0                              1.50    4.51   -3.01 (VIOLATED)
+_13243_/A0                              1.50    4.51   -3.01 (VIOLATED)
+_09008_/A1                              1.50    4.51   -3.01 (VIOLATED)
+_09930_/A1                              1.50    4.51   -3.01 (VIOLATED)
+_13043_/A                               1.50    4.51   -3.01 (VIOLATED)
+_13226_/A1                              1.50    4.51   -3.01 (VIOLATED)
+_13189_/A0                              1.50    4.51   -3.01 (VIOLATED)
+_13067_/A0                              1.50    4.51   -3.01 (VIOLATED)
+_11556_/B1                              1.50    4.51   -3.01 (VIOLATED)
+_11557_/A1                              1.50    4.51   -3.01 (VIOLATED)
+_13181_/A0                              1.50    4.51   -3.01 (VIOLATED)
+_13059_/A0                              1.50    4.51   -3.01 (VIOLATED)
+_11725_/A1                              1.50    4.51   -3.01 (VIOLATED)
+_11593_/A                               1.50    4.51   -3.01 (VIOLATED)
+_13204_/A1                              1.50    4.51   -3.01 (VIOLATED)
+_09003_/X                               1.51    4.51   -3.00 (VIOLATED)
+_11592_/X                               1.51    4.51   -3.00 (VIOLATED)
+_13253_/A0                              1.50    4.48   -2.98 (VIOLATED)
+_09565_/A1                              1.50    4.48   -2.98 (VIOLATED)
+_09140_/A1                              1.50    4.48   -2.98 (VIOLATED)
+_13047_/A                               1.50    4.48   -2.98 (VIOLATED)
+_13230_/A1                              1.50    4.48   -2.98 (VIOLATED)
+_13191_/A0                              1.50    4.48   -2.98 (VIOLATED)
+_13069_/A0                              1.50    4.48   -2.98 (VIOLATED)
+_11557_/B1                              1.50    4.48   -2.98 (VIOLATED)
+_11672_/A                               1.50    4.48   -2.98 (VIOLATED)
+rv151.soc.imem1/addr0[7]                0.04    3.02   -2.98 (VIOLATED)
+_09132_/X                               1.51    4.48   -2.97 (VIOLATED)
+rv151.soc.bios_mem0/addr1[7]            0.04    3.01   -2.97 (VIOLATED)
+rv151.soc.dmem1/addr0[7]                0.04    3.01   -2.97 (VIOLATED)
+rv151.soc.dmem0/addr0[7]                0.04    3.01   -2.97 (VIOLATED)
+rv151.soc.imem0/addr0[7]                0.04    3.01   -2.97 (VIOLATED)
+rv151.soc.bios_mem1/addr1[7]            0.04    3.00   -2.96 (VIOLATED)
+_13245_/A0                              1.50    4.43   -2.93 (VIOLATED)
+_13183_/A0                              1.50    4.43   -2.93 (VIOLATED)
+_13061_/A0                              1.50    4.43   -2.93 (VIOLATED)
+_11727_/A1                              1.50    4.43   -2.93 (VIOLATED)
+_13214_/A1                              1.50    4.43   -2.93 (VIOLATED)
+_11633_/A                               1.50    4.43   -2.93 (VIOLATED)
+_11632_/X                               1.51    4.43   -2.92 (VIOLATED)
+_13242_/A                               1.50    4.10   -2.60 (VIOLATED)
+_13177_/A                               1.50    4.10   -2.60 (VIOLATED)
+_13022_/B                               1.50    4.10   -2.60 (VIOLATED)
+_13260_/B                               1.50    4.10   -2.60 (VIOLATED)
+_13021_/Y                               1.50    4.10   -2.59 (VIOLATED)
+rv151.soc.imem1/wmask0[2]               0.04    2.22   -2.18 (VIOLATED)
+rv151.soc.imem0/wmask0[2]               0.04    2.22   -2.18 (VIOLATED)
+rv151.soc.dmem1/wmask0[2]               0.04    2.21   -2.17 (VIOLATED)
+rv151.soc.dmem0/wmask0[2]               0.04    2.21   -2.17 (VIOLATED)
+_13220_/A0                              1.50    3.57   -2.07 (VIOLATED)
+_13219_/X                               1.51    3.57   -2.06 (VIOLATED)
+_13224_/A0                              1.50    3.56   -2.06 (VIOLATED)
+_13232_/A0                              1.50    3.56   -2.06 (VIOLATED)
+_13236_/A0                              1.50    3.56   -2.06 (VIOLATED)
+_13223_/X                               1.51    3.56   -2.05 (VIOLATED)
+_13231_/X                               1.51    3.56   -2.05 (VIOLATED)
+_13235_/X                               1.51    3.56   -2.05 (VIOLATED)
+_13240_/A0                              1.50    3.54   -2.04 (VIOLATED)
+_13239_/X                               1.51    3.54   -2.03 (VIOLATED)
+_13216_/A0                              1.50    3.53   -2.03 (VIOLATED)
+_13228_/A0                              1.50    3.52   -2.02 (VIOLATED)
+_13215_/X                               1.51    3.53   -2.02 (VIOLATED)
+_13227_/X                               1.51    3.52   -2.02 (VIOLATED)
+_13212_/A0                              1.50    3.50   -2.00 (VIOLATED)
+_13205_/X                               1.51    3.50   -2.00 (VIOLATED)
+_13513_/Y                               1.50    3.41   -1.91 (VIOLATED)
+_13511_/Y                               1.50    3.41   -1.90 (VIOLATED)
+rv151.soc.bios_mem1/addr0[1]            0.04    1.63   -1.59 (VIOLATED)
+rv151.soc.bios_mem0/addr0[1]            0.04    1.63   -1.59 (VIOLATED)
+rv151.soc.bios_mem1/addr0[0]            0.04    1.59   -1.55 (VIOLATED)
+rv151.soc.bios_mem0/addr0[0]            0.04    1.59   -1.55 (VIOLATED)
+rv151.soc.bios_mem1/addr0[2]            0.04    1.55   -1.51 (VIOLATED)
+rv151.soc.bios_mem0/addr0[2]            0.04    1.55   -1.51 (VIOLATED)
+rv151.soc.bios_mem1/addr0[3]            0.04    1.55   -1.51 (VIOLATED)
+rv151.soc.bios_mem0/addr0[3]            0.04    1.55   -1.51 (VIOLATED)
+rv151.soc.bios_mem1/addr0[4]            0.04    1.55   -1.51 (VIOLATED)
+rv151.soc.bios_mem1/addr0[5]            0.04    1.55   -1.51 (VIOLATED)
+rv151.soc.bios_mem0/addr0[4]            0.04    1.55   -1.51 (VIOLATED)
+rv151.soc.bios_mem1/addr0[6]            0.04    1.55   -1.51 (VIOLATED)
+rv151.soc.bios_mem0/addr0[5]            0.04    1.55   -1.51 (VIOLATED)
+rv151.soc.bios_mem1/addr0[7]            0.04    1.55   -1.51 (VIOLATED)
+rv151.soc.bios_mem0/addr0[6]            0.04    1.55   -1.51 (VIOLATED)
+rv151.soc.bios_mem1/addr0[8]            0.04    1.55   -1.51 (VIOLATED)
+rv151.soc.bios_mem0/addr0[7]            0.04    1.55   -1.51 (VIOLATED)
+rv151.soc.bios_mem0/addr0[8]            0.04    1.55   -1.51 (VIOLATED)
+rv151.soc.imem0/addr1[7]                0.04    1.47   -1.43 (VIOLATED)
+rv151.soc.imem1/addr1[7]                0.04    1.45   -1.41 (VIOLATED)
+rv151.soc.bios_mem1/wmask0[1]           0.04    1.43   -1.39 (VIOLATED)
+rv151.soc.bios_mem1/wmask0[3]           0.04    1.43   -1.39 (VIOLATED)
+rv151.soc.bios_mem1/wmask0[2]           0.04    1.43   -1.39 (VIOLATED)
+rv151.soc.bios_mem0/wmask0[3]           0.04    1.43   -1.39 (VIOLATED)
+rv151.soc.bios_mem0/wmask0[1]           0.04    1.43   -1.39 (VIOLATED)
+rv151.soc.bios_mem0/wmask0[2]           0.04    1.43   -1.39 (VIOLATED)
+rv151.soc.bios_mem1/wmask0[0]           0.04    1.43   -1.39 (VIOLATED)
+rv151.soc.bios_mem0/wmask0[0]           0.04    1.43   -1.39 (VIOLATED)
+rv151.soc.imem0/addr1[4]                0.04    1.42   -1.38 (VIOLATED)
+rv151.soc.imem0/addr1[8]                0.04    1.42   -1.38 (VIOLATED)
+rv151.soc.imem1/addr1[4]                0.04    1.40   -1.36 (VIOLATED)
+rv151.soc.imem1/addr1[8]                0.04    1.39   -1.35 (VIOLATED)
+rv151.soc.imem0/addr1[6]                0.04    1.37   -1.33 (VIOLATED)
+rv151.soc.imem0/addr1[5]                0.04    1.37   -1.33 (VIOLATED)
+rv151.soc.imem0/addr1[3]                0.04    1.37   -1.33 (VIOLATED)
+rv151.soc.imem0/addr1[2]                0.04    1.36   -1.32 (VIOLATED)
+rv151.soc.imem1/addr1[6]                0.04    1.35   -1.31 (VIOLATED)
+rv151.soc.imem1/addr1[3]                0.04    1.34   -1.30 (VIOLATED)
+rv151.soc.imem1/addr1[5]                0.04    1.34   -1.30 (VIOLATED)
+rv151.soc.imem1/addr1[2]                0.04    1.34   -1.30 (VIOLATED)
+rv151.soc.imem0/addr1[0]                0.04    1.31   -1.27 (VIOLATED)
+rv151.soc.imem1/addr1[0]                0.04    1.29   -1.25 (VIOLATED)
+rv151.soc.imem0/addr1[1]                0.04    1.27   -1.23 (VIOLATED)
+rv151.soc.imem1/addr1[1]                0.04    1.25   -1.21 (VIOLATED)
+_12814_/A0                              1.50    2.51   -1.01 (VIOLATED)
+_13024_/C                               1.50    2.51   -1.01 (VIOLATED)
+_18542_/D                               1.50    2.51   -1.01 (VIOLATED)
+_12811_/X                               1.50    2.51   -1.00 (VIOLATED)
+_12755_/A0                              1.50    2.40   -0.90 (VIOLATED)
+_18545_/D                               1.50    2.40   -0.90 (VIOLATED)
+_12752_/X                               1.50    2.40   -0.90 (VIOLATED)
+_13024_/B                               1.50    2.36   -0.86 (VIOLATED)
+_12798_/A0                              1.50    2.36   -0.86 (VIOLATED)
+_18543_/D                               1.50    2.36   -0.86 (VIOLATED)
+_12796_/X                               1.50    2.36   -0.85 (VIOLATED)
+_12738_/A0                              1.50    2.25   -0.75 (VIOLATED)
+_18546_/D                               1.50    2.25   -0.75 (VIOLATED)
+_12736_/X                               1.51    2.25   -0.75 (VIOLATED)
+_13576_/X                               1.51    1.80   -0.29 (VIOLATED)
+_13578_/X                               1.51    1.80   -0.29 (VIOLATED)
+_13580_/X                               1.51    1.79   -0.29 (VIOLATED)
+_13574_/X                               1.51    1.79   -0.29 (VIOLATED)
+_13572_/X                               1.51    1.79   -0.29 (VIOLATED)
+_13568_/X                               1.51    1.79   -0.29 (VIOLATED)
+_13566_/X                               1.51    1.79   -0.29 (VIOLATED)
+_13570_/X                               1.51    1.79   -0.28 (VIOLATED)
+_13211_/A                               1.50    1.65   -0.15 (VIOLATED)
+_13207_/X                               1.50    1.65   -0.15 (VIOLATED)
+_13037_/A0                              1.50    1.60   -0.10 (VIOLATED)
+_13029_/A0                              1.50    1.60   -0.10 (VIOLATED)
+_13053_/A0                              1.50    1.60   -0.10 (VIOLATED)
+_13033_/A0                              1.50    1.60   -0.10 (VIOLATED)
+_13041_/A0                              1.50    1.60   -0.10 (VIOLATED)
+_13036_/X                               1.51    1.60   -0.10 (VIOLATED)
+_13057_/A0                              1.50    1.60   -0.10 (VIOLATED)
+_12923_/X                               1.51    1.60   -0.10 (VIOLATED)
+_13052_/X                               1.51    1.60   -0.10 (VIOLATED)
+_13032_/X                               1.51    1.60   -0.10 (VIOLATED)
+_13040_/X                               1.51    1.60   -0.09 (VIOLATED)
+_13056_/X                               1.51    1.60   -0.09 (VIOLATED)
+_13045_/A0                              1.50    1.59   -0.09 (VIOLATED)
+_13049_/A0                              1.50    1.59   -0.09 (VIOLATED)
+_13044_/X                               1.51    1.59   -0.09 (VIOLATED)
+_13048_/X                               1.51    1.59   -0.08 (VIOLATED)
+_13539_/X                               1.51    1.55   -0.04 (VIOLATED)
+_13537_/X                               1.51    1.55   -0.04 (VIOLATED)
+_13535_/X                               1.51    1.54   -0.03 (VIOLATED)
+_13533_/X                               1.51    1.53   -0.03 (VIOLATED)
+_13531_/X                               1.51    1.53   -0.03 (VIOLATED)
+_13525_/X                               1.51    1.53   -0.03 (VIOLATED)
+_13527_/X                               1.51    1.53   -0.02 (VIOLATED)
+_13529_/X                               1.51    1.53   -0.02 (VIOLATED)
+
+max capacitance
+
+Pin                                    Limit     Cap   Slack
+------------------------------------------------------------
+_12847_/X                               0.13    0.50   -0.37 (VIOLATED)
+_12865_/X                               0.13    0.50   -0.37 (VIOLATED)
+_12776_/X                               0.13    0.48   -0.35 (VIOLATED)
+_12829_/Y                               0.13    0.48   -0.35 (VIOLATED)
+_12719_/X                               0.13    0.45   -0.32 (VIOLATED)
+_09071_/X                               0.13    0.40   -0.27 (VIOLATED)
+_08919_/X                               0.13    0.40   -0.27 (VIOLATED)
+_11669_/X                               0.13    0.40   -0.27 (VIOLATED)
+_08646_/X                               0.13    0.40   -0.27 (VIOLATED)
+_09003_/X                               0.13    0.40   -0.27 (VIOLATED)
+_11592_/X                               0.13    0.40   -0.27 (VIOLATED)
+_09132_/X                               0.13    0.39   -0.26 (VIOLATED)
+_11632_/X                               0.13    0.39   -0.26 (VIOLATED)
+_13021_/Y                               0.13    0.36   -0.23 (VIOLATED)
+_12811_/X                               0.29    0.48   -0.20 (VIOLATED)
+_13219_/X                               0.13    0.32   -0.19 (VIOLATED)
+_13223_/X                               0.13    0.31   -0.18 (VIOLATED)
+_13231_/X                               0.13    0.31   -0.18 (VIOLATED)
+_13235_/X                               0.13    0.31   -0.18 (VIOLATED)
+_13239_/X                               0.13    0.31   -0.18 (VIOLATED)
+_13215_/X                               0.13    0.31   -0.18 (VIOLATED)
+_13227_/X                               0.13    0.31   -0.18 (VIOLATED)
+_13205_/X                               0.13    0.31   -0.18 (VIOLATED)
+_12752_/X                               0.29    0.46   -0.18 (VIOLATED)
+_12796_/X                               0.30    0.48   -0.17 (VIOLATED)
+_13513_/Y                               0.13    0.30   -0.17 (VIOLATED)
+_13511_/Y                               0.13    0.30   -0.17 (VIOLATED)
+_12736_/X                               0.29    0.45   -0.15 (VIOLATED)
+rv151.soc.dmem0/dout0[31]               0.03    0.10   -0.07 (VIOLATED)
+rv151.soc.dmem0/dout0[30]               0.03    0.10   -0.07 (VIOLATED)
+rv151.soc.dmem0/dout0[29]               0.03    0.09   -0.07 (VIOLATED)
+rv151.soc.dmem0/dout0[27]               0.03    0.09   -0.07 (VIOLATED)
+rv151.soc.dmem0/dout0[28]               0.03    0.09   -0.07 (VIOLATED)
+rv151.soc.dmem0/dout0[26]               0.03    0.09   -0.07 (VIOLATED)
+rv151.soc.dmem0/dout0[25]               0.03    0.09   -0.06 (VIOLATED)
+rv151.soc.dmem0/dout0[24]               0.03    0.09   -0.06 (VIOLATED)
+rv151.soc.dmem0/dout0[23]               0.03    0.09   -0.06 (VIOLATED)
+rv151.soc.dmem0/dout0[22]               0.03    0.09   -0.06 (VIOLATED)
+rv151.soc.dmem0/dout0[21]               0.03    0.09   -0.06 (VIOLATED)
+rv151.soc.dmem0/dout0[20]               0.03    0.09   -0.06 (VIOLATED)
+rv151.soc.dmem0/dout0[19]               0.03    0.09   -0.06 (VIOLATED)
+rv151.soc.bios_mem0/dout1[31]           0.03    0.09   -0.06 (VIOLATED)
+rv151.soc.dmem0/dout0[18]               0.03    0.08   -0.06 (VIOLATED)
+rv151.soc.bios_mem0/dout1[30]           0.03    0.08   -0.06 (VIOLATED)
+rv151.soc.dmem0/dout0[17]               0.03    0.08   -0.05 (VIOLATED)
+rv151.soc.bios_mem0/dout1[28]           0.03    0.08   -0.05 (VIOLATED)
+rv151.soc.bios_mem0/dout1[27]           0.03    0.08   -0.05 (VIOLATED)
+rv151.soc.dmem0/dout0[16]               0.03    0.08   -0.05 (VIOLATED)
+rv151.soc.bios_mem0/dout1[29]           0.03    0.08   -0.05 (VIOLATED)
+rv151.soc.bios_mem0/dout1[26]           0.03    0.08   -0.05 (VIOLATED)
+rv151.soc.dmem0/dout0[15]               0.03    0.08   -0.05 (VIOLATED)
+rv151.soc.imem0/dout1[31]               0.03    0.08   -0.05 (VIOLATED)
+rv151.soc.dmem0/dout0[14]               0.03    0.08   -0.05 (VIOLATED)
+rv151.soc.bios_mem0/dout0[31]           0.03    0.08   -0.05 (VIOLATED)
+rv151.soc.bios_mem0/dout1[25]           0.03    0.08   -0.05 (VIOLATED)
+rv151.soc.imem0/dout1[30]               0.03    0.08   -0.05 (VIOLATED)
+rv151.soc.bios_mem0/dout0[30]           0.03    0.08   -0.05 (VIOLATED)
+rv151.soc.bios_mem0/dout1[24]           0.03    0.08   -0.05 (VIOLATED)
+rv151.soc.imem0/dout1[29]               0.03    0.08   -0.05 (VIOLATED)
+rv151.soc.dmem0/dout0[13]               0.03    0.08   -0.05 (VIOLATED)
+rv151.soc.bios_mem0/dout0[29]           0.03    0.08   -0.05 (VIOLATED)
+rv151.soc.bios_mem0/dout1[23]           0.03    0.07   -0.05 (VIOLATED)
+rv151.soc.bios_mem0/dout0[28]           0.03    0.07   -0.05 (VIOLATED)
+rv151.soc.dmem0/dout0[12]               0.03    0.07   -0.05 (VIOLATED)
+rv151.soc.bios_mem0/dout1[22]           0.03    0.07   -0.05 (VIOLATED)
+rv151.soc.dmem0/dout0[10]               0.03    0.07   -0.05 (VIOLATED)
+rv151.soc.dmem0/dout0[11]               0.03    0.07   -0.05 (VIOLATED)
+rv151.soc.imem0/dout1[28]               0.03    0.07   -0.05 (VIOLATED)
+rv151.soc.bios_mem0/dout1[21]           0.03    0.07   -0.04 (VIOLATED)
+rv151.soc.bios_mem0/dout0[27]           0.03    0.07   -0.04 (VIOLATED)
+rv151.soc.imem0/dout1[27]               0.03    0.07   -0.04 (VIOLATED)
+rv151.soc.bios_mem0/dout1[20]           0.03    0.07   -0.04 (VIOLATED)
+rv151.soc.imem0/dout1[26]               0.03    0.07   -0.04 (VIOLATED)
+rv151.soc.bios_mem0/dout0[26]           0.03    0.07   -0.04 (VIOLATED)
+rv151.soc.dmem0/dout0[9]                0.03    0.07   -0.04 (VIOLATED)
+rv151.soc.dmem0/dout0[7]                0.03    0.07   -0.04 (VIOLATED)
+rv151.soc.dmem0/dout0[8]                0.03    0.07   -0.04 (VIOLATED)
+rv151.soc.bios_mem0/dout1[18]           0.03    0.07   -0.04 (VIOLATED)
+rv151.soc.bios_mem0/dout1[19]           0.03    0.07   -0.04 (VIOLATED)
+rv151.soc.imem0/dout1[25]               0.03    0.07   -0.04 (VIOLATED)
+rv151.soc.dmem0/dout0[5]                0.03    0.07   -0.04 (VIOLATED)
+rv151.soc.dmem0/dout0[6]                0.03    0.07   -0.04 (VIOLATED)
+rv151.soc.bios_mem0/dout0[25]           0.03    0.07   -0.04 (VIOLATED)
+rv151.soc.dmem0/dout0[4]                0.03    0.07   -0.04 (VIOLATED)
+rv151.soc.bios_mem0/dout1[17]           0.03    0.07   -0.04 (VIOLATED)
+rv151.soc.bios_mem0/dout1[16]           0.03    0.07   -0.04 (VIOLATED)
+rv151.soc.imem0/dout1[24]               0.03    0.07   -0.04 (VIOLATED)
+rv151.soc.bios_mem0/dout0[24]           0.03    0.07   -0.04 (VIOLATED)
+rv151.soc.imem0/dout1[22]               0.03    0.06   -0.04 (VIOLATED)
+rv151.soc.imem0/dout1[23]               0.03    0.06   -0.04 (VIOLATED)
+rv151.soc.bios_mem0/dout0[22]           0.03    0.06   -0.04 (VIOLATED)
+rv151.soc.bios_mem0/dout0[23]           0.03    0.06   -0.04 (VIOLATED)
+rv151.soc.bios_mem0/dout0[20]           0.03    0.06   -0.04 (VIOLATED)
+rv151.soc.bios_mem0/dout0[21]           0.03    0.06   -0.04 (VIOLATED)
+rv151.soc.dmem0/dout0[2]                0.03    0.06   -0.04 (VIOLATED)
+rv151.soc.imem0/dout1[21]               0.03    0.06   -0.04 (VIOLATED)
+rv151.soc.dmem0/dout0[3]                0.03    0.06   -0.04 (VIOLATED)
+rv151.soc.imem0/dout1[20]               0.03    0.06   -0.04 (VIOLATED)
+rv151.soc.bios_mem0/dout1[15]           0.03    0.06   -0.04 (VIOLATED)
+rv151.soc.bios_mem0/dout1[14]           0.03    0.06   -0.03 (VIOLATED)
+rv151.soc.dmem0/dout0[1]                0.03    0.06   -0.03 (VIOLATED)
+rv151.soc.imem0/dout1[19]               0.03    0.06   -0.03 (VIOLATED)
+rv151.soc.dmem0/dout0[0]                0.03    0.06   -0.03 (VIOLATED)
+rv151.soc.bios_mem0/dout0[19]           0.03    0.06   -0.03 (VIOLATED)
+rv151.soc.bios_mem0/dout0[18]           0.03    0.06   -0.03 (VIOLATED)
+rv151.soc.bios_mem0/dout1[13]           0.03    0.06   -0.03 (VIOLATED)
+rv151.soc.imem0/dout1[18]               0.03    0.06   -0.03 (VIOLATED)
+rv151.soc.dmem1/dout0[0]                0.03    0.06   -0.03 (VIOLATED)
+rv151.soc.bios_mem0/dout0[17]           0.03    0.06   -0.03 (VIOLATED)
+rv151.soc.imem0/dout1[17]               0.03    0.06   -0.03 (VIOLATED)
+rv151.soc.dmem1/dout0[1]                0.03    0.06   -0.03 (VIOLATED)
+rv151.soc.imem0/dout1[16]               0.03    0.06   -0.03 (VIOLATED)
+rv151.soc.bios_mem0/dout1[12]           0.03    0.06   -0.03 (VIOLATED)
+rv151.soc.bios_mem0/dout1[10]           0.03    0.06   -0.03 (VIOLATED)
+rv151.soc.bios_mem0/dout1[11]           0.03    0.06   -0.03 (VIOLATED)
+rv151.soc.bios_mem0/dout0[16]           0.03    0.06   -0.03 (VIOLATED)
+rv151.soc.imem0/dout1[14]               0.03    0.06   -0.03 (VIOLATED)
+_13207_/X                               0.29    0.31   -0.03 (VIOLATED)
+rv151.soc.imem0/dout1[13]               0.03    0.06   -0.03 (VIOLATED)
+rv151.soc.imem0/dout1[15]               0.03    0.06   -0.03 (VIOLATED)
+rv151.soc.bios_mem0/dout0[14]           0.03    0.06   -0.03 (VIOLATED)
+rv151.soc.dmem1/dout0[3]                0.03    0.06   -0.03 (VIOLATED)
+rv151.soc.bios_mem0/dout0[15]           0.03    0.06   -0.03 (VIOLATED)
+rv151.soc.bios_mem0/dout0[13]           0.03    0.05   -0.03 (VIOLATED)
+rv151.soc.imem0/dout1[12]               0.03    0.05   -0.03 (VIOLATED)
+rv151.soc.dmem1/dout0[2]                0.03    0.05   -0.03 (VIOLATED)
+_13576_/X                               0.13    0.16   -0.03 (VIOLATED)
+_13578_/X                               0.13    0.16   -0.03 (VIOLATED)
+_13580_/X                               0.13    0.16   -0.03 (VIOLATED)
+_13574_/X                               0.13    0.16   -0.03 (VIOLATED)
+_13572_/X                               0.13    0.16   -0.03 (VIOLATED)
+_13568_/X                               0.13    0.16   -0.03 (VIOLATED)
+rv151.soc.bios_mem0/dout0[12]           0.03    0.05   -0.03 (VIOLATED)
+_13566_/X                               0.13    0.16   -0.03 (VIOLATED)
+_13570_/X                               0.13    0.16   -0.03 (VIOLATED)
+rv151.soc.bios_mem0/dout1[6]            0.03    0.05   -0.03 (VIOLATED)
+rv151.soc.bios_mem0/dout1[5]            0.03    0.05   -0.03 (VIOLATED)
+rv151.soc.bios_mem0/dout1[9]            0.03    0.05   -0.03 (VIOLATED)
+rv151.soc.bios_mem0/dout1[7]            0.03    0.05   -0.03 (VIOLATED)
+rv151.soc.bios_mem0/dout1[8]            0.03    0.05   -0.03 (VIOLATED)
+rv151.soc.imem0/dout1[11]               0.03    0.05   -0.02 (VIOLATED)
+rv151.soc.bios_mem0/dout1[3]            0.03    0.05   -0.02 (VIOLATED)
+rv151.soc.bios_mem0/dout0[11]           0.03    0.05   -0.02 (VIOLATED)
+rv151.soc.dmem1/dout0[4]                0.03    0.05   -0.02 (VIOLATED)
+rv151.soc.imem0/dout1[8]                0.03    0.05   -0.02 (VIOLATED)
+rv151.soc.bios_mem0/dout1[4]            0.03    0.05   -0.02 (VIOLATED)
+rv151.soc.imem0/dout1[10]               0.03    0.05   -0.02 (VIOLATED)
+rv151.soc.dmem1/dout0[6]                0.03    0.05   -0.02 (VIOLATED)
+rv151.soc.imem0/dout1[7]                0.03    0.05   -0.02 (VIOLATED)
+rv151.soc.dmem1/dout0[5]                0.03    0.05   -0.02 (VIOLATED)
+rv151.soc.imem0/dout1[6]                0.03    0.05   -0.02 (VIOLATED)
+rv151.soc.bios_mem0/dout0[10]           0.03    0.05   -0.02 (VIOLATED)
+rv151.soc.bios_mem0/dout1[2]            0.03    0.05   -0.02 (VIOLATED)
+rv151.soc.bios_mem0/dout0[6]            0.03    0.05   -0.02 (VIOLATED)
+rv151.soc.imem0/dout1[9]                0.03    0.05   -0.02 (VIOLATED)
+rv151.soc.dmem1/dout0[7]                0.03    0.05   -0.02 (VIOLATED)
+rv151.soc.imem0/dout1[5]                0.03    0.05   -0.02 (VIOLATED)
+rv151.soc.bios_mem0/dout0[7]            0.03    0.05   -0.02 (VIOLATED)
+rv151.soc.dmem1/dout0[8]                0.03    0.05   -0.02 (VIOLATED)
+rv151.soc.bios_mem0/dout0[9]            0.03    0.05   -0.02 (VIOLATED)
+rv151.soc.bios_mem0/dout0[5]            0.03    0.05   -0.02 (VIOLATED)
+rv151.soc.imem0/dout1[4]                0.03    0.05   -0.02 (VIOLATED)
+rv151.soc.dmem1/dout0[9]                0.03    0.05   -0.02 (VIOLATED)
+rv151.soc.bios_mem0/dout0[8]            0.03    0.05   -0.02 (VIOLATED)
+_13036_/X                               0.31    0.33   -0.02 (VIOLATED)
+rv151.soc.bios_mem1/dout0[0]            0.03    0.05   -0.02 (VIOLATED)
+rv151.soc.bios_mem0/dout0[4]            0.03    0.05   -0.02 (VIOLATED)
+rv151.soc.bios_mem1/dout0[1]            0.03    0.05   -0.02 (VIOLATED)
+rv151.soc.bios_mem0/dout1[0]            0.03    0.05   -0.02 (VIOLATED)
+_13052_/X                               0.31    0.33   -0.02 (VIOLATED)
+rv151.soc.imem0/dout1[3]                0.03    0.05   -0.02 (VIOLATED)
+_12923_/X                               0.31    0.33   -0.02 (VIOLATED)
+_13040_/X                               0.31    0.33   -0.02 (VIOLATED)
+_13032_/X                               0.31    0.33   -0.02 (VIOLATED)
+rv151.soc.bios_mem0/dout1[1]            0.03    0.05   -0.02 (VIOLATED)
+_13056_/X                               0.31    0.33   -0.02 (VIOLATED)
+rv151.soc.bios_mem0/dout0[3]            0.03    0.05   -0.02 (VIOLATED)
+rv151.soc.bios_mem1/dout0[2]            0.03    0.05   -0.02 (VIOLATED)
+rv151.soc.imem0/dout1[1]                0.03    0.05   -0.02 (VIOLATED)
+rv151.soc.imem0/dout1[2]                0.03    0.05   -0.02 (VIOLATED)
+rv151.soc.dmem1/dout0[11]               0.03    0.05   -0.02 (VIOLATED)
+rv151.soc.imem1/dout1[0]                0.03    0.05   -0.02 (VIOLATED)
+rv151.soc.dmem1/dout0[10]               0.03    0.05   -0.02 (VIOLATED)
+rv151.soc.imem1/dout1[2]                0.03    0.04   -0.02 (VIOLATED)
+_13044_/X                               0.31    0.33   -0.02 (VIOLATED)
+_13048_/X                               0.31    0.33   -0.02 (VIOLATED)
+rv151.soc.imem0/dout1[0]                0.03    0.04   -0.02 (VIOLATED)
+rv151.soc.dmem1/dout0[12]               0.03    0.04   -0.02 (VIOLATED)
+rv151.soc.imem1/dout1[1]                0.03    0.04   -0.02 (VIOLATED)
+rv151.soc.bios_mem1/dout0[3]            0.03    0.04   -0.02 (VIOLATED)
+rv151.soc.bios_mem0/dout0[2]            0.03    0.04   -0.02 (VIOLATED)
+rv151.soc.imem1/dout1[3]                0.03    0.04   -0.02 (VIOLATED)
+rv151.soc.bios_mem1/dout1[0]            0.03    0.04   -0.02 (VIOLATED)
+rv151.soc.bios_mem0/dout0[1]            0.03    0.04   -0.02 (VIOLATED)
+rv151.soc.dmem1/dout0[13]               0.03    0.04   -0.02 (VIOLATED)
+rv151.soc.bios_mem0/dout0[0]            0.03    0.04   -0.01 (VIOLATED)
+rv151.soc.bios_mem1/dout0[4]            0.03    0.04   -0.01 (VIOLATED)
+rv151.soc.bios_mem1/dout1[1]            0.03    0.04   -0.01 (VIOLATED)
+rv151.soc.imem1/dout1[4]                0.03    0.04   -0.01 (VIOLATED)
+rv151.soc.dmem1/dout0[14]               0.03    0.04   -0.01 (VIOLATED)
+rv151.soc.bios_mem1/dout0[5]            0.03    0.04   -0.01 (VIOLATED)
+rv151.soc.imem1/dout1[5]                0.03    0.04   -0.01 (VIOLATED)
+rv151.soc.bios_mem1/dout0[8]            0.03    0.04   -0.01 (VIOLATED)
+rv151.soc.dmem1/dout0[15]               0.03    0.04   -0.01 (VIOLATED)
+rv151.soc.bios_mem1/dout0[7]            0.03    0.04   -0.01 (VIOLATED)
+rv151.soc.bios_mem1/dout0[9]            0.03    0.04   -0.01 (VIOLATED)
+rv151.soc.bios_mem1/dout0[6]            0.03    0.04   -0.01 (VIOLATED)
+rv151.soc.bios_mem1/dout1[2]            0.03    0.04   -0.01 (VIOLATED)
+rv151.soc.imem1/dout1[7]                0.03    0.04   -0.01 (VIOLATED)
+rv151.soc.imem1/dout1[9]                0.03    0.04   -0.01 (VIOLATED)
+rv151.soc.imem1/dout1[6]                0.03    0.04   -0.01 (VIOLATED)
+rv151.soc.imem1/dout1[8]                0.03    0.04   -0.01 (VIOLATED)
+rv151.soc.bios_mem1/dout0[10]           0.03    0.04   -0.01 (VIOLATED)
+rv151.soc.imem1/dout1[10]               0.03    0.04   -0.01 (VIOLATED)
+rv151.soc.dmem1/dout0[16]               0.03    0.04   -0.01 (VIOLATED)
+rv151.soc.bios_mem1/dout0[11]           0.03    0.04   -0.01 (VIOLATED)
+rv151.soc.bios_mem1/dout1[4]            0.03    0.04   -0.01 (VIOLATED)
+rv151.soc.dmem1/dout0[17]               0.03    0.04   -0.01 (VIOLATED)
+rv151.soc.bios_mem1/dout1[5]            0.03    0.04   -0.01 (VIOLATED)
+rv151.soc.imem1/dout1[11]               0.03    0.04   -0.01 (VIOLATED)
+rv151.soc.bios_mem1/dout1[7]            0.03    0.04   -0.01 (VIOLATED)
+rv151.soc.bios_mem1/dout1[6]            0.03    0.04   -0.01 (VIOLATED)
+rv151.soc.bios_mem1/dout1[3]            0.03    0.04   -0.01 (VIOLATED)
+rv151.soc.bios_mem1/dout1[8]            0.03    0.04   -0.01 (VIOLATED)
+rv151.soc.bios_mem1/dout1[9]            0.03    0.04   -0.01 (VIOLATED)
+rv151.soc.bios_mem1/dout0[12]           0.03    0.04   -0.01 (VIOLATED)
+_13539_/X                               0.30    0.31   -0.01 (VIOLATED)
+rv151.soc.bios_mem1/dout0[13]           0.03    0.04   -0.01 (VIOLATED)
+rv151.soc.imem1/dout1[12]               0.03    0.03   -0.01 (VIOLATED)
+_13537_/X                               0.30    0.31   -0.01 (VIOLATED)
+rv151.soc.bios_mem1/dout0[14]           0.03    0.03   -0.01 (VIOLATED)
+rv151.soc.imem1/dout1[13]               0.03    0.03   -0.01 (VIOLATED)
+rv151.soc.bios_mem1/dout0[15]           0.03    0.03   -0.01 (VIOLATED)
+rv151.soc.imem1/dout1[15]               0.03    0.03   -0.01 (VIOLATED)
+rv151.soc.dmem1/dout0[18]               0.03    0.03   -0.01 (VIOLATED)
+rv151.soc.imem1/dout1[14]               0.03    0.03   -0.01 (VIOLATED)
+rv151.soc.bios_mem1/dout1[10]           0.03    0.03   -0.01 (VIOLATED)
+rv151.soc.bios_mem1/dout1[11]           0.03    0.03   -0.01 (VIOLATED)
+rv151.soc.dmem1/dout0[19]               0.03    0.03   -0.01 (VIOLATED)
+rv151.soc.bios_mem1/dout0[16]           0.03    0.03   -0.01 (VIOLATED)
+_13535_/X                               0.30    0.30   -0.01 (VIOLATED)
+rv151.soc.bios_mem1/dout1[12]           0.03    0.03   -0.01 (VIOLATED)
+rv151.soc.imem1/dout1[16]               0.03    0.03   -0.00 (VIOLATED)
+_13533_/X                               0.30    0.30   -0.00 (VIOLATED)
+rv151.soc.bios_mem1/dout0[17]           0.03    0.03   -0.00 (VIOLATED)
+_13531_/X                               0.30    0.30   -0.00 (VIOLATED)
+_13525_/X                               0.30    0.30   -0.00 (VIOLATED)
+_13527_/X                               0.30    0.30   -0.00 (VIOLATED)
+rv151.soc.dmem1/dout0[20]               0.03    0.03   -0.00 (VIOLATED)
+rv151.soc.imem1/dout1[17]               0.03    0.03   -0.00 (VIOLATED)
+_13529_/X                               0.30    0.30   -0.00 (VIOLATED)
+rv151.soc.imem1/dout1[18]               0.03    0.03   -0.00 (VIOLATED)
+rv151.soc.bios_mem1/dout1[13]           0.03    0.03   -0.00 (VIOLATED)
+rv151.soc.dmem1/dout0[21]               0.03    0.03   -0.00 (VIOLATED)
+rv151.soc.bios_mem1/dout0[18]           0.03    0.03   -0.00 (VIOLATED)
+rv151.soc.dmem1/dout0[22]               0.03    0.03   -0.00 (VIOLATED)
+rv151.soc.dmem1/dout0[23]               0.03    0.03   -0.00 (VIOLATED)
+rv151.soc.bios_mem1/dout1[14]           0.03    0.03   -0.00 (VIOLATED)
+rv151.soc.bios_mem1/dout0[19]           0.03    0.03   -0.00 (VIOLATED)
+rv151.soc.imem1/dout1[19]               0.03    0.03   -0.00 (VIOLATED)
+rv151.soc.dmem1/dout0[24]               0.03    0.03   -0.00 (VIOLATED)
+_13793_/X                               0.13    0.13   -0.00 (VIOLATED)
+
+
+===========================================================================
+max slew violation count 284
+max fanout violation count 0
+max cap violation count 262
+============================================================================
+check_slew_end
+tns_report
+
+===========================================================================
+ report_tns
+============================================================================
+tns 0.00
+tns_report_end
+wns_report
+
+===========================================================================
+ report_wns
+============================================================================
+wns 0.00
+wns_report_end
+worst_slack
+
+===========================================================================
+ report_worst_slack -max (Setup)
+============================================================================
+worst slack 18.84
+
+===========================================================================
+ report_worst_slack -min (Hold)
+============================================================================
+worst slack 0.33
+worst_slack_end
+clock_skew
+
+===========================================================================
+ report_clock_skew
+============================================================================
+Clock clk
+Latency      CRPR       Skew
+_17108_/CLK ^
+  55.74
+_17112_/CLK ^
+  23.04      0.00      32.69
+
+Clock ick
+Latency      CRPR       Skew
+_17108_/CLK ^
+  40.74
+_17112_/CLK ^
+  23.04      0.00      17.69
+
+Clock sck
+Latency      CRPR       Skew
+_18041_/CLK ^
+   0.00
+_18033_/CLK ^
+   0.02      0.00      -0.02
+
+clock_skew_end
+power_report
+
+===========================================================================
+ report_power
+============================================================================
+Group                  Internal  Switching    Leakage      Total
+                          Power      Power      Power      Power (Watts)
+----------------------------------------------------------------
+Sequential             7.45e-04   1.07e-04   1.36e-08   8.52e-04  16.7%
+Combinational          3.21e-03   9.32e-04   1.06e-04   4.25e-03  83.3%
+Macro                  0.00e+00   0.00e+00   0.00e+00   0.00e+00   0.0%
+Pad                    0.00e+00   0.00e+00   0.00e+00   0.00e+00   0.0%
+----------------------------------------------------------------
+Total                  3.96e-03   1.04e-03   1.06e-04   5.10e-03 100.0%
+                          77.6%      20.4%       2.1%
+power_report_end
+area_report
+
+===========================================================================
+ report_design_area
+============================================================================
+Design area 1963753 u^2 19% utilization.
+area_report_end
+Setting global connections for newly added cells...
+Writing OpenROAD database to /mnt/d/project/mpw_hdp_rv151/openlane/user_project_wrapper/runs/23_02_01_20_01/tmp/placement/8-global.odb...
+Writing layout to /mnt/d/project/mpw_hdp_rv151/openlane/user_project_wrapper/runs/23_02_01_20_01/tmp/placement/8-global.def...

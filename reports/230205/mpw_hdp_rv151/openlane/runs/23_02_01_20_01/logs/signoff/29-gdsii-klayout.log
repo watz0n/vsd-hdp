@@ -1,0 +1,18 @@
+
+Input: /mnt/d/project/mpw_hdp_rv151/openlane/user_project_wrapper/runs/23_02_01_20_01/results/routing/user_project_wrapper.def
+Output: /mnt/d/project/mpw_hdp_rv151/openlane/user_project_wrapper/runs/23_02_01_20_01/results/signoff/user_project_wrapper.klayout.gds
+Design: user_project_wrapper
+Technology File: /mnt/d/project/mpw_hdp_rv151/../mpw_deps/pdks/sky130A/libs.tech/klayout/tech/sky130A.lyt
+GDS File List: ['/mnt/d/project/mpw_hdp_rv151/../mpw_deps/pdks/sky130A/libs.ref/sky130_fd_sc_hd/gds/sky130_fd_sc_hd.gds', '/mnt/d/project/mpw_hdp_rv151/openlane/user_project_wrapper/../../../mpw_deps/pdks/sky130A/libs.ref/sky130_sram_macros/gds/sky130_sram_2kbyte_1rw1r_32x512_8.gds']
+LEF File: /mnt/d/project/mpw_hdp_rv151/openlane/user_project_wrapper/runs/23_02_01_20_01/tmp/merged.nom.lef
+
+[INFO] Clearing cells...
+[INFO] Merging GDS files...
+	/mnt/d/project/mpw_hdp_rv151/../mpw_deps/pdks/sky130A/libs.ref/sky130_fd_sc_hd/gds/sky130_fd_sc_hd.gds
+	/mnt/d/project/mpw_hdp_rv151/openlane/user_project_wrapper/../../../mpw_deps/pdks/sky130A/libs.ref/sky130_sram_macros/gds/sky130_sram_2kbyte_1rw1r_32x512_8.gds
+[INFO] Copying toplevel cell 'user_project_wrapper'
+WARNING: no fill config file specified
+[INFO] Checking for missing GDS...
+[INFO] All LEF cells have matching GDS cells
+[INFO] Writing out GDS '/mnt/d/project/mpw_hdp_rv151/openlane/user_project_wrapper/runs/23_02_01_20_01/results/signoff/user_project_wrapper.klayout.gds'
+[INFO] Done.

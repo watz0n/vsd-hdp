@@ -1,0 +1,627 @@
+
+Magic 8.3 revision 331 - Compiled on Sat Oct 22 18:40:56 UTC 2022.
+Starting magic under Tcl interpreter
+Using the terminal as the console.
+Using NULL graphics device.
+Processing system .magicrc file
+Sourcing design .magicrc for technology sky130A ...
+2 Magic internal units = 1 Lambda
+Input style sky130(): scaleFactor=2, multiplier=2
+The following types are not handled by extraction and will be treated as non-electrical types:
+    ubm 
+Scaled tech values by 2 / 1 to match internal grid scaling
+Loading sky130A Device Generator Menu ...
+Using technology "sky130A", version 1.0.356-0-g3af1337
+Reading LEF data from file /mnt/d/project/mpw_hdp_rv151/../mpw_deps/pdks/sky130A/libs.ref/sky130_fd_sc_hd/techlef/sky130_fd_sc_hd__nom.tlef.
+This action cannot be undone.
+LEF read, Line 78 (Message): Unknown keyword "ANTENNAMODEL" in LEF file; ignoring.
+LEF read, Line 79 (Message): Unknown keyword "ANTENNADIFFSIDEAREARATIO" in LEF file; ignoring.
+LEF read, Line 112 (Message): Unknown keyword "MINENCLOSEDAREA" in LEF file; ignoring.
+LEF read, Line 114 (Message): Unknown keyword "ANTENNAMODEL" in LEF file; ignoring.
+LEF read, Line 115 (Message): Unknown keyword "ANTENNADIFFSIDEAREARATIO" in LEF file; ignoring.
+LEF read, Line 121 (Message): Unknown keyword "MAXIMUMDENSITY" in LEF file; ignoring.
+LEF read, Line 122 (Message): Unknown keyword "DENSITYCHECKWINDOW" in LEF file; ignoring.
+LEF read, Line 123 (Message): Unknown keyword "DENSITYCHECKSTEP" in LEF file; ignoring.
+LEF read, Line 156 (Message): Unknown keyword "MINENCLOSEDAREA" in LEF file; ignoring.
+LEF read, Line 164 (Message): Unknown keyword "ANTENNAMODEL" in LEF file; ignoring.
+LEF read, Line 165 (Message): Unknown keyword "ANTENNADIFFSIDEAREARATIO" in LEF file; ignoring.
+LEF read, Line 167 (Message): Unknown keyword "MAXIMUMDENSITY" in LEF file; ignoring.
+LEF read, Line 168 (Message): Unknown keyword "DENSITYCHECKWINDOW" in LEF file; ignoring.
+LEF read, Line 169 (Message): Unknown keyword "DENSITYCHECKSTEP" in LEF file; ignoring.
+LEF read, Line 206 (Message): Unknown keyword "ANTENNAMODEL" in LEF file; ignoring.
+LEF read, Line 207 (Message): Unknown keyword "ANTENNADIFFSIDEAREARATIO" in LEF file; ignoring.
+LEF read, Line 209 (Message): Unknown keyword "MAXIMUMDENSITY" in LEF file; ignoring.
+LEF read, Line 210 (Message): Unknown keyword "DENSITYCHECKWINDOW" in LEF file; ignoring.
+LEF read, Line 211 (Message): Unknown keyword "DENSITYCHECKSTEP" in LEF file; ignoring.
+LEF read, Line 248 (Message): Unknown keyword "ANTENNAMODEL" in LEF file; ignoring.
+LEF read, Line 249 (Message): Unknown keyword "ANTENNADIFFSIDEAREARATIO" in LEF file; ignoring.
+LEF read, Line 251 (Message): Unknown keyword "MAXIMUMDENSITY" in LEF file; ignoring.
+LEF read, Line 252 (Message): Unknown keyword "DENSITYCHECKWINDOW" in LEF file; ignoring.
+LEF read, Line 253 (Message): Unknown keyword "DENSITYCHECKSTEP" in LEF file; ignoring.
+LEF read, Line 290 (Message): Unknown keyword "ANTENNAMODEL" in LEF file; ignoring.
+LEF read, Line 291 (Message): Unknown keyword "ANTENNADIFFSIDEAREARATIO" in LEF file; ignoring.
+LEF read: Processed 797 lines.
+Reading LEF data from file /mnt/d/project/mpw_hdp_rv151/openlane/user_project_wrapper/../../../mpw_deps/pdks/sky130A/libs.ref/sky130_sram_macros/lef/sky130_sram_2kbyte_1rw1r_32x512_8.lef.
+This action cannot be undone.
+LEF read: Processed 1116 lines.
+Reading DEF data from file /mnt/d/project/mpw_hdp_rv151/openlane/user_project_wrapper/runs/23_02_01_20_01/results/routing/user_project_wrapper.def.
+This action cannot be undone.
+  Processed 6 vias total.
+  Processed 849401 subcell instances total.
+  Processed 645 pins total.
+  Processed 8 special nets total.
+  Processed 12265 nets total.
+DEF read: Processed 1185008 lines.
+Moving label "_00003_" from metal1 to via1 in cell user_project_wrapper.
+Moving label "_00006_" from metal1 to via1 in cell user_project_wrapper.
+Moving label "_00007_" from metal1 to via1 in cell user_project_wrapper.
+Moving label "_00008_" from metal1 to via1 in cell user_project_wrapper.
+Moving label "_00013_" from metal1 to via1 in cell user_project_wrapper.
+Moving label "_00127_" from metal1 to via1 in cell user_project_wrapper.
+Moving label "_00239_" from metal2 to via1 in cell user_project_wrapper.
+Moving label "_00555_" from metal2 to via2 in cell user_project_wrapper.
+Moving label "_00579_" from metal1 to via1 in cell user_project_wrapper.
+Moving label "_00582_" from metal1 to via1 in cell user_project_wrapper.
+Moving label "_00583_" from metal1 to via1 in cell user_project_wrapper.
+Moving label "_00587_" from metal1 to via1 in cell user_project_wrapper.
+Moving label "_00594_" from metal1 to via1 in cell user_project_wrapper.
+Moving label "_00597_" from metal1 to via1 in cell user_project_wrapper.
+Moving label "_00605_" from metal1 to via1 in cell user_project_wrapper.
+Moving label "_00621_" from metal1 to via1 in cell user_project_wrapper.
+Moving label "_00625_" from metal1 to via1 in cell user_project_wrapper.
+Moving label "_00656_" from metal1 to via1 in cell user_project_wrapper.
+Moving label "_00667_" from metal1 to via1 in cell user_project_wrapper.
+Moving label "_00668_" from metal1 to viali in cell user_project_wrapper.
+Moving label "_00672_" from metal1 to via1 in cell user_project_wrapper.
+Moving label "_00674_" from metal1 to via1 in cell user_project_wrapper.
+Moving label "_00705_" from metal1 to via1 in cell user_project_wrapper.
+Moving label "_00710_" from metal1 to via1 in cell user_project_wrapper.
+Moving label "_00714_" from metal1 to via1 in cell user_project_wrapper.
+Moving label "_00717_" from metal1 to via1 in cell user_project_wrapper.
+Moving label "_00723_" from metal1 to via1 in cell user_project_wrapper.
+Moving label "_00724_" from metal1 to via1 in cell user_project_wrapper.
+Moving label "_00735_" from metal1 to via1 in cell user_project_wrapper.
+Moving label "_00738_" from metal1 to via1 in cell user_project_wrapper.
+Moving label "_00740_" from metal2 to via2 in cell user_project_wrapper.
+Moving label "_00802_" from metal1 to via1 in cell user_project_wrapper.
+Moving label "_00803_" from metal1 to via1 in cell user_project_wrapper.
+Moving label "_00809_" from metal1 to via1 in cell user_project_wrapper.
+Moving label "_00814_" from metal1 to via1 in cell user_project_wrapper.
+Moving label "_00820_" from metal1 to via1 in cell user_project_wrapper.
+Moving label "_00840_" from metal1 to via1 in cell user_project_wrapper.
+Moving label "_00850_" from metal1 to via1 in cell user_project_wrapper.
+Moving label "_00856_" from metal1 to via1 in cell user_project_wrapper.
+Moving label "_00858_" from metal1 to via1 in cell user_project_wrapper.
+Moving label "_00859_" from metal1 to via1 in cell user_project_wrapper.
+Moving label "_00861_" from metal1 to via1 in cell user_project_wrapper.
+Moving label "_00880_" from metal1 to via1 in cell user_project_wrapper.
+Moving label "_00888_" from metal1 to via1 in cell user_project_wrapper.
+Moving label "_00935_" from metal1 to via1 in cell user_project_wrapper.
+Moving label "_00937_" from metal1 to via1 in cell user_project_wrapper.
+Moving label "_00942_" from metal1 to via1 in cell user_project_wrapper.
+Moving label "_00943_" from metal1 to via1 in cell user_project_wrapper.
+Moving label "_00947_" from metal1 to via1 in cell user_project_wrapper.
+Moving label "_00954_" from metal1 to via1 in cell user_project_wrapper.
+Moving label "_00959_" from metal1 to via1 in cell user_project_wrapper.
+Moving label "_00961_" from metal1 to via1 in cell user_project_wrapper.
+Moving label "_00971_" from metal1 to via1 in cell user_project_wrapper.
+Moving label "_00984_" from metal2 to via1 in cell user_project_wrapper.
+Moving label "_00990_" from metal1 to via1 in cell user_project_wrapper.
+Moving label "_00992_" from metal1 to via1 in cell user_project_wrapper.
+Moving label "_01040_" from metal1 to via1 in cell user_project_wrapper.
+Moving label "_01054_" from metal2 to via1 in cell user_project_wrapper.
+Moving label "_01057_" from metal1 to via1 in cell user_project_wrapper.
+Moving label "_01063_" from metal1 to via1 in cell user_project_wrapper.
+Moving label "_01097_" from metal1 to via1 in cell user_project_wrapper.
+Moving label "_01110_" from metal1 to via1 in cell user_project_wrapper.
+Moving label "_01120_" from metal1 to via1 in cell user_project_wrapper.
+Moving label "_01155_" from metal1 to via1 in cell user_project_wrapper.
+Moving label "_01159_" from metal1 to via1 in cell user_project_wrapper.
+Moving label "_01165_" from metal1 to viali in cell user_project_wrapper.
+Moving label "_01170_" from metal1 to via1 in cell user_project_wrapper.
+Moving label "_01193_" from metal1 to via1 in cell user_project_wrapper.
+Moving label "_01214_" from metal1 to via1 in cell user_project_wrapper.
+Moving label "_01215_" from metal1 to via1 in cell user_project_wrapper.
+Moving label "_01239_" from metal1 to via1 in cell user_project_wrapper.
+Moving label "_01247_" from metal1 to via1 in cell user_project_wrapper.
+Moving label "_01263_" from metal1 to viali in cell user_project_wrapper.
+Moving label "_01264_" from metal1 to via1 in cell user_project_wrapper.
+Moving label "_01268_" from metal2 to via1 in cell user_project_wrapper.
+Moving label "_01281_" from metal1 to via1 in cell user_project_wrapper.
+Moving label "_01283_" from metal1 to via1 in cell user_project_wrapper.
+Moving label "_01288_" from metal1 to via1 in cell user_project_wrapper.
+Moving label "_01305_" from metal1 to via1 in cell user_project_wrapper.
+Moving label "_01306_" from metal1 to via1 in cell user_project_wrapper.
+Moving label "_01322_" from metal1 to via1 in cell user_project_wrapper.
+Moving label "_01329_" from metal1 to via1 in cell user_project_wrapper.
+Moving label "_01334_" from metal1 to via1 in cell user_project_wrapper.
+Moving label "_01339_" from metal1 to via1 in cell user_project_wrapper.
+Moving label "_01349_" from metal1 to via1 in cell user_project_wrapper.
+Moving label "_01354_" from metal1 to via1 in cell user_project_wrapper.
+Moving label "_01411_" from metal2 to via2 in cell user_project_wrapper.
+Moving label "_01421_" from metal1 to via1 in cell user_project_wrapper.
+Moving label "_01424_" from metal1 to via1 in cell user_project_wrapper.
+Moving label "_01425_" from metal1 to via1 in cell user_project_wrapper.
+Moving label "_01427_" from metal1 to via1 in cell user_project_wrapper.
+Moving label "_01435_" from metal2 to via2 in cell user_project_wrapper.
+Moving label "_01436_" from metal1 to via1 in cell user_project_wrapper.
+Moving label "_01439_" from metal1 to via1 in cell user_project_wrapper.
+Moving label "_01440_" from metal1 to via1 in cell user_project_wrapper.
+Moving label "_01442_" from metal1 to via1 in cell user_project_wrapper.
+Moving label "_01462_" from metal1 to via1 in cell user_project_wrapper.
+Moving label "_01467_" from metal1 to via1 in cell user_project_wrapper.
+Moving label "_01468_" from metal1 to via1 in cell user_project_wrapper.
+Moving label "_01471_" from metal1 to via1 in cell user_project_wrapper.
+Moving label "_01484_" from metal1 to via1 in cell user_project_wrapper.
+Moving label "_01494_" from metal1 to via1 in cell user_project_wrapper.
+Moving label "_01497_" from metal1 to via1 in cell user_project_wrapper.
+Moving label "_01502_" from metal1 to via1 in cell user_project_wrapper.
+Moving label "_01507_" from metal1 to via1 in cell user_project_wrapper.
+Moving label "_01515_" from metal1 to via1 in cell user_project_wrapper.
+Moving label "_01520_" from metal1 to via1 in cell user_project_wrapper.
+Moving label "_01522_" from metal1 to via1 in cell user_project_wrapper.
+Moving label "_01525_" from metal1 to via1 in cell user_project_wrapper.
+Moving label "_01528_" from metal1 to via1 in cell user_project_wrapper.
+Moving label "_01539_" from metal1 to via1 in cell user_project_wrapper.
+Moving label "_01563_" from metal1 to via1 in cell user_project_wrapper.
+Moving label "_01569_" from metal1 to via1 in cell user_project_wrapper.
+Moving label "_01571_" from metal1 to via1 in cell user_project_wrapper.
+Moving label "_01577_" from metal1 to via1 in cell user_project_wrapper.
+Moving label "_01578_" from metal1 to via1 in cell user_project_wrapper.
+Moving label "_01579_" from metal1 to via1 in cell user_project_wrapper.
+Moving label "_01587_" from metal1 to via1 in cell user_project_wrapper.
+Moving label "_01590_" from metal1 to via1 in cell user_project_wrapper.
+Moving label "_01596_" from metal1 to via1 in cell user_project_wrapper.
+Moving label "_01600_" from metal1 to via1 in cell user_project_wrapper.
+Moving label "_01610_" from metal1 to via1 in cell user_project_wrapper.
+Moving label "_01624_" from metal1 to via1 in cell user_project_wrapper.
+Moving label "_01627_" from metal1 to via1 in cell user_project_wrapper.
+Moving label "_01633_" from metal1 to via1 in cell user_project_wrapper.
+Moving label "_01635_" from metal1 to via1 in cell user_project_wrapper.
+Moving label "_01641_" from metal1 to via1 in cell user_project_wrapper.
+Moving label "_01647_" from metal1 to via1 in cell user_project_wrapper.
+Moving label "_01648_" from metal1 to via1 in cell user_project_wrapper.
+Moving label "_01651_" from metal1 to via1 in cell user_project_wrapper.
+Moving label "_01654_" from metal1 to via1 in cell user_project_wrapper.
+Moving label "_01655_" from metal1 to via1 in cell user_project_wrapper.
+Moving label "_01660_" from metal1 to via1 in cell user_project_wrapper.
+Moving label "_01690_" from metal1 to via1 in cell user_project_wrapper.
+Moving label "_01700_" from metal1 to via1 in cell user_project_wrapper.
+Moving label "_01712_" from metal1 to via1 in cell user_project_wrapper.
+Moving label "_01714_" from metal1 to via1 in cell user_project_wrapper.
+Moving label "_01722_" from metal1 to via1 in cell user_project_wrapper.
+Moving label "_01732_" from metal1 to via1 in cell user_project_wrapper.
+Moving label "_01733_" from metal1 to viali in cell user_project_wrapper.
+Moving label "_01738_" from metal1 to via1 in cell user_project_wrapper.
+Moving label "_01739_" from metal1 to via1 in cell user_project_wrapper.
+Moving label "_01754_" from metal1 to via1 in cell user_project_wrapper.
+Moving label "_01761_" from metal1 to via1 in cell user_project_wrapper.
+Moving label "_01765_" from metal1 to viali in cell user_project_wrapper.
+Moving label "_01767_" from metal1 to via1 in cell user_project_wrapper.
+Moving label "_01768_" from metal1 to via1 in cell user_project_wrapper.
+Moving label "_01782_" from metal1 to via1 in cell user_project_wrapper.
+Moving label "_01799_" from metal1 to via1 in cell user_project_wrapper.
+Moving label "_01805_" from metal1 to via1 in cell user_project_wrapper.
+Moving label "_01808_" from metal1 to via1 in cell user_project_wrapper.
+Moving label "_01813_" from metal1 to viali in cell user_project_wrapper.
+Moving label "_01831_" from metal1 to via1 in cell user_project_wrapper.
+Moving label "_01832_" from metal1 to via1 in cell user_project_wrapper.
+Moving label "_01839_" from metal1 to via1 in cell user_project_wrapper.
+Moving label "_01843_" from metal1 to via1 in cell user_project_wrapper.
+Moving label "_01857_" from metal1 to via1 in cell user_project_wrapper.
+Moving label "_01865_" from metal1 to via1 in cell user_project_wrapper.
+Moving label "_01887_" from metal2 to via2 in cell user_project_wrapper.
+Moving label "_01937_" from metal1 to viali in cell user_project_wrapper.
+Moving label "_01985_" from metal3 to via2 in cell user_project_wrapper.
+Moving label "_02087_" from metal2 to via2 in cell user_project_wrapper.
+Moving label "_02103_" from metal1 to via1 in cell user_project_wrapper.
+Moving label "_02160_" from metal2 to via2 in cell user_project_wrapper.
+Moving label "_02174_" from metal2 to via2 in cell user_project_wrapper.
+Moving label "_02202_" from metal1 to viali in cell user_project_wrapper.
+Moving label "_02494_" from metal1 to viali in cell user_project_wrapper.
+Moving label "_02554_" from metal1 to viali in cell user_project_wrapper.
+Moving label "_02675_" from metal2 to via2 in cell user_project_wrapper.
+Moving label "_02787_" from metal2 to via2 in cell user_project_wrapper.
+Moving label "_02898_" from metal1 to viali in cell user_project_wrapper.
+Moving label "_02924_" from metal1 to viali in cell user_project_wrapper.
+Moving label "_02938_" from metal2 to via2 in cell user_project_wrapper.
+Moving label "_02965_" from metal2 to via2 in cell user_project_wrapper.
+Moving label "_03052_" from metal2 to via2 in cell user_project_wrapper.
+Moving label "_03067_" from metal2 to via1 in cell user_project_wrapper.
+Moving label "_03077_" from metal1 to viali in cell user_project_wrapper.
+Moving label "_03171_" from metal1 to via1 in cell user_project_wrapper.
+Moving label "_03192_" from metal1 to viali in cell user_project_wrapper.
+Moving label "_03291_" from metal3 to via3 in cell user_project_wrapper.
+Moving label "_03294_" from metal2 to via2 in cell user_project_wrapper.
+Moving label "_03297_" from metal2 to via2 in cell user_project_wrapper.
+Moving label "_03321_" from metal3 to via3 in cell user_project_wrapper.
+Moving label "_03352_" from metal3 to via3 in cell user_project_wrapper.
+Moving label "_03423_" from metal1 to viali in cell user_project_wrapper.
+Moving label "_03643_" from metal1 to via1 in cell user_project_wrapper.
+Moving label "_03679_" from metal2 to via2 in cell user_project_wrapper.
+Moving label "_03749_" from metal2 to via2 in cell user_project_wrapper.
+Moving label "_03753_" from metal2 to via2 in cell user_project_wrapper.
+Moving label "_03910_" from metal1 to viali in cell user_project_wrapper.
+Moving label "_03975_" from metal2 to via2 in cell user_project_wrapper.
+Moving label "_04003_" from metal1 to viali in cell user_project_wrapper.
+Moving label "_04019_" from metal2 to via1 in cell user_project_wrapper.
+Moving label "_04050_" from metal2 to via2 in cell user_project_wrapper.
+Moving label "_04087_" from metal1 to viali in cell user_project_wrapper.
+Moving label "_04125_" from metal1 to viali in cell user_project_wrapper.
+Moving label "_04200_" from metal2 to via2 in cell user_project_wrapper.
+Moving label "_04215_" from metal2 to via2 in cell user_project_wrapper.
+Moving label "_04238_" from metal2 to via2 in cell user_project_wrapper.
+Moving label "_04248_" from metal1 to viali in cell user_project_wrapper.
+Moving label "_04321_" from metal2 to via2 in cell user_project_wrapper.
+Moving label "_04343_" from metal2 to via2 in cell user_project_wrapper.
+Moving label "_04414_" from metal3 to via3 in cell user_project_wrapper.
+Moving label "_04419_" from metal1 to viali in cell user_project_wrapper.
+Moving label "_04425_" from metal2 to via2 in cell user_project_wrapper.
+Moving label "_04438_" from metal2 to via1 in cell user_project_wrapper.
+Moving label "_04503_" from metal2 to via1 in cell user_project_wrapper.
+Moving label "_04517_" from metal1 to viali in cell user_project_wrapper.
+Moving label "_04518_" from metal2 to via2 in cell user_project_wrapper.
+Moving label "_04557_" from metal1 to via1 in cell user_project_wrapper.
+Moving label "_04601_" from metal3 to via3 in cell user_project_wrapper.
+Moving label "_04643_" from metal2 to via2 in cell user_project_wrapper.
+Moving label "_04644_" from metal2 to via2 in cell user_project_wrapper.
+Moving label "_04780_" from metal1 to via1 in cell user_project_wrapper.
+Moving label "_04807_" from metal1 to via1 in cell user_project_wrapper.
+Moving label "_04823_" from metal1 to viali in cell user_project_wrapper.
+Moving label "_04838_" from metal1 to via1 in cell user_project_wrapper.
+Moving label "_04882_" from metal3 to via3 in cell user_project_wrapper.
+Moving label "_04940_" from metal1 to viali in cell user_project_wrapper.
+Moving label "_05025_" from metal1 to via1 in cell user_project_wrapper.
+Moving label "_05041_" from metal1 to via1 in cell user_project_wrapper.
+Moving label "_05066_" from metal1 to via1 in cell user_project_wrapper.
+Moving label "_05070_" from metal2 to via2 in cell user_project_wrapper.
+Moving label "_05110_" from metal2 to via2 in cell user_project_wrapper.
+Moving label "_05112_" from metal2 to via2 in cell user_project_wrapper.
+Moving label "_05201_" from metal1 to viali in cell user_project_wrapper.
+Moving label "_05229_" from metal1 to via1 in cell user_project_wrapper.
+Moving label "_05320_" from metal2 to via1 in cell user_project_wrapper.
+Moving label "_05364_" from metal1 to viali in cell user_project_wrapper.
+Moving label "_05391_" from metal1 to via1 in cell user_project_wrapper.
+Moving label "_05428_" from metal2 to via2 in cell user_project_wrapper.
+Moving label "_05484_" from metal3 to via3 in cell user_project_wrapper.
+Moving label "_05514_" from metal2 to via2 in cell user_project_wrapper.
+Moving label "_05537_" from metal2 to via1 in cell user_project_wrapper.
+Moving label "_05562_" from metal1 to viali in cell user_project_wrapper.
+Moving label "_05640_" from metal2 to via2 in cell user_project_wrapper.
+Moving label "_05692_" from metal1 to viali in cell user_project_wrapper.
+Moving label "_05704_" from metal2 to via1 in cell user_project_wrapper.
+Moving label "_05710_" from metal1 to via1 in cell user_project_wrapper.
+Moving label "_05727_" from metal1 to viali in cell user_project_wrapper.
+Moving label "_05741_" from metal2 to via1 in cell user_project_wrapper.
+Moving label "_05768_" from metal1 to via1 in cell user_project_wrapper.
+Moving label "_05777_" from metal2 to via2 in cell user_project_wrapper.
+Moving label "_05964_" from metal2 to via2 in cell user_project_wrapper.
+Moving label "_06046_" from metal1 to via1 in cell user_project_wrapper.
+Moving label "_06065_" from metal1 to viali in cell user_project_wrapper.
+Moving label "_06069_" from metal1 to viali in cell user_project_wrapper.
+Moving label "_06131_" from metal1 to via1 in cell user_project_wrapper.
+Moving label "_06246_" from metal2 to via2 in cell user_project_wrapper.
+Moving label "_06278_" from metal2 to via2 in cell user_project_wrapper.
+Moving label "_06295_" from metal1 to viali in cell user_project_wrapper.
+Moving label "_06297_" from metal1 to viali in cell user_project_wrapper.
+Moving label "_06306_" from metal1 to viali in cell user_project_wrapper.
+Moving label "_06326_" from metal2 to via2 in cell user_project_wrapper.
+Moving label "_06361_" from metal2 to via2 in cell user_project_wrapper.
+Moving label "_06413_" from metal2 to via1 in cell user_project_wrapper.
+Moving label "_06427_" from metal1 to via1 in cell user_project_wrapper.
+Moving label "_06587_" from metal2 to via2 in cell user_project_wrapper.
+Moving label "_06600_" from metal2 to via2 in cell user_project_wrapper.
+Moving label "_06627_" from metal1 to via1 in cell user_project_wrapper.
+Moving label "_06704_" from metal2 to via2 in cell user_project_wrapper.
+Moving label "_06712_" from metal3 to via3 in cell user_project_wrapper.
+Moving label "_06733_" from metal1 to via1 in cell user_project_wrapper.
+Moving label "_06742_" from metal1 to via1 in cell user_project_wrapper.
+Moving label "_06832_" from metal1 to viali in cell user_project_wrapper.
+Moving label "_06917_" from metal1 to viali in cell user_project_wrapper.
+Moving label "_06929_" from metal3 to via3 in cell user_project_wrapper.
+Moving label "_06944_" from metal2 to via2 in cell user_project_wrapper.
+Moving label "_06982_" from metal1 to via1 in cell user_project_wrapper.
+Moving label "_06986_" from metal2 to via2 in cell user_project_wrapper.
+Moving label "_07038_" from metal2 to via2 in cell user_project_wrapper.
+Moving label "_07042_" from metal2 to via2 in cell user_project_wrapper.
+Moving label "_07046_" from metal2 to via2 in cell user_project_wrapper.
+Moving label "_07100_" from metal2 to via2 in cell user_project_wrapper.
+Moving label "_07102_" from metal2 to via2 in cell user_project_wrapper.
+Moving label "_07116_" from metal1 to via1 in cell user_project_wrapper.
+Moving label "_07118_" from metal1 to via1 in cell user_project_wrapper.
+Moving label "_07155_" from metal2 to via2 in cell user_project_wrapper.
+Moving label "_07203_" from metal1 to via1 in cell user_project_wrapper.
+Moving label "_07256_" from metal2 to via2 in cell user_project_wrapper.
+Moving label "_07282_" from metal2 to via1 in cell user_project_wrapper.
+Moving label "_07367_" from metal2 to via2 in cell user_project_wrapper.
+Moving label "_07471_" from metal1 to viali in cell user_project_wrapper.
+Moving label "_07612_" from metal1 to via1 in cell user_project_wrapper.
+Moving label "_07656_" from metal1 to via1 in cell user_project_wrapper.
+Moving label "_07702_" from metal1 to viali in cell user_project_wrapper.
+Moving label "_07900_" from metal2 to via2 in cell user_project_wrapper.
+Moving label "_07904_" from metal1 to via1 in cell user_project_wrapper.
+Moving label "_08038_" from metal2 to via2 in cell user_project_wrapper.
+Moving label "_08041_" from metal2 to via2 in cell user_project_wrapper.
+Moving label "_08051_" from metal1 to via1 in cell user_project_wrapper.
+Moving label "_08082_" from metal1 to viali in cell user_project_wrapper.
+Moving label "_08143_" from metal2 to via1 in cell user_project_wrapper.
+Moving label "_08367_" from metal2 to via2 in cell user_project_wrapper.
+Moving label "_08420_" from metal2 to via2 in cell user_project_wrapper.
+Moving label "clknet_1_1_1_rv151.mxck" from metal3 to via3 in cell user_project_wrapper.
+Moving label "clknet_2_0_2_rv151.mxck" from metal3 to via3 in cell user_project_wrapper.
+Moving label "clknet_leaf_150_rv151.mxck" from metal2 to via2 in cell user_project_wrapper.
+Moving label "clknet_leaf_91_rv151.mxck" from metal1 to via1 in cell user_project_wrapper.
+Moving label "clknet_opt_14_5_rv151.mxck" from metal2 to via2 in cell user_project_wrapper.
+Moving label "clknet_opt_8_1_rv151.mxck" from metal2 to via2 in cell user_project_wrapper.
+Moving label "clknet_opt_8_4_rv151.mxck" from metal2 to via2 in cell user_project_wrapper.
+Moving label "io_out[26]" from metal2 to via2 in cell user_project_wrapper.
+Moving label "net102" from metal2 to via2 in cell user_project_wrapper.
+Moving label "net106" from metal2 to via2 in cell user_project_wrapper.
+Moving label "net117" from metal2 to via2 in cell user_project_wrapper.
+Moving label "net150" from metal2 to via2 in cell user_project_wrapper.
+Moving label "net159" from metal2 to via2 in cell user_project_wrapper.
+Moving label "net160" from metal2 to via2 in cell user_project_wrapper.
+Moving label "net201" from metal2 to via2 in cell user_project_wrapper.
+Moving label "net25" from metal2 to via2 in cell user_project_wrapper.
+Moving label "net341" from metal2 to via2 in cell user_project_wrapper.
+Moving label "net373" from metal2 to via2 in cell user_project_wrapper.
+Moving label "net408" from metal2 to via2 in cell user_project_wrapper.
+Moving label "net420" from metal2 to via2 in cell user_project_wrapper.
+Moving label "net423" from metal2 to via2 in cell user_project_wrapper.
+Moving label "net435" from metal2 to via2 in cell user_project_wrapper.
+Moving label "net454" from metal2 to via2 in cell user_project_wrapper.
+Moving label "net479" from metal2 to via2 in cell user_project_wrapper.
+Moving label "net492" from metal2 to via2 in cell user_project_wrapper.
+Moving label "net595" from metal2 to via2 in cell user_project_wrapper.
+Moving label "net599" from metal2 to via2 in cell user_project_wrapper.
+Moving label "net640" from metal2 to via2 in cell user_project_wrapper.
+Moving label "net653" from metal2 to via1 in cell user_project_wrapper.
+Moving label "net670" from metal2 to via2 in cell user_project_wrapper.
+Moving label "net709" from metal3 to via3 in cell user_project_wrapper.
+Moving label "net729" from metal2 to via2 in cell user_project_wrapper.
+Moving label "net740" from metal2 to via2 in cell user_project_wrapper.
+Moving label "net744" from metal2 to via2 in cell user_project_wrapper.
+Moving label "net748" from metal2 to via2 in cell user_project_wrapper.
+Moving label "net752" from metal2 to via2 in cell user_project_wrapper.
+Moving label "net757" from metal2 to via2 in cell user_project_wrapper.
+Moving label "net938" from metal2 to via2 in cell user_project_wrapper.
+Moving label "net956" from metal2 to via2 in cell user_project_wrapper.
+Moving label "net960" from metal2 to via2 in cell user_project_wrapper.
+Moving label "net963" from metal2 to via2 in cell user_project_wrapper.
+Moving label "rv151.mxck" from metal2 to via2 in cell user_project_wrapper.
+Moving label "rv151.soc.bdto\[14\]" from metal2 to via2 in cell user_project_wrapper.
+Moving label "rv151.soc.bios_doutb\[3\]" from metal2 to via2 in cell user_project_wrapper.
+Moving label "rv151.soc.bios_doutb\[7\]" from metal3 to via3 in cell user_project_wrapper.
+Moving label "rv151.soc.cc_cntr\[18\]" from metal2 to via1 in cell user_project_wrapper.
+Moving label "rv151.soc.cc_cntr\[22\]" from metal1 to via1 in cell user_project_wrapper.
+Moving label "rv151.soc.cc_cntr\[2\]" from metal2 to via2 in cell user_project_wrapper.
+Moving label "rv151.soc.core.ctl.ctl_ins\[7\]" from metal2 to via2 in cell user_project_wrapper.
+Moving label "rv151.soc.core.exr_wad\[4\]" from metal2 to via2 in cell user_project_wrapper.
+Moving label "rv151.soc.core.md_we\[1\]" from metal2 to via2 in cell user_project_wrapper.
+Moving label "rv151.soc.core.xw_pc4\[12\]" from metal1 to viali in cell user_project_wrapper.
+Moving label "rv151.soc.core.xw_pc4\[26\]" from metal1 to via1 in cell user_project_wrapper.
+Moving label "rv151.soc.dmem_dout0\[0\]\[4\]" from metal2 to via2 in cell user_project_wrapper.
+Moving label "rv151.soc.dmem_dout0\[1\]\[4\]" from metal1 to via1 in cell user_project_wrapper.
+Moving label "rv151.soc.dmem_dout\[11\]" from metal2 to via2 in cell user_project_wrapper.
+Moving label "rv151.soc.dmem_dout\[13\]" from metal2 to via2 in cell user_project_wrapper.
+Moving label "rv151.soc.dmem_dout\[15\]" from metal2 to via2 in cell user_project_wrapper.
+Moving label "rv151.soc.dmem_dout\[25\]" from metal2 to via2 in cell user_project_wrapper.
+Moving label "rv151.soc.dmem_dout\[2\]" from metal2 to via2 in cell user_project_wrapper.
+Moving label "rv151.soc.dmem_dout\[6\]" from metal2 to via2 in cell user_project_wrapper.
+Moving label "rv151.soc.dmem_dout\[7\]" from metal2 to via2 in cell user_project_wrapper.
+Moving label "rv151.soc.dmem_dout\[8\]" from metal2 to via2 in cell user_project_wrapper.
+Moving label "rv151.soc.dmem_dout\[9\]" from metal2 to via2 in cell user_project_wrapper.
+Moving label "rv151.soc.imem_dout1\[0\]\[14\]" from metal2 to via2 in cell user_project_wrapper.
+Moving label "rv151.soc.imem_dout1\[0\]\[15\]" from metal2 to via2 in cell user_project_wrapper.
+Moving label "rv151.soc.imem_dout1\[0\]\[5\]" from metal2 to via1 in cell user_project_wrapper.
+Moving label "rv151.soc.imem_dout1\[1\]\[7\]" from metal2 to via2 in cell user_project_wrapper.
+Moving label "rv151.soc.imem_doutb\[12\]" from metal3 to via3 in cell user_project_wrapper.
+Moving label "rv151.soc.imem_doutb\[14\]" from metal3 to via3 in cell user_project_wrapper.
+Moving label "rv151.soc.imem_doutb\[17\]" from metal3 to via3 in cell user_project_wrapper.
+Moving label "rv151.soc.imem_doutb\[1\]" from metal2 to via2 in cell user_project_wrapper.
+Moving label "rv151.soc.imem_doutb\[21\]" from metal3 to via3 in cell user_project_wrapper.
+Moving label "rv151.soc.imem_doutb\[22\]" from metal3 to via3 in cell user_project_wrapper.
+Moving label "rv151.soc.imem_doutb\[23\]" from metal2 to via2 in cell user_project_wrapper.
+Moving label "rv151.soc.imem_doutb\[24\]" from metal3 to via3 in cell user_project_wrapper.
+Moving label "rv151.soc.imem_doutb\[30\]" from metal2 to via2 in cell user_project_wrapper.
+Moving label "rv151.soc.imem_doutb\[3\]" from metal2 to via2 in cell user_project_wrapper.
+Moving label "rv151.soc.imem_doutb\[6\]" from metal2 to via2 in cell user_project_wrapper.
+Moving label "rv151.soc.rf.mem\[0\]\[5\]" from metal2 to via1 in cell user_project_wrapper.
+Moving label "rv151.soc.rf.mem\[10\]\[25\]" from metal2 to via1 in cell user_project_wrapper.
+Moving label "rv151.soc.rf.mem\[11\]\[13\]" from metal2 to via1 in cell user_project_wrapper.
+Moving label "rv151.soc.rf.mem\[17\]\[13\]" from metal1 to via1 in cell user_project_wrapper.
+Moving label "rv151.soc.rf.mem\[22\]\[29\]" from metal1 to via1 in cell user_project_wrapper.
+Moving label "rv151.soc.rf.mem\[23\]\[15\]" from metal2 to via1 in cell user_project_wrapper.
+Moving label "rv151.soc.rf.mem\[26\]\[11\]" from metal2 to via2 in cell user_project_wrapper.
+Moving label "rv151.soc.rf.mem\[29\]\[7\]" from metal2 to via1 in cell user_project_wrapper.
+Moving label "rv151.soc.rf.mem\[31\]\[20\]" from metal2 to via1 in cell user_project_wrapper.
+Moving label "rv151.soc.rf.mem\[6\]\[24\]" from metal2 to via2 in cell user_project_wrapper.
+Moving label "rv151.soc.rf.mem\[7\]\[22\]" from metal1 to via1 in cell user_project_wrapper.
+Moving label "rv151.soc.uart.baud_edge\[12\]" from metal1 to via1 in cell user_project_wrapper.
+Moving label "rv151.soc.uart.uareceive.clock_counter\[8\]" from metal1 to via1 in cell user_project_wrapper.
+Moving label "rv151.soc.uart.uatransmit.rg_bit_counter\[0\]" from metal1 to viali in cell user_project_wrapper.
+Processing user_project_wrapper
+Extracting sky130_fd_sc_hd__buf_8 into sky130_fd_sc_hd__buf_8.ext:
+Extracting sky130_fd_sc_hd__decap_3 into sky130_fd_sc_hd__decap_3.ext:
+Extracting sky130_ef_sc_hd__decap_12 into sky130_ef_sc_hd__decap_12.ext:
+Extracting sky130_fd_sc_hd__decap_4 into sky130_fd_sc_hd__decap_4.ext:
+Extracting sky130_fd_sc_hd__conb_1 into sky130_fd_sc_hd__conb_1.ext:
+Extracting sky130_fd_sc_hd__tapvpwrvgnd_1 into sky130_fd_sc_hd__tapvpwrvgnd_1.ext:
+Extracting sky130_fd_sc_hd__fill_2 into sky130_fd_sc_hd__fill_2.ext:
+Extracting sky130_fd_sc_hd__fill_1 into sky130_fd_sc_hd__fill_1.ext:
+Extracting sky130_fd_sc_hd__decap_6 into sky130_fd_sc_hd__decap_6.ext:
+Extracting sky130_fd_sc_hd__decap_8 into sky130_fd_sc_hd__decap_8.ext:
+Extracting sky130_fd_sc_hd__diode_2 into sky130_fd_sc_hd__diode_2.ext:
+Extracting sky130_fd_sc_hd__buf_12 into sky130_fd_sc_hd__buf_12.ext:
+Created database crash recovery file /tmp//MAG1258.L6rt23
+Extracting sky130_fd_sc_hd__buf_6 into sky130_fd_sc_hd__buf_6.ext:
+Extracting sky130_fd_sc_hd__clkbuf_16 into sky130_fd_sc_hd__clkbuf_16.ext:
+Extracting sky130_sram_2kbyte_1rw1r_32x512_8 into sky130_sram_2kbyte_1rw1r_32x512_8.ext:
+Extracting sky130_fd_sc_hd__clkbuf_1 into sky130_fd_sc_hd__clkbuf_1.ext:
+Extracting sky130_fd_sc_hd__buf_4 into sky130_fd_sc_hd__buf_4.ext:
+Extracting sky130_fd_sc_hd__mux2_1 into sky130_fd_sc_hd__mux2_1.ext:
+Extracting sky130_fd_sc_hd__clkbuf_2 into sky130_fd_sc_hd__clkbuf_2.ext:
+Extracting sky130_fd_sc_hd__dfxtp_4 into sky130_fd_sc_hd__dfxtp_4.ext:
+Extracting sky130_fd_sc_hd__dfxtp_2 into sky130_fd_sc_hd__dfxtp_2.ext:
+Extracting sky130_fd_sc_hd__clkbuf_4 into sky130_fd_sc_hd__clkbuf_4.ext:
+Extracting sky130_fd_sc_hd__clkbuf_8 into sky130_fd_sc_hd__clkbuf_8.ext:
+Extracting sky130_fd_sc_hd__dfxtp_1 into sky130_fd_sc_hd__dfxtp_1.ext:
+Extracting sky130_fd_sc_hd__or2_1 into sky130_fd_sc_hd__or2_1.ext:
+Extracting sky130_fd_sc_hd__o211a_1 into sky130_fd_sc_hd__o211a_1.ext:
+Extracting sky130_fd_sc_hd__a211o_1 into sky130_fd_sc_hd__a211o_1.ext:
+Extracting sky130_fd_sc_hd__buf_2 into sky130_fd_sc_hd__buf_2.ext:
+Extracting sky130_fd_sc_hd__a21o_1 into sky130_fd_sc_hd__a21o_1.ext:
+Extracting sky130_fd_sc_hd__a21oi_1 into sky130_fd_sc_hd__a21oi_1.ext:
+Extracting sky130_fd_sc_hd__a2111o_1 into sky130_fd_sc_hd__a2111o_1.ext:
+Extracting sky130_fd_sc_hd__or2_4 into sky130_fd_sc_hd__or2_4.ext:
+Extracting sky130_fd_sc_hd__a22oi_4 into sky130_fd_sc_hd__a22oi_4.ext:
+Extracting sky130_fd_sc_hd__o2111a_1 into sky130_fd_sc_hd__o2111a_1.ext:
+Extracting sky130_fd_sc_hd__or4_1 into sky130_fd_sc_hd__or4_1.ext:
+Extracting sky130_fd_sc_hd__nor2_1 into sky130_fd_sc_hd__nor2_1.ext:
+Extracting sky130_fd_sc_hd__o21ai_1 into sky130_fd_sc_hd__o21ai_1.ext:
+Extracting sky130_fd_sc_hd__o21a_1 into sky130_fd_sc_hd__o21a_1.ext:
+Extracting sky130_fd_sc_hd__nand2_1 into sky130_fd_sc_hd__nand2_1.ext:
+Extracting sky130_fd_sc_hd__clkinv_2 into sky130_fd_sc_hd__clkinv_2.ext:
+Extracting sky130_fd_sc_hd__inv_2 into sky130_fd_sc_hd__inv_2.ext:
+Extracting sky130_fd_sc_hd__o31a_1 into sky130_fd_sc_hd__o31a_1.ext:
+Extracting sky130_fd_sc_hd__and2_1 into sky130_fd_sc_hd__and2_1.ext:
+Extracting sky130_fd_sc_hd__and2b_1 into sky130_fd_sc_hd__and2b_1.ext:
+Extracting sky130_fd_sc_hd__a32o_4 into sky130_fd_sc_hd__a32o_4.ext:
+Extracting sky130_fd_sc_hd__o21ba_1 into sky130_fd_sc_hd__o21ba_1.ext:
+Extracting sky130_fd_sc_hd__a21bo_1 into sky130_fd_sc_hd__a21bo_1.ext:
+Extracting sky130_fd_sc_hd__a32o_2 into sky130_fd_sc_hd__a32o_2.ext:
+Extracting sky130_fd_sc_hd__a22o_2 into sky130_fd_sc_hd__a22o_2.ext:
+Extracting sky130_fd_sc_hd__nand3b_4 into sky130_fd_sc_hd__nand3b_4.ext:
+Extracting sky130_fd_sc_hd__o221a_1 into sky130_fd_sc_hd__o221a_1.ext:
+Extracting sky130_fd_sc_hd__or3b_4 into sky130_fd_sc_hd__or3b_4.ext:
+Extracting sky130_fd_sc_hd__or2b_1 into sky130_fd_sc_hd__or2b_1.ext:
+Extracting sky130_fd_sc_hd__xnor2_1 into sky130_fd_sc_hd__xnor2_1.ext:
+Extracting sky130_fd_sc_hd__a31o_1 into sky130_fd_sc_hd__a31o_1.ext:
+Extracting sky130_fd_sc_hd__o21bai_1 into sky130_fd_sc_hd__o21bai_1.ext:
+Extracting sky130_fd_sc_hd__a21boi_1 into sky130_fd_sc_hd__a21boi_1.ext:
+Extracting sky130_fd_sc_hd__and3_1 into sky130_fd_sc_hd__and3_1.ext:
+Extracting sky130_fd_sc_hd__or3b_1 into sky130_fd_sc_hd__or3b_1.ext:
+Extracting sky130_fd_sc_hd__nand3_1 into sky130_fd_sc_hd__nand3_1.ext:
+Extracting sky130_fd_sc_hd__o22a_1 into sky130_fd_sc_hd__o22a_1.ext:
+Extracting sky130_fd_sc_hd__a31oi_1 into sky130_fd_sc_hd__a31oi_1.ext:
+Extracting sky130_fd_sc_hd__a41o_1 into sky130_fd_sc_hd__a41o_1.ext:
+Extracting sky130_fd_sc_hd__and4_1 into sky130_fd_sc_hd__and4_1.ext:
+Extracting sky130_fd_sc_hd__a32o_1 into sky130_fd_sc_hd__a32o_1.ext:
+Extracting sky130_fd_sc_hd__o2bb2a_1 into sky130_fd_sc_hd__o2bb2a_1.ext:
+Extracting sky130_fd_sc_hd__xnor2_2 into sky130_fd_sc_hd__xnor2_2.ext:
+Extracting sky130_fd_sc_hd__or3_1 into sky130_fd_sc_hd__or3_1.ext:
+Extracting sky130_fd_sc_hd__and4_2 into sky130_fd_sc_hd__and4_2.ext:
+Extracting sky130_fd_sc_hd__or4b_1 into sky130_fd_sc_hd__or4b_1.ext:
+Extracting sky130_fd_sc_hd__o2111ai_1 into sky130_fd_sc_hd__o2111ai_1.ext:
+Extracting sky130_fd_sc_hd__a21oi_2 into sky130_fd_sc_hd__a21oi_2.ext:
+Extracting sky130_fd_sc_hd__a22o_1 into sky130_fd_sc_hd__a22o_1.ext:
+Extracting sky130_fd_sc_hd__o211ai_1 into sky130_fd_sc_hd__o211ai_1.ext:
+Extracting sky130_fd_sc_hd__a221o_1 into sky130_fd_sc_hd__a221o_1.ext:
+Extracting sky130_fd_sc_hd__o22a_4 into sky130_fd_sc_hd__o22a_4.ext:
+Extracting sky130_fd_sc_hd__nor2_2 into sky130_fd_sc_hd__nor2_2.ext:
+Extracting sky130_fd_sc_hd__a2bb2o_1 into sky130_fd_sc_hd__a2bb2o_1.ext:
+Extracting sky130_fd_sc_hd__a21oi_4 into sky130_fd_sc_hd__a21oi_4.ext:
+Extracting sky130_fd_sc_hd__o31a_4 into sky130_fd_sc_hd__o31a_4.ext:
+Extracting sky130_fd_sc_hd__a21o_2 into sky130_fd_sc_hd__a21o_2.ext:
+Extracting sky130_fd_sc_hd__o32a_1 into sky130_fd_sc_hd__o32a_1.ext:
+Extracting sky130_fd_sc_hd__nand4_1 into sky130_fd_sc_hd__nand4_1.ext:
+Extracting sky130_fd_sc_hd__and3b_1 into sky130_fd_sc_hd__and3b_1.ext:
+Extracting sky130_fd_sc_hd__or2b_2 into sky130_fd_sc_hd__or2b_2.ext:
+Extracting sky130_fd_sc_hd__a311o_1 into sky130_fd_sc_hd__a311o_1.ext:
+Extracting sky130_fd_sc_hd__a211oi_2 into sky130_fd_sc_hd__a211oi_2.ext:
+Extracting sky130_fd_sc_hd__nor2_4 into sky130_fd_sc_hd__nor2_4.ext:
+Extracting sky130_fd_sc_hd__a21boi_4 into sky130_fd_sc_hd__a21boi_4.ext:
+Extracting sky130_fd_sc_hd__o31ai_1 into sky130_fd_sc_hd__o31ai_1.ext:
+Extracting sky130_fd_sc_hd__xor2_1 into sky130_fd_sc_hd__xor2_1.ext:
+Extracting sky130_fd_sc_hd__a22oi_1 into sky130_fd_sc_hd__a22oi_1.ext:
+Extracting sky130_fd_sc_hd__a2bb2o_2 into sky130_fd_sc_hd__a2bb2o_2.ext:
+Extracting sky130_fd_sc_hd__or2_2 into sky130_fd_sc_hd__or2_2.ext:
+Extracting sky130_fd_sc_hd__o2bb2a_2 into sky130_fd_sc_hd__o2bb2a_2.ext:
+Extracting sky130_fd_sc_hd__nor3_2 into sky130_fd_sc_hd__nor3_2.ext:
+Extracting sky130_fd_sc_hd__o22ai_1 into sky130_fd_sc_hd__o22ai_1.ext:
+Extracting sky130_fd_sc_hd__and2b_2 into sky130_fd_sc_hd__and2b_2.ext:
+Extracting sky130_fd_sc_hd__or3_2 into sky130_fd_sc_hd__or3_2.ext:
+Extracting sky130_fd_sc_hd__nor3_4 into sky130_fd_sc_hd__nor3_4.ext:
+Extracting sky130_fd_sc_hd__o311a_1 into sky130_fd_sc_hd__o311a_1.ext:
+Extracting sky130_fd_sc_hd__and4b_1 into sky130_fd_sc_hd__and4b_1.ext:
+Extracting sky130_fd_sc_hd__a211oi_1 into sky130_fd_sc_hd__a211oi_1.ext:
+Extracting sky130_fd_sc_hd__mux2_2 into sky130_fd_sc_hd__mux2_2.ext:
+Extracting sky130_fd_sc_hd__nand2_4 into sky130_fd_sc_hd__nand2_4.ext:
+Extracting sky130_fd_sc_hd__nand2_2 into sky130_fd_sc_hd__nand2_2.ext:
+Extracting sky130_fd_sc_hd__and2_2 into sky130_fd_sc_hd__and2_2.ext:
+Extracting sky130_fd_sc_hd__nor4b_1 into sky130_fd_sc_hd__nor4b_1.ext:
+Extracting sky130_fd_sc_hd__a22o_4 into sky130_fd_sc_hd__a22o_4.ext:
+Extracting sky130_fd_sc_hd__a311o_4 into sky130_fd_sc_hd__a311o_4.ext:
+Extracting sky130_fd_sc_hd__a2111oi_2 into sky130_fd_sc_hd__a2111oi_2.ext:
+Extracting sky130_fd_sc_hd__mux2_4 into sky130_fd_sc_hd__mux2_4.ext:
+Extracting sky130_fd_sc_hd__o41a_1 into sky130_fd_sc_hd__o41a_1.ext:
+Extracting sky130_fd_sc_hd__a21o_4 into sky130_fd_sc_hd__a21o_4.ext:
+Extracting sky130_fd_sc_hd__a2bb2o_4 into sky130_fd_sc_hd__a2bb2o_4.ext:
+Extracting sky130_fd_sc_hd__nand3b_1 into sky130_fd_sc_hd__nand3b_1.ext:
+Extracting sky130_fd_sc_hd__nor4_1 into sky130_fd_sc_hd__nor4_1.ext:
+Extracting sky130_fd_sc_hd__o32a_2 into sky130_fd_sc_hd__o32a_2.ext:
+Extracting sky130_fd_sc_hd__clkinv_16 into sky130_fd_sc_hd__clkinv_16.ext:
+Extracting sky130_fd_sc_hd__o21ai_2 into sky130_fd_sc_hd__o21ai_2.ext:
+Extracting sky130_fd_sc_hd__dfrtp_4 into sky130_fd_sc_hd__dfrtp_4.ext:
+Extracting sky130_fd_sc_hd__o21a_4 into sky130_fd_sc_hd__o21a_4.ext:
+Extracting sky130_fd_sc_hd__a211o_2 into sky130_fd_sc_hd__a211o_2.ext:
+Extracting sky130_fd_sc_hd__a41oi_4 into sky130_fd_sc_hd__a41oi_4.ext:
+Extracting sky130_fd_sc_hd__o2111ai_4 into sky130_fd_sc_hd__o2111ai_4.ext:
+Extracting sky130_fd_sc_hd__dlygate4sd3_1 into sky130_fd_sc_hd__dlygate4sd3_1.ext:
+Extracting sky130_fd_sc_hd__xor2_2 into sky130_fd_sc_hd__xor2_2.ext:
+Extracting sky130_fd_sc_hd__a32oi_4 into sky130_fd_sc_hd__a32oi_4.ext:
+Extracting sky130_fd_sc_hd__nor2_8 into sky130_fd_sc_hd__nor2_8.ext:
+Extracting sky130_fd_sc_hd__a221oi_2 into sky130_fd_sc_hd__a221oi_2.ext:
+Extracting sky130_fd_sc_hd__a2bb2oi_1 into sky130_fd_sc_hd__a2bb2oi_1.ext:
+Extracting sky130_fd_sc_hd__dfrtp_1 into sky130_fd_sc_hd__dfrtp_1.ext:
+Extracting sky130_fd_sc_hd__o211a_2 into sky130_fd_sc_hd__o211a_2.ext:
+Extracting sky130_fd_sc_hd__or3_4 into sky130_fd_sc_hd__or3_4.ext:
+Extracting sky130_fd_sc_hd__a31o_4 into sky130_fd_sc_hd__a31o_4.ext:
+Extracting sky130_fd_sc_hd__clkinv_4 into sky130_fd_sc_hd__clkinv_4.ext:
+Extracting sky130_fd_sc_hd__a221o_2 into sky130_fd_sc_hd__a221o_2.ext:
+Extracting sky130_fd_sc_hd__a221oi_4 into sky130_fd_sc_hd__a221oi_4.ext:
+Extracting sky130_fd_sc_hd__o21ai_4 into sky130_fd_sc_hd__o21ai_4.ext:
+Extracting sky130_fd_sc_hd__inv_4 into sky130_fd_sc_hd__inv_4.ext:
+Extracting sky130_fd_sc_hd__o311a_4 into sky130_fd_sc_hd__o311a_4.ext:
+Extracting sky130_fd_sc_hd__dfrtp_2 into sky130_fd_sc_hd__dfrtp_2.ext:
+Extracting sky130_fd_sc_hd__or4_2 into sky130_fd_sc_hd__or4_2.ext:
+Extracting sky130_fd_sc_hd__nor2b_4 into sky130_fd_sc_hd__nor2b_4.ext:
+Extracting sky130_fd_sc_hd__or3b_2 into sky130_fd_sc_hd__or3b_2.ext:
+Extracting sky130_fd_sc_hd__a221o_4 into sky130_fd_sc_hd__a221o_4.ext:
+Extracting sky130_fd_sc_hd__or4b_4 into sky130_fd_sc_hd__or4b_4.ext:
+Extracting sky130_fd_sc_hd__o2bb2a_4 into sky130_fd_sc_hd__o2bb2a_4.ext:
+Extracting sky130_fd_sc_hd__or4_4 into sky130_fd_sc_hd__or4_4.ext:
+Extracting sky130_fd_sc_hd__nor3_1 into sky130_fd_sc_hd__nor3_1.ext:
+Extracting sky130_fd_sc_hd__dfstp_4 into sky130_fd_sc_hd__dfstp_4.ext:
+Extracting sky130_fd_sc_hd__nor3b_4 into sky130_fd_sc_hd__nor3b_4.ext:
+Extracting sky130_fd_sc_hd__nand2_8 into sky130_fd_sc_hd__nand2_8.ext:
+Extracting sky130_fd_sc_hd__o31a_2 into sky130_fd_sc_hd__o31a_2.ext:
+Extracting sky130_fd_sc_hd__nor4_4 into sky130_fd_sc_hd__nor4_4.ext:
+Extracting sky130_fd_sc_hd__inv_12 into sky130_fd_sc_hd__inv_12.ext:
+Extracting sky130_fd_sc_hd__dlymetal6s2s_1 into sky130_fd_sc_hd__dlymetal6s2s_1.ext:
+Extracting sky130_fd_sc_hd__o32ai_2 into sky130_fd_sc_hd__o32ai_2.ext:
+Extracting sky130_fd_sc_hd__dfstp_1 into sky130_fd_sc_hd__dfstp_1.ext:
+Extracting sky130_fd_sc_hd__o32ai_1 into sky130_fd_sc_hd__o32ai_1.ext:
+Extracting sky130_fd_sc_hd__a22oi_2 into sky130_fd_sc_hd__a22oi_2.ext:
+Extracting sky130_fd_sc_hd__nand3_4 into sky130_fd_sc_hd__nand3_4.ext:
+Extracting sky130_fd_sc_hd__and3_2 into sky130_fd_sc_hd__and3_2.ext:
+Extracting sky130_fd_sc_hd__and2_4 into sky130_fd_sc_hd__and2_4.ext:
+Extracting sky130_fd_sc_hd__o31ai_4 into sky130_fd_sc_hd__o31ai_4.ext:
+Extracting sky130_fd_sc_hd__dfstp_2 into sky130_fd_sc_hd__dfstp_2.ext:
+Extracting sky130_fd_sc_hd__or4bb_1 into sky130_fd_sc_hd__or4bb_1.ext:
+Extracting sky130_fd_sc_hd__o221ai_1 into sky130_fd_sc_hd__o221ai_1.ext:
+Extracting sky130_fd_sc_hd__a31oi_2 into sky130_fd_sc_hd__a31oi_2.ext:
+Extracting sky130_fd_sc_hd__o31ai_2 into sky130_fd_sc_hd__o31ai_2.ext:
+Extracting sky130_fd_sc_hd__nand3_2 into sky130_fd_sc_hd__nand3_2.ext:
+Extracting sky130_fd_sc_hd__nand2b_4 into sky130_fd_sc_hd__nand2b_4.ext:
+Extracting sky130_fd_sc_hd__and3b_2 into sky130_fd_sc_hd__and3b_2.ext:
+Extracting sky130_fd_sc_hd__and3b_4 into sky130_fd_sc_hd__and3b_4.ext:
+Extracting sky130_fd_sc_hd__nand2b_2 into sky130_fd_sc_hd__nand2b_2.ext:
+Extracting sky130_fd_sc_hd__o21a_2 into sky130_fd_sc_hd__o21a_2.ext:
+Extracting sky130_fd_sc_hd__a41o_4 into sky130_fd_sc_hd__a41o_4.ext:
+Extracting sky130_fd_sc_hd__buf_1 into sky130_fd_sc_hd__buf_1.ext:
+Extracting sky130_fd_sc_hd__or2b_4 into sky130_fd_sc_hd__or2b_4.ext:
+Extracting user_project_wrapper into user_project_wrapper.ext:
+user_project_wrapper: 1482017 errors
+Total of 1482017 errors (check feedback entries).
+exttospice finished.

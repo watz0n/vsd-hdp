@@ -3,6 +3,8 @@
 * Author: wats0n.edx@gmail.com (Watson Huang)
 * Project Design-Report: [design_report.md](reports/design_report.md)
 
+* MPW-Precheck Project: [watz0n/mpw_hdp_rv151](https://github.com/watz0n/mpw_hdp_rv151)
+
 ------
 
 Quick-Link:<br />
@@ -529,6 +531,8 @@ Development Progress (@230205):
 
 * MPW-Precheck Project:
     * [watz0n/mpw_hdp_rv151](https://github.com/watz0n/mpw_hdp_rv151)
+    * [Log File from Openlane Flow](reports/230205/mpw_hdp_rv151/openlane/runs/23_02_01_20_01/openlane.log)
+    * [Log File from MPW-Precheck](reports/230205/mpw_hdp_rv151/precheck_results/02_FEB_2023___04_14_58/logs/precheck.log)
 
 * Issue
     1. OpenLane issue after Magic DRC, stop at translate DRC result to other Readable Format
@@ -536,6 +540,7 @@ Development Progress (@230205):
 
 * Work-Around
     1. Magic DRC translate to other exchangeable form issue
+        * OpenLane Version: efabless/openlane:2022.11.19
         * Disable `RUN_MAGIC_DRC` in `openlane\user_project_wrapper\config.json`
         ```
             "RUN_MAGIC_DRC": false,
@@ -543,8 +548,12 @@ Development Progress (@230205):
         * Check the DRC-Rules in MPW-Precheck flow
 
 * Result
-    1. Check by MPW-Precheck with Magic DRC Violation
+    1. Check by MPW-Precheck with Magic DRC Violation, but MPW-Precheck passed
         * Note: From discussion [efabless/mpw_precheck: Precheck crash with SRAM DRC](https://github.com/efabless/mpw_precheck/issues/180), there are [abstract view](https://github.com/efabless/mpw_precheck/issues/180#issuecomment-1371327482) for `sky130_sram_macros` DRC-Clean library.
     ![mpw-pass-with-magic-drc-violation](reports/230205/prj_mpw_precheck_drc-issue-pass_230205.png)
+
+* Extra-Note: Github Large-File Upload Limitation
+    * Change the large text file as zipped(`.zip`) file for reference.
+    ![github-large-file](reports/230205/mpw_hdp_rv151/github_large-file_issue_230205.png)
 
 ------

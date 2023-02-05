@@ -1,0 +1,100 @@
+2023-02-02 04:14:58 - [INFO] - {{EXTRACTING FILES}} Extracting compressed files in: /mnt/d/project/mpw_hdp_rv151
+2023-02-02 04:15:12 - [INFO] - {{Project Type Info}} digital
+2023-02-02 04:15:13 - [INFO] - {{Project GDS Info}} user_project_wrapper: 8e2b8c5126f3ff676ee93d8d0299b0a4c705dc7b
+2023-02-02 04:15:13 - [INFO] - {{Tools Info}} KLayout: v0.27.12 | Magic: v8.3.348
+2023-02-02 04:15:13 - [INFO] - {{PDKs Info}} SKY130A: f70d8ca46961ff92719d8870a18a076370b85f6c | Open PDKs: 3af133706e554a740cfe60f21e773d9eaa41838c
+2023-02-02 04:15:13 - [INFO] - {{START}} Precheck Started, the full log 'precheck.log' will be located in '/mnt/d/project/mpw_hdp_rv151/precheck_results/02_FEB_2023___04_14_58/logs'
+2023-02-02 04:15:13 - [INFO] - {{PRECHECK SEQUENCE}} Precheck will run the following checks: [License, Makefile, Default, Documentation, Consistency, GPIO-Defines, XOR, Magic DRC, Klayout FEOL, Klayout BEOL, Klayout Offgrid, Klayout Metal Minimum Clear Area Density, Klayout Pin Label Purposes Overlapping Drawing, Klayout ZeroArea]
+2023-02-02 04:15:13 - [INFO] - {{STEP UPDATE}} Executing Check 1 of 14: License
+2023-02-02 04:15:14 - [INFO] - An approved LICENSE (Apache-2.0) was found in /mnt/d/project/mpw_hdp_rv151.
+2023-02-02 04:15:14 - [INFO] - {{MAIN LICENSE CHECK PASSED}} An approved LICENSE was found in project root.
+2023-02-02 04:15:16 - [INFO] - An approved LICENSE (Apache-2.0) was found in /mnt/d/project/mpw_hdp_rv151.
+2023-02-02 04:15:19 - [INFO] - An approved LICENSE (Apache-2.0) was found in /mnt/d/project/mpw_hdp_rv151.
+2023-02-02 04:15:22 - [INFO] - An approved LICENSE (Apache-2.0) was found in /mnt/d/project/mpw_hdp_rv151.
+2023-02-02 04:15:24 - [INFO] - An approved LICENSE (Apache-2.0) was found in /mnt/d/project/mpw_hdp_rv151.
+2023-02-02 04:15:27 - [INFO] - {{SUBMODULES LICENSE CHECK PASSED}} No prohibited LICENSE file(s) was found in project submodules
+2023-02-02 04:15:31 - [ERROR] - SPDX COMPLIANCE FILE UNICODE DECODE EXCEPTION in (/mnt/d/project/mpw_hdp_rv151/mgmt_core_wrapper/lvs/examples/utils/vlog2Spice): 'utf-8' codec can't decode byte 0xf8 in position 96: invalid start byte
+2023-02-02 04:15:32 - [ERROR] - SPDX COMPLIANCE FILE UNICODE DECODE EXCEPTION in (/mnt/d/project/mpw_hdp_rv151/mgmt_core_wrapper/lvs/utils/vlog2Spice): 'utf-8' codec can't decode byte 0xf8 in position 96: invalid start byte
+2023-02-02 04:18:56 - [ERROR] - SPDX COMPLIANCE FILE UNICODE DECODE EXCEPTION in (/mnt/d/project/mpw_hdp_rv151/mgmt_core_wrapper/verilog/dv/tests-standalone/spi_master/spi_master.vcd.hier): 'utf-8' codec can't decode byte 0xfc in position 0: invalid start byte
+2023-02-02 04:18:58 - [ERROR] - SPDX COMPLIANCE FILE UNICODE DECODE EXCEPTION in (/mnt/d/project/mpw_hdp_rv151/mgmt_core_wrapper/verilog/rtl/ibex/sv-source-orig/sv2v): 'utf-8' codec can't decode byte 0xcf in position 0: invalid continuation byte
+2023-02-02 04:19:01 - [ERROR] - SPDX COMPLIANCE FILE UNICODE DECODE EXCEPTION in (/mnt/d/project/mpw_hdp_rv151/openlane/user_project_wrapper/runs/23_02_01_20_01/results/cts/user_project_wrapper.odb): 'utf-8' codec can't decode byte 0xba in position 16: invalid start byte
+2023-02-02 04:19:09 - [ERROR] - SPDX COMPLIANCE FILE UNICODE DECODE EXCEPTION in (/mnt/d/project/mpw_hdp_rv151/openlane/user_project_wrapper/runs/23_02_01_20_01/results/floorplan/user_project_wrapper.odb): 'utf-8' codec can't decode byte 0xba in position 16: invalid start byte
+2023-02-02 04:19:09 - [ERROR] - SPDX COMPLIANCE FILE UNICODE DECODE EXCEPTION in (/mnt/d/project/mpw_hdp_rv151/openlane/user_project_wrapper/runs/23_02_01_20_01/results/placement/user_project_wrapper.odb): 'utf-8' codec can't decode byte 0xba in position 16: invalid start byte
+2023-02-02 04:19:11 - [ERROR] - SPDX COMPLIANCE FILE UNICODE DECODE EXCEPTION in (/mnt/d/project/mpw_hdp_rv151/openlane/user_project_wrapper/runs/23_02_01_20_01/results/routing/user_project_wrapper.odb): 'utf-8' codec can't decode byte 0xba in position 16: invalid start byte
+2023-02-02 04:19:28 - [ERROR] - SPDX COMPLIANCE FILE UNICODE DECODE EXCEPTION in (/mnt/d/project/mpw_hdp_rv151/openlane/user_project_wrapper/runs/23_02_01_20_01/tmp/13-user_project_wrapper.odb): 'utf-8' codec can't decode byte 0xba in position 16: invalid start byte
+2023-02-02 04:19:29 - [ERROR] - SPDX COMPLIANCE FILE UNICODE DECODE EXCEPTION in (/mnt/d/project/mpw_hdp_rv151/openlane/user_project_wrapper/runs/23_02_01_20_01/tmp/cts/12-user_project_wrapper.resized.odb): 'utf-8' codec can't decode byte 0xba in position 16: invalid start byte
+2023-02-02 04:19:30 - [ERROR] - SPDX COMPLIANCE FILE UNICODE DECODE EXCEPTION in (/mnt/d/project/mpw_hdp_rv151/openlane/user_project_wrapper/runs/23_02_01_20_01/tmp/floorplan/3-initial_fp.odb): 'utf-8' codec can't decode byte 0xba in position 16: invalid start byte
+2023-02-02 04:19:30 - [ERROR] - SPDX COMPLIANCE FILE UNICODE DECODE EXCEPTION in (/mnt/d/project/mpw_hdp_rv151/openlane/user_project_wrapper/runs/23_02_01_20_01/tmp/floorplan/4-io.macro_placement.odb): 'utf-8' codec can't decode byte 0xba in position 16: invalid start byte
+2023-02-02 04:19:30 - [ERROR] - SPDX COMPLIANCE FILE UNICODE DECODE EXCEPTION in (/mnt/d/project/mpw_hdp_rv151/openlane/user_project_wrapper/runs/23_02_01_20_01/tmp/floorplan/4-io.odb): 'utf-8' codec can't decode byte 0xba in position 16: invalid start byte
+2023-02-02 04:19:30 - [ERROR] - SPDX COMPLIANCE FILE UNICODE DECODE EXCEPTION in (/mnt/d/project/mpw_hdp_rv151/openlane/user_project_wrapper/runs/23_02_01_20_01/tmp/floorplan/7-pdn.odb): 'utf-8' codec can't decode byte 0xba in position 16: invalid start byte
+2023-02-02 04:19:30 - [ERROR] - SPDX COMPLIANCE FILE UNICODE DECODE EXCEPTION in (/mnt/d/project/mpw_hdp_rv151/openlane/user_project_wrapper/runs/23_02_01_20_01/tmp/placement/8-global.odb): 'utf-8' codec can't decode byte 0xba in position 16: invalid start byte
+2023-02-02 04:19:30 - [ERROR] - SPDX COMPLIANCE FILE UNICODE DECODE EXCEPTION in (/mnt/d/project/mpw_hdp_rv151/openlane/user_project_wrapper/runs/23_02_01_20_01/tmp/placement/9-resizer.odb): 'utf-8' codec can't decode byte 0xba in position 16: invalid start byte
+2023-02-02 04:19:31 - [ERROR] - SPDX COMPLIANCE FILE UNICODE DECODE EXCEPTION in (/mnt/d/project/mpw_hdp_rv151/openlane/user_project_wrapper/runs/23_02_01_20_01/tmp/routing/15-global.odb): 'utf-8' codec can't decode byte 0xba in position 16: invalid start byte
+2023-02-02 04:19:31 - [ERROR] - SPDX COMPLIANCE FILE UNICODE DECODE EXCEPTION in (/mnt/d/project/mpw_hdp_rv151/openlane/user_project_wrapper/runs/23_02_01_20_01/tmp/routing/15-global_1.odb): 'utf-8' codec can't decode byte 0xba in position 16: invalid start byte
+2023-02-02 04:19:32 - [ERROR] - SPDX COMPLIANCE FILE UNICODE DECODE EXCEPTION in (/mnt/d/project/mpw_hdp_rv151/openlane/user_project_wrapper/runs/23_02_01_20_01/tmp/routing/17-fill.odb): 'utf-8' codec can't decode byte 0xba in position 16: invalid start byte
+2023-02-02 04:19:36 - [ERROR] - SPDX COMPLIANCE FILE UNICODE DECODE EXCEPTION in (/mnt/d/project/mpw_hdp_rv151/openlane/user_project_wrapper/runs/23_02_01_20_01/tmp/routing/diode.odb): 'utf-8' codec can't decode byte 0xba in position 16: invalid start byte
+2023-02-02 04:20:03 - [WARNING] - {{SPDX COMPLIANCE CHECK FAILED}} Found 947 non-compliant file(s) with the SPDX Standard.
+2023-02-02 04:20:03 - [INFO] - SPDX COMPLIANCE: NON-COMPLIANT FILE(S) PREVIEW: ['/mnt/d/project/mpw_hdp_rv151/env_setup.sh', '/mnt/d/project/mpw_hdp_rv151/env_var.sh', '/mnt/d/project/mpw_hdp_rv151/dependencies/timing-scripts/Dockerfile', '/mnt/d/project/mpw_hdp_rv151/dependencies/timing-scripts/timing.mk', '/mnt/d/project/mpw_hdp_rv151/dependencies/timing-scripts/env/caravel_spef_mapping-mpw2-calibre.tcl', '/mnt/d/project/mpw_hdp_rv151/dependencies/timing-scripts/env/caravel_spef_mapping-mpw2.tcl', '/mnt/d/project/mpw_hdp_rv151/dependencies/timing-scripts/env/caravel_spef_mapping-mpw5-calibre.tcl', '/mnt/d/project/mpw_hdp_rv151/dependencies/timing-scripts/env/caravel_spef_mapping-mpw7.tcl', '/mnt/d/project/mpw_hdp_rv151/dependencies/timing-scripts/env/caravel_spef_mapping.tcl', '/mnt/d/project/mpw_hdp_rv151/dependencies/timing-scripts/env/common.tcl', '/mnt/d/project/mpw_hdp_rv151/dependencies/timing-scripts/env/sky130A/config.tcl', '/mnt/d/project/mpw_hdp_rv151/dependencies/timing-scripts/env/sky130A/f.tcl', '/mnt/d/project/mpw_hdp_rv151/dependencies/timing-scripts/env/sky130A/s.tcl', '/mnt/d/project/mpw_hdp_rv151/dependencies/timing-scripts/env/sky130A/t.tcl', '/mnt/d/project/mpw_hdp_rv151/dependencies/timing-scripts/scripts/compare_reports.py']
+2023-02-02 04:20:03 - [INFO] - For the full SPDX compliance report check: /mnt/d/project/mpw_hdp_rv151/precheck_results/02_FEB_2023___04_14_58/logs/spdx_compliance_report.log
+2023-02-02 04:20:03 - [INFO] - {{STEP UPDATE}} Executing Check 2 of 14: Makefile
+2023-02-02 04:20:03 - [INFO] - {{MAKEFILE CHECK PASSED}} Makefile valid.
+2023-02-02 04:20:03 - [INFO] - {{STEP UPDATE}} Executing Check 3 of 14: Default
+2023-02-02 04:20:03 - [INFO] - {{README DEFAULT CHECK PASSED}} Project 'README.md' was modified and is not identical to the default 'README.md'
+2023-02-02 04:20:05 - [INFO] - {{CONTENT DEFAULT CHECK PASSED}} Project 'gds' was modified and is not identical to the default 'gds'
+2023-02-02 04:20:05 - [INFO] - {{STEP UPDATE}} Executing Check 4 of 14: Documentation
+2023-02-02 04:20:11 - [INFO] - {{DOCUMENTATION CHECK PASSED}} Project documentation is appropriate.
+2023-02-02 04:20:11 - [INFO] - {{STEP UPDATE}} Executing Check 5 of 14: Consistency
+2023-02-02 05:34:01 - [INFO] - POWER CONNECTIONS CHECK PASSED: All instances in caravel are connected to power
+2023-02-02 05:34:01 - [INFO] - {{NETLIST CONSISTENCY CHECK PASSED}} caravel netlist passed all consistency checks.
+2023-02-02 05:34:01 - [INFO] - PORTS CHECK PASSED: Netlist user_project_wrapper ports match the golden wrapper ports
+2023-02-02 05:34:01 - [INFO] - COMPLEXITY CHECK PASSED: Netlist user_project_wrapper contains at least 1 instances (473003 instances). 
+2023-02-02 05:34:01 - [INFO] - MODELING CHECK PASSED: Netlist user_project_wrapper is structural.
+2023-02-02 05:34:02 - [INFO] - LAYOUT CHECK PASSED: The GDS layout for user_project_wrapper matches the provided structural netlist.
+2023-02-02 05:34:07 - [INFO] - POWER CONNECTIONS CHECK PASSED: All instances in user_project_wrapper are connected to power
+2023-02-02 05:34:07 - [INFO] - PORT TYPES CHECK PASSED: Netlist user_project_wrapper port types match the golden wrapper port types.
+2023-02-02 05:34:07 - [INFO] - {{NETLIST CONSISTENCY CHECK PASSED}} user_project_wrapper netlist passed all consistency checks.
+2023-02-02 05:34:08 - [INFO] - {{CONSISTENCY CHECK PASSED}} The user netlist and the top netlist are valid.
+2023-02-02 05:34:08 - [INFO] - {{STEP UPDATE}} Executing Check 6 of 14: GPIO-Defines
+2023-02-02 05:34:08 - [INFO] - GPIO-DEFINES: Checking verilog/rtl/user_defines.v, parsing files: ['/mnt/d/project/mpw_deps/precheck/checks/gpio_defines_check/verilog_assets/gpio_modes_base.v', '/mnt/d/project/mpw_hdp_rv151/verilog/rtl/user_defines.v', '/mnt/d/project/mpw_deps/precheck/checks/gpio_defines_check/verilog_assets/gpio_modes_observe.v']
+2023-02-02 05:34:09 - [INFO] - GPIO-DEFINES report path: /mnt/d/project/mpw_hdp_rv151/precheck_results/02_FEB_2023___04_14_58/outputs/reports/gpio_defines.report
+2023-02-02 05:34:09 - [INFO] - {{GPIO-DEFINES CHECK PASSED}} The user verilog/rtl/user_defines.v is valid.
+2023-02-02 05:34:09 - [INFO] - {{STEP UPDATE}} Executing Check 7 of 14: XOR
+2023-02-02 05:36:35 - [INFO] - {{XOR CHECK UPDATE}} Total XOR differences: 0, for more details view /mnt/d/project/mpw_hdp_rv151/precheck_results/02_FEB_2023___04_14_58/outputs/user_project_wrapper.xor.gds
+2023-02-02 05:36:35 - [INFO] - {{XOR CHECK PASSED}} The GDS file has no XOR violations.
+2023-02-02 05:36:35 - [INFO] - {{STEP UPDATE}} Executing Check 8 of 14: Magic DRC
+2023-02-02 06:09:47 - [ERROR] - Violation Message 'Metal4 > 3um spacing to unrelated m4 < 0.4um (met4.5b)' found 149 times.
+2023-02-02 06:09:47 - [ERROR] - Violation Message 'Metal3 > 3um spacing to unrelated m3 < 0.4um (met3.3d)' found 85 times.
+2023-02-02 06:09:47 - [ERROR] - 234 DRC violations
+2023-02-02 06:09:47 - [WARNING] - {{MAGIC DRC CHECK FAILED}} The GDS file, user_project_wrapper.gds, has DRC violations.
+2023-02-02 06:09:47 - [INFO] - {{STEP UPDATE}} Executing Check 9 of 14: Klayout FEOL
+2023-02-02 06:09:47 - [INFO] - in CUSTOM klayout_gds_drc_check
+2023-02-02 06:09:47 - [INFO] - run: klayout -b -r /mnt/d/project/mpw_deps/precheck/checks/tech-files/sky130A_mr.drc -rd input=/mnt/d/project/mpw_hdp_rv151/gds/user_project_wrapper.gds -rd topcell=user_project_wrapper -rd report=/mnt/d/project/mpw_hdp_rv151/precheck_results/02_FEB_2023___04_14_58/outputs/reports/klayout_feol_check.xml -rd feol=true >& /mnt/d/project/mpw_hdp_rv151/precheck_results/02_FEB_2023___04_14_58/logs/klayout_feol_check.log
+2023-02-02 06:16:45 - [INFO] - No DRC Violations found
+2023-02-02 06:16:45 - [INFO] - {{Klayout FEOL CHECK PASSED}} The GDS file, user_project_wrapper.gds, has no DRC violations.
+2023-02-02 06:16:45 - [INFO] - {{STEP UPDATE}} Executing Check 10 of 14: Klayout BEOL
+2023-02-02 06:16:45 - [INFO] - in CUSTOM klayout_gds_drc_check
+2023-02-02 06:16:45 - [INFO] - run: klayout -b -r /mnt/d/project/mpw_deps/precheck/checks/tech-files/sky130A_mr.drc -rd input=/mnt/d/project/mpw_hdp_rv151/gds/user_project_wrapper.gds -rd topcell=user_project_wrapper -rd report=/mnt/d/project/mpw_hdp_rv151/precheck_results/02_FEB_2023___04_14_58/outputs/reports/klayout_beol_check.xml -rd beol=true >& /mnt/d/project/mpw_hdp_rv151/precheck_results/02_FEB_2023___04_14_58/logs/klayout_beol_check.log
+2023-02-02 07:05:20 - [INFO] - No DRC Violations found
+2023-02-02 07:05:20 - [INFO] - {{Klayout BEOL CHECK PASSED}} The GDS file, user_project_wrapper.gds, has no DRC violations.
+2023-02-02 07:05:20 - [INFO] - {{STEP UPDATE}} Executing Check 11 of 14: Klayout Offgrid
+2023-02-02 07:05:20 - [INFO] - in CUSTOM klayout_gds_drc_check
+2023-02-02 07:05:20 - [INFO] - run: klayout -b -r /mnt/d/project/mpw_deps/precheck/checks/tech-files/sky130A_mr.drc -rd input=/mnt/d/project/mpw_hdp_rv151/gds/user_project_wrapper.gds -rd topcell=user_project_wrapper -rd report=/mnt/d/project/mpw_hdp_rv151/precheck_results/02_FEB_2023___04_14_58/outputs/reports/klayout_offgrid_check.xml -rd offgrid=true >& /mnt/d/project/mpw_hdp_rv151/precheck_results/02_FEB_2023___04_14_58/logs/klayout_offgrid_check.log
+2023-02-02 07:14:30 - [INFO] - No DRC Violations found
+2023-02-02 07:14:30 - [INFO] - {{Klayout Offgrid CHECK PASSED}} The GDS file, user_project_wrapper.gds, has no DRC violations.
+2023-02-02 07:14:30 - [INFO] - {{STEP UPDATE}} Executing Check 12 of 14: Klayout Metal Minimum Clear Area Density
+2023-02-02 07:14:30 - [INFO] - in CUSTOM klayout_gds_drc_check
+2023-02-02 07:14:30 - [INFO] - run: klayout -b -r /mnt/d/project/mpw_deps/precheck/checks/drc_checks/klayout/met_min_ca_density.lydrc -rd input=/mnt/d/project/mpw_hdp_rv151/gds/user_project_wrapper.gds -rd topcell=user_project_wrapper -rd report=/mnt/d/project/mpw_hdp_rv151/precheck_results/02_FEB_2023___04_14_58/outputs/reports/klayout_met_min_ca_density_check.xml >& /mnt/d/project/mpw_hdp_rv151/precheck_results/02_FEB_2023___04_14_58/logs/klayout_met_min_ca_density_check.log
+2023-02-02 07:17:22 - [INFO] - No DRC Violations found
+2023-02-02 07:17:22 - [INFO] - {{Klayout Metal Minimum Clear Area Density CHECK PASSED}} The GDS file, user_project_wrapper.gds, has no DRC violations.
+2023-02-02 07:17:22 - [INFO] - {{STEP UPDATE}} Executing Check 13 of 14: Klayout Pin Label Purposes Overlapping Drawing
+2023-02-02 07:17:22 - [INFO] - in CUSTOM klayout_gds_drc_check
+2023-02-02 07:17:22 - [INFO] - run: klayout -b -r /mnt/d/project/mpw_deps/precheck/checks/drc_checks/klayout/pin_label_purposes_overlapping_drawing.rb.drc -rd input=/mnt/d/project/mpw_hdp_rv151/gds/user_project_wrapper.gds -rd topcell=user_project_wrapper -rd report=/mnt/d/project/mpw_hdp_rv151/precheck_results/02_FEB_2023___04_14_58/outputs/reports/klayout_pin_label_purposes_overlapping_drawing_check.xml -rd top_cell_name=user_project_wrapper >& /mnt/d/project/mpw_hdp_rv151/precheck_results/02_FEB_2023___04_14_58/logs/klayout_pin_label_purposes_overlapping_drawing_check.log
+2023-02-02 07:18:36 - [INFO] - No DRC Violations found
+2023-02-02 07:18:36 - [INFO] - {{Klayout Pin Label Purposes Overlapping Drawing CHECK PASSED}} The GDS file, user_project_wrapper.gds, has no DRC violations.
+2023-02-02 07:18:36 - [INFO] - {{STEP UPDATE}} Executing Check 14 of 14: Klayout ZeroArea
+2023-02-02 07:18:36 - [INFO] - in CUSTOM klayout_gds_drc_check
+2023-02-02 07:18:36 - [INFO] - run: klayout -b -r /mnt/d/project/mpw_deps/precheck/checks/drc_checks/klayout/zeroarea.rb.drc -rd input=/mnt/d/project/mpw_hdp_rv151/gds/user_project_wrapper.gds -rd topcell=user_project_wrapper -rd report=/mnt/d/project/mpw_hdp_rv151/precheck_results/02_FEB_2023___04_14_58/outputs/reports/klayout_zeroarea_check.xml -rd cleaned_output=/mnt/d/project/mpw_hdp_rv151/precheck_results/02_FEB_2023___04_14_58/outputs/user_project_wrapper_no_zero_areas.gds >& /mnt/d/project/mpw_hdp_rv151/precheck_results/02_FEB_2023___04_14_58/logs/klayout_zeroarea_check.log
+2023-02-02 07:18:54 - [INFO] - No DRC Violations found
+2023-02-02 07:18:54 - [INFO] - {{Klayout ZeroArea CHECK PASSED}} The GDS file, user_project_wrapper.gds, has no DRC violations.
+2023-02-02 07:18:54 - [INFO] - {{FINISH}} Executing Finished, the full log 'precheck.log' can be found in '/mnt/d/project/mpw_hdp_rv151/precheck_results/02_FEB_2023___04_14_58/logs'
+2023-02-02 07:18:54 - [INFO] - {{SUCCESS}} All Checks Passed !!!
