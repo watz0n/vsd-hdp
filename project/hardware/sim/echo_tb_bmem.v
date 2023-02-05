@@ -3,6 +3,12 @@
 
 `ifdef SYN
 localparam SIM_MODE = "SYN ";
+`elsif RGL
+  `ifdef SDF
+    localparam SIM_MODE = "RGL+SDF";
+  `else
+    localparam SIM_MODE = "RGL ";
+  `endif
 `else
 localparam SIM_MODE = "RTL ";
 `endif
@@ -27,15 +33,7 @@ module echo_tb();
   wire serial_out;
   reg bp_enable = 1'b0;
 
-  rv151_soc #(
-`ifndef SYN
-    .CPU_CLOCK_FREQ(CPU_CLOCK_FREQ),
-    .RESET_PC(32'h4000_0000),
-    .BAUD_RATE(BAUD_RATE)
-`endif
-  ) soc (
-    .clk(clk),
-    .rst(rst),
+  hdp_rv151 rv151 (
     .io_bcf(1'b0),
     .io_scs(1'b0),
     .io_sdi(1'b0),
@@ -44,13 +42,40 @@ module echo_tb();
     .io_hlt(),
     .io_irc(),
     .serial_in(serial_in),   // input
-    .serial_out(serial_out)  // output
+    .serial_out(serial_out),  // output
+    .gpio_in(8'h0),
+    .gpio_out(),
+    .gpio_oeb(),
+    .io_cslt(1'b1),
+    .io_clk(clk),
+    .io_rst(rst),
+    .clk(1'b0),
+    .rst(1'b0)
   );
 
-`ifndef SYN
+`ifdef RTL
 initial begin: rpt_baud_bits
-  #1; $display("[INFO] BAUD_BITS: %d, uart_baud_edge: 0x%08x", soc.BAUD_BITS, soc.uart_baud_edge);
+  #1; $display("[INFO] BAUD_BITS: %d, uart_baud_edge: 0x%08x", rv151.soc.BAUD_BITS, rv151.soc.uart_baud_edge);
 end
+`endif
+
+`ifdef RGL
+  `ifdef SDF
+    initial begin : load_sdf
+      `ifdef MAX
+        $display("INFO: Load MAX-SDF");
+        $sdf_annotate("../rgl/sdf/hdp_rv151.ss.sdf", rv151) ;
+      `elsif MIN
+        $display("INFO: Load MIN-SDF");
+        $sdf_annotate("../rgl/sdf/hdp_rv151.ff.sdf", rv151) ;
+      `elsif NOM
+        $display("INFO: Load NOM-SDF");
+        $sdf_annotate("../rgl/sdf/hdp_rv151.tt.sdf", rv151) ;
+      `else
+        $display("INFO: no-SDF");
+      `endif
+    end
+  `endif
 `endif
 
   integer i, j, c, c1, c2;
@@ -128,17 +153,23 @@ end
 
     $display("[INFO] %s (%s) test-bench, clk-freq: %d", "echo_tb_bmem", SIM_MODE, CPU_CLOCK_FREQ);
 
-    $readmemh("../../software/echo/echo.hex", `BIOS_PATH.mem);
+    $readmemh("../../software/echo/echo.hex", `BIOS_PATH .mem);
 
     `ifndef IVERILOG
         $vcdpluson;
     `endif
     `ifdef IVERILOG
-`ifdef SYN
+      `ifdef SYN
         $dumpfile("echo_tb_bmem_syn.fst");
-`else
+      `elsif RGL
+        `ifdef SDF
+          $dumpfile("echo_tb_bmem_rgl+sdf.fst");
+        `else
+          $dumpfile("echo_tb_bmem_rgl.fst");
+        `endif
+      `else
         $dumpfile("echo_tb_bmem.fst");
-`endif
+      `endif
         $dumpvars(0, echo_tb);
     `endif
     rst = 1;

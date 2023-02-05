@@ -1,8 +1,10 @@
 # Copyright 2023 Hwa-Shan (Watson) Huang
 # Author: watson.edx@gmail.com
 
-read_liberty ./lib/openram/hdp_sky130_sram_8kbytes_1rw1r_32x2048_8_TT_1p8V_25C.lib
-read_liberty ./lib/openram/hdp_sky130_sram_8kbytes_1rw_32x2048_8_TT_1p8V_25C.lib
+#read_liberty ./lib/openram/hdp_sky130_sram_8kbytes_1rw1r_32x2048_8_TT_1p8V_25C.lib
+#read_liberty ./lib/openram/hdp_sky130_sram_8kbytes_1rw_32x2048_8_TT_1p8V_25C.lib
+
+read_liberty ./lib/openram/sky130_sram_2kbyte_1rw1r_32x512_8_TT_1p8V_25C.lib
 read_liberty ./lib/sky130/sky130_fd_sc_hd__tt_025C_1v80.lib
 
 source ./sta/opensta_report_timing.tcl

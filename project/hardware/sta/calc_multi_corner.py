@@ -30,19 +30,23 @@ for libcnr in lst_libcnr:
     print("OpenSTA:",libcnr);
     libhd = libcnr[0:2];
     memcnr="";
+    
     if(libhd == "tt"):
-            memcnr="TT_1p8V_25C";
+        memcnr="TT_1p8V_25C";
     elif(libhd == "ff"):
-            memcnr="FF_1p8V_25C";
+        #memcnr="FF_1p8V_25C";
+        memcnr="TT_1p8V_25C";
     elif(libhd == "ss"):
-            memcnr="SS_1p8V_25C";
+        #memcnr="SS_1p8V_25C";
+        memcnr="TT_1p8V_25C";
     else:
-            print("unknown corner"); exit(-1);
+        print("unknown corner"); exit(-1);
 
     #print(memcnr);
     fd = open("py_cal_dly.tcl", "w");
-    fd.write("read_liberty ./lib/openram/hdp_sky130_sram_8kbytes_1rw1r_32x2048_8_{}.lib\n".format(memcnr))
-    fd.write("read_liberty ./lib/openram/hdp_sky130_sram_8kbytes_1rw_32x2048_8_{}.lib\n".format(memcnr))
+    # fd.write("read_liberty ./lib/openram/hdp_sky130_sram_8kbytes_1rw1r_32x2048_8_{}.lib\n".format(memcnr))
+    # fd.write("read_liberty ./lib/openram/hdp_sky130_sram_8kbytes_1rw_32x2048_8_{}.lib\n".format(memcnr))
+    fd.write("read_liberty ./lib/openram/sky130_sram_2kbyte_1rw1r_32x512_8_{}.lib\n".format(memcnr))
     fd.write("read_liberty ./lib/sky130/sky130_fd_sc_hd__{}.lib\n".format(libcnr));
     fd.write("source ./sta/opensta_report_timing.tcl\n");
     fd.write("exit\n");

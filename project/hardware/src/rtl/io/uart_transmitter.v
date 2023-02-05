@@ -1,3 +1,5 @@
+//From UCB EECS-151 FPGA Lab/Project
+
 module uart_transmitter #(
     parameter CLOCK_FREQ = 125_000_000,
     parameter MIN_BDRT = 9_600,

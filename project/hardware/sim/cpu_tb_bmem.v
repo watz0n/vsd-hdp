@@ -37,12 +37,7 @@ module cpu_tb();
   wire [31:0] csr;
   reg bp_enable = 1'b0;
 
-  rv151_soc #(
-    .CPU_CLOCK_FREQ(CPU_CLOCK_FREQ),
-    .RESET_PC(32'h4000_0000)
-  ) soc (
-    .clk(clk),
-    .rst(rst),
+  hdp_rv151 rv151 (
     .io_bcf(1'b0),
     .io_scs(1'b0),
     .io_sdi(1'b0),
@@ -51,7 +46,15 @@ module cpu_tb();
     .io_hlt(),
     .io_irc(),
     .serial_in(1'b1),
-    .serial_out()
+    .serial_out(),
+    .gpio_in(8'h0),
+    .gpio_out(),
+    .gpio_oeb(),
+    .io_cslt(1'b1),
+    .io_clk(clk),
+    .io_rst(rst),
+    .clk(1'b0),
+    .rst(1'b0)
   );
 
 
@@ -442,7 +445,8 @@ end
     `RF_PATH.mem[3] = 300;
     `RF_PATH.mem[4] = 400;
 
-    IMM       = 32'h0000_0FF0;
+    //IMM       = 32'h0000_0FF0; //SRAM size >= 4KB
+    IMM       = 32'h0000_07F0; //Shrink to SRAM size to 2KB
     INST_ADDR = 14'h0000;
     JUMP_ADDR = (32'h1000_0000 + {IMM[20:1], 1'b0}) >> 2;
 
@@ -480,8 +484,9 @@ end
 
     // Test B-Type Insts --------------------------------------------------
     // - BEQ, BNE, BLT, BGE, BLTU, BGEU
-
-    IMM       = 32'h0000_0FF0;
+    
+    //IMM       = 32'h0000_0FF0; //SRAM size >= 4KB
+    IMM       = 32'h0000_07F0; //Shrink to SRAM size to 2KB
     INST_ADDR = 14'h0000;
     JUMP_ADDR = (32'h1000_0000 + IMM[12:0]) >> 2;
 
@@ -701,7 +706,8 @@ end
     init_rf();
 
     INST_ADDR = 14'h0000;
-    IMM       = 32'h0000_0FF0;
+    //IMM       = 32'h0000_0FF0; //SRAM size >= 4KB
+    IMM       = 32'h0000_07F0; //Shrink to SRAM size to 2KB
     JUMP_ADDR = (32'h1000_0008 + IMM[12:0]) >> 2; // note the PC address here
 
     `BIOS_PATH.mem[INST_ADDR + 0]   = {`FNC7_0, 5'd1, 5'd4, `FNC_ADD_SUB, 5'd6, `OPC_ARI_RTYPE};

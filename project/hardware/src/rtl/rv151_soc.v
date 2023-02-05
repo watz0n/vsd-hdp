@@ -1,5 +1,29 @@
-// Copyright 2023 Hwa-Shan (Watson) Huang
-// Author: watson.edx@gmail.com
+// MIT License
+// -----------
+// 
+// Copyright (c) 2023 Watson Huang (watson.edx@gmail.com)
+// Permission is hereby granted, free of charge, to any person
+// obtaining a copy of this software and associated documentation
+// files (the "Software"), to deal in the Software without
+// restriction, including without limitation the rights to use,
+// copy, modify, merge, publish, distribute, sublicense, and/or sell
+// copies of the Software, and to permit persons to whom the
+// Software is furnished to do so, subject to the following
+// conditions:
+// 
+// The above copyright notice and this permission notice shall be
+// included in all copies or substantial portions of the Software.
+// 
+// THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
+// EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES
+// OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND
+// NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT
+// HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY,
+// WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+// FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR
+// OTHER DEALINGS IN THE SOFTWARE.
+// -----------
+// SPDX-License-Identifier: MIT
 
 module rv151_soc #(
     //parameter CPU_CLOCK_FREQ = 50_000_000,
@@ -8,9 +32,6 @@ module rv151_soc #(
     parameter BAUD_RATE = 115200,
     parameter MIN_BDRT = 9600
 ) (
-    input  clk,
-    input  rst,
-
     input  io_bcf,
     input  io_scs,
     input  io_sdi,
@@ -21,7 +42,14 @@ module rv151_soc #(
     output io_irc,
 
     input  serial_in,
-    output serial_out
+    output serial_out,
+
+    input  [7:0] gpio_in,
+    output [7:0] gpio_out,
+    output [7:0] gpio_oeb,
+    
+    input  clk,
+    input  rst
 );
 
     //Register-File
@@ -58,6 +86,10 @@ module rv151_soc #(
     wire        ds_irc;
     wire        ds_hlt;
     wire [31:0] ds_hpc;
+
+//===========
+
+    localparam SRAM_AWDH = 9;
 
 //===========
 
@@ -99,168 +131,279 @@ module rv151_soc #(
       .clk(clk)
     );
 
-    wire [11-1:0] bios_addra, bios_addrb;
-    wire bios_ena, bios_enb;
+    localparam BMEM_AWDH = 10; //4KB
+    localparam BMEM_SWMX = BMEM_AWDH-SRAM_AWDH;
+    localparam BMEM_SWDH = 'h1<<(BMEM_SWMX);
 
-    wire [31:0] bios_dout0, bios_dout1;
+    wire [BMEM_SWDH-1:0] bios_mxa;
+    wire [BMEM_SWDH-1:0] bios_mxb;
+
+    wire [BMEM_AWDH-1:0] bios_addra, bios_addrb;
+    wire [BMEM_SWDH-1:0] bios_ena;
+    wire [BMEM_SWDH-1:0] bios_enb;
+
+    wire [31:0] bios_dout0 [BMEM_SWDH-1:0];
+    wire [31:0] bios_dout1 [BMEM_SWDH-1:0];
     reg  [31:0] bios_douta, bios_doutb;
 
     wire        bios_web0  ;
     wire [3:0]  bios_wmask0;
     wire [31:0] bios_din0  ;
 
-    hdp_sky130_sram_8kbytes_1rw1r_32x2048_8 bios_mem(
+    sky130_sram_2kbyte_1rw1r_32x512_8 bios_mem0(
       // Port 0: RW
       .clk0(clk),
-      .csb0(~bios_ena),
+      .csb0(~bios_ena[0]),
       .web0(bios_web0),
       .wmask0(bios_wmask0),
-      .addr0(bios_addra),
+      .addr0(bios_addra[0+:SRAM_AWDH]),
       .din0(bios_din0),
-      .dout0(bios_dout0),
+      .dout0(bios_dout0[0]),
       // Port 1: R
       .clk1(clk),
-      .csb1(~bios_enb),
-      .addr1(bios_addrb),
-      .dout1(bios_dout1)
+      .csb1(~bios_enb[0]),
+      .addr1(bios_addrb[0+:SRAM_AWDH]),
+      .dout1(bios_dout1[0])
     );
 
+    sky130_sram_2kbyte_1rw1r_32x512_8 bios_mem1(
+      // Port 0: RW
+      .clk0(clk),
+      .csb0(~bios_ena[1]),
+      .web0(bios_web0),
+      .wmask0(bios_wmask0),
+      .addr0(bios_addra[0+:SRAM_AWDH]),
+      .din0(bios_din0),
+      .dout0(bios_dout0[1]),
+      // Port 1: R
+      .clk1(clk),
+      .csb1(~bios_enb[1]),
+      .addr1(bios_addrb[0+:SRAM_AWDH]),
+      .dout1(bios_dout1[1])
+    );
+    
+    assign bios_mxa = ({{(BMEM_SWDH-1){1'b0}},1'b1}) << (bios_addra[SRAM_AWDH+:BMEM_SWMX]);
+    assign bios_mxb = ({{(BMEM_SWDH-1){1'b0}},1'b1}) << (bios_addrb[SRAM_AWDH+:BMEM_SWMX]);
+
     //assign bios_ena = mi_en&mi_ad[30];
-    assign bios_ena = bcf ? (~bcsb) : (mi_en&mi_ad[30]);
+    assign bios_ena = bcf ? {BMEM_SWDH{(~bcsb)}}&bios_mxa : {BMEM_SWDH{(mi_en&mi_ad[30])}}&bios_mxa;
     
-    assign bios_enb = md_en&md_ad[30];
+    assign bios_enb = {BMEM_SWDH{(md_en&md_ad[30])}}&bios_mxb;
     
-    //assign bios_addra = mi_ad[2+:11];
-    assign bios_addra = bcf ? badr : (mi_ad[2+:11]);
+    //assign bios_addra = mi_ad[2+:BMEM_AWDH];
+    assign bios_addra = bcf ? badr : (mi_ad[2+:BMEM_AWDH]);
     
-    assign bios_addrb = md_ad[2+:11];
+    assign bios_addrb = md_ad[2+:BMEM_AWDH];
 
     assign bios_web0   = bcf ? &bweb : 1'b1  ;
     assign bios_wmask0 = bcf ? ~bweb : 4'h0  ;
     assign bios_din0   = bcf ? bdti  : 32'h0 ;
 
     always@(posedge clk) begin
-        {bios_doutb, bios_douta} <= {bios_dout1, bios_dout0};
+        {bios_doutb, bios_douta} <= {bios_dout1[bios_addrb[SRAM_AWDH+:BMEM_SWMX]], bios_dout0[bios_addra[SRAM_AWDH+:BMEM_SWMX]]};
     end
 
     assign bdto = bios_douta;
 
 //===========
 
-    wire [11-1:0] dmem_addr;
+    //localparam DMEM_AWDH = 11; //8KB //Route-Congestion
+    localparam DMEM_AWDH = 10; //4KB
+    localparam DMEM_SWMX = DMEM_AWDH-SRAM_AWDH;
+    localparam DMEM_SWDH = 'h1<<(DMEM_SWMX);
+
+    wire [DMEM_SWDH-1:0] dmem_mxa;
+
+    wire [DMEM_AWDH-1:0] dmem_addr;
     wire [31:0] dmem_din; 
     wire [3:0] dmem_we;
     
     wire [3:0] dmem_web;
 
-    wire dmem_en0;
-    wire [32:0] dmem_dout0;
-    wire dmem_en1;
-    wire [32:0] dmem_dout1;
+    wire [DMEM_SWDH-1:0] dmem_en;
+    wire [31:0] dmem_dout0 [DMEM_SWDH-1:0];
 
     reg  [31:0] dmem_dout;
 
-    hdp_sky130_sram_8kbytes_1rw_32x2048_8 dmem0(
+    sky130_sram_2kbyte_1rw1r_32x512_8 dmem0(
       // Port 0: RW
       .clk0(clk),
-      .csb0(~dmem_en0),
+      .csb0(~dmem_en[0]),
       .web0(&dmem_web),
       .wmask0(dmem_we),
-      //.spare_wen0(1'b0),
-      .addr0({1'b0, dmem_addr}),
-      .din0({1'b0, dmem_din}),
-      .dout0(dmem_dout0)
+      .addr0(dmem_addr[0+:SRAM_AWDH]),
+      .din0(dmem_din),
+      .dout0(dmem_dout0[0]),
+      // Port 1: R
+      .clk1(1'b0),
+      .csb1(1'b1),
+      .addr1({SRAM_AWDH{1'b1}}),
+      .dout1()
     );
 
-    hdp_sky130_sram_8kbytes_1rw_32x2048_8 dmem1(
+    sky130_sram_2kbyte_1rw1r_32x512_8 dmem1(
       // Port 0: RW
       .clk0(clk),
-      .csb0(~dmem_en1),
+      .csb0(~dmem_en[1]),
       .web0(&dmem_web),
       .wmask0(dmem_we),
-      //.spare_wen0(1'b0),
-      .addr0({1'b0, dmem_addr}),
-      .din0({1'b0, dmem_din}),
-      .dout0(dmem_dout1)
+      .addr0(dmem_addr[0+:SRAM_AWDH]),
+      .din0(dmem_din),
+      .dout0(dmem_dout0[1]),
+      // Port 1: R
+      .clk1(1'b0),
+      .csb1(1'b1),
+      .addr1({SRAM_AWDH{1'b1}}),
+      .dout1()
+    );
+/* //8KB //Route-Congestion
+    sky130_sram_2kbyte_1rw1r_32x512_8 dmem2(
+      // Port 0: RW
+      .clk0(clk),
+      .csb0(~dmem_en[2]),
+      .web0(&dmem_web),
+      .wmask0(dmem_we),
+      .addr0(dmem_addr[0+:SRAM_AWDH]),
+      .din0(dmem_din),
+      .dout0(dmem_dout0[2]),
+      // Port 1: R
+      .clk1(1'b0),
+      .csb1(1'b1),
+      .addr1({SRAM_AWDH{1'b1}}),
+      .dout1()
     );
 
-    assign dmem_addr = md_ad[2+:11];
+    sky130_sram_2kbyte_1rw1r_32x512_8 dmem3(
+      // Port 0: RW
+      .clk0(clk),
+      .csb0(~dmem_en[3]),
+      .web0(&dmem_web),
+      .wmask0(dmem_we),
+      .addr0(dmem_addr[0+:SRAM_AWDH]),
+      .din0(dmem_din),
+      .dout0(dmem_dout0[3]),
+      // Port 1: R
+      .clk1(1'b0),
+      .csb1(1'b1),
+      .addr1({SRAM_AWDH{1'b1}}),
+      .dout1()
+    );
+*/
+    assign dmem_mxa = ({{(DMEM_SWDH-1){1'b0}},1'b1}) << (dmem_addr[SRAM_AWDH+:DMEM_SWMX]);
+
+    assign dmem_addr = md_ad[2+:DMEM_AWDH];
     assign dmem_din  = md_wd;
     assign dmem_we   = md_we;
 
     assign dmem_web  = ~dmem_we;
 
-    assign dmem_en0  = md_en&md_ad[28]&(~md_ad[11+2]);
-    assign dmem_en1  = md_en&md_ad[28]&( md_ad[11+2]);
+    assign dmem_en = {DMEM_SWDH{md_en&md_ad[28]}}&dmem_mxa;
 
     always@(posedge clk) begin
-      dmem_dout <= ( md_ad[11+2]) ? dmem_dout1[31:0] : dmem_dout0[31:0] ;
+      dmem_dout <= dmem_dout0[dmem_addr[SRAM_AWDH+:DMEM_SWMX]];
     end
 
 //===========
 
-    wire [11-1:0] imem_addra, imem_addrb;
+    //localparam IMEM_AWDH = 11; //8KB //Route-Congestion
+    localparam IMEM_AWDH = 10; //4KB
+    localparam IMEM_SWMX = IMEM_AWDH-SRAM_AWDH;
+    localparam IMEM_SWDH = 'h1<<(IMEM_SWMX);
+
+    wire [IMEM_SWDH-1:0] imem_mxa;
+    wire [IMEM_SWDH-1:0] imem_mxb;
+
+    wire [IMEM_AWDH-1:0] imem_addra, imem_addrb;
     wire [31:0] imem_dina; 
     wire [3:0] imem_wea;
     wire [3:0] imem_weba;
 
-    wire imem_ena0;
-    wire imem_ena1;
+    wire [IMEM_SWDH-1:0] imem_ena;
+    wire [IMEM_SWDH-1:0] imem_enb;
+    wire [31:0] imem_dout1 [IMEM_SWDH-1:0];
 
-    wire imem_enb0;
-    wire imem_enb1;
-
-    wire [31:0] imem_dout10;
-    wire [31:0] imem_dout11;
     reg  [31:0] imem_doutb;
 
-    hdp_sky130_sram_8kbytes_1rw1r_32x2048_8 imem0(
+    sky130_sram_2kbyte_1rw1r_32x512_8 imem0(
       // Port 0: RW
       .clk0(clk),
-      .csb0(~imem_ena0),
+      .csb0(~imem_ena[0]),
       .web0(&imem_weba),
       .wmask0(imem_wea),
-      .addr0(imem_addra),
+      .addr0(imem_addra[0+:SRAM_AWDH]),
       .din0(imem_dina),
       .dout0(),
       // Port 1: R
       .clk1(clk),
-      .csb1(~imem_enb0),
-      .addr1(imem_addrb),
-      .dout1(imem_dout10)
+      .csb1(~imem_enb[0]),
+      .addr1(imem_addrb[0+:SRAM_AWDH]),
+      .dout1(imem_dout1[0])
     );
 
-    hdp_sky130_sram_8kbytes_1rw1r_32x2048_8 imem1(
+    sky130_sram_2kbyte_1rw1r_32x512_8 imem1(
       // Port 0: RW
       .clk0(clk),
-      .csb0(~imem_ena1),
+      .csb0(~imem_ena[1]),
       .web0(&imem_weba),
       .wmask0(imem_wea),
-      .addr0(imem_addra),
+      .addr0(imem_addra[0+:SRAM_AWDH]),
       .din0(imem_dina),
       .dout0(),
       // Port 1: R
       .clk1(clk),
-      .csb1(~imem_enb1),
-      .addr1(imem_addrb),
-      .dout1(imem_dout11)
+      .csb1(~imem_enb[1]),
+      .addr1(imem_addrb[0+:SRAM_AWDH]),
+      .dout1(imem_dout1[1])
     );
+
+/* //8KB //Route-Congestion
+    sky130_sram_2kbyte_1rw1r_32x512_8 imem2(
+      // Port 0: RW
+      .clk0(clk),
+      .csb0(~imem_ena[2]),
+      .web0(&imem_weba),
+      .wmask0(imem_wea),
+      .addr0(imem_addra[0+:SRAM_AWDH]),
+      .din0(imem_dina),
+      .dout0(),
+      // Port 1: R
+      .clk1(clk),
+      .csb1(~imem_enb[2]),
+      .addr1(imem_addrb[0+:SRAM_AWDH]),
+      .dout1(imem_dout1[2])
+    );
+
+    sky130_sram_2kbyte_1rw1r_32x512_8 imem3(
+      // Port 0: RW
+      .clk0(clk),
+      .csb0(~imem_ena[3]),
+      .web0(&imem_weba),
+      .wmask0(imem_wea),
+      .addr0(imem_addra[0+:SRAM_AWDH]),
+      .din0(imem_dina),
+      .dout0(),
+      // Port 1: R
+      .clk1(clk),
+      .csb1(~imem_enb[3]),
+      .addr1(imem_addrb[0+:SRAM_AWDH]),
+      .dout1(imem_dout1[3])
+    );
+*/
+    assign imem_mxa = ({{(IMEM_SWDH-1){1'b0}},1'b1}) << (imem_addra[SRAM_AWDH+:IMEM_SWMX]);
+    assign imem_mxb = ({{(IMEM_SWDH-1){1'b0}},1'b1}) << (imem_addrb[SRAM_AWDH+:IMEM_SWMX]);
     
-    assign imem_addra = md_ad[2+:11];
+    assign imem_addra = md_ad[2+:IMEM_AWDH];
     assign imem_dina  = md_wd;
-    assign imem_addrb = mi_ad[2+:11];
+    assign imem_addrb = mi_ad[2+:IMEM_AWDH];
 
     assign imem_wea   = md_we;
     assign imem_weba  = ~imem_wea;
 
-    assign imem_ena0  = md_en&mi_ad[30]&md_ad[29]&(~md_ad[11+2]);
-    assign imem_ena1  = md_en&mi_ad[30]&md_ad[29]&( md_ad[11+2]);
-
-    assign imem_enb0  = mi_en&(~mi_ad[30])&(~mi_ad[11+2]);
-    assign imem_enb1  = mi_en&(~mi_ad[30])&( mi_ad[11+2]);
+    assign imem_ena  = {IMEM_SWDH{(md_en&mi_ad[30]&md_ad[29])}}&imem_mxa;
+    assign imem_enb  = {IMEM_SWDH{(mi_en&(~mi_ad[30]))}}&imem_mxb;
 
     always@(posedge clk) begin
-      imem_doutb <= ( mi_ad[11+2]) ? imem_dout11 : imem_dout10 ;
+      imem_doutb <= imem_dout1[imem_addrb[SRAM_AWDH+:IMEM_SWMX]];
     end
 
 //===========
@@ -369,6 +512,28 @@ module rv151_soc #(
       end
     end
 
+//===|GPIO=CSR|===
+
+    reg [7:0] gpio_ot;
+    reg [7:0] gpio_ob;
+
+    assign gpio_out = gpio_ot;
+    assign gpio_oeb = gpio_ob;
+
+    always@(posedge clk or posedge rst) begin
+      if(rst) begin
+        gpio_ot <= 8'h0;
+        gpio_ob <= 8'h0;
+      end
+      else begin
+        gpio_ot <= (md_ad[31]&md_en&md_we[0]&(md_ad[7:0]==8'h1C)) ? md_wd[8*0+:8] : 
+                                                                    gpio_ot       ;
+        gpio_ob <= (md_ad[31]&md_en&md_we[2]&(md_ad[7:0]==8'h1C)) ? md_wd[8*2+:8] : 
+                                                                    gpio_ob       ;
+      end
+    end
+
+
 //===|RISCV-CSR|===
 
     reg [31:0] tohost_csr = 0;
@@ -445,6 +610,7 @@ module rv151_soc #(
         {4'h8, 8'h0C} : io_rm = {{(32-BAUD_BITS){1'b0}}, uart_baud_edge};
         {4'h8, 8'h10} : io_rm = cc_cntr;
         {4'h8, 8'h18} : io_rm = ir_cntr;
+        {4'h8, 8'h1C} : io_rm = {8'h0, gpio_ob, 8'h0, gpio_in};
         default :       io_rm = 32'h0;
       endcase
     end

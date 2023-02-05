@@ -1,0 +1,37 @@
+{
+    "DESIGN_NAME": "hdp_rv151",
+    "VERILOG_FILES": ["dir::src/*.v", "dir::src/core/*.v", "dir::src/io/*.v"],
+    "CLOCK_PORT": "clk io_clk io_sck",
+    "CLOCK_PERIOD": 100.0,
+
+    "EXTRA_LEFS":      "dir::../../pdks/sky130A/libs.ref/sky130_sram_macros/lef/sky130_sram_2kbyte_1rw1r_32x512_8.lef",
+    "EXTRA_GDS_FILES": "dir::../../pdks/sky130A/libs.ref/sky130_sram_macros/gds/sky130_sram_2kbyte_1rw1r_32x512_8.gds",
+    "EXTRA_LIBS":      "dir::../../pdks/sky130A/libs.ref/sky130_sram_macros/lib/sky130_sram_2kbyte_1rw1r_32x512_8_TT_1p8V_25C.lib",
+
+    "VDD_NETS": "vccd1",
+    "GND_NETS": "vssd1",
+
+    "FP_PDN_MACRO_HOOKS": "soc.bios_mem0 vccd1 vssd1 vccd1 vssd1, soc.bios_mem1 vccd1 vssd1 vccd1 vssd1, soc.dmem0 vccd1 vssd1 vccd1 vssd1, soc.dmem1 vccd1 vssd1 vccd1 vssd1, soc.imem0 vccd1 vssd1 vccd1 vssd1, soc.imem1 vccd1 vssd1 vccd1 vssd1",
+
+    "FP_SIZING": "absolute",
+    "PL_TARGET_DENSITY": 0.5,
+    "RT_MAX_LAYER": "met4",
+    "DIE_AREA": "0 0 2450 2050",
+
+    "MACRO_PLACEMENT_CFG": "dir::macro_placement.cfg",
+    "BASE_SDC_FILE": "dir::base.sdc",
+    "SYNTH_STRATEGY": "AREA 0",
+
+    "SYNTH_SIZING": 1,
+    "SYNTH_FLAT_TOP": 1,
+
+    "ROUTING_CORES": 4,
+
+    "FP_PIN_ORDER_CFG": "dir::pin_order.cfg",
+
+    "MAGIC_DRC_USE_GDS": false,
+    "QUIT_ON_MAGIC_DRC": false,
+    "RUN_KLAYOUT_XOR": false,
+
+    "DESIGN_IS_CORE": true
+}

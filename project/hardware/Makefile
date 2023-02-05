@@ -9,18 +9,31 @@ VVP                     := vvp
 SYN                     += $(subst /cygdrive/c/,C:/,$(shell find $(ABS_TOP)/syn -type f -name "*.v"))
 LIB                     := $(subst /cygdrive/c/,C:/,$(shell find $(ABS_TOP)/lib/sky130 -type f -name "*.lib"))
 LIB_GZ                  := $(subst /cygdrive/c/,C:/,$(shell find $(ABS_TOP)/lib/sky130 -type f -name "*.tar.gz"))
+RGL                     += $(subst /cygdrive/c/,C:/,$(shell find $(ABS_TOP)/rgl -type f -name "*.v"))
 
 sim/%.fst: sim/%.v $(RTL)
-	@cd sim && $(IVERILOG) $(IVERILOG_OPTS) -o $*.tbi $*.v $(RTL) && $(VVP) $*.tbi -fst |& tee $*.log
+	@cd sim && $(IVERILOG) $(IVERILOG_OPTS) -DRTL -o $*.tbi $*.v $(RTL) && $(VVP) $*.tbi -fst |& tee $*.log
 
 sim-syn/%.fst: sim/%.v $(SYN)
 	@cd sim && $(IVERILOG) $(IVERILOG_OPTS) -DSYN -o $*_syn.tbi $*.v $(SYN) && $(VVP) $*_syn.tbi -fst |& tee $*.log
+
+sim-rgl/%.fst: sim/%.v $(RGL)
+	@cd sim && $(IVERILOG) $(IVERILOG_OPTS) -DRGL -o $*_rgl.tbi $*.v $(RGL) && $(VVP) $*_rgl.tbi -fst |& tee $*.log
+
+sim-rgl-nom/%.fst: sim/%.v $(RGL)
+	@cd sim && $(IVERILOG) $(IVERILOG_OPTS) -DRGL -DSDF -DNOM -gspecify -o $*_rgl.tbi $*.v $(RGL) && $(VVP) $*_rgl.tbi -fst |& tee $*.log
+
+sim-rgl-max/%.fst: sim/%.v $(RGL)
+	@cd sim && $(IVERILOG) $(IVERILOG_OPTS) -DRGL -DSDF -DMAX -gspecify -o $*_rgl.tbi $*.v $(RGL) && $(VVP) $*_rgl.tbi -fst |& tee $*.log
+
+sim-rgl-min/%.fst: sim/%.v $(RGL)
+	@cd sim && $(IVERILOG) $(IVERILOG_OPTS) -DRGL -DSDF -DMIN -gspecify -o $*_rgl.tbi $*.v $(RGL) && $(VVP) $*_rgl.tbi -fst |& tee $*.log
 
 clean-all: clean-sim clean-syn clean-sta
 	@rm -rf lib/sky130/*.lib
 
 clean-sim:
-	@rm -rf sim/*.tbi sim/*.fst sim/*.log
+	@rm -rf sim/*.tbi sim/*.fst sim/*.log sim/*.hier
 
 lib/sky130/*.lib:
 	@tar -zxvf lib/sky130/sky130_fd_sc_hd__ff_100C_1v65.tar.gz

@@ -8,8 +8,8 @@ read_verilog ./syn/rv151_soc_syn.v
 
 link_design rv151_soc
 
-create_clock -name clk -period 100 { clk }
-create_clock -name sck -period 100 { io_sck }
+create_clock -name clk -period 100.0 { clk }
+create_clock -name sck -period 100.0 { io_sck }
 
 set_input_delay -clock clk 0 { serial_in }
 set_output_delay -clock clk 0 { serial_out }
