@@ -13,6 +13,7 @@ Quick-Link:<br />
 [Progress 230107](#PRG230107)<br />
 [Progress 230114](#PRG230114)<br />
 [Progress 230127](#PRG230127)<br />
+[Progress 230205](#PRG230205)<br />
 
 ------
 
@@ -514,5 +515,36 @@ Development Progress (@230127):
 
 [4] Precheck results on SKY130 SRAM-Macro<br />
 ![sky130_sm_precheck](reports/230127/sky130_sram_drc_p02.png)<br />
+
+------
+
+### PRG230205
+
+Development Progress (@230205):
+
+- [x] Know how to build GDS file from caravel_user_project\user_project_wrapper
+- [x] Refine HDP-RV151 to caravel_user_project environment
+- [x] Perform Behavior/Gate-Level RTL Simulation to check funcational consistency
+- [x] Pass the MPW-Precheck flow for submitting Multi-Project Wafer (MPW) application
+
+* MPW-Precheck Project:
+    * [watz0n/mpw_hdp_rv151](https://github.com/watz0n/mpw_hdp_rv151)
+
+* Issue
+    1. OpenLane issue after Magic DRC, stop at translate DRC result to other Readable Format
+    ![magic-drc-step-fail](reports/230205/prj_mpw_openlane-flow_fail-log_230205.png)
+
+* Work-Around
+    1. Magic DRC translate to other exchangeable form issue
+        * Disable `RUN_MAGIC_DRC` in `openlane\user_project_wrapper\config.json`
+        ```
+            "RUN_MAGIC_DRC": false,
+        ```
+        * Check the DRC-Rules in MPW-Precheck flow
+
+* Result
+    1. Check by MPW-Precheck with Magic DRC Violation
+        * Note: From discussion [efabless/mpw_precheck: Precheck crash with SRAM DRC](https://github.com/efabless/mpw_precheck/issues/180), there are [abstract view](https://github.com/efabless/mpw_precheck/issues/180#issuecomment-1371327482) for `sky130_sram_macros` DRC-Clean library.
+    ![mpw-pass-with-magic-drc-violation](reports/230205/prj_mpw_precheck_drc-issue-pass_230205.png)
 
 ------
