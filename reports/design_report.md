@@ -44,8 +44,9 @@ Outline:<br />
 
 ### 1.2. Design Constraint 
 
-1. Target Performance (Clock) : CPU/SPI at 10 MHz
-2. Target Area (Utilization) : No constraint
+* Design Configuration: [config.json](230207/OpenLane/hdp_rv151/config.json)
+    1. Target Performance (Clock) : CPU/SPI at 10MHz(100.0ns)
+    2. Target Area (Utilization) : 5022500 (nm^2, 2450(nm, Width)x2050(nm, Height))
 
 ### 1.3. IO-CSRs
 
