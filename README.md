@@ -6,6 +6,7 @@ Program: [SKY130-based ASIC Design Projects](https://www.vlsisystemdesign.com/hd
 
 Project-Database: [HDP-RV151](project)<br />
 Project-Progress: [project.md](project.md)<br />
+Project-Design-Report: [design_report.md](reports/design_report.md)<br />
 
 ------
 
