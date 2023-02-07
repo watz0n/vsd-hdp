@@ -175,7 +175,7 @@ Outline:<br />
     * Pass in [MPW-Precheck Results](https://github.com/watz0n/mpw_hdp_rv151#results)
     * [efabless/mpw_precheck: Precheck crash with SRAM DRC](https://github.com/efabless/mpw_precheck/issues/180)
 
-* Antenna Rule Check: 0 violatiors, [report-file](230207/OpenLane/hdp_rv151/runs/full_guide/reports/signoff/35-antenna_violators.rpt)
+* Antenna Rule Check: 0 violators, [report-file](230207/OpenLane/hdp_rv151/runs/full_guide/reports/signoff/35-antenna_violators.rpt)
 
 ### 3.6. PVT Corners
 
