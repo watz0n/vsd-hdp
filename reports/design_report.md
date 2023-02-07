@@ -7,7 +7,7 @@
 Outline:<br />
 [1. Design Specification](#1-design-specification)<br />
 [2. Function Consistancy](#2-function-consistancy)<br />
-[3. Physical Implementation](3-physical-implementation)<br />
+[3. Physical Implementation](#3-physical-implementation)<br />
 [4. References](#4-references)<br />
 
 ------
