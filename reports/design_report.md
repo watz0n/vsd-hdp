@@ -172,9 +172,15 @@ Outline:<br />
 
 * LVS: Total Errors = 0, [report-file](230207/OpenLane/hdp_rv151/runs/full_guide/reports/signoff/33-hdp_rv151.lvs.rpt)
 
-* DRC: Errors on SRAM-Macro, [report-file](230207/OpenLane/hdp_rv151/runs/full_guide/reports/manufacturability.rpt)
-    * Pass in [MPW-Precheck Results](https://github.com/watz0n/mpw_hdp_rv151#results)
-    * [efabless/mpw_precheck: Precheck crash with SRAM DRC](https://github.com/efabless/mpw_precheck/issues/180)
+* DRC: 
+    * Magic-DRC: 
+        * Errors on SRAM-Macro, [report-file](230207/OpenLane/hdp_rv151/runs/full_guide/reports/manufacturability.rpt)
+        * [efabless/mpw_precheck: Precheck crash with SRAM DRC](https://github.com/efabless/mpw_precheck/issues/180)
+    * Klayout-DRC: 
+        * No DRC-Check Error, [report-file](230207/OpenLane/hdp_rv151/runs/full_guide-klayout-drc/reports/signoff/34-magic.lydrc)<br />
+            ![prj-kl-drc-log](230207/prj_kl_drc_flow_230207.png)
+        * Root-Cause: DRC-Check exclude `sram`<br />
+            ![prj-kl-drc-dtl](230207/prj_kl_drc_detail_230207.png)
 
 * Antenna Rule Check: 0 violators, [report-file](230207/OpenLane/hdp_rv151/runs/full_guide/reports/signoff/35-antenna_violators.rpt)
 

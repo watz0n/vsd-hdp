@@ -1,0 +1,29 @@
+[ERROR]: during executing: "python3 /openlane/scripts/generate_reports.py -d /openlane/designs/hdp_rv151 --design_name hdp_rv151 --tag full_guide --output_file /openlane/designs/hdp_rv151/runs/full_guide/reports/metrics.csv --man_report /openlane/designs/hdp_rv151/runs/full_guide/reports/manufacturability.rpt --run_path /openlane/designs/hdp_rv151/runs/full_guide"
+[ERROR]: Exit code: 1
+[ERROR]: Last 10 lines:
+    return ctx.invoke(self.callback, **ctx.params)
+  File "/usr/local/lib/python3.6/site-packages/click/core.py", line 754, in invoke
+    return __callback(*args, **kwargs)
+  File "/openlane/scripts/generate_reports.py", line 50, in cli
+    report = Report(design, tag, design_name, params, run_path).get_report()
+  File "/openlane/scripts/report/report.py", line 775, in get_report
+    *self.extract_all_values(),
+  File "/openlane/scripts/report/report.py", line 514, in extract_all_values
+    for line in klayout_violations.split("\n"):
+AttributeError: 'int' object has no attribute 'split'
+
+[ERROR]: during executing: "python3 /openlane/scripts/generate_reports.py -d /openlane/designs/hdp_rv151 --design_name hdp_rv151 --tag full_guide --output_file /openlane/designs/hdp_rv151/runs/full_guide/reports/metrics.csv --man_report /openlane/designs/hdp_rv151/runs/full_guide/reports/manufacturability.rpt --run_path /openlane/designs/hdp_rv151/runs/full_guide"
+[ERROR]: Exit code: 1
+[ERROR]: Last 10 lines:
+    return ctx.invoke(self.callback, **ctx.params)
+  File "/usr/local/lib/python3.6/site-packages/click/core.py", line 754, in invoke
+    return __callback(*args, **kwargs)
+  File "/openlane/scripts/generate_reports.py", line 50, in cli
+    report = Report(design, tag, design_name, params, run_path).get_report()
+  File "/openlane/scripts/report/report.py", line 775, in get_report
+    *self.extract_all_values(),
+  File "/openlane/scripts/report/report.py", line 514, in extract_all_values
+    for line in klayout_violations.split("\n"):
+AttributeError: 'int' object has no attribute 'split'
+
+[ERROR]: Flow failed.
