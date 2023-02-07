@@ -2,12 +2,13 @@ A repository for recording VSD-HDP program as below program link.
 
 Program: [SKY130-based ASIC Design Projects](https://www.vlsisystemdesign.com/hdp/)
 
-* watz0n (Watson Huang), wats0n.edx@gmail.com
+* Author: watz0n (Watson Huang), wats0n.edx@gmail.com
 
-Project-Database:      [HDP-RV151 Files](project)<br />
-Project-Progress:      [project.md](project.md)<br />
-Project-Design-Report: [design_report.md](reports/design_report.md)<br />
-Project-MPW-Precheck:  [watz0n/mpw_hdp_rv151](https://github.com/watz0n/mpw_hdp_rv151)<br />
+* Project Quick-Links:
+    1. Database:      [HDP-RV151 Files](project)<br />
+    2. Progress:      [project.md](project.md)<br />
+    3. Design-Report: [design_report.md](reports/design_report.md)<br />
+    4. MPW-Precheck:  [watz0n/mpw_hdp_rv151](https://github.com/watz0n/mpw_hdp_rv151)<br />
 
 ------
 
@@ -15,7 +16,7 @@ Project-MPW-Precheck:  [watz0n/mpw_hdp_rv151](https://github.com/watz0n/mpw_hdp_
 
 ------
 
-Quick-Link:<br />
+Progress Quick-Link:<br />
 [Day0](#Day0)<br />
 [Day1](#Day1)<br />
 [Day2](#Day2)<br />
@@ -40,6 +41,7 @@ Quick-Link:<br />
 [Day21](#Day21)<br />
 [Day22-28](#Day22-28)<br />
 [Day29-30](#Day29-30)<br />
+
 ------
 
 ## Day0
