@@ -1,0 +1,21 @@
+Design Name: hdp_rv151
+Run Directory: /openlane/designs/hdp_rv151/runs/full_guide
+----------------------------------------
+
+Magic DRC Summary:
+Source: /openlane/designs/hdp_rv151/runs/full_guide/reports/signoff/drc.rpt
+Violation Message "This layer can't abut or partially overlap between subcells "found 5748 Times.
+Violation Message "Metal3 > 3um spacing to unrelated m3 < 0.4um (met3.3d) "found 145 Times.
+Violation Message "Can't overlap those layers "found 826737 Times.
+Violation Message "Min area of metal1 holes > 0.14um^2 (met1.7) "found 575998 Times.
+Violation Message "All nwells must contain metal-connected N+ taps (nwell.4) "found 2461 Times.
+Total Magic DRC violations is 1411089
+----------------------------------------
+
+LVS Summary:
+Source: /openlane/designs/hdp_rv151/runs/full_guide/logs/signoff/hdp_rv151.lvs.lef.log
+Source not found.
+----------------------------------------
+
+Antenna Summary:
+No antenna report found.

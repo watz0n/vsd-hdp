@@ -34,19 +34,19 @@ $ make sim-syn/echo_tb_bmem.fst
 $ make sim-syn/gpio_tb_bmem.fst
 ```
 
-> STA :
+> SYN-STA :
 
 ```
 //perform typical-typical STA detail report
-$ make sta-tt
+$ make sta-syn-tt
 
 //perform multi-corner STA report summary
-$ make sta-mc
+$ make sta-syn-mc
 ```
 
 > Routed-Gatel-Level (RGL) Simulation
 
-* copy verilog netlist without power-port from `results/final/verilog/gl/`
+* copy verilog netlist without power-port from OpenLane-runs `results/final/verilog/gl/`
 
 ```
 $ make sim-rgl/bspi_tb_bmem.fst
@@ -56,7 +56,7 @@ $ make sim-rgl/gpio_tb_bmem.fst
 
 > Routed-Gatel-Level (RGL) Simulation + SDF, but with SDF read error
 
-* copy sdf file form `results/final/verilog/sdf` 
+* copy sdf file form OpenLane-runs `results/final/verilog/sdf` 
 
     * SDF-Type:
         * Max : RC-Worst
@@ -71,5 +71,15 @@ $ make sim-rgl-min/bspi_tb_bmem.fst
 
 * SDF Read Error:
     * Incomplete SDF Support: https://github.com/steveicarus/iverilog/issues/509#issuecomment-841794369
+
+> RGL-STA :
+
+```
+//perform typical-typical STA detail report on RC-NOM SPEF
+$ make sta-rgl-tt
+
+//perform multi-corner STA report summary with RC-MIN/MAX SPEF
+$ make sta-rgl-mc
+```
 
 ------

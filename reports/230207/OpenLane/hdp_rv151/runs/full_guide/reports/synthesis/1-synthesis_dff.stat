@@ -1,0 +1,28 @@
+
+31. Printing statistics.
+
+=== hdp_rv151 ===
+
+   Number of wires:               9055
+   Number of wire bits:          11351
+   Number of public wires:         152
+   Number of public wire bits:    2280
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:              10797
+     $_ANDNOT_                    1445
+     $_AND_                        209
+     $_MUX_                       4126
+     $_NAND_                       151
+     $_NOR_                        264
+     $_NOT_                       1694
+     $_ORNOT_                      164
+     $_OR_                         750
+     $_XNOR_                       126
+     $_XOR_                        228
+     sky130_fd_sc_hd__dfrtp_2      376
+     sky130_fd_sc_hd__dfstp_2       12
+     sky130_fd_sc_hd__dfxtp_2     1246
+     sky130_sram_2kbyte_1rw1r_32x512_8      6
+

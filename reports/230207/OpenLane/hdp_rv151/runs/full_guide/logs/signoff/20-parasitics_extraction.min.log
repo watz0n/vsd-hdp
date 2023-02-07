@@ -1,0 +1,45 @@
+OpenROAD c295b08a99aacb6147b9c51104627e78ac3859e3 
+This program is licensed under the BSD-3 license. See the LICENSE file for details.
+Components of this program may be licensed under more restrictive licenses which must be honored.
+[INFO ODB-0222] Reading LEF file: /openlane/designs/hdp_rv151/runs/full_guide/tmp/merged.min.lef
+[WARNING ODB-0220] WARNING (LEFPARS-2036): SOURCE statement is obsolete in version 5.6 and later.
+The LEF parser will ignore this statement.
+To avoid this warning in the future, remove this statement from the LEF file with version 5.6 or later. See file /openlane/designs/hdp_rv151/runs/full_guide/tmp/merged.min.lef at line 930.
+
+[INFO ODB-0223]     Created 13 technology layers
+[INFO ODB-0224]     Created 25 technology vias
+[INFO ODB-0225]     Created 442 library cells
+[INFO ODB-0226] Finished LEF file:  /openlane/designs/hdp_rv151/runs/full_guide/tmp/merged.min.lef
+[INFO ODB-0127] Reading DEF file: /openlane/designs/hdp_rv151/runs/full_guide/results/routing/hdp_rv151.def
+[INFO ODB-0128] Design: hdp_rv151
+[INFO ODB-0094] 		Created 100000 Insts
+[INFO ODB-0094] 		Created 200000 Insts
+[INFO ODB-0094] 		Created 300000 Insts
+[INFO ODB-0130]     Created 40 pins.
+[INFO ODB-0131]     Created 326125 components and 1254954 component-terminals.
+[INFO ODB-0132]     Created 2 special nets and 1215736 connections.
+[INFO ODB-0133]     Created 11430 nets and 39068 connections.
+[INFO ODB-0134] Finished DEF file: /openlane/designs/hdp_rv151/runs/full_guide/results/routing/hdp_rv151.def
+Using RCX ruleset '/mnt/d/project/OpenLane/pdks/sky130A/libs.tech/openlane/rules.openrcx.sky130A.min.calibre'...
+[INFO RCX-0431] Defined process_corner X with ext_model_index 0
+[INFO RCX-0029] Defined extraction corner X
+[INFO RCX-0008] extracting parasitics of hdp_rv151 ...
+[INFO RCX-0435] Reading extraction model file /mnt/d/project/OpenLane/pdks/sky130A/libs.tech/openlane/rules.openrcx.sky130A.min.calibre ...
+[INFO RCX-0436] RC segment generation hdp_rv151 (max_merge_res 50.0) ...
+[INFO RCX-0040] Final 47868 rc segments
+[INFO RCX-0439] Coupling Cap extraction hdp_rv151 ...
+[INFO RCX-0440] Coupling threshhold is 0.1000 fF, coupling capacitance less than 0.1000 fF will be grounded.
+[INFO RCX-0043] 113643 wires to be extracted
+[INFO RCX-0442] 20% completion -- 22813 wires have been extracted
+[INFO RCX-0442] 51% completion -- 58796 wires have been extracted
+[INFO RCX-0442] 58% completion -- 66490 wires have been extracted
+[INFO RCX-0442] 95% completion -- 108721 wires have been extracted
+[INFO RCX-0045] Extract 11430 nets, 59298 rsegs, 59298 caps, 128909 ccs
+[INFO RCX-0015] Finished extracting hdp_rv151.
+Writing result to /openlane/designs/hdp_rv151/runs/full_guide/results/routing/mca/process_corner_min/hdp_rv151.spef...
+Setting global connections for newly added cells...
+[WARNING] Did not save OpenROAD database!
+Writing extracted parasitics to /openlane/designs/hdp_rv151/runs/full_guide/results/routing/mca/process_corner_min/hdp_rv151.spef...
+[INFO RCX-0016] Writing SPEF ...
+[INFO RCX-0443] 11430 nets finished
+[INFO RCX-0017] Finished writing SPEF ...

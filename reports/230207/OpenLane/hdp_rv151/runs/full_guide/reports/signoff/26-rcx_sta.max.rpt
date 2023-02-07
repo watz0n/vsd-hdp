@@ -1,0 +1,1513 @@
+
+===========================================================================
+report_checks -path_delay max (Setup)
+============================================================================
+Startpoint: io_cslt (input port clocked by clk)
+Endpoint: _18651_ (recovery check against rising-edge clock clk)
+Path Group: **async_default**
+Path Type: max
+
+Fanout     Cap    Slew   Delay    Time   Description
+-----------------------------------------------------------------------------
+                          0.00    0.00   clock clk (rise edge)
+                          0.00    0.00   clock network delay (propagated)
+                         30.00   30.00 ^ input external delay
+                  0.00    0.00   30.00 ^ io_cslt (in)
+     1    0.00                           io_cslt (net)
+                  0.00    0.00   30.00 ^ input10/A (sky130_fd_sc_hd__buf_4)
+                  0.27    0.25   30.25 ^ input10/X (sky130_fd_sc_hd__buf_4)
+     3    0.10                           net10 (net)
+                  0.27    0.03   30.28 ^ _13511_/B_N (sky130_fd_sc_hd__or2b_1)
+                  0.06    0.29   30.58 v _13511_/X (sky130_fd_sc_hd__or2b_1)
+     1    0.01                           _07849_ (net)
+                  0.06    0.00   30.58 v _13512_/B1 (sky130_fd_sc_hd__o21a_4)
+                  0.19    0.25   30.83 v _13512_/X (sky130_fd_sc_hd__o21a_4)
+     2    0.13                           _07850_ (net)
+                  0.20    0.05   30.87 v _13513_/A (sky130_fd_sc_hd__clkbuf_4)
+                  0.12    0.30   31.18 v _13513_/X (sky130_fd_sc_hd__clkbuf_4)
+     7    0.06                           _07851_ (net)
+                  0.12    0.01   31.18 v _16922_/A (sky130_fd_sc_hd__buf_4)
+                  0.09    0.25   31.43 v _16922_/X (sky130_fd_sc_hd__buf_4)
+    10    0.06                           _03046_ (net)
+                  0.09    0.00   31.43 v _16923_/A (sky130_fd_sc_hd__buf_12)
+                  0.15    0.23   31.66 v _16923_/X (sky130_fd_sc_hd__buf_12)
+    10    0.35                           _03047_ (net)
+                  0.21    0.07   31.73 v _16926_/A (sky130_fd_sc_hd__inv_2)
+                  0.06    0.10   31.83 ^ _16926_/Y (sky130_fd_sc_hd__inv_2)
+     1    0.00                           _00473_ (net)
+                  0.06    0.00   31.83 ^ _18651_/RESET_B (sky130_fd_sc_hd__dfrtp_4)
+                                 31.83   data arrival time
+
+                        100.00  100.00   clock clk (rise edge)
+                          0.00  100.00   clock source latency
+                  0.00    0.00  100.00 ^ clk (in)
+    90    0.49                           clk (net)
+                  0.32    0.15  100.15 ^ _13581_/A0 (sky130_fd_sc_hd__mux2_2)
+                  0.04    0.20  100.35 ^ _13581_/X (sky130_fd_sc_hd__mux2_2)
+     1    0.00                           _07888_ (net)
+                  0.04    0.00  100.35 ^ _13582_/A (sky130_fd_sc_hd__buf_1)
+                  2.76    1.84  102.19 ^ _13582_/X (sky130_fd_sc_hd__buf_1)
+     1    0.24                           soc.bspi.b2o.wck (net)
+                  2.76    0.04  102.23 ^ clkbuf_0_soc.bspi.b2o.wck/A (sky130_fd_sc_hd__clkbuf_16)
+                  0.19    0.53  102.76 ^ clkbuf_0_soc.bspi.b2o.wck/X (sky130_fd_sc_hd__clkbuf_16)
+     2    0.14                           clknet_0_soc.bspi.b2o.wck (net)
+                  0.19    0.01  102.77 ^ clkbuf_1_0_0_soc.bspi.b2o.wck/A (sky130_fd_sc_hd__clkbuf_8)
+                  0.16    0.25  103.02 ^ clkbuf_1_0_0_soc.bspi.b2o.wck/X (sky130_fd_sc_hd__clkbuf_8)
+     2    0.09                           clknet_1_0_0_soc.bspi.b2o.wck (net)
+                  0.16    0.01  103.03 ^ clkbuf_2_1_0_soc.bspi.b2o.wck/A (sky130_fd_sc_hd__clkbuf_8)
+                  0.10    0.20  103.22 ^ clkbuf_2_1_0_soc.bspi.b2o.wck/X (sky130_fd_sc_hd__clkbuf_8)
+     2    0.05                           clknet_2_1_0_soc.bspi.b2o.wck (net)
+                  0.10    0.00  103.23 ^ clkbuf_3_2_0_soc.bspi.b2o.wck/A (sky130_fd_sc_hd__clkbuf_8)
+                  0.12    0.19  103.42 ^ clkbuf_3_2_0_soc.bspi.b2o.wck/X (sky130_fd_sc_hd__clkbuf_8)
+     2    0.06                           clknet_3_2_0_soc.bspi.b2o.wck (net)
+                  0.12    0.00  103.42 ^ clkbuf_4_4__f_soc.bspi.b2o.wck/A (sky130_fd_sc_hd__clkbuf_16)
+                  0.28    0.30  103.73 ^ clkbuf_4_4__f_soc.bspi.b2o.wck/X (sky130_fd_sc_hd__clkbuf_16)
+    13    0.27                           clknet_4_4__leaf_soc.bspi.b2o.wck (net)
+                  0.28    0.02  103.74 ^ _18651_/CLK (sky130_fd_sc_hd__dfrtp_4)
+                          0.00  103.74   clock reconvergence pessimism
+                          0.29  104.03   library recovery time
+                                104.03   data required time
+-----------------------------------------------------------------------------
+                                104.03   data required time
+                                -31.83   data arrival time
+-----------------------------------------------------------------------------
+                                 72.20   slack (MET)
+
+
+Startpoint: io_cslt (input port clocked by clk)
+Endpoint: _18719_ (recovery check against rising-edge clock clk)
+Path Group: **async_default**
+Path Type: max
+
+Fanout     Cap    Slew   Delay    Time   Description
+-----------------------------------------------------------------------------
+                          0.00    0.00   clock clk (rise edge)
+                          0.00    0.00   clock network delay (propagated)
+                         30.00   30.00 ^ input external delay
+                  0.00    0.00   30.00 ^ io_cslt (in)
+     1    0.00                           io_cslt (net)
+                  0.00    0.00   30.00 ^ input10/A (sky130_fd_sc_hd__buf_4)
+                  0.27    0.25   30.25 ^ input10/X (sky130_fd_sc_hd__buf_4)
+     3    0.10                           net10 (net)
+                  0.27    0.03   30.28 ^ _13511_/B_N (sky130_fd_sc_hd__or2b_1)
+                  0.06    0.29   30.58 v _13511_/X (sky130_fd_sc_hd__or2b_1)
+     1    0.01                           _07849_ (net)
+                  0.06    0.00   30.58 v _13512_/B1 (sky130_fd_sc_hd__o21a_4)
+                  0.19    0.25   30.83 v _13512_/X (sky130_fd_sc_hd__o21a_4)
+     2    0.13                           _07850_ (net)
+                  0.20    0.05   30.87 v _13513_/A (sky130_fd_sc_hd__clkbuf_4)
+                  0.12    0.30   31.18 v _13513_/X (sky130_fd_sc_hd__clkbuf_4)
+     7    0.06                           _07851_ (net)
+                  0.12    0.01   31.18 v _16922_/A (sky130_fd_sc_hd__buf_4)
+                  0.09    0.25   31.43 v _16922_/X (sky130_fd_sc_hd__buf_4)
+    10    0.06                           _03046_ (net)
+                  0.09    0.00   31.43 v _17000_/A (sky130_fd_sc_hd__buf_4)
+                  0.09    0.22   31.66 v _17000_/X (sky130_fd_sc_hd__buf_4)
+    10    0.06                           _03054_ (net)
+                  0.09    0.00   31.66 v _17001_/A (sky130_fd_sc_hd__inv_2)
+                  0.03    0.06   31.72 ^ _17001_/Y (sky130_fd_sc_hd__inv_2)
+     1    0.00                           _00541_ (net)
+                  0.03    0.00   31.72 ^ _18719_/RESET_B (sky130_fd_sc_hd__dfrtp_1)
+                                 31.72   data arrival time
+
+                        100.00  100.00   clock clk (rise edge)
+                          0.00  100.00   clock source latency
+                  0.00    0.00  100.00 ^ clk (in)
+    90    0.49                           clk (net)
+                  0.32    0.15  100.15 ^ _13581_/A0 (sky130_fd_sc_hd__mux2_2)
+                  0.04    0.20  100.35 ^ _13581_/X (sky130_fd_sc_hd__mux2_2)
+     1    0.00                           _07888_ (net)
+                  0.04    0.00  100.35 ^ _13582_/A (sky130_fd_sc_hd__buf_1)
+                  2.76    1.84  102.19 ^ _13582_/X (sky130_fd_sc_hd__buf_1)
+     1    0.24                           soc.bspi.b2o.wck (net)
+                  2.76    0.04  102.23 ^ clkbuf_0_soc.bspi.b2o.wck/A (sky130_fd_sc_hd__clkbuf_16)
+                  0.19    0.53  102.76 ^ clkbuf_0_soc.bspi.b2o.wck/X (sky130_fd_sc_hd__clkbuf_16)
+     2    0.14                           clknet_0_soc.bspi.b2o.wck (net)
+                  0.19    0.01  102.77 ^ clkbuf_1_0_0_soc.bspi.b2o.wck/A (sky130_fd_sc_hd__clkbuf_8)
+                  0.16    0.25  103.02 ^ clkbuf_1_0_0_soc.bspi.b2o.wck/X (sky130_fd_sc_hd__clkbuf_8)
+     2    0.09                           clknet_1_0_0_soc.bspi.b2o.wck (net)
+                  0.16    0.01  103.03 ^ clkbuf_2_1_0_soc.bspi.b2o.wck/A (sky130_fd_sc_hd__clkbuf_8)
+                  0.10    0.20  103.22 ^ clkbuf_2_1_0_soc.bspi.b2o.wck/X (sky130_fd_sc_hd__clkbuf_8)
+     2    0.05                           clknet_2_1_0_soc.bspi.b2o.wck (net)
+                  0.10    0.00  103.23 ^ clkbuf_3_3_0_soc.bspi.b2o.wck/A (sky130_fd_sc_hd__clkbuf_8)
+                  0.15    0.22  103.44 ^ clkbuf_3_3_0_soc.bspi.b2o.wck/X (sky130_fd_sc_hd__clkbuf_8)
+     2    0.08                           clknet_3_3_0_soc.bspi.b2o.wck (net)
+                  0.15    0.01  103.45 ^ clkbuf_4_7__f_soc.bspi.b2o.wck/A (sky130_fd_sc_hd__clkbuf_16)
+                  0.20    0.26  103.71 ^ clkbuf_4_7__f_soc.bspi.b2o.wck/X (sky130_fd_sc_hd__clkbuf_16)
+    14    0.19                           clknet_4_7__leaf_soc.bspi.b2o.wck (net)
+                  0.21    0.02  103.73 ^ _18719_/CLK (sky130_fd_sc_hd__dfrtp_1)
+                          0.00  103.73   clock reconvergence pessimism
+                          0.28  104.01   library recovery time
+                                104.01   data required time
+-----------------------------------------------------------------------------
+                                104.01   data required time
+                                -31.72   data arrival time
+-----------------------------------------------------------------------------
+                                 72.29   slack (MET)
+
+
+Startpoint: io_cslt (input port clocked by clk)
+Endpoint: _17580_ (recovery check against rising-edge clock clk)
+Path Group: **async_default**
+Path Type: max
+
+Fanout     Cap    Slew   Delay    Time   Description
+-----------------------------------------------------------------------------
+                          0.00    0.00   clock clk (rise edge)
+                          0.00    0.00   clock network delay (propagated)
+                         30.00   30.00 ^ input external delay
+                  0.00    0.00   30.00 ^ io_cslt (in)
+     1    0.00                           io_cslt (net)
+                  0.00    0.00   30.00 ^ input10/A (sky130_fd_sc_hd__buf_4)
+                  0.27    0.25   30.25 ^ input10/X (sky130_fd_sc_hd__buf_4)
+     3    0.10                           net10 (net)
+                  0.27    0.03   30.28 ^ _13511_/B_N (sky130_fd_sc_hd__or2b_1)
+                  0.06    0.29   30.58 v _13511_/X (sky130_fd_sc_hd__or2b_1)
+     1    0.01                           _07849_ (net)
+                  0.06    0.00   30.58 v _13512_/B1 (sky130_fd_sc_hd__o21a_4)
+                  0.19    0.25   30.83 v _13512_/X (sky130_fd_sc_hd__o21a_4)
+     2    0.13                           _07850_ (net)
+                  0.20    0.05   30.87 v _13513_/A (sky130_fd_sc_hd__clkbuf_4)
+                  0.12    0.30   31.18 v _13513_/X (sky130_fd_sc_hd__clkbuf_4)
+     7    0.06                           _07851_ (net)
+                  0.13    0.01   31.19 v _15114_/A (sky130_fd_sc_hd__buf_4)
+                  0.11    0.26   31.45 v _15114_/X (sky130_fd_sc_hd__buf_4)
+    10    0.09                           _02179_ (net)
+                  0.12    0.01   31.46 v _15115_/A (sky130_fd_sc_hd__clkbuf_8)
+                  0.09    0.24   31.69 v _15115_/X (sky130_fd_sc_hd__clkbuf_8)
+    10    0.08                           _02180_ (net)
+                  0.09    0.00   31.70 v _15116_/A (sky130_fd_sc_hd__inv_2)
+                  0.03    0.06   31.76 ^ _15116_/Y (sky130_fd_sc_hd__inv_2)
+     1    0.00                           _00189_ (net)
+                  0.03    0.00   31.76 ^ _17580_/SET_B (sky130_fd_sc_hd__dfstp_1)
+                                 31.76   data arrival time
+
+                        100.00  100.00   clock clk (rise edge)
+                          0.00  100.00   clock source latency
+                  0.00    0.00  100.00 ^ clk (in)
+    90    0.49                           clk (net)
+                  0.32    0.15  100.15 ^ _13581_/A0 (sky130_fd_sc_hd__mux2_2)
+                  0.04    0.20  100.35 ^ _13581_/X (sky130_fd_sc_hd__mux2_2)
+     1    0.00                           _07888_ (net)
+                  0.04    0.00  100.35 ^ _13582_/A (sky130_fd_sc_hd__buf_1)
+                  2.76    1.84  102.19 ^ _13582_/X (sky130_fd_sc_hd__buf_1)
+     1    0.24                           soc.bspi.b2o.wck (net)
+                  2.76    0.04  102.23 ^ clkbuf_0_soc.bspi.b2o.wck/A (sky130_fd_sc_hd__clkbuf_16)
+                  0.19    0.53  102.76 ^ clkbuf_0_soc.bspi.b2o.wck/X (sky130_fd_sc_hd__clkbuf_16)
+     2    0.14                           clknet_0_soc.bspi.b2o.wck (net)
+                  0.19    0.01  102.77 ^ clkbuf_1_0_0_soc.bspi.b2o.wck/A (sky130_fd_sc_hd__clkbuf_8)
+                  0.16    0.25  103.02 ^ clkbuf_1_0_0_soc.bspi.b2o.wck/X (sky130_fd_sc_hd__clkbuf_8)
+     2    0.09                           clknet_1_0_0_soc.bspi.b2o.wck (net)
+                  0.16    0.01  103.03 ^ clkbuf_2_1_0_soc.bspi.b2o.wck/A (sky130_fd_sc_hd__clkbuf_8)
+                  0.10    0.20  103.22 ^ clkbuf_2_1_0_soc.bspi.b2o.wck/X (sky130_fd_sc_hd__clkbuf_8)
+     2    0.05                           clknet_2_1_0_soc.bspi.b2o.wck (net)
+                  0.10    0.00  103.23 ^ clkbuf_3_3_0_soc.bspi.b2o.wck/A (sky130_fd_sc_hd__clkbuf_8)
+                  0.15    0.22  103.44 ^ clkbuf_3_3_0_soc.bspi.b2o.wck/X (sky130_fd_sc_hd__clkbuf_8)
+     2    0.08                           clknet_3_3_0_soc.bspi.b2o.wck (net)
+                  0.15    0.01  103.45 ^ clkbuf_4_7__f_soc.bspi.b2o.wck/A (sky130_fd_sc_hd__clkbuf_16)
+                  0.20    0.26  103.71 ^ clkbuf_4_7__f_soc.bspi.b2o.wck/X (sky130_fd_sc_hd__clkbuf_16)
+    14    0.19                           clknet_4_7__leaf_soc.bspi.b2o.wck (net)
+                  0.21    0.02  103.73 ^ clkbuf_leaf_48_soc.bspi.b2o.wck/A (sky130_fd_sc_hd__clkbuf_16)
+                  0.07    0.19  103.92 ^ clkbuf_leaf_48_soc.bspi.b2o.wck/X (sky130_fd_sc_hd__clkbuf_16)
+    13    0.04                           clknet_leaf_48_soc.bspi.b2o.wck (net)
+                  0.07    0.00  103.92 ^ _17580_/CLK (sky130_fd_sc_hd__dfstp_1)
+                          0.00  103.92   clock reconvergence pessimism
+                          0.14  104.06   library recovery time
+                                104.06   data required time
+-----------------------------------------------------------------------------
+                                104.06   data required time
+                                -31.76   data arrival time
+-----------------------------------------------------------------------------
+                                 72.30   slack (MET)
+
+
+Startpoint: io_cslt (input port clocked by clk)
+Endpoint: _18755_ (recovery check against rising-edge clock clk)
+Path Group: **async_default**
+Path Type: max
+
+Fanout     Cap    Slew   Delay    Time   Description
+-----------------------------------------------------------------------------
+                          0.00    0.00   clock clk (rise edge)
+                          0.00    0.00   clock network delay (propagated)
+                         30.00   30.00 ^ input external delay
+                  0.00    0.00   30.00 ^ io_cslt (in)
+     1    0.00                           io_cslt (net)
+                  0.00    0.00   30.00 ^ input10/A (sky130_fd_sc_hd__buf_4)
+                  0.27    0.25   30.25 ^ input10/X (sky130_fd_sc_hd__buf_4)
+     3    0.10                           net10 (net)
+                  0.27    0.03   30.28 ^ _13511_/B_N (sky130_fd_sc_hd__or2b_1)
+                  0.06    0.29   30.58 v _13511_/X (sky130_fd_sc_hd__or2b_1)
+     1    0.01                           _07849_ (net)
+                  0.06    0.00   30.58 v _13512_/B1 (sky130_fd_sc_hd__o21a_4)
+                  0.19    0.25   30.83 v _13512_/X (sky130_fd_sc_hd__o21a_4)
+     2    0.13                           _07850_ (net)
+                  0.20    0.05   30.87 v _13513_/A (sky130_fd_sc_hd__clkbuf_4)
+                  0.12    0.30   31.18 v _13513_/X (sky130_fd_sc_hd__clkbuf_4)
+     7    0.06                           _07851_ (net)
+                  0.13    0.01   31.19 v _15525_/A (sky130_fd_sc_hd__buf_2)
+                  0.10    0.24   31.43 v _15525_/X (sky130_fd_sc_hd__buf_2)
+    10    0.04                           _02348_ (net)
+                  0.10    0.00   31.43 v _15534_/A (sky130_fd_sc_hd__clkbuf_8)
+                  0.10    0.24   31.66 v _15534_/X (sky130_fd_sc_hd__clkbuf_8)
+    10    0.09                           _02354_ (net)
+                  0.10    0.01   31.67 v _17039_/A (sky130_fd_sc_hd__inv_2)
+                  0.04    0.07   31.74 ^ _17039_/Y (sky130_fd_sc_hd__inv_2)
+     1    0.00                           _00577_ (net)
+                  0.04    0.00   31.74 ^ _18755_/SET_B (sky130_fd_sc_hd__dfstp_2)
+                                 31.74   data arrival time
+
+                        100.00  100.00   clock clk (rise edge)
+                          0.00  100.00   clock source latency
+                  0.00    0.00  100.00 ^ clk (in)
+    90    0.49                           clk (net)
+                  0.32    0.15  100.15 ^ _13581_/A0 (sky130_fd_sc_hd__mux2_2)
+                  0.04    0.20  100.35 ^ _13581_/X (sky130_fd_sc_hd__mux2_2)
+     1    0.00                           _07888_ (net)
+                  0.04    0.00  100.35 ^ _13582_/A (sky130_fd_sc_hd__buf_1)
+                  2.76    1.84  102.19 ^ _13582_/X (sky130_fd_sc_hd__buf_1)
+     1    0.24                           soc.bspi.b2o.wck (net)
+                  2.76    0.04  102.23 ^ clkbuf_0_soc.bspi.b2o.wck/A (sky130_fd_sc_hd__clkbuf_16)
+                  0.19    0.53  102.76 ^ clkbuf_0_soc.bspi.b2o.wck/X (sky130_fd_sc_hd__clkbuf_16)
+     2    0.14                           clknet_0_soc.bspi.b2o.wck (net)
+                  0.19    0.01  102.77 ^ clkbuf_1_0_0_soc.bspi.b2o.wck/A (sky130_fd_sc_hd__clkbuf_8)
+                  0.16    0.25  103.02 ^ clkbuf_1_0_0_soc.bspi.b2o.wck/X (sky130_fd_sc_hd__clkbuf_8)
+     2    0.09                           clknet_1_0_0_soc.bspi.b2o.wck (net)
+                  0.16    0.01  103.03 ^ clkbuf_2_1_0_soc.bspi.b2o.wck/A (sky130_fd_sc_hd__clkbuf_8)
+                  0.10    0.20  103.22 ^ clkbuf_2_1_0_soc.bspi.b2o.wck/X (sky130_fd_sc_hd__clkbuf_8)
+     2    0.05                           clknet_2_1_0_soc.bspi.b2o.wck (net)
+                  0.10    0.00  103.23 ^ clkbuf_3_2_0_soc.bspi.b2o.wck/A (sky130_fd_sc_hd__clkbuf_8)
+                  0.12    0.19  103.42 ^ clkbuf_3_2_0_soc.bspi.b2o.wck/X (sky130_fd_sc_hd__clkbuf_8)
+     2    0.06                           clknet_3_2_0_soc.bspi.b2o.wck (net)
+                  0.12    0.00  103.42 ^ clkbuf_4_4__f_soc.bspi.b2o.wck/A (sky130_fd_sc_hd__clkbuf_16)
+                  0.28    0.30  103.73 ^ clkbuf_4_4__f_soc.bspi.b2o.wck/X (sky130_fd_sc_hd__clkbuf_16)
+    13    0.27                           clknet_4_4__leaf_soc.bspi.b2o.wck (net)
+                  0.28    0.02  103.74 ^ clkbuf_leaf_40_soc.bspi.b2o.wck/A (sky130_fd_sc_hd__clkbuf_16)
+                  0.04    0.19  103.93 ^ clkbuf_leaf_40_soc.bspi.b2o.wck/X (sky130_fd_sc_hd__clkbuf_16)
+     4    0.01                           clknet_leaf_40_soc.bspi.b2o.wck (net)
+                  0.04    0.00  103.93 ^ _18755_/CLK (sky130_fd_sc_hd__dfstp_2)
+                          0.00  103.93   clock reconvergence pessimism
+                          0.14  104.07   library recovery time
+                                104.07   data required time
+-----------------------------------------------------------------------------
+                                104.07   data required time
+                                -31.74   data arrival time
+-----------------------------------------------------------------------------
+                                 72.32   slack (MET)
+
+
+Startpoint: io_cslt (input port clocked by clk)
+Endpoint: _18192_ (recovery check against rising-edge clock clk)
+Path Group: **async_default**
+Path Type: max
+
+Fanout     Cap    Slew   Delay    Time   Description
+-----------------------------------------------------------------------------
+                          0.00    0.00   clock clk (rise edge)
+                          0.00    0.00   clock network delay (propagated)
+                         30.00   30.00 ^ input external delay
+                  0.00    0.00   30.00 ^ io_cslt (in)
+     1    0.00                           io_cslt (net)
+                  0.00    0.00   30.00 ^ input10/A (sky130_fd_sc_hd__buf_4)
+                  0.27    0.25   30.25 ^ input10/X (sky130_fd_sc_hd__buf_4)
+     3    0.10                           net10 (net)
+                  0.27    0.03   30.28 ^ _13511_/B_N (sky130_fd_sc_hd__or2b_1)
+                  0.06    0.29   30.58 v _13511_/X (sky130_fd_sc_hd__or2b_1)
+     1    0.01                           _07849_ (net)
+                  0.06    0.00   30.58 v _13512_/B1 (sky130_fd_sc_hd__o21a_4)
+                  0.19    0.25   30.83 v _13512_/X (sky130_fd_sc_hd__o21a_4)
+     2    0.13                           _07850_ (net)
+                  0.20    0.05   30.87 v _13513_/A (sky130_fd_sc_hd__clkbuf_4)
+                  0.12    0.30   31.18 v _13513_/X (sky130_fd_sc_hd__clkbuf_4)
+     7    0.06                           _07851_ (net)
+                  0.12    0.01   31.18 v _16318_/A (sky130_fd_sc_hd__buf_6)
+                  0.09    0.22   31.41 v _16318_/X (sky130_fd_sc_hd__buf_6)
+    10    0.10                           _02774_ (net)
+                  0.09    0.01   31.41 v _16319_/A (sky130_fd_sc_hd__buf_4)
+                  0.08    0.22   31.64 v _16319_/X (sky130_fd_sc_hd__buf_4)
+    10    0.06                           _02775_ (net)
+                  0.08    0.00   31.64 v _16323_/A (sky130_fd_sc_hd__inv_2)
+                  0.04    0.06   31.70 ^ _16323_/Y (sky130_fd_sc_hd__inv_2)
+     1    0.00                           _00374_ (net)
+                  0.04    0.00   31.70 ^ _18192_/SET_B (sky130_fd_sc_hd__dfstp_1)
+                                 31.70   data arrival time
+
+                        100.00  100.00   clock clk (rise edge)
+                          0.00  100.00   clock source latency
+                  0.00    0.00  100.00 ^ clk (in)
+    90    0.49                           clk (net)
+                  0.32    0.15  100.15 ^ _13581_/A0 (sky130_fd_sc_hd__mux2_2)
+                  0.04    0.20  100.35 ^ _13581_/X (sky130_fd_sc_hd__mux2_2)
+     1    0.00                           _07888_ (net)
+                  0.04    0.00  100.35 ^ _13582_/A (sky130_fd_sc_hd__buf_1)
+                  2.76    1.84  102.19 ^ _13582_/X (sky130_fd_sc_hd__buf_1)
+     1    0.24                           soc.bspi.b2o.wck (net)
+                  2.76    0.04  102.23 ^ clkbuf_0_soc.bspi.b2o.wck/A (sky130_fd_sc_hd__clkbuf_16)
+                  0.19    0.53  102.76 ^ clkbuf_0_soc.bspi.b2o.wck/X (sky130_fd_sc_hd__clkbuf_16)
+     2    0.14                           clknet_0_soc.bspi.b2o.wck (net)
+                  0.19    0.01  102.77 ^ clkbuf_1_0_0_soc.bspi.b2o.wck/A (sky130_fd_sc_hd__clkbuf_8)
+                  0.16    0.25  103.02 ^ clkbuf_1_0_0_soc.bspi.b2o.wck/X (sky130_fd_sc_hd__clkbuf_8)
+     2    0.09                           clknet_1_0_0_soc.bspi.b2o.wck (net)
+                  0.16    0.01  103.03 ^ clkbuf_2_1_0_soc.bspi.b2o.wck/A (sky130_fd_sc_hd__clkbuf_8)
+                  0.10    0.20  103.22 ^ clkbuf_2_1_0_soc.bspi.b2o.wck/X (sky130_fd_sc_hd__clkbuf_8)
+     2    0.05                           clknet_2_1_0_soc.bspi.b2o.wck (net)
+                  0.10    0.00  103.23 ^ clkbuf_3_3_0_soc.bspi.b2o.wck/A (sky130_fd_sc_hd__clkbuf_8)
+                  0.15    0.22  103.44 ^ clkbuf_3_3_0_soc.bspi.b2o.wck/X (sky130_fd_sc_hd__clkbuf_8)
+     2    0.08                           clknet_3_3_0_soc.bspi.b2o.wck (net)
+                  0.15    0.01  103.45 ^ clkbuf_4_7__f_soc.bspi.b2o.wck/A (sky130_fd_sc_hd__clkbuf_16)
+                  0.20    0.26  103.71 ^ clkbuf_4_7__f_soc.bspi.b2o.wck/X (sky130_fd_sc_hd__clkbuf_16)
+    14    0.19                           clknet_4_7__leaf_soc.bspi.b2o.wck (net)
+                  0.21    0.01  103.73 ^ clkbuf_leaf_46_soc.bspi.b2o.wck/A (sky130_fd_sc_hd__clkbuf_16)
+                  0.04    0.17  103.90 ^ clkbuf_leaf_46_soc.bspi.b2o.wck/X (sky130_fd_sc_hd__clkbuf_16)
+     5    0.02                           clknet_leaf_46_soc.bspi.b2o.wck (net)
+                  0.04    0.00  103.90 ^ _18192_/CLK (sky130_fd_sc_hd__dfstp_1)
+                          0.00  103.90   clock reconvergence pessimism
+                          0.14  104.03   library recovery time
+                                104.03   data required time
+-----------------------------------------------------------------------------
+                                104.03   data required time
+                                -31.70   data arrival time
+-----------------------------------------------------------------------------
+                                 72.33   slack (MET)
+
+
+Startpoint: soc.bios_mem1 (falling edge-triggered flip-flop clocked by clk)
+Endpoint: _18566_ (rising edge-triggered flip-flop clocked by clk)
+Path Group: clk
+Path Type: max
+
+Fanout     Cap    Slew   Delay    Time   Description
+-----------------------------------------------------------------------------
+                         50.00   50.00   clock clk (fall edge)
+                          0.00   50.00   clock source latency
+                  0.00    0.00   50.00 v clk (in)
+    90    0.48                           clk (net)
+                  0.31    0.16   50.16 v _13581_/A0 (sky130_fd_sc_hd__mux2_2)
+                  0.05    0.38   50.54 v _13581_/X (sky130_fd_sc_hd__mux2_2)
+     1    0.00                           _07888_ (net)
+                  0.05    0.00   50.54 v _13582_/A (sky130_fd_sc_hd__buf_1)
+                  1.36    1.11   51.65 v _13582_/X (sky130_fd_sc_hd__buf_1)
+     1    0.24                           soc.bspi.b2o.wck (net)
+                  1.36    0.04   51.69 v clkbuf_0_soc.bspi.b2o.wck/A (sky130_fd_sc_hd__clkbuf_16)
+                  0.12    0.68   52.37 v clkbuf_0_soc.bspi.b2o.wck/X (sky130_fd_sc_hd__clkbuf_16)
+     2    0.14                           clknet_0_soc.bspi.b2o.wck (net)
+                  0.13    0.01   52.38 v clkbuf_1_1_0_soc.bspi.b2o.wck/A (sky130_fd_sc_hd__clkbuf_8)
+                  0.11    0.26   52.63 v clkbuf_1_1_0_soc.bspi.b2o.wck/X (sky130_fd_sc_hd__clkbuf_8)
+     3    0.10                           clknet_1_1_0_soc.bspi.b2o.wck (net)
+                  0.11    0.00   52.64 v clkbuf_2_3_0_soc.bspi.b2o.wck/A (sky130_fd_sc_hd__clkbuf_8)
+                  0.08    0.22   52.86 v clkbuf_2_3_0_soc.bspi.b2o.wck/X (sky130_fd_sc_hd__clkbuf_8)
+     2    0.06                           clknet_2_3_0_soc.bspi.b2o.wck (net)
+                  0.08    0.00   52.86 v clkbuf_3_7_0_soc.bspi.b2o.wck/A (sky130_fd_sc_hd__clkbuf_8)
+                  0.09    0.22   53.08 v clkbuf_3_7_0_soc.bspi.b2o.wck/X (sky130_fd_sc_hd__clkbuf_8)
+     2    0.08                           clknet_3_7_0_soc.bspi.b2o.wck (net)
+                  0.09    0.00   53.08 v clkbuf_4_15__f_soc.bspi.b2o.wck/A (sky130_fd_sc_hd__clkbuf_16)
+                  0.19    0.29   53.37 v clkbuf_4_15__f_soc.bspi.b2o.wck/X (sky130_fd_sc_hd__clkbuf_16)
+    14    0.33                           clknet_4_15__leaf_soc.bspi.b2o.wck (net)
+                  0.28    0.04   53.41 v soc.bios_mem1/clk0 (sky130_sram_2kbyte_1rw1r_32x512_8)
+                  0.02    0.63   54.04 v soc.bios_mem1/dout0[29] (sky130_sram_2kbyte_1rw1r_32x512_8)
+     1    0.04                           soc.bios_dout0[1][29] (net)
+                  0.02    0.01   54.04 v wire451/A (sky130_fd_sc_hd__clkbuf_2)
+                  0.18    0.22   54.26 v wire451/X (sky130_fd_sc_hd__clkbuf_2)
+     1    0.05                           net451 (net)
+                  0.18    0.01   54.27 v wire450/A (sky130_fd_sc_hd__buf_4)
+                  0.07    0.24   54.51 v wire450/X (sky130_fd_sc_hd__buf_4)
+     1    0.04                           net450 (net)
+                  0.07    0.01   54.52 v wire449/A (sky130_fd_sc_hd__buf_6)
+                  0.05    0.16   54.68 v wire449/X (sky130_fd_sc_hd__buf_6)
+     1    0.04                           net449 (net)
+                  0.05    0.01   54.69 v _13679_/A1 (sky130_fd_sc_hd__mux2_1)
+                  0.06    0.31   55.00 v _13679_/X (sky130_fd_sc_hd__mux2_1)
+     1    0.00                           _07944_ (net)
+                  0.06    0.00   55.00 v _13680_/A (sky130_fd_sc_hd__clkbuf_1)
+                  0.03    0.10   55.10 v _13680_/X (sky130_fd_sc_hd__clkbuf_1)
+     1    0.00                           _00024_ (net)
+                  0.03    0.00   55.10 v _18566_/D (sky130_fd_sc_hd__dfxtp_1)
+                                 55.10   data arrival time
+
+                        100.00  100.00   clock clk (rise edge)
+                          0.00  100.00   clock source latency
+                  0.00    0.00  100.00 ^ clk (in)
+    90    0.49                           clk (net)
+                  0.32    0.15  100.15 ^ _13581_/A0 (sky130_fd_sc_hd__mux2_2)
+                  0.04    0.20  100.35 ^ _13581_/X (sky130_fd_sc_hd__mux2_2)
+     1    0.00                           _07888_ (net)
+                  0.04    0.00  100.35 ^ _13582_/A (sky130_fd_sc_hd__buf_1)
+                  2.76    1.84  102.19 ^ _13582_/X (sky130_fd_sc_hd__buf_1)
+     1    0.24                           soc.bspi.b2o.wck (net)
+                  2.76    0.04  102.23 ^ clkbuf_0_soc.bspi.b2o.wck/A (sky130_fd_sc_hd__clkbuf_16)
+                  0.19    0.53  102.76 ^ clkbuf_0_soc.bspi.b2o.wck/X (sky130_fd_sc_hd__clkbuf_16)
+     2    0.14                           clknet_0_soc.bspi.b2o.wck (net)
+                  0.19    0.01  102.77 ^ clkbuf_1_0_0_soc.bspi.b2o.wck/A (sky130_fd_sc_hd__clkbuf_8)
+                  0.16    0.25  103.02 ^ clkbuf_1_0_0_soc.bspi.b2o.wck/X (sky130_fd_sc_hd__clkbuf_8)
+     2    0.09                           clknet_1_0_0_soc.bspi.b2o.wck (net)
+                  0.16    0.01  103.03 ^ clkbuf_2_1_0_soc.bspi.b2o.wck/A (sky130_fd_sc_hd__clkbuf_8)
+                  0.10    0.20  103.22 ^ clkbuf_2_1_0_soc.bspi.b2o.wck/X (sky130_fd_sc_hd__clkbuf_8)
+     2    0.05                           clknet_2_1_0_soc.bspi.b2o.wck (net)
+                  0.10    0.00  103.23 ^ clkbuf_3_2_0_soc.bspi.b2o.wck/A (sky130_fd_sc_hd__clkbuf_8)
+                  0.12    0.19  103.42 ^ clkbuf_3_2_0_soc.bspi.b2o.wck/X (sky130_fd_sc_hd__clkbuf_8)
+     2    0.06                           clknet_3_2_0_soc.bspi.b2o.wck (net)
+                  0.12    0.00  103.42 ^ clkbuf_4_5__f_soc.bspi.b2o.wck/A (sky130_fd_sc_hd__clkbuf_16)
+                  0.29    0.29  103.71 ^ clkbuf_4_5__f_soc.bspi.b2o.wck/X (sky130_fd_sc_hd__clkbuf_16)
+    10    0.28                           clknet_4_5__leaf_soc.bspi.b2o.wck (net)
+                  0.29    0.03  103.74 ^ _18566_/CLK (sky130_fd_sc_hd__dfxtp_1)
+                          0.23  103.97   clock reconvergence pessimism
+                         -0.04  103.92   library setup time
+                                103.92   data required time
+-----------------------------------------------------------------------------
+                                103.92   data required time
+                                -55.10   data arrival time
+-----------------------------------------------------------------------------
+                                 48.82   slack (MET)
+
+
+Startpoint: soc.dmem1 (falling edge-triggered flip-flop clocked by clk)
+Endpoint: _18579_ (rising edge-triggered flip-flop clocked by clk)
+Path Group: clk
+Path Type: max
+
+Fanout     Cap    Slew   Delay    Time   Description
+-----------------------------------------------------------------------------
+                         50.00   50.00   clock clk (fall edge)
+                          0.00   50.00   clock source latency
+                  0.00    0.00   50.00 v clk (in)
+    90    0.48                           clk (net)
+                  0.31    0.16   50.16 v _13581_/A0 (sky130_fd_sc_hd__mux2_2)
+                  0.05    0.38   50.54 v _13581_/X (sky130_fd_sc_hd__mux2_2)
+     1    0.00                           _07888_ (net)
+                  0.05    0.00   50.54 v _13582_/A (sky130_fd_sc_hd__buf_1)
+                  1.36    1.11   51.65 v _13582_/X (sky130_fd_sc_hd__buf_1)
+     1    0.24                           soc.bspi.b2o.wck (net)
+                  1.36    0.04   51.69 v clkbuf_0_soc.bspi.b2o.wck/A (sky130_fd_sc_hd__clkbuf_16)
+                  0.12    0.68   52.37 v clkbuf_0_soc.bspi.b2o.wck/X (sky130_fd_sc_hd__clkbuf_16)
+     2    0.14                           clknet_0_soc.bspi.b2o.wck (net)
+                  0.13    0.01   52.38 v clkbuf_1_1_0_soc.bspi.b2o.wck/A (sky130_fd_sc_hd__clkbuf_8)
+                  0.11    0.26   52.63 v clkbuf_1_1_0_soc.bspi.b2o.wck/X (sky130_fd_sc_hd__clkbuf_8)
+     3    0.10                           clknet_1_1_0_soc.bspi.b2o.wck (net)
+                  0.11    0.01   52.64 v clkbuf_2_2_0_soc.bspi.b2o.wck/A (sky130_fd_sc_hd__clkbuf_8)
+                  0.08    0.22   52.86 v clkbuf_2_2_0_soc.bspi.b2o.wck/X (sky130_fd_sc_hd__clkbuf_8)
+     2    0.07                           clknet_2_2_0_soc.bspi.b2o.wck (net)
+                  0.08    0.01   52.87 v clkbuf_3_5_0_soc.bspi.b2o.wck/A (sky130_fd_sc_hd__clkbuf_8)
+                  0.10    0.23   53.10 v clkbuf_3_5_0_soc.bspi.b2o.wck/X (sky130_fd_sc_hd__clkbuf_8)
+     2    0.09                           clknet_3_5_0_soc.bspi.b2o.wck (net)
+                  0.10    0.01   53.11 v clkbuf_4_10__f_soc.bspi.b2o.wck/A (sky130_fd_sc_hd__clkbuf_16)
+                  0.20    0.30   53.41 v clkbuf_4_10__f_soc.bspi.b2o.wck/X (sky130_fd_sc_hd__clkbuf_16)
+    14    0.30                           clknet_4_10__leaf_soc.bspi.b2o.wck (net)
+                  0.28    0.04   53.45 v soc.dmem1/clk0 (sky130_sram_2kbyte_1rw1r_32x512_8)
+                  0.00    0.42   53.87 v soc.dmem1/dout0[10] (sky130_sram_2kbyte_1rw1r_32x512_8)
+     1    0.00                           soc.dmem_dout0[1][10] (net)
+                  0.00    0.00   53.87 v wire360/A (sky130_fd_sc_hd__clkbuf_2)
+                  0.80    0.60   54.47 v wire360/X (sky130_fd_sc_hd__clkbuf_2)
+     7    0.21                           net360 (net)
+                  0.83    0.12   54.59 v wire359/A (sky130_fd_sc_hd__buf_4)
+                  0.06    0.45   55.04 v wire359/X (sky130_fd_sc_hd__buf_4)
+     1    0.02                           net359 (net)
+                  0.06    0.00   55.04 v _13775_/A0 (sky130_fd_sc_hd__mux2_1)
+                  0.06    0.31   55.35 v _13775_/X (sky130_fd_sc_hd__mux2_1)
+     1    0.00                           _07995_ (net)
+                  0.06    0.00   55.35 v _13776_/A (sky130_fd_sc_hd__clkbuf_1)
+                  0.03    0.11   55.45 v _13776_/X (sky130_fd_sc_hd__clkbuf_1)
+     1    0.00                           _00068_ (net)
+                  0.03    0.00   55.45 v _18579_/D (sky130_fd_sc_hd__dfxtp_4)
+                                 55.45   data arrival time
+
+                        100.00  100.00   clock clk (rise edge)
+                          0.00  100.00   clock source latency
+                  0.00    0.00  100.00 ^ clk (in)
+    90    0.49                           clk (net)
+                  0.32    0.15  100.15 ^ _13581_/A0 (sky130_fd_sc_hd__mux2_2)
+                  0.04    0.20  100.35 ^ _13581_/X (sky130_fd_sc_hd__mux2_2)
+     1    0.00                           _07888_ (net)
+                  0.04    0.00  100.35 ^ _13582_/A (sky130_fd_sc_hd__buf_1)
+                  2.76    1.84  102.19 ^ _13582_/X (sky130_fd_sc_hd__buf_1)
+     1    0.24                           soc.bspi.b2o.wck (net)
+                  2.76    0.04  102.23 ^ clkbuf_0_soc.bspi.b2o.wck/A (sky130_fd_sc_hd__clkbuf_16)
+                  0.19    0.53  102.76 ^ clkbuf_0_soc.bspi.b2o.wck/X (sky130_fd_sc_hd__clkbuf_16)
+     2    0.14                           clknet_0_soc.bspi.b2o.wck (net)
+                  0.19    0.01  102.77 ^ clkbuf_1_1_0_soc.bspi.b2o.wck/A (sky130_fd_sc_hd__clkbuf_8)
+                  0.17    0.26  103.03 ^ clkbuf_1_1_0_soc.bspi.b2o.wck/X (sky130_fd_sc_hd__clkbuf_8)
+     3    0.10                           clknet_1_1_0_soc.bspi.b2o.wck (net)
+                  0.17    0.01  103.03 ^ clkbuf_2_2_0_soc.bspi.b2o.wck/A (sky130_fd_sc_hd__clkbuf_8)
+                  0.12    0.22  103.25 ^ clkbuf_2_2_0_soc.bspi.b2o.wck/X (sky130_fd_sc_hd__clkbuf_8)
+     2    0.07                           clknet_2_2_0_soc.bspi.b2o.wck (net)
+                  0.13    0.01  103.26 ^ clkbuf_3_5_0_soc.bspi.b2o.wck/A (sky130_fd_sc_hd__clkbuf_8)
+                  0.16    0.23  103.49 ^ clkbuf_3_5_0_soc.bspi.b2o.wck/X (sky130_fd_sc_hd__clkbuf_8)
+     2    0.09                           clknet_3_5_0_soc.bspi.b2o.wck (net)
+                  0.16    0.01  103.50 ^ clkbuf_4_10__f_soc.bspi.b2o.wck/A (sky130_fd_sc_hd__clkbuf_16)
+                  0.33    0.33  103.83 ^ clkbuf_4_10__f_soc.bspi.b2o.wck/X (sky130_fd_sc_hd__clkbuf_16)
+    14    0.32                           clknet_4_10__leaf_soc.bspi.b2o.wck (net)
+                  0.33    0.03  103.86 ^ clkbuf_leaf_139_soc.bspi.b2o.wck/A (sky130_fd_sc_hd__clkbuf_16)
+                  0.05    0.20  104.06 ^ clkbuf_leaf_139_soc.bspi.b2o.wck/X (sky130_fd_sc_hd__clkbuf_16)
+     5    0.02                           clknet_leaf_139_soc.bspi.b2o.wck (net)
+                  0.05    0.00  104.06 ^ _18579_/CLK (sky130_fd_sc_hd__dfxtp_4)
+                          0.33  104.39   clock reconvergence pessimism
+                         -0.11  104.28   library setup time
+                                104.28   data required time
+-----------------------------------------------------------------------------
+                                104.28   data required time
+                                -55.45   data arrival time
+-----------------------------------------------------------------------------
+                                 48.83   slack (MET)
+
+
+Startpoint: soc.dmem1 (falling edge-triggered flip-flop clocked by clk)
+Endpoint: _18588_ (rising edge-triggered flip-flop clocked by clk)
+Path Group: clk
+Path Type: max
+
+Fanout     Cap    Slew   Delay    Time   Description
+-----------------------------------------------------------------------------
+                         50.00   50.00   clock clk (fall edge)
+                          0.00   50.00   clock source latency
+                  0.00    0.00   50.00 v clk (in)
+    90    0.48                           clk (net)
+                  0.31    0.16   50.16 v _13581_/A0 (sky130_fd_sc_hd__mux2_2)
+                  0.05    0.38   50.54 v _13581_/X (sky130_fd_sc_hd__mux2_2)
+     1    0.00                           _07888_ (net)
+                  0.05    0.00   50.54 v _13582_/A (sky130_fd_sc_hd__buf_1)
+                  1.36    1.11   51.65 v _13582_/X (sky130_fd_sc_hd__buf_1)
+     1    0.24                           soc.bspi.b2o.wck (net)
+                  1.36    0.04   51.69 v clkbuf_0_soc.bspi.b2o.wck/A (sky130_fd_sc_hd__clkbuf_16)
+                  0.12    0.68   52.37 v clkbuf_0_soc.bspi.b2o.wck/X (sky130_fd_sc_hd__clkbuf_16)
+     2    0.14                           clknet_0_soc.bspi.b2o.wck (net)
+                  0.13    0.01   52.38 v clkbuf_1_1_0_soc.bspi.b2o.wck/A (sky130_fd_sc_hd__clkbuf_8)
+                  0.11    0.26   52.63 v clkbuf_1_1_0_soc.bspi.b2o.wck/X (sky130_fd_sc_hd__clkbuf_8)
+     3    0.10                           clknet_1_1_0_soc.bspi.b2o.wck (net)
+                  0.11    0.01   52.64 v clkbuf_2_2_0_soc.bspi.b2o.wck/A (sky130_fd_sc_hd__clkbuf_8)
+                  0.08    0.22   52.86 v clkbuf_2_2_0_soc.bspi.b2o.wck/X (sky130_fd_sc_hd__clkbuf_8)
+     2    0.07                           clknet_2_2_0_soc.bspi.b2o.wck (net)
+                  0.08    0.01   52.87 v clkbuf_3_5_0_soc.bspi.b2o.wck/A (sky130_fd_sc_hd__clkbuf_8)
+                  0.10    0.23   53.10 v clkbuf_3_5_0_soc.bspi.b2o.wck/X (sky130_fd_sc_hd__clkbuf_8)
+     2    0.09                           clknet_3_5_0_soc.bspi.b2o.wck (net)
+                  0.10    0.01   53.11 v clkbuf_4_10__f_soc.bspi.b2o.wck/A (sky130_fd_sc_hd__clkbuf_16)
+                  0.20    0.30   53.41 v clkbuf_4_10__f_soc.bspi.b2o.wck/X (sky130_fd_sc_hd__clkbuf_16)
+    14    0.30                           clknet_4_10__leaf_soc.bspi.b2o.wck (net)
+                  0.28    0.04   53.45 v soc.dmem1/clk0 (sky130_sram_2kbyte_1rw1r_32x512_8)
+                  0.00    0.40   53.85 v soc.dmem1/dout0[19] (sky130_sram_2kbyte_1rw1r_32x512_8)
+     1    0.00                           soc.dmem_dout0[1][19] (net)
+                  0.00    0.00   53.85 v wire342/A (sky130_fd_sc_hd__clkbuf_2)
+                  0.82    0.62   54.46 v wire342/X (sky130_fd_sc_hd__clkbuf_2)
+     9    0.22                           net342 (net)
+                  0.84    0.12   54.58 v wire341/A (sky130_fd_sc_hd__buf_4)
+                  0.06    0.45   55.03 v wire341/X (sky130_fd_sc_hd__buf_4)
+     1    0.02                           net341 (net)
+                  0.06    0.00   55.04 v _13794_/A0 (sky130_fd_sc_hd__mux2_1)
+                  0.06    0.31   55.34 v _13794_/X (sky130_fd_sc_hd__mux2_1)
+     1    0.00                           _08005_ (net)
+                  0.06    0.00   55.34 v _13795_/A (sky130_fd_sc_hd__clkbuf_1)
+                  0.03    0.11   55.45 v _13795_/X (sky130_fd_sc_hd__clkbuf_1)
+     1    0.00                           _00077_ (net)
+                  0.03    0.00   55.45 v _18588_/D (sky130_fd_sc_hd__dfxtp_4)
+                                 55.45   data arrival time
+
+                        100.00  100.00   clock clk (rise edge)
+                          0.00  100.00   clock source latency
+                  0.00    0.00  100.00 ^ clk (in)
+    90    0.49                           clk (net)
+                  0.32    0.15  100.15 ^ _13581_/A0 (sky130_fd_sc_hd__mux2_2)
+                  0.04    0.20  100.35 ^ _13581_/X (sky130_fd_sc_hd__mux2_2)
+     1    0.00                           _07888_ (net)
+                  0.04    0.00  100.35 ^ _13582_/A (sky130_fd_sc_hd__buf_1)
+                  2.76    1.84  102.19 ^ _13582_/X (sky130_fd_sc_hd__buf_1)
+     1    0.24                           soc.bspi.b2o.wck (net)
+                  2.76    0.04  102.23 ^ clkbuf_0_soc.bspi.b2o.wck/A (sky130_fd_sc_hd__clkbuf_16)
+                  0.19    0.53  102.76 ^ clkbuf_0_soc.bspi.b2o.wck/X (sky130_fd_sc_hd__clkbuf_16)
+     2    0.14                           clknet_0_soc.bspi.b2o.wck (net)
+                  0.19    0.01  102.77 ^ clkbuf_1_1_0_soc.bspi.b2o.wck/A (sky130_fd_sc_hd__clkbuf_8)
+                  0.17    0.26  103.03 ^ clkbuf_1_1_0_soc.bspi.b2o.wck/X (sky130_fd_sc_hd__clkbuf_8)
+     3    0.10                           clknet_1_1_0_soc.bspi.b2o.wck (net)
+                  0.17    0.01  103.03 ^ clkbuf_2_2_0_soc.bspi.b2o.wck/A (sky130_fd_sc_hd__clkbuf_8)
+                  0.12    0.22  103.25 ^ clkbuf_2_2_0_soc.bspi.b2o.wck/X (sky130_fd_sc_hd__clkbuf_8)
+     2    0.07                           clknet_2_2_0_soc.bspi.b2o.wck (net)
+                  0.13    0.01  103.26 ^ clkbuf_3_5_0_soc.bspi.b2o.wck/A (sky130_fd_sc_hd__clkbuf_8)
+                  0.16    0.23  103.49 ^ clkbuf_3_5_0_soc.bspi.b2o.wck/X (sky130_fd_sc_hd__clkbuf_8)
+     2    0.09                           clknet_3_5_0_soc.bspi.b2o.wck (net)
+                  0.16    0.01  103.50 ^ clkbuf_4_10__f_soc.bspi.b2o.wck/A (sky130_fd_sc_hd__clkbuf_16)
+                  0.33    0.33  103.83 ^ clkbuf_4_10__f_soc.bspi.b2o.wck/X (sky130_fd_sc_hd__clkbuf_16)
+    14    0.32                           clknet_4_10__leaf_soc.bspi.b2o.wck (net)
+                  0.33    0.04  103.87 ^ clkbuf_leaf_141_soc.bspi.b2o.wck/A (sky130_fd_sc_hd__clkbuf_16)
+                  0.05    0.20  104.07 ^ clkbuf_leaf_141_soc.bspi.b2o.wck/X (sky130_fd_sc_hd__clkbuf_16)
+     5    0.02                           clknet_leaf_141_soc.bspi.b2o.wck (net)
+                  0.05    0.00  104.07 ^ _18588_/CLK (sky130_fd_sc_hd__dfxtp_4)
+                          0.33  104.40   clock reconvergence pessimism
+                         -0.11  104.29   library setup time
+                                104.29   data required time
+-----------------------------------------------------------------------------
+                                104.29   data required time
+                                -55.45   data arrival time
+-----------------------------------------------------------------------------
+                                 48.84   slack (MET)
+
+
+Startpoint: soc.dmem1 (falling edge-triggered flip-flop clocked by clk)
+Endpoint: _18583_ (rising edge-triggered flip-flop clocked by clk)
+Path Group: clk
+Path Type: max
+
+Fanout     Cap    Slew   Delay    Time   Description
+-----------------------------------------------------------------------------
+                         50.00   50.00   clock clk (fall edge)
+                          0.00   50.00   clock source latency
+                  0.00    0.00   50.00 v clk (in)
+    90    0.48                           clk (net)
+                  0.31    0.16   50.16 v _13581_/A0 (sky130_fd_sc_hd__mux2_2)
+                  0.05    0.38   50.54 v _13581_/X (sky130_fd_sc_hd__mux2_2)
+     1    0.00                           _07888_ (net)
+                  0.05    0.00   50.54 v _13582_/A (sky130_fd_sc_hd__buf_1)
+                  1.36    1.11   51.65 v _13582_/X (sky130_fd_sc_hd__buf_1)
+     1    0.24                           soc.bspi.b2o.wck (net)
+                  1.36    0.04   51.69 v clkbuf_0_soc.bspi.b2o.wck/A (sky130_fd_sc_hd__clkbuf_16)
+                  0.12    0.68   52.37 v clkbuf_0_soc.bspi.b2o.wck/X (sky130_fd_sc_hd__clkbuf_16)
+     2    0.14                           clknet_0_soc.bspi.b2o.wck (net)
+                  0.13    0.01   52.38 v clkbuf_1_1_0_soc.bspi.b2o.wck/A (sky130_fd_sc_hd__clkbuf_8)
+                  0.11    0.26   52.63 v clkbuf_1_1_0_soc.bspi.b2o.wck/X (sky130_fd_sc_hd__clkbuf_8)
+     3    0.10                           clknet_1_1_0_soc.bspi.b2o.wck (net)
+                  0.11    0.01   52.64 v clkbuf_2_2_0_soc.bspi.b2o.wck/A (sky130_fd_sc_hd__clkbuf_8)
+                  0.08    0.22   52.86 v clkbuf_2_2_0_soc.bspi.b2o.wck/X (sky130_fd_sc_hd__clkbuf_8)
+     2    0.07                           clknet_2_2_0_soc.bspi.b2o.wck (net)
+                  0.08    0.01   52.87 v clkbuf_3_5_0_soc.bspi.b2o.wck/A (sky130_fd_sc_hd__clkbuf_8)
+                  0.10    0.23   53.10 v clkbuf_3_5_0_soc.bspi.b2o.wck/X (sky130_fd_sc_hd__clkbuf_8)
+     2    0.09                           clknet_3_5_0_soc.bspi.b2o.wck (net)
+                  0.10    0.01   53.11 v clkbuf_4_10__f_soc.bspi.b2o.wck/A (sky130_fd_sc_hd__clkbuf_16)
+                  0.20    0.30   53.41 v clkbuf_4_10__f_soc.bspi.b2o.wck/X (sky130_fd_sc_hd__clkbuf_16)
+    14    0.30                           clknet_4_10__leaf_soc.bspi.b2o.wck (net)
+                  0.28    0.04   53.45 v soc.dmem1/clk0 (sky130_sram_2kbyte_1rw1r_32x512_8)
+                  0.00    0.41   53.86 v soc.dmem1/dout0[14] (sky130_sram_2kbyte_1rw1r_32x512_8)
+     1    0.00                           soc.dmem_dout0[1][14] (net)
+                  0.00    0.00   53.86 v wire352/A (sky130_fd_sc_hd__clkbuf_2)
+                  0.79    0.58   54.44 v wire352/X (sky130_fd_sc_hd__clkbuf_2)
+     1    0.21                           net352 (net)
+                  0.82    0.13   54.57 v wire351/A (sky130_fd_sc_hd__buf_4)
+                  0.06    0.45   55.02 v wire351/X (sky130_fd_sc_hd__buf_4)
+     1    0.02                           net351 (net)
+                  0.06    0.00   55.02 v _13783_/A0 (sky130_fd_sc_hd__mux2_1)
+                  0.06    0.30   55.33 v _13783_/X (sky130_fd_sc_hd__mux2_1)
+     1    0.00                           _07999_ (net)
+                  0.06    0.00   55.33 v _13784_/A (sky130_fd_sc_hd__clkbuf_1)
+                  0.03    0.10   55.43 v _13784_/X (sky130_fd_sc_hd__clkbuf_1)
+     1    0.00                           _00072_ (net)
+                  0.03    0.00   55.43 v _18583_/D (sky130_fd_sc_hd__dfxtp_4)
+                                 55.43   data arrival time
+
+                        100.00  100.00   clock clk (rise edge)
+                          0.00  100.00   clock source latency
+                  0.00    0.00  100.00 ^ clk (in)
+    90    0.49                           clk (net)
+                  0.32    0.15  100.15 ^ _13581_/A0 (sky130_fd_sc_hd__mux2_2)
+                  0.04    0.20  100.35 ^ _13581_/X (sky130_fd_sc_hd__mux2_2)
+     1    0.00                           _07888_ (net)
+                  0.04    0.00  100.35 ^ _13582_/A (sky130_fd_sc_hd__buf_1)
+                  2.76    1.84  102.19 ^ _13582_/X (sky130_fd_sc_hd__buf_1)
+     1    0.24                           soc.bspi.b2o.wck (net)
+                  2.76    0.04  102.23 ^ clkbuf_0_soc.bspi.b2o.wck/A (sky130_fd_sc_hd__clkbuf_16)
+                  0.19    0.53  102.76 ^ clkbuf_0_soc.bspi.b2o.wck/X (sky130_fd_sc_hd__clkbuf_16)
+     2    0.14                           clknet_0_soc.bspi.b2o.wck (net)
+                  0.19    0.01  102.77 ^ clkbuf_1_1_0_soc.bspi.b2o.wck/A (sky130_fd_sc_hd__clkbuf_8)
+                  0.17    0.26  103.03 ^ clkbuf_1_1_0_soc.bspi.b2o.wck/X (sky130_fd_sc_hd__clkbuf_8)
+     3    0.10                           clknet_1_1_0_soc.bspi.b2o.wck (net)
+                  0.17    0.01  103.03 ^ clkbuf_2_2_0_soc.bspi.b2o.wck/A (sky130_fd_sc_hd__clkbuf_8)
+                  0.12    0.22  103.25 ^ clkbuf_2_2_0_soc.bspi.b2o.wck/X (sky130_fd_sc_hd__clkbuf_8)
+     2    0.07                           clknet_2_2_0_soc.bspi.b2o.wck (net)
+                  0.13    0.01  103.26 ^ clkbuf_3_5_0_soc.bspi.b2o.wck/A (sky130_fd_sc_hd__clkbuf_8)
+                  0.16    0.23  103.49 ^ clkbuf_3_5_0_soc.bspi.b2o.wck/X (sky130_fd_sc_hd__clkbuf_8)
+     2    0.09                           clknet_3_5_0_soc.bspi.b2o.wck (net)
+                  0.16    0.01  103.50 ^ clkbuf_4_10__f_soc.bspi.b2o.wck/A (sky130_fd_sc_hd__clkbuf_16)
+                  0.33    0.33  103.83 ^ clkbuf_4_10__f_soc.bspi.b2o.wck/X (sky130_fd_sc_hd__clkbuf_16)
+    14    0.32                           clknet_4_10__leaf_soc.bspi.b2o.wck (net)
+                  0.33    0.03  103.87 ^ clkbuf_leaf_140_soc.bspi.b2o.wck/A (sky130_fd_sc_hd__clkbuf_16)
+                  0.04    0.19  104.06 ^ clkbuf_leaf_140_soc.bspi.b2o.wck/X (sky130_fd_sc_hd__clkbuf_16)
+     4    0.01                           clknet_leaf_140_soc.bspi.b2o.wck (net)
+                  0.04    0.00  104.06 ^ _18583_/CLK (sky130_fd_sc_hd__dfxtp_4)
+                          0.33  104.39   clock reconvergence pessimism
+                         -0.11  104.28   library setup time
+                                104.28   data required time
+-----------------------------------------------------------------------------
+                                104.28   data required time
+                                -55.43   data arrival time
+-----------------------------------------------------------------------------
+                                 48.85   slack (MET)
+
+
+Startpoint: soc.dmem1 (falling edge-triggered flip-flop clocked by clk)
+Endpoint: _18587_ (rising edge-triggered flip-flop clocked by clk)
+Path Group: clk
+Path Type: max
+
+Fanout     Cap    Slew   Delay    Time   Description
+-----------------------------------------------------------------------------
+                         50.00   50.00   clock clk (fall edge)
+                          0.00   50.00   clock source latency
+                  0.00    0.00   50.00 v clk (in)
+    90    0.48                           clk (net)
+                  0.31    0.16   50.16 v _13581_/A0 (sky130_fd_sc_hd__mux2_2)
+                  0.05    0.38   50.54 v _13581_/X (sky130_fd_sc_hd__mux2_2)
+     1    0.00                           _07888_ (net)
+                  0.05    0.00   50.54 v _13582_/A (sky130_fd_sc_hd__buf_1)
+                  1.36    1.11   51.65 v _13582_/X (sky130_fd_sc_hd__buf_1)
+     1    0.24                           soc.bspi.b2o.wck (net)
+                  1.36    0.04   51.69 v clkbuf_0_soc.bspi.b2o.wck/A (sky130_fd_sc_hd__clkbuf_16)
+                  0.12    0.68   52.37 v clkbuf_0_soc.bspi.b2o.wck/X (sky130_fd_sc_hd__clkbuf_16)
+     2    0.14                           clknet_0_soc.bspi.b2o.wck (net)
+                  0.13    0.01   52.38 v clkbuf_1_1_0_soc.bspi.b2o.wck/A (sky130_fd_sc_hd__clkbuf_8)
+                  0.11    0.26   52.63 v clkbuf_1_1_0_soc.bspi.b2o.wck/X (sky130_fd_sc_hd__clkbuf_8)
+     3    0.10                           clknet_1_1_0_soc.bspi.b2o.wck (net)
+                  0.11    0.01   52.64 v clkbuf_2_2_0_soc.bspi.b2o.wck/A (sky130_fd_sc_hd__clkbuf_8)
+                  0.08    0.22   52.86 v clkbuf_2_2_0_soc.bspi.b2o.wck/X (sky130_fd_sc_hd__clkbuf_8)
+     2    0.07                           clknet_2_2_0_soc.bspi.b2o.wck (net)
+                  0.08    0.01   52.87 v clkbuf_3_5_0_soc.bspi.b2o.wck/A (sky130_fd_sc_hd__clkbuf_8)
+                  0.10    0.23   53.10 v clkbuf_3_5_0_soc.bspi.b2o.wck/X (sky130_fd_sc_hd__clkbuf_8)
+     2    0.09                           clknet_3_5_0_soc.bspi.b2o.wck (net)
+                  0.10    0.01   53.11 v clkbuf_4_10__f_soc.bspi.b2o.wck/A (sky130_fd_sc_hd__clkbuf_16)
+                  0.20    0.30   53.41 v clkbuf_4_10__f_soc.bspi.b2o.wck/X (sky130_fd_sc_hd__clkbuf_16)
+    14    0.30                           clknet_4_10__leaf_soc.bspi.b2o.wck (net)
+                  0.28    0.04   53.45 v soc.dmem1/clk0 (sky130_sram_2kbyte_1rw1r_32x512_8)
+                  0.00    0.42   53.87 v soc.dmem1/dout0[18] (sky130_sram_2kbyte_1rw1r_32x512_8)
+     1    0.00                           soc.dmem_dout0[1][18] (net)
+                  0.00    0.00   53.87 v wire344/A (sky130_fd_sc_hd__clkbuf_2)
+                  0.78    0.59   54.46 v wire344/X (sky130_fd_sc_hd__clkbuf_2)
+    11    0.21                           net344 (net)
+                  0.80    0.12   54.58 v wire343/A (sky130_fd_sc_hd__buf_4)
+                  0.06    0.44   55.02 v wire343/X (sky130_fd_sc_hd__buf_4)
+     1    0.02                           net343 (net)
+                  0.06    0.00   55.02 v _13792_/A0 (sky130_fd_sc_hd__mux2_1)
+                  0.06    0.31   55.33 v _13792_/X (sky130_fd_sc_hd__mux2_1)
+     1    0.00                           _08004_ (net)
+                  0.06    0.00   55.33 v _13793_/A (sky130_fd_sc_hd__clkbuf_1)
+                  0.03    0.10   55.43 v _13793_/X (sky130_fd_sc_hd__clkbuf_1)
+     1    0.00                           _00076_ (net)
+                  0.03    0.00   55.43 v _18587_/D (sky130_fd_sc_hd__dfxtp_4)
+                                 55.43   data arrival time
+
+                        100.00  100.00   clock clk (rise edge)
+                          0.00  100.00   clock source latency
+                  0.00    0.00  100.00 ^ clk (in)
+    90    0.49                           clk (net)
+                  0.32    0.15  100.15 ^ _13581_/A0 (sky130_fd_sc_hd__mux2_2)
+                  0.04    0.20  100.35 ^ _13581_/X (sky130_fd_sc_hd__mux2_2)
+     1    0.00                           _07888_ (net)
+                  0.04    0.00  100.35 ^ _13582_/A (sky130_fd_sc_hd__buf_1)
+                  2.76    1.84  102.19 ^ _13582_/X (sky130_fd_sc_hd__buf_1)
+     1    0.24                           soc.bspi.b2o.wck (net)
+                  2.76    0.04  102.23 ^ clkbuf_0_soc.bspi.b2o.wck/A (sky130_fd_sc_hd__clkbuf_16)
+                  0.19    0.53  102.76 ^ clkbuf_0_soc.bspi.b2o.wck/X (sky130_fd_sc_hd__clkbuf_16)
+     2    0.14                           clknet_0_soc.bspi.b2o.wck (net)
+                  0.19    0.01  102.77 ^ clkbuf_1_1_0_soc.bspi.b2o.wck/A (sky130_fd_sc_hd__clkbuf_8)
+                  0.17    0.26  103.03 ^ clkbuf_1_1_0_soc.bspi.b2o.wck/X (sky130_fd_sc_hd__clkbuf_8)
+     3    0.10                           clknet_1_1_0_soc.bspi.b2o.wck (net)
+                  0.17    0.01  103.03 ^ clkbuf_2_2_0_soc.bspi.b2o.wck/A (sky130_fd_sc_hd__clkbuf_8)
+                  0.12    0.22  103.25 ^ clkbuf_2_2_0_soc.bspi.b2o.wck/X (sky130_fd_sc_hd__clkbuf_8)
+     2    0.07                           clknet_2_2_0_soc.bspi.b2o.wck (net)
+                  0.13    0.01  103.26 ^ clkbuf_3_5_0_soc.bspi.b2o.wck/A (sky130_fd_sc_hd__clkbuf_8)
+                  0.16    0.23  103.49 ^ clkbuf_3_5_0_soc.bspi.b2o.wck/X (sky130_fd_sc_hd__clkbuf_8)
+     2    0.09                           clknet_3_5_0_soc.bspi.b2o.wck (net)
+                  0.16    0.01  103.50 ^ clkbuf_4_10__f_soc.bspi.b2o.wck/A (sky130_fd_sc_hd__clkbuf_16)
+                  0.33    0.33  103.83 ^ clkbuf_4_10__f_soc.bspi.b2o.wck/X (sky130_fd_sc_hd__clkbuf_16)
+    14    0.32                           clknet_4_10__leaf_soc.bspi.b2o.wck (net)
+                  0.33    0.04  103.87 ^ clkbuf_leaf_141_soc.bspi.b2o.wck/A (sky130_fd_sc_hd__clkbuf_16)
+                  0.05    0.20  104.07 ^ clkbuf_leaf_141_soc.bspi.b2o.wck/X (sky130_fd_sc_hd__clkbuf_16)
+     5    0.02                           clknet_leaf_141_soc.bspi.b2o.wck (net)
+                  0.05    0.00  104.07 ^ _18587_/CLK (sky130_fd_sc_hd__dfxtp_4)
+                          0.33  104.40   clock reconvergence pessimism
+                         -0.11  104.29   library setup time
+                                104.29   data required time
+-----------------------------------------------------------------------------
+                                104.29   data required time
+                                -55.43   data arrival time
+-----------------------------------------------------------------------------
+                                 48.86   slack (MET)
+
+
+Startpoint: soc.bios_mem1 (falling edge-triggered flip-flop clocked by ick)
+Endpoint: _18566_ (rising edge-triggered flip-flop clocked by ick)
+Path Group: ick
+Path Type: max
+
+Fanout     Cap    Slew   Delay    Time   Description
+-----------------------------------------------------------------------------
+                         50.00   50.00   clock ick (fall edge)
+                          0.00   50.00   clock source latency
+                  0.00    0.00   50.00 v io_clk (in)
+     2    0.03                           io_clk (net)
+                  0.00    0.00   50.00 v _13581_/A1 (sky130_fd_sc_hd__mux2_2)
+                  0.05    0.25   50.26 v _13581_/X (sky130_fd_sc_hd__mux2_2)
+     1    0.00                           _07888_ (net)
+                  0.05    0.00   50.26 v _13582_/A (sky130_fd_sc_hd__buf_1)
+                  1.36    1.11   51.36 v _13582_/X (sky130_fd_sc_hd__buf_1)
+     1    0.24                           soc.bspi.b2o.wck (net)
+                  1.36    0.04   51.41 v clkbuf_0_soc.bspi.b2o.wck/A (sky130_fd_sc_hd__clkbuf_16)
+                  0.12    0.68   52.08 v clkbuf_0_soc.bspi.b2o.wck/X (sky130_fd_sc_hd__clkbuf_16)
+     2    0.14                           clknet_0_soc.bspi.b2o.wck (net)
+                  0.13    0.01   52.09 v clkbuf_1_1_0_soc.bspi.b2o.wck/A (sky130_fd_sc_hd__clkbuf_8)
+                  0.11    0.26   52.35 v clkbuf_1_1_0_soc.bspi.b2o.wck/X (sky130_fd_sc_hd__clkbuf_8)
+     3    0.10                           clknet_1_1_0_soc.bspi.b2o.wck (net)
+                  0.11    0.00   52.35 v clkbuf_2_3_0_soc.bspi.b2o.wck/A (sky130_fd_sc_hd__clkbuf_8)
+                  0.08    0.22   52.57 v clkbuf_2_3_0_soc.bspi.b2o.wck/X (sky130_fd_sc_hd__clkbuf_8)
+     2    0.06                           clknet_2_3_0_soc.bspi.b2o.wck (net)
+                  0.08    0.00   52.57 v clkbuf_3_7_0_soc.bspi.b2o.wck/A (sky130_fd_sc_hd__clkbuf_8)
+                  0.09    0.22   52.79 v clkbuf_3_7_0_soc.bspi.b2o.wck/X (sky130_fd_sc_hd__clkbuf_8)
+     2    0.08                           clknet_3_7_0_soc.bspi.b2o.wck (net)
+                  0.09    0.00   52.79 v clkbuf_4_15__f_soc.bspi.b2o.wck/A (sky130_fd_sc_hd__clkbuf_16)
+                  0.19    0.29   53.08 v clkbuf_4_15__f_soc.bspi.b2o.wck/X (sky130_fd_sc_hd__clkbuf_16)
+    14    0.33                           clknet_4_15__leaf_soc.bspi.b2o.wck (net)
+                  0.28    0.04   53.12 v soc.bios_mem1/clk0 (sky130_sram_2kbyte_1rw1r_32x512_8)
+                  0.02    0.63   53.75 v soc.bios_mem1/dout0[29] (sky130_sram_2kbyte_1rw1r_32x512_8)
+     1    0.04                           soc.bios_dout0[1][29] (net)
+                  0.02    0.01   53.76 v wire451/A (sky130_fd_sc_hd__clkbuf_2)
+                  0.18    0.22   53.97 v wire451/X (sky130_fd_sc_hd__clkbuf_2)
+     1    0.05                           net451 (net)
+                  0.18    0.01   53.98 v wire450/A (sky130_fd_sc_hd__buf_4)
+                  0.07    0.24   54.23 v wire450/X (sky130_fd_sc_hd__buf_4)
+     1    0.04                           net450 (net)
+                  0.07    0.01   54.23 v wire449/A (sky130_fd_sc_hd__buf_6)
+                  0.05    0.16   54.39 v wire449/X (sky130_fd_sc_hd__buf_6)
+     1    0.04                           net449 (net)
+                  0.05    0.01   54.40 v _13679_/A1 (sky130_fd_sc_hd__mux2_1)
+                  0.06    0.31   54.71 v _13679_/X (sky130_fd_sc_hd__mux2_1)
+     1    0.00                           _07944_ (net)
+                  0.06    0.00   54.71 v _13680_/A (sky130_fd_sc_hd__clkbuf_1)
+                  0.03    0.10   54.82 v _13680_/X (sky130_fd_sc_hd__clkbuf_1)
+     1    0.00                           _00024_ (net)
+                  0.03    0.00   54.82 v _18566_/D (sky130_fd_sc_hd__dfxtp_1)
+                                 54.82   data arrival time
+
+                        100.00  100.00   clock ick (rise edge)
+                          0.00  100.00   clock source latency
+                  0.00    0.00  100.00 ^ io_clk (in)
+     2    0.03                           io_clk (net)
+                  0.00    0.00  100.00 ^ _13581_/A1 (sky130_fd_sc_hd__mux2_2)
+                  0.04    0.11  100.12 ^ _13581_/X (sky130_fd_sc_hd__mux2_2)
+     1    0.00                           _07888_ (net)
+                  0.04    0.00  100.12 ^ _13582_/A (sky130_fd_sc_hd__buf_1)
+                  2.76    1.84  101.96 ^ _13582_/X (sky130_fd_sc_hd__buf_1)
+     1    0.24                           soc.bspi.b2o.wck (net)
+                  2.76    0.04  102.00 ^ clkbuf_0_soc.bspi.b2o.wck/A (sky130_fd_sc_hd__clkbuf_16)
+                  0.19    0.53  102.53 ^ clkbuf_0_soc.bspi.b2o.wck/X (sky130_fd_sc_hd__clkbuf_16)
+     2    0.14                           clknet_0_soc.bspi.b2o.wck (net)
+                  0.19    0.01  102.54 ^ clkbuf_1_0_0_soc.bspi.b2o.wck/A (sky130_fd_sc_hd__clkbuf_8)
+                  0.16    0.25  102.78 ^ clkbuf_1_0_0_soc.bspi.b2o.wck/X (sky130_fd_sc_hd__clkbuf_8)
+     2    0.09                           clknet_1_0_0_soc.bspi.b2o.wck (net)
+                  0.16    0.01  102.79 ^ clkbuf_2_1_0_soc.bspi.b2o.wck/A (sky130_fd_sc_hd__clkbuf_8)
+                  0.10    0.20  102.99 ^ clkbuf_2_1_0_soc.bspi.b2o.wck/X (sky130_fd_sc_hd__clkbuf_8)
+     2    0.05                           clknet_2_1_0_soc.bspi.b2o.wck (net)
+                  0.10    0.00  102.99 ^ clkbuf_3_2_0_soc.bspi.b2o.wck/A (sky130_fd_sc_hd__clkbuf_8)
+                  0.12    0.19  103.18 ^ clkbuf_3_2_0_soc.bspi.b2o.wck/X (sky130_fd_sc_hd__clkbuf_8)
+     2    0.06                           clknet_3_2_0_soc.bspi.b2o.wck (net)
+                  0.12    0.00  103.19 ^ clkbuf_4_5__f_soc.bspi.b2o.wck/A (sky130_fd_sc_hd__clkbuf_16)
+                  0.29    0.29  103.48 ^ clkbuf_4_5__f_soc.bspi.b2o.wck/X (sky130_fd_sc_hd__clkbuf_16)
+    10    0.28                           clknet_4_5__leaf_soc.bspi.b2o.wck (net)
+                  0.29    0.03  103.50 ^ _18566_/CLK (sky130_fd_sc_hd__dfxtp_1)
+                          0.20  103.70   clock reconvergence pessimism
+                         -0.04  103.66   library setup time
+                                103.66   data required time
+-----------------------------------------------------------------------------
+                                103.66   data required time
+                                -54.82   data arrival time
+-----------------------------------------------------------------------------
+                                 48.84   slack (MET)
+
+
+Startpoint: soc.dmem1 (falling edge-triggered flip-flop clocked by ick)
+Endpoint: _18579_ (rising edge-triggered flip-flop clocked by ick)
+Path Group: ick
+Path Type: max
+
+Fanout     Cap    Slew   Delay    Time   Description
+-----------------------------------------------------------------------------
+                         50.00   50.00   clock ick (fall edge)
+                          0.00   50.00   clock source latency
+                  0.00    0.00   50.00 v io_clk (in)
+     2    0.03                           io_clk (net)
+                  0.00    0.00   50.00 v _13581_/A1 (sky130_fd_sc_hd__mux2_2)
+                  0.05    0.25   50.26 v _13581_/X (sky130_fd_sc_hd__mux2_2)
+     1    0.00                           _07888_ (net)
+                  0.05    0.00   50.26 v _13582_/A (sky130_fd_sc_hd__buf_1)
+                  1.36    1.11   51.36 v _13582_/X (sky130_fd_sc_hd__buf_1)
+     1    0.24                           soc.bspi.b2o.wck (net)
+                  1.36    0.04   51.41 v clkbuf_0_soc.bspi.b2o.wck/A (sky130_fd_sc_hd__clkbuf_16)
+                  0.12    0.68   52.08 v clkbuf_0_soc.bspi.b2o.wck/X (sky130_fd_sc_hd__clkbuf_16)
+     2    0.14                           clknet_0_soc.bspi.b2o.wck (net)
+                  0.13    0.01   52.09 v clkbuf_1_1_0_soc.bspi.b2o.wck/A (sky130_fd_sc_hd__clkbuf_8)
+                  0.11    0.26   52.35 v clkbuf_1_1_0_soc.bspi.b2o.wck/X (sky130_fd_sc_hd__clkbuf_8)
+     3    0.10                           clknet_1_1_0_soc.bspi.b2o.wck (net)
+                  0.11    0.01   52.35 v clkbuf_2_2_0_soc.bspi.b2o.wck/A (sky130_fd_sc_hd__clkbuf_8)
+                  0.08    0.22   52.58 v clkbuf_2_2_0_soc.bspi.b2o.wck/X (sky130_fd_sc_hd__clkbuf_8)
+     2    0.07                           clknet_2_2_0_soc.bspi.b2o.wck (net)
+                  0.08    0.01   52.58 v clkbuf_3_5_0_soc.bspi.b2o.wck/A (sky130_fd_sc_hd__clkbuf_8)
+                  0.10    0.23   52.81 v clkbuf_3_5_0_soc.bspi.b2o.wck/X (sky130_fd_sc_hd__clkbuf_8)
+     2    0.09                           clknet_3_5_0_soc.bspi.b2o.wck (net)
+                  0.10    0.01   52.82 v clkbuf_4_10__f_soc.bspi.b2o.wck/A (sky130_fd_sc_hd__clkbuf_16)
+                  0.20    0.30   53.12 v clkbuf_4_10__f_soc.bspi.b2o.wck/X (sky130_fd_sc_hd__clkbuf_16)
+    14    0.30                           clknet_4_10__leaf_soc.bspi.b2o.wck (net)
+                  0.28    0.04   53.16 v soc.dmem1/clk0 (sky130_sram_2kbyte_1rw1r_32x512_8)
+                  0.00    0.42   53.58 v soc.dmem1/dout0[10] (sky130_sram_2kbyte_1rw1r_32x512_8)
+     1    0.00                           soc.dmem_dout0[1][10] (net)
+                  0.00    0.00   53.58 v wire360/A (sky130_fd_sc_hd__clkbuf_2)
+                  0.80    0.60   54.18 v wire360/X (sky130_fd_sc_hd__clkbuf_2)
+     7    0.21                           net360 (net)
+                  0.83    0.12   54.30 v wire359/A (sky130_fd_sc_hd__buf_4)
+                  0.06    0.45   54.75 v wire359/X (sky130_fd_sc_hd__buf_4)
+     1    0.02                           net359 (net)
+                  0.06    0.00   54.75 v _13775_/A0 (sky130_fd_sc_hd__mux2_1)
+                  0.06    0.31   55.06 v _13775_/X (sky130_fd_sc_hd__mux2_1)
+     1    0.00                           _07995_ (net)
+                  0.06    0.00   55.06 v _13776_/A (sky130_fd_sc_hd__clkbuf_1)
+                  0.03    0.11   55.16 v _13776_/X (sky130_fd_sc_hd__clkbuf_1)
+     1    0.00                           _00068_ (net)
+                  0.03    0.00   55.16 v _18579_/D (sky130_fd_sc_hd__dfxtp_4)
+                                 55.16   data arrival time
+
+                        100.00  100.00   clock ick (rise edge)
+                          0.00  100.00   clock source latency
+                  0.00    0.00  100.00 ^ io_clk (in)
+     2    0.03                           io_clk (net)
+                  0.00    0.00  100.00 ^ _13581_/A1 (sky130_fd_sc_hd__mux2_2)
+                  0.04    0.11  100.12 ^ _13581_/X (sky130_fd_sc_hd__mux2_2)
+     1    0.00                           _07888_ (net)
+                  0.04    0.00  100.12 ^ _13582_/A (sky130_fd_sc_hd__buf_1)
+                  2.76    1.84  101.96 ^ _13582_/X (sky130_fd_sc_hd__buf_1)
+     1    0.24                           soc.bspi.b2o.wck (net)
+                  2.76    0.04  102.00 ^ clkbuf_0_soc.bspi.b2o.wck/A (sky130_fd_sc_hd__clkbuf_16)
+                  0.19    0.53  102.53 ^ clkbuf_0_soc.bspi.b2o.wck/X (sky130_fd_sc_hd__clkbuf_16)
+     2    0.14                           clknet_0_soc.bspi.b2o.wck (net)
+                  0.19    0.01  102.53 ^ clkbuf_1_1_0_soc.bspi.b2o.wck/A (sky130_fd_sc_hd__clkbuf_8)
+                  0.17    0.26  102.79 ^ clkbuf_1_1_0_soc.bspi.b2o.wck/X (sky130_fd_sc_hd__clkbuf_8)
+     3    0.10                           clknet_1_1_0_soc.bspi.b2o.wck (net)
+                  0.17    0.01  102.80 ^ clkbuf_2_2_0_soc.bspi.b2o.wck/A (sky130_fd_sc_hd__clkbuf_8)
+                  0.12    0.22  103.02 ^ clkbuf_2_2_0_soc.bspi.b2o.wck/X (sky130_fd_sc_hd__clkbuf_8)
+     2    0.07                           clknet_2_2_0_soc.bspi.b2o.wck (net)
+                  0.13    0.01  103.02 ^ clkbuf_3_5_0_soc.bspi.b2o.wck/A (sky130_fd_sc_hd__clkbuf_8)
+                  0.16    0.23  103.25 ^ clkbuf_3_5_0_soc.bspi.b2o.wck/X (sky130_fd_sc_hd__clkbuf_8)
+     2    0.09                           clknet_3_5_0_soc.bspi.b2o.wck (net)
+                  0.16    0.01  103.26 ^ clkbuf_4_10__f_soc.bspi.b2o.wck/A (sky130_fd_sc_hd__clkbuf_16)
+                  0.33    0.33  103.60 ^ clkbuf_4_10__f_soc.bspi.b2o.wck/X (sky130_fd_sc_hd__clkbuf_16)
+    14    0.32                           clknet_4_10__leaf_soc.bspi.b2o.wck (net)
+                  0.33    0.03  103.63 ^ clkbuf_leaf_139_soc.bspi.b2o.wck/A (sky130_fd_sc_hd__clkbuf_16)
+                  0.05    0.20  103.83 ^ clkbuf_leaf_139_soc.bspi.b2o.wck/X (sky130_fd_sc_hd__clkbuf_16)
+     5    0.02                           clknet_leaf_139_soc.bspi.b2o.wck (net)
+                  0.05    0.00  103.83 ^ _18579_/CLK (sky130_fd_sc_hd__dfxtp_4)
+                          0.30  104.12   clock reconvergence pessimism
+                         -0.11  104.02   library setup time
+                                104.02   data required time
+-----------------------------------------------------------------------------
+                                104.02   data required time
+                                -55.16   data arrival time
+-----------------------------------------------------------------------------
+                                 48.85   slack (MET)
+
+
+Startpoint: soc.dmem1 (falling edge-triggered flip-flop clocked by ick)
+Endpoint: _18588_ (rising edge-triggered flip-flop clocked by ick)
+Path Group: ick
+Path Type: max
+
+Fanout     Cap    Slew   Delay    Time   Description
+-----------------------------------------------------------------------------
+                         50.00   50.00   clock ick (fall edge)
+                          0.00   50.00   clock source latency
+                  0.00    0.00   50.00 v io_clk (in)
+     2    0.03                           io_clk (net)
+                  0.00    0.00   50.00 v _13581_/A1 (sky130_fd_sc_hd__mux2_2)
+                  0.05    0.25   50.26 v _13581_/X (sky130_fd_sc_hd__mux2_2)
+     1    0.00                           _07888_ (net)
+                  0.05    0.00   50.26 v _13582_/A (sky130_fd_sc_hd__buf_1)
+                  1.36    1.11   51.36 v _13582_/X (sky130_fd_sc_hd__buf_1)
+     1    0.24                           soc.bspi.b2o.wck (net)
+                  1.36    0.04   51.41 v clkbuf_0_soc.bspi.b2o.wck/A (sky130_fd_sc_hd__clkbuf_16)
+                  0.12    0.68   52.08 v clkbuf_0_soc.bspi.b2o.wck/X (sky130_fd_sc_hd__clkbuf_16)
+     2    0.14                           clknet_0_soc.bspi.b2o.wck (net)
+                  0.13    0.01   52.09 v clkbuf_1_1_0_soc.bspi.b2o.wck/A (sky130_fd_sc_hd__clkbuf_8)
+                  0.11    0.26   52.35 v clkbuf_1_1_0_soc.bspi.b2o.wck/X (sky130_fd_sc_hd__clkbuf_8)
+     3    0.10                           clknet_1_1_0_soc.bspi.b2o.wck (net)
+                  0.11    0.01   52.35 v clkbuf_2_2_0_soc.bspi.b2o.wck/A (sky130_fd_sc_hd__clkbuf_8)
+                  0.08    0.22   52.58 v clkbuf_2_2_0_soc.bspi.b2o.wck/X (sky130_fd_sc_hd__clkbuf_8)
+     2    0.07                           clknet_2_2_0_soc.bspi.b2o.wck (net)
+                  0.08    0.01   52.58 v clkbuf_3_5_0_soc.bspi.b2o.wck/A (sky130_fd_sc_hd__clkbuf_8)
+                  0.10    0.23   52.81 v clkbuf_3_5_0_soc.bspi.b2o.wck/X (sky130_fd_sc_hd__clkbuf_8)
+     2    0.09                           clknet_3_5_0_soc.bspi.b2o.wck (net)
+                  0.10    0.01   52.82 v clkbuf_4_10__f_soc.bspi.b2o.wck/A (sky130_fd_sc_hd__clkbuf_16)
+                  0.20    0.30   53.12 v clkbuf_4_10__f_soc.bspi.b2o.wck/X (sky130_fd_sc_hd__clkbuf_16)
+    14    0.30                           clknet_4_10__leaf_soc.bspi.b2o.wck (net)
+                  0.28    0.04   53.16 v soc.dmem1/clk0 (sky130_sram_2kbyte_1rw1r_32x512_8)
+                  0.00    0.40   53.56 v soc.dmem1/dout0[19] (sky130_sram_2kbyte_1rw1r_32x512_8)
+     1    0.00                           soc.dmem_dout0[1][19] (net)
+                  0.00    0.00   53.56 v wire342/A (sky130_fd_sc_hd__clkbuf_2)
+                  0.82    0.62   54.18 v wire342/X (sky130_fd_sc_hd__clkbuf_2)
+     9    0.22                           net342 (net)
+                  0.84    0.12   54.29 v wire341/A (sky130_fd_sc_hd__buf_4)
+                  0.06    0.45   54.75 v wire341/X (sky130_fd_sc_hd__buf_4)
+     1    0.02                           net341 (net)
+                  0.06    0.00   54.75 v _13794_/A0 (sky130_fd_sc_hd__mux2_1)
+                  0.06    0.31   55.05 v _13794_/X (sky130_fd_sc_hd__mux2_1)
+     1    0.00                           _08005_ (net)
+                  0.06    0.00   55.05 v _13795_/A (sky130_fd_sc_hd__clkbuf_1)
+                  0.03    0.11   55.16 v _13795_/X (sky130_fd_sc_hd__clkbuf_1)
+     1    0.00                           _00077_ (net)
+                  0.03    0.00   55.16 v _18588_/D (sky130_fd_sc_hd__dfxtp_4)
+                                 55.16   data arrival time
+
+                        100.00  100.00   clock ick (rise edge)
+                          0.00  100.00   clock source latency
+                  0.00    0.00  100.00 ^ io_clk (in)
+     2    0.03                           io_clk (net)
+                  0.00    0.00  100.00 ^ _13581_/A1 (sky130_fd_sc_hd__mux2_2)
+                  0.04    0.11  100.12 ^ _13581_/X (sky130_fd_sc_hd__mux2_2)
+     1    0.00                           _07888_ (net)
+                  0.04    0.00  100.12 ^ _13582_/A (sky130_fd_sc_hd__buf_1)
+                  2.76    1.84  101.96 ^ _13582_/X (sky130_fd_sc_hd__buf_1)
+     1    0.24                           soc.bspi.b2o.wck (net)
+                  2.76    0.04  102.00 ^ clkbuf_0_soc.bspi.b2o.wck/A (sky130_fd_sc_hd__clkbuf_16)
+                  0.19    0.53  102.53 ^ clkbuf_0_soc.bspi.b2o.wck/X (sky130_fd_sc_hd__clkbuf_16)
+     2    0.14                           clknet_0_soc.bspi.b2o.wck (net)
+                  0.19    0.01  102.53 ^ clkbuf_1_1_0_soc.bspi.b2o.wck/A (sky130_fd_sc_hd__clkbuf_8)
+                  0.17    0.26  102.79 ^ clkbuf_1_1_0_soc.bspi.b2o.wck/X (sky130_fd_sc_hd__clkbuf_8)
+     3    0.10                           clknet_1_1_0_soc.bspi.b2o.wck (net)
+                  0.17    0.01  102.80 ^ clkbuf_2_2_0_soc.bspi.b2o.wck/A (sky130_fd_sc_hd__clkbuf_8)
+                  0.12    0.22  103.02 ^ clkbuf_2_2_0_soc.bspi.b2o.wck/X (sky130_fd_sc_hd__clkbuf_8)
+     2    0.07                           clknet_2_2_0_soc.bspi.b2o.wck (net)
+                  0.13    0.01  103.02 ^ clkbuf_3_5_0_soc.bspi.b2o.wck/A (sky130_fd_sc_hd__clkbuf_8)
+                  0.16    0.23  103.25 ^ clkbuf_3_5_0_soc.bspi.b2o.wck/X (sky130_fd_sc_hd__clkbuf_8)
+     2    0.09                           clknet_3_5_0_soc.bspi.b2o.wck (net)
+                  0.16    0.01  103.26 ^ clkbuf_4_10__f_soc.bspi.b2o.wck/A (sky130_fd_sc_hd__clkbuf_16)
+                  0.33    0.33  103.60 ^ clkbuf_4_10__f_soc.bspi.b2o.wck/X (sky130_fd_sc_hd__clkbuf_16)
+    14    0.32                           clknet_4_10__leaf_soc.bspi.b2o.wck (net)
+                  0.33    0.04  103.63 ^ clkbuf_leaf_141_soc.bspi.b2o.wck/A (sky130_fd_sc_hd__clkbuf_16)
+                  0.05    0.20  103.83 ^ clkbuf_leaf_141_soc.bspi.b2o.wck/X (sky130_fd_sc_hd__clkbuf_16)
+     5    0.02                           clknet_leaf_141_soc.bspi.b2o.wck (net)
+                  0.05    0.00  103.83 ^ _18588_/CLK (sky130_fd_sc_hd__dfxtp_4)
+                          0.30  104.13   clock reconvergence pessimism
+                         -0.11  104.02   library setup time
+                                104.02   data required time
+-----------------------------------------------------------------------------
+                                104.02   data required time
+                                -55.16   data arrival time
+-----------------------------------------------------------------------------
+                                 48.86   slack (MET)
+
+
+Startpoint: soc.dmem1 (falling edge-triggered flip-flop clocked by ick)
+Endpoint: _18583_ (rising edge-triggered flip-flop clocked by ick)
+Path Group: ick
+Path Type: max
+
+Fanout     Cap    Slew   Delay    Time   Description
+-----------------------------------------------------------------------------
+                         50.00   50.00   clock ick (fall edge)
+                          0.00   50.00   clock source latency
+                  0.00    0.00   50.00 v io_clk (in)
+     2    0.03                           io_clk (net)
+                  0.00    0.00   50.00 v _13581_/A1 (sky130_fd_sc_hd__mux2_2)
+                  0.05    0.25   50.26 v _13581_/X (sky130_fd_sc_hd__mux2_2)
+     1    0.00                           _07888_ (net)
+                  0.05    0.00   50.26 v _13582_/A (sky130_fd_sc_hd__buf_1)
+                  1.36    1.11   51.36 v _13582_/X (sky130_fd_sc_hd__buf_1)
+     1    0.24                           soc.bspi.b2o.wck (net)
+                  1.36    0.04   51.41 v clkbuf_0_soc.bspi.b2o.wck/A (sky130_fd_sc_hd__clkbuf_16)
+                  0.12    0.68   52.08 v clkbuf_0_soc.bspi.b2o.wck/X (sky130_fd_sc_hd__clkbuf_16)
+     2    0.14                           clknet_0_soc.bspi.b2o.wck (net)
+                  0.13    0.01   52.09 v clkbuf_1_1_0_soc.bspi.b2o.wck/A (sky130_fd_sc_hd__clkbuf_8)
+                  0.11    0.26   52.35 v clkbuf_1_1_0_soc.bspi.b2o.wck/X (sky130_fd_sc_hd__clkbuf_8)
+     3    0.10                           clknet_1_1_0_soc.bspi.b2o.wck (net)
+                  0.11    0.01   52.35 v clkbuf_2_2_0_soc.bspi.b2o.wck/A (sky130_fd_sc_hd__clkbuf_8)
+                  0.08    0.22   52.58 v clkbuf_2_2_0_soc.bspi.b2o.wck/X (sky130_fd_sc_hd__clkbuf_8)
+     2    0.07                           clknet_2_2_0_soc.bspi.b2o.wck (net)
+                  0.08    0.01   52.58 v clkbuf_3_5_0_soc.bspi.b2o.wck/A (sky130_fd_sc_hd__clkbuf_8)
+                  0.10    0.23   52.81 v clkbuf_3_5_0_soc.bspi.b2o.wck/X (sky130_fd_sc_hd__clkbuf_8)
+     2    0.09                           clknet_3_5_0_soc.bspi.b2o.wck (net)
+                  0.10    0.01   52.82 v clkbuf_4_10__f_soc.bspi.b2o.wck/A (sky130_fd_sc_hd__clkbuf_16)
+                  0.20    0.30   53.12 v clkbuf_4_10__f_soc.bspi.b2o.wck/X (sky130_fd_sc_hd__clkbuf_16)
+    14    0.30                           clknet_4_10__leaf_soc.bspi.b2o.wck (net)
+                  0.28    0.04   53.16 v soc.dmem1/clk0 (sky130_sram_2kbyte_1rw1r_32x512_8)
+                  0.00    0.41   53.58 v soc.dmem1/dout0[14] (sky130_sram_2kbyte_1rw1r_32x512_8)
+     1    0.00                           soc.dmem_dout0[1][14] (net)
+                  0.00    0.00   53.58 v wire352/A (sky130_fd_sc_hd__clkbuf_2)
+                  0.79    0.58   54.16 v wire352/X (sky130_fd_sc_hd__clkbuf_2)
+     1    0.21                           net352 (net)
+                  0.82    0.13   54.29 v wire351/A (sky130_fd_sc_hd__buf_4)
+                  0.06    0.45   54.73 v wire351/X (sky130_fd_sc_hd__buf_4)
+     1    0.02                           net351 (net)
+                  0.06    0.00   54.74 v _13783_/A0 (sky130_fd_sc_hd__mux2_1)
+                  0.06    0.30   55.04 v _13783_/X (sky130_fd_sc_hd__mux2_1)
+     1    0.00                           _07999_ (net)
+                  0.06    0.00   55.04 v _13784_/A (sky130_fd_sc_hd__clkbuf_1)
+                  0.03    0.10   55.14 v _13784_/X (sky130_fd_sc_hd__clkbuf_1)
+     1    0.00                           _00072_ (net)
+                  0.03    0.00   55.14 v _18583_/D (sky130_fd_sc_hd__dfxtp_4)
+                                 55.14   data arrival time
+
+                        100.00  100.00   clock ick (rise edge)
+                          0.00  100.00   clock source latency
+                  0.00    0.00  100.00 ^ io_clk (in)
+     2    0.03                           io_clk (net)
+                  0.00    0.00  100.00 ^ _13581_/A1 (sky130_fd_sc_hd__mux2_2)
+                  0.04    0.11  100.12 ^ _13581_/X (sky130_fd_sc_hd__mux2_2)
+     1    0.00                           _07888_ (net)
+                  0.04    0.00  100.12 ^ _13582_/A (sky130_fd_sc_hd__buf_1)
+                  2.76    1.84  101.96 ^ _13582_/X (sky130_fd_sc_hd__buf_1)
+     1    0.24                           soc.bspi.b2o.wck (net)
+                  2.76    0.04  102.00 ^ clkbuf_0_soc.bspi.b2o.wck/A (sky130_fd_sc_hd__clkbuf_16)
+                  0.19    0.53  102.53 ^ clkbuf_0_soc.bspi.b2o.wck/X (sky130_fd_sc_hd__clkbuf_16)
+     2    0.14                           clknet_0_soc.bspi.b2o.wck (net)
+                  0.19    0.01  102.53 ^ clkbuf_1_1_0_soc.bspi.b2o.wck/A (sky130_fd_sc_hd__clkbuf_8)
+                  0.17    0.26  102.79 ^ clkbuf_1_1_0_soc.bspi.b2o.wck/X (sky130_fd_sc_hd__clkbuf_8)
+     3    0.10                           clknet_1_1_0_soc.bspi.b2o.wck (net)
+                  0.17    0.01  102.80 ^ clkbuf_2_2_0_soc.bspi.b2o.wck/A (sky130_fd_sc_hd__clkbuf_8)
+                  0.12    0.22  103.02 ^ clkbuf_2_2_0_soc.bspi.b2o.wck/X (sky130_fd_sc_hd__clkbuf_8)
+     2    0.07                           clknet_2_2_0_soc.bspi.b2o.wck (net)
+                  0.13    0.01  103.02 ^ clkbuf_3_5_0_soc.bspi.b2o.wck/A (sky130_fd_sc_hd__clkbuf_8)
+                  0.16    0.23  103.25 ^ clkbuf_3_5_0_soc.bspi.b2o.wck/X (sky130_fd_sc_hd__clkbuf_8)
+     2    0.09                           clknet_3_5_0_soc.bspi.b2o.wck (net)
+                  0.16    0.01  103.26 ^ clkbuf_4_10__f_soc.bspi.b2o.wck/A (sky130_fd_sc_hd__clkbuf_16)
+                  0.33    0.33  103.60 ^ clkbuf_4_10__f_soc.bspi.b2o.wck/X (sky130_fd_sc_hd__clkbuf_16)
+    14    0.32                           clknet_4_10__leaf_soc.bspi.b2o.wck (net)
+                  0.33    0.03  103.63 ^ clkbuf_leaf_140_soc.bspi.b2o.wck/A (sky130_fd_sc_hd__clkbuf_16)
+                  0.04    0.19  103.82 ^ clkbuf_leaf_140_soc.bspi.b2o.wck/X (sky130_fd_sc_hd__clkbuf_16)
+     4    0.01                           clknet_leaf_140_soc.bspi.b2o.wck (net)
+                  0.04    0.00  103.83 ^ _18583_/CLK (sky130_fd_sc_hd__dfxtp_4)
+                          0.30  104.12   clock reconvergence pessimism
+                         -0.11  104.02   library setup time
+                                104.02   data required time
+-----------------------------------------------------------------------------
+                                104.02   data required time
+                                -55.14   data arrival time
+-----------------------------------------------------------------------------
+                                 48.88   slack (MET)
+
+
+Startpoint: soc.dmem1 (falling edge-triggered flip-flop clocked by ick)
+Endpoint: _18587_ (rising edge-triggered flip-flop clocked by ick)
+Path Group: ick
+Path Type: max
+
+Fanout     Cap    Slew   Delay    Time   Description
+-----------------------------------------------------------------------------
+                         50.00   50.00   clock ick (fall edge)
+                          0.00   50.00   clock source latency
+                  0.00    0.00   50.00 v io_clk (in)
+     2    0.03                           io_clk (net)
+                  0.00    0.00   50.00 v _13581_/A1 (sky130_fd_sc_hd__mux2_2)
+                  0.05    0.25   50.26 v _13581_/X (sky130_fd_sc_hd__mux2_2)
+     1    0.00                           _07888_ (net)
+                  0.05    0.00   50.26 v _13582_/A (sky130_fd_sc_hd__buf_1)
+                  1.36    1.11   51.36 v _13582_/X (sky130_fd_sc_hd__buf_1)
+     1    0.24                           soc.bspi.b2o.wck (net)
+                  1.36    0.04   51.41 v clkbuf_0_soc.bspi.b2o.wck/A (sky130_fd_sc_hd__clkbuf_16)
+                  0.12    0.68   52.08 v clkbuf_0_soc.bspi.b2o.wck/X (sky130_fd_sc_hd__clkbuf_16)
+     2    0.14                           clknet_0_soc.bspi.b2o.wck (net)
+                  0.13    0.01   52.09 v clkbuf_1_1_0_soc.bspi.b2o.wck/A (sky130_fd_sc_hd__clkbuf_8)
+                  0.11    0.26   52.35 v clkbuf_1_1_0_soc.bspi.b2o.wck/X (sky130_fd_sc_hd__clkbuf_8)
+     3    0.10                           clknet_1_1_0_soc.bspi.b2o.wck (net)
+                  0.11    0.01   52.35 v clkbuf_2_2_0_soc.bspi.b2o.wck/A (sky130_fd_sc_hd__clkbuf_8)
+                  0.08    0.22   52.58 v clkbuf_2_2_0_soc.bspi.b2o.wck/X (sky130_fd_sc_hd__clkbuf_8)
+     2    0.07                           clknet_2_2_0_soc.bspi.b2o.wck (net)
+                  0.08    0.01   52.58 v clkbuf_3_5_0_soc.bspi.b2o.wck/A (sky130_fd_sc_hd__clkbuf_8)
+                  0.10    0.23   52.81 v clkbuf_3_5_0_soc.bspi.b2o.wck/X (sky130_fd_sc_hd__clkbuf_8)
+     2    0.09                           clknet_3_5_0_soc.bspi.b2o.wck (net)
+                  0.10    0.01   52.82 v clkbuf_4_10__f_soc.bspi.b2o.wck/A (sky130_fd_sc_hd__clkbuf_16)
+                  0.20    0.30   53.12 v clkbuf_4_10__f_soc.bspi.b2o.wck/X (sky130_fd_sc_hd__clkbuf_16)
+    14    0.30                           clknet_4_10__leaf_soc.bspi.b2o.wck (net)
+                  0.28    0.04   53.16 v soc.dmem1/clk0 (sky130_sram_2kbyte_1rw1r_32x512_8)
+                  0.00    0.42   53.58 v soc.dmem1/dout0[18] (sky130_sram_2kbyte_1rw1r_32x512_8)
+     1    0.00                           soc.dmem_dout0[1][18] (net)
+                  0.00    0.00   53.58 v wire344/A (sky130_fd_sc_hd__clkbuf_2)
+                  0.78    0.59   54.17 v wire344/X (sky130_fd_sc_hd__clkbuf_2)
+    11    0.21                           net344 (net)
+                  0.80    0.12   54.29 v wire343/A (sky130_fd_sc_hd__buf_4)
+                  0.06    0.44   54.73 v wire343/X (sky130_fd_sc_hd__buf_4)
+     1    0.02                           net343 (net)
+                  0.06    0.00   54.74 v _13792_/A0 (sky130_fd_sc_hd__mux2_1)
+                  0.06    0.31   55.04 v _13792_/X (sky130_fd_sc_hd__mux2_1)
+     1    0.00                           _08004_ (net)
+                  0.06    0.00   55.04 v _13793_/A (sky130_fd_sc_hd__clkbuf_1)
+                  0.03    0.10   55.15 v _13793_/X (sky130_fd_sc_hd__clkbuf_1)
+     1    0.00                           _00076_ (net)
+                  0.03    0.00   55.15 v _18587_/D (sky130_fd_sc_hd__dfxtp_4)
+                                 55.15   data arrival time
+
+                        100.00  100.00   clock ick (rise edge)
+                          0.00  100.00   clock source latency
+                  0.00    0.00  100.00 ^ io_clk (in)
+     2    0.03                           io_clk (net)
+                  0.00    0.00  100.00 ^ _13581_/A1 (sky130_fd_sc_hd__mux2_2)
+                  0.04    0.11  100.12 ^ _13581_/X (sky130_fd_sc_hd__mux2_2)
+     1    0.00                           _07888_ (net)
+                  0.04    0.00  100.12 ^ _13582_/A (sky130_fd_sc_hd__buf_1)
+                  2.76    1.84  101.96 ^ _13582_/X (sky130_fd_sc_hd__buf_1)
+     1    0.24                           soc.bspi.b2o.wck (net)
+                  2.76    0.04  102.00 ^ clkbuf_0_soc.bspi.b2o.wck/A (sky130_fd_sc_hd__clkbuf_16)
+                  0.19    0.53  102.53 ^ clkbuf_0_soc.bspi.b2o.wck/X (sky130_fd_sc_hd__clkbuf_16)
+     2    0.14                           clknet_0_soc.bspi.b2o.wck (net)
+                  0.19    0.01  102.53 ^ clkbuf_1_1_0_soc.bspi.b2o.wck/A (sky130_fd_sc_hd__clkbuf_8)
+                  0.17    0.26  102.79 ^ clkbuf_1_1_0_soc.bspi.b2o.wck/X (sky130_fd_sc_hd__clkbuf_8)
+     3    0.10                           clknet_1_1_0_soc.bspi.b2o.wck (net)
+                  0.17    0.01  102.80 ^ clkbuf_2_2_0_soc.bspi.b2o.wck/A (sky130_fd_sc_hd__clkbuf_8)
+                  0.12    0.22  103.02 ^ clkbuf_2_2_0_soc.bspi.b2o.wck/X (sky130_fd_sc_hd__clkbuf_8)
+     2    0.07                           clknet_2_2_0_soc.bspi.b2o.wck (net)
+                  0.13    0.01  103.02 ^ clkbuf_3_5_0_soc.bspi.b2o.wck/A (sky130_fd_sc_hd__clkbuf_8)
+                  0.16    0.23  103.25 ^ clkbuf_3_5_0_soc.bspi.b2o.wck/X (sky130_fd_sc_hd__clkbuf_8)
+     2    0.09                           clknet_3_5_0_soc.bspi.b2o.wck (net)
+                  0.16    0.01  103.26 ^ clkbuf_4_10__f_soc.bspi.b2o.wck/A (sky130_fd_sc_hd__clkbuf_16)
+                  0.33    0.33  103.60 ^ clkbuf_4_10__f_soc.bspi.b2o.wck/X (sky130_fd_sc_hd__clkbuf_16)
+    14    0.32                           clknet_4_10__leaf_soc.bspi.b2o.wck (net)
+                  0.33    0.04  103.63 ^ clkbuf_leaf_141_soc.bspi.b2o.wck/A (sky130_fd_sc_hd__clkbuf_16)
+                  0.05    0.20  103.83 ^ clkbuf_leaf_141_soc.bspi.b2o.wck/X (sky130_fd_sc_hd__clkbuf_16)
+     5    0.02                           clknet_leaf_141_soc.bspi.b2o.wck (net)
+                  0.05    0.00  103.83 ^ _18587_/CLK (sky130_fd_sc_hd__dfxtp_4)
+                          0.30  104.13   clock reconvergence pessimism
+                         -0.11  104.03   library setup time
+                                104.03   data required time
+-----------------------------------------------------------------------------
+                                104.03   data required time
+                                -55.15   data arrival time
+-----------------------------------------------------------------------------
+                                 48.88   slack (MET)
+
+
+Startpoint: _18105_ (rising edge-triggered flip-flop clocked by sck')
+Endpoint: io_sdo (output port clocked by sck)
+Path Group: sck
+Path Type: max
+
+Fanout     Cap    Slew   Delay    Time   Description
+-----------------------------------------------------------------------------
+                         50.00   50.00   clock sck' (rise edge)
+                          0.00   50.00   clock source latency
+                  0.00    0.00   50.00 v io_sck (in)
+     1    0.21                           io_sck (net)
+                  0.24    0.13   50.13 v clkbuf_0_io_sck/A (sky130_fd_sc_hd__clkbuf_16)
+                  0.05    0.27   50.39 v clkbuf_0_io_sck/X (sky130_fd_sc_hd__clkbuf_16)
+     4    0.04                           clknet_0_io_sck (net)
+                  0.05    0.00   50.39 v clkbuf_2_1__f_io_sck/A (sky130_fd_sc_hd__clkbuf_16)
+                  0.04    0.17   50.56 v clkbuf_2_1__f_io_sck/X (sky130_fd_sc_hd__clkbuf_16)
+     8    0.03                           clknet_2_1__leaf_io_sck (net)
+                  0.04    0.00   50.56 v _16161__1/A (sky130_fd_sc_hd__inv_2)
+                  0.02    0.04   50.60 ^ _16161__1/Y (sky130_fd_sc_hd__inv_2)
+     1    0.00                           net651 (net)
+                  0.02    0.00   50.60 ^ _18105_/CLK (sky130_fd_sc_hd__dfrtp_4)
+                  0.72    0.78   51.38 ^ _18105_/Q (sky130_fd_sc_hd__dfrtp_4)
+     3    0.27                           net34 (net)
+                  0.89    0.29   51.67 ^ output34/A (sky130_fd_sc_hd__clkbuf_1)
+                  0.04    0.14   51.81 ^ output34/X (sky130_fd_sc_hd__clkbuf_1)
+     1    0.00                           io_sdo (net)
+                  0.04    0.00   51.81 ^ io_sdo (out)
+                                 51.81   data arrival time
+
+                        100.00  100.00   clock sck (rise edge)
+                          0.00  100.00   clock network delay (propagated)
+                          0.00  100.00   clock reconvergence pessimism
+                        -30.00   70.00   output external delay
+                                 70.00   data required time
+-----------------------------------------------------------------------------
+                                 70.00   data required time
+                                -51.81   data arrival time
+-----------------------------------------------------------------------------
+                                 18.19   slack (MET)
+
+
+Startpoint: _18104_ (rising edge-triggered flip-flop clocked by sck)
+Endpoint: _18105_ (rising edge-triggered flip-flop clocked by sck')
+Path Group: sck
+Path Type: max
+
+Fanout     Cap    Slew   Delay    Time   Description
+-----------------------------------------------------------------------------
+                          0.00    0.00   clock sck (rise edge)
+                          0.00    0.00   clock source latency
+                  0.00    0.00    0.00 ^ io_sck (in)
+     1    0.21                           io_sck (net)
+                  0.24    0.13    0.13 ^ clkbuf_0_io_sck/A (sky130_fd_sc_hd__clkbuf_16)
+                  0.07    0.22    0.35 ^ clkbuf_0_io_sck/X (sky130_fd_sc_hd__clkbuf_16)
+     4    0.05                           clknet_0_io_sck (net)
+                  0.07    0.00    0.35 ^ clkbuf_2_1__f_io_sck/A (sky130_fd_sc_hd__clkbuf_16)
+                  0.05    0.15    0.51 ^ clkbuf_2_1__f_io_sck/X (sky130_fd_sc_hd__clkbuf_16)
+     8    0.03                           clknet_2_1__leaf_io_sck (net)
+                  0.05    0.00    0.51 ^ _18104_/CLK (sky130_fd_sc_hd__dfrtp_1)
+                  0.06    0.40    0.90 v _18104_/Q (sky130_fd_sc_hd__dfrtp_1)
+     1    0.01                           soc.bspi.oif.rsfr[7] (net)
+                  0.06    0.00    0.90 v _18105_/D (sky130_fd_sc_hd__dfrtp_4)
+                                  0.90   data arrival time
+
+                         50.00   50.00   clock sck' (rise edge)
+                          0.00   50.00   clock source latency
+                  0.00    0.00   50.00 v io_sck (in)
+     1    0.21                           io_sck (net)
+                  0.24    0.11   50.11 v clkbuf_0_io_sck/A (sky130_fd_sc_hd__clkbuf_16)
+                  0.05    0.24   50.35 v clkbuf_0_io_sck/X (sky130_fd_sc_hd__clkbuf_16)
+     4    0.04                           clknet_0_io_sck (net)
+                  0.05    0.00   50.36 v clkbuf_2_1__f_io_sck/A (sky130_fd_sc_hd__clkbuf_16)
+                  0.04    0.15   50.51 v clkbuf_2_1__f_io_sck/X (sky130_fd_sc_hd__clkbuf_16)
+     8    0.03                           clknet_2_1__leaf_io_sck (net)
+                  0.04    0.00   50.51 v _16161__1/A (sky130_fd_sc_hd__inv_2)
+                  0.02    0.04   50.54 ^ _16161__1/Y (sky130_fd_sc_hd__inv_2)
+     1    0.00                           net651 (net)
+                  0.02    0.00   50.54 ^ _18105_/CLK (sky130_fd_sc_hd__dfrtp_4)
+                          0.05   50.59   clock reconvergence pessimism
+                         -0.12   50.47   library setup time
+                                 50.47   data required time
+-----------------------------------------------------------------------------
+                                 50.47   data required time
+                                 -0.90   data arrival time
+-----------------------------------------------------------------------------
+                                 49.56   slack (MET)
+
+
+Startpoint: io_scs (input port clocked by sck)
+Endpoint: _18104_ (rising edge-triggered flip-flop clocked by sck)
+Path Group: sck
+Path Type: max
+
+Fanout     Cap    Slew   Delay    Time   Description
+-----------------------------------------------------------------------------
+                          0.00    0.00   clock sck (rise edge)
+                          0.00    0.00   clock network delay (propagated)
+                         30.00   30.00 v input external delay
+                  0.00    0.00   30.00 v io_scs (in)
+     1    0.01                           io_scs (net)
+                  0.00    0.00   30.00 v input12/A (sky130_fd_sc_hd__buf_12)
+                  0.07    0.15   30.15 v input12/X (sky130_fd_sc_hd__buf_12)
+     2    0.26                           net12 (net)
+                  0.43    0.22   30.37 v _13524_/A_N (sky130_fd_sc_hd__and2b_1)
+                  0.12    0.40   30.77 ^ _13524_/X (sky130_fd_sc_hd__and2b_1)
+     3    0.01                           _07858_ (net)
+                  0.12    0.00   30.77 ^ _13587_/B (sky130_fd_sc_hd__and2_1)
+                  0.07    0.16   30.93 ^ _13587_/X (sky130_fd_sc_hd__and2_1)
+     1    0.01                           _07892_ (net)
+                  0.07    0.00   30.93 ^ _13588_/A (sky130_fd_sc_hd__buf_2)
+                  0.18    0.22   31.15 ^ _13588_/X (sky130_fd_sc_hd__buf_2)
+     7    0.04                           _07893_ (net)
+                  0.18    0.00   31.15 ^ _13607_/S (sky130_fd_sc_hd__mux2_1)
+                  0.07    0.38   31.53 v _13607_/X (sky130_fd_sc_hd__mux2_1)
+     1    0.01                           _07906_ (net)
+                  0.07    0.00   31.53 v _13608_/A (sky130_fd_sc_hd__clkbuf_1)
+                  0.03    0.11   31.64 v _13608_/X (sky130_fd_sc_hd__clkbuf_1)
+     1    0.00                           _00186_ (net)
+                  0.03    0.00   31.64 v _18104_/D (sky130_fd_sc_hd__dfrtp_1)
+                                 31.64   data arrival time
+
+                        100.00  100.00   clock sck (rise edge)
+                          0.00  100.00   clock source latency
+                  0.00    0.00  100.00 ^ io_sck (in)
+     1    0.21                           io_sck (net)
+                  0.24    0.12  100.12 ^ clkbuf_0_io_sck/A (sky130_fd_sc_hd__clkbuf_16)
+                  0.07    0.20  100.32 ^ clkbuf_0_io_sck/X (sky130_fd_sc_hd__clkbuf_16)
+     4    0.05                           clknet_0_io_sck (net)
+                  0.07    0.00  100.32 ^ clkbuf_2_1__f_io_sck/A (sky130_fd_sc_hd__clkbuf_16)
+                  0.05    0.14  100.46 ^ clkbuf_2_1__f_io_sck/X (sky130_fd_sc_hd__clkbuf_16)
+     8    0.03                           clknet_2_1__leaf_io_sck (net)
+                  0.05    0.00  100.46 ^ _18104_/CLK (sky130_fd_sc_hd__dfrtp_1)
+                          0.00  100.46   clock reconvergence pessimism
+                         -0.11  100.35   library setup time
+                                100.35   data required time
+-----------------------------------------------------------------------------
+                                100.35   data required time
+                                -31.64   data arrival time
+-----------------------------------------------------------------------------
+                                 68.71   slack (MET)
+
+
+Startpoint: io_scs (input port clocked by sck)
+Endpoint: _18101_ (rising edge-triggered flip-flop clocked by sck)
+Path Group: sck
+Path Type: max
+
+Fanout     Cap    Slew   Delay    Time   Description
+-----------------------------------------------------------------------------
+                          0.00    0.00   clock sck (rise edge)
+                          0.00    0.00   clock network delay (propagated)
+                         30.00   30.00 v input external delay
+                  0.00    0.00   30.00 v io_scs (in)
+     1    0.01                           io_scs (net)
+                  0.00    0.00   30.00 v input12/A (sky130_fd_sc_hd__buf_12)
+                  0.07    0.15   30.15 v input12/X (sky130_fd_sc_hd__buf_12)
+     2    0.26                           net12 (net)
+                  0.43    0.22   30.37 v _13524_/A_N (sky130_fd_sc_hd__and2b_1)
+                  0.12    0.40   30.77 ^ _13524_/X (sky130_fd_sc_hd__and2b_1)
+     3    0.01                           _07858_ (net)
+                  0.12    0.00   30.77 ^ _13587_/B (sky130_fd_sc_hd__and2_1)
+                  0.07    0.16   30.93 ^ _13587_/X (sky130_fd_sc_hd__and2_1)
+     1    0.01                           _07892_ (net)
+                  0.07    0.00   30.93 ^ _13588_/A (sky130_fd_sc_hd__buf_2)
+                  0.18    0.22   31.15 ^ _13588_/X (sky130_fd_sc_hd__buf_2)
+     7    0.04                           _07893_ (net)
+                  0.18    0.00   31.15 ^ _13598_/S (sky130_fd_sc_hd__mux2_1)
+                  0.06    0.36   31.51 v _13598_/X (sky130_fd_sc_hd__mux2_1)
+     1    0.00                           _07900_ (net)
+                  0.06    0.00   31.51 v _13599_/A (sky130_fd_sc_hd__clkbuf_1)
+                  0.04    0.11   31.62 v _13599_/X (sky130_fd_sc_hd__clkbuf_1)
+     1    0.01                           _00183_ (net)
+                  0.04    0.00   31.62 v _18101_/D (sky130_fd_sc_hd__dfrtp_1)
+                                 31.62   data arrival time
+
+                        100.00  100.00   clock sck (rise edge)
+                          0.00  100.00   clock source latency
+                  0.00    0.00  100.00 ^ io_sck (in)
+     1    0.21                           io_sck (net)
+                  0.24    0.12  100.12 ^ clkbuf_0_io_sck/A (sky130_fd_sc_hd__clkbuf_16)
+                  0.07    0.20  100.32 ^ clkbuf_0_io_sck/X (sky130_fd_sc_hd__clkbuf_16)
+     4    0.05                           clknet_0_io_sck (net)
+                  0.07    0.00  100.32 ^ clkbuf_2_0__f_io_sck/A (sky130_fd_sc_hd__clkbuf_16)
+                  0.06    0.14  100.46 ^ clkbuf_2_0__f_io_sck/X (sky130_fd_sc_hd__clkbuf_16)
+    11    0.04                           clknet_2_0__leaf_io_sck (net)
+                  0.06    0.00  100.46 ^ _18101_/CLK (sky130_fd_sc_hd__dfrtp_1)
+                          0.00  100.46   clock reconvergence pessimism
+                         -0.11  100.35   library setup time
+                                100.35   data required time
+-----------------------------------------------------------------------------
+                                100.35   data required time
+                                -31.62   data arrival time
+-----------------------------------------------------------------------------
+                                 68.73   slack (MET)
+
+
+Startpoint: io_scs (input port clocked by sck)
+Endpoint: _18102_ (rising edge-triggered flip-flop clocked by sck)
+Path Group: sck
+Path Type: max
+
+Fanout     Cap    Slew   Delay    Time   Description
+-----------------------------------------------------------------------------
+                          0.00    0.00   clock sck (rise edge)
+                          0.00    0.00   clock network delay (propagated)
+                         30.00   30.00 v input external delay
+                  0.00    0.00   30.00 v io_scs (in)
+     1    0.01                           io_scs (net)
+                  0.00    0.00   30.00 v input12/A (sky130_fd_sc_hd__buf_12)
+                  0.07    0.15   30.15 v input12/X (sky130_fd_sc_hd__buf_12)
+     2    0.26                           net12 (net)
+                  0.43    0.22   30.37 v _13524_/A_N (sky130_fd_sc_hd__and2b_1)
+                  0.12    0.40   30.77 ^ _13524_/X (sky130_fd_sc_hd__and2b_1)
+     3    0.01                           _07858_ (net)
+                  0.12    0.00   30.77 ^ _13587_/B (sky130_fd_sc_hd__and2_1)
+                  0.07    0.16   30.93 ^ _13587_/X (sky130_fd_sc_hd__and2_1)
+     1    0.01                           _07892_ (net)
+                  0.07    0.00   30.93 ^ _13588_/A (sky130_fd_sc_hd__buf_2)
+                  0.18    0.22   31.15 ^ _13588_/X (sky130_fd_sc_hd__buf_2)
+     7    0.04                           _07893_ (net)
+                  0.18    0.00   31.15 ^ _13601_/S (sky130_fd_sc_hd__mux2_1)
+                  0.06    0.37   31.52 v _13601_/X (sky130_fd_sc_hd__mux2_1)
+     1    0.00                           _07902_ (net)
+                  0.06    0.00   31.52 v _13602_/A (sky130_fd_sc_hd__clkbuf_1)
+                  0.03    0.10   31.62 v _13602_/X (sky130_fd_sc_hd__clkbuf_1)
+     1    0.00                           _00184_ (net)
+                  0.03    0.00   31.62 v _18102_/D (sky130_fd_sc_hd__dfrtp_1)
+                                 31.62   data arrival time
+
+                        100.00  100.00   clock sck (rise edge)
+                          0.00  100.00   clock source latency
+                  0.00    0.00  100.00 ^ io_sck (in)
+     1    0.21                           io_sck (net)
+                  0.24    0.12  100.12 ^ clkbuf_0_io_sck/A (sky130_fd_sc_hd__clkbuf_16)
+                  0.07    0.20  100.32 ^ clkbuf_0_io_sck/X (sky130_fd_sc_hd__clkbuf_16)
+     4    0.05                           clknet_0_io_sck (net)
+                  0.07    0.00  100.32 ^ clkbuf_2_0__f_io_sck/A (sky130_fd_sc_hd__clkbuf_16)
+                  0.06    0.14  100.46 ^ clkbuf_2_0__f_io_sck/X (sky130_fd_sc_hd__clkbuf_16)
+    11    0.04                           clknet_2_0__leaf_io_sck (net)
+                  0.06    0.00  100.46 ^ _18102_/CLK (sky130_fd_sc_hd__dfrtp_1)
+                          0.00  100.46   clock reconvergence pessimism
+                         -0.10  100.36   library setup time
+                                100.36   data required time
+-----------------------------------------------------------------------------
+                                100.36   data required time
+                                -31.62   data arrival time
+-----------------------------------------------------------------------------
+                                 68.73   slack (MET)
+
+

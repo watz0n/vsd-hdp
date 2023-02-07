@@ -1,0 +1,13 @@
+OpenROAD c295b08a99aacb6147b9c51104627e78ac3859e3 
+This program is licensed under the BSD-3 license. See the LICENSE file for details.
+Components of this program may be licensed under more restrictive licenses which must be honored.
+Placing the following macros:
+{'soc.bios_mem0': ['375000', '1400000', 'N'], 'soc.bios_mem1': ['1375000', '1400000', 'N'], 'soc.dmem0': ['1550000', '800000', 'N'], 'soc.dmem1': ['1375000', '200000', 'N'], 'soc.imem0': ['200000', '800000', 'N'], 'soc.imem1': ['375000', '200000', 'N']}
+Design name: hdp_rv151
+Placing soc.bios_mem0
+Placing soc.bios_mem1
+Placing soc.dmem0
+Placing soc.dmem1
+Placing soc.imem0
+Placing soc.imem1
+Successfully placed 6 instances.

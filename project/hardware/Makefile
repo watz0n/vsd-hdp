@@ -59,11 +59,17 @@ syn: lib/sky130/*.lib
 clean-syn:
 	@rm -rf syn/*.v syn/*.log
 
-sta-tt: ./syn/rv151_soc_syn.v
-	@sta sta/opensta_delay_calc_tt.tcl
+sta-syn-tt: ./syn/hdp_rv151_syn.v lib/sky130/*.lib
+	@sta sta/opensta_syn_delay_calc_tt.tcl
 
-sta-mc: ./syn/rv151_soc_syn.v
-	@python3 sta/calc_multi_corner.py
+sta-syn-mc: ./syn/hdp_rv151_syn.v lib/sky130/*.lib
+	@python3 sta/calc_syn_multi_corner.py
+
+sta-rgl-tt: ./rgl/hdp_rv151.nl.v lib/sky130/*.lib
+	@sta sta/opensta_rgl_delay_calc_tt.tcl
+
+sta-rgl-mc: ./rgl/hdp_rv151.nl.v lib/sky130/*.lib
+	@python3 sta/calc_rgl_multi_corner.py
 
 clean-sta:
 	@rm -rf sta/log tns.log whs.log wns.log

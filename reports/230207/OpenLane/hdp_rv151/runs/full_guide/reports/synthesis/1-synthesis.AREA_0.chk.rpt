@@ -1,0 +1,134 @@
+
+38. Executing CHECK pass (checking for obvious problems).
+Checking module hdp_rv151...
+Warning: Wire hdp_rv151.\serial_out is used but has no driver.
+Warning: Wire hdp_rv151.\io_sdo is used but has no driver.
+Warning: Wire hdp_rv151.\io_irc is used but has no driver.
+Warning: Wire hdp_rv151.\io_hlt is used but has no driver.
+Warning: Wire hdp_rv151.\gpio_out [7] is used but has no driver.
+Warning: Wire hdp_rv151.\gpio_out [6] is used but has no driver.
+Warning: Wire hdp_rv151.\gpio_out [5] is used but has no driver.
+Warning: Wire hdp_rv151.\gpio_out [4] is used but has no driver.
+Warning: Wire hdp_rv151.\gpio_out [3] is used but has no driver.
+Warning: Wire hdp_rv151.\gpio_out [2] is used but has no driver.
+Warning: Wire hdp_rv151.\gpio_out [1] is used but has no driver.
+Warning: Wire hdp_rv151.\gpio_out [0] is used but has no driver.
+Warning: Wire hdp_rv151.\gpio_oeb [7] is used but has no driver.
+Warning: Wire hdp_rv151.\gpio_oeb [6] is used but has no driver.
+Warning: Wire hdp_rv151.\gpio_oeb [5] is used but has no driver.
+Warning: Wire hdp_rv151.\gpio_oeb [4] is used but has no driver.
+Warning: Wire hdp_rv151.\gpio_oeb [3] is used but has no driver.
+Warning: Wire hdp_rv151.\gpio_oeb [2] is used but has no driver.
+Warning: Wire hdp_rv151.\gpio_oeb [1] is used but has no driver.
+Warning: Wire hdp_rv151.\gpio_oeb [0] is used but has no driver.
+Warning: Wire hdp_rv151.$abc$17138$flatten\soc.$indirect$\csb1$/openlane/designs/hdp_rv151/src/rv151_soc.v:343$38 is used but has no driver.
+Warning: Wire hdp_rv151.$abc$17138$flatten\soc.$indirect$\csb0$/openlane/designs/hdp_rv151/src/rv151_soc.v:343$35 is used but has no driver.
+Warning: Wire hdp_rv151.$abc$17138$flatten\soc.$indirect$\csb1$/openlane/designs/hdp_rv151/src/rv151_soc.v:327$32 is used but has no driver.
+Warning: Wire hdp_rv151.$abc$17138$flatten\soc.$indirect$\csb0$/openlane/designs/hdp_rv151/src/rv151_soc.v:327$29 is used but has no driver.
+Warning: Wire hdp_rv151.\soc.core.mi_ad[10] is used but has no driver.
+Warning: Wire hdp_rv151.\soc.core.mi_ad[9] is used but has no driver.
+Warning: Wire hdp_rv151.\soc.core.mi_ad[8] is used but has no driver.
+Warning: Wire hdp_rv151.\soc.core.mi_ad[7] is used but has no driver.
+Warning: Wire hdp_rv151.\soc.core.mi_ad[6] is used but has no driver.
+Warning: Wire hdp_rv151.\soc.core.mi_ad[5] is used but has no driver.
+Warning: Wire hdp_rv151.\soc.core.mi_ad[4] is used but has no driver.
+Warning: Wire hdp_rv151.\soc.core.mi_ad[3] is used but has no driver.
+Warning: Wire hdp_rv151.\soc.core.mi_ad[2] is used but has no driver.
+Warning: Wire hdp_rv151.$auto$hilomap.cc:39:hilomap_worker$36707 is used but has no driver.
+Warning: Wire hdp_rv151.$abc$17138$flatten\soc.$indirect$\csb0$/openlane/designs/hdp_rv151/src/rv151_soc.v:244$22 is used but has no driver.
+Warning: Wire hdp_rv151.$auto$hilomap.cc:47:hilomap_worker$36705 is used but has no driver.
+Warning: Wire hdp_rv151.$auto$hilomap.cc:39:hilomap_worker$36703 is used but has no driver.
+Warning: Wire hdp_rv151.$auto$hilomap.cc:39:hilomap_worker$36701 is used but has no driver.
+Warning: Wire hdp_rv151.$auto$hilomap.cc:39:hilomap_worker$36699 is used but has no driver.
+Warning: Wire hdp_rv151.$auto$hilomap.cc:39:hilomap_worker$36697 is used but has no driver.
+Warning: Wire hdp_rv151.$auto$hilomap.cc:39:hilomap_worker$36695 is used but has no driver.
+Warning: Wire hdp_rv151.$auto$hilomap.cc:39:hilomap_worker$36693 is used but has no driver.
+Warning: Wire hdp_rv151.$auto$hilomap.cc:39:hilomap_worker$36691 is used but has no driver.
+Warning: Wire hdp_rv151.$auto$hilomap.cc:39:hilomap_worker$36689 is used but has no driver.
+Warning: Wire hdp_rv151.$auto$hilomap.cc:39:hilomap_worker$36687 is used but has no driver.
+Warning: Wire hdp_rv151.\soc.core.md_we[3] is used but has no driver.
+Warning: Wire hdp_rv151.\soc.core.md_we[2] is used but has no driver.
+Warning: Wire hdp_rv151.\soc.core.md_we[1] is used but has no driver.
+Warning: Wire hdp_rv151.\soc.core.md_we[0] is used but has no driver.
+Warning: Wire hdp_rv151.$abc$17138$flatten\soc.$indirect$\web0$/openlane/designs/hdp_rv151/src/rv151_soc.v:228$16 is used but has no driver.
+Warning: Wire hdp_rv151.\soc.core.exo_mwd[31] is used but has no driver.
+Warning: Wire hdp_rv151.\soc.core.exo_mwd[30] is used but has no driver.
+Warning: Wire hdp_rv151.\soc.core.exo_mwd[29] is used but has no driver.
+Warning: Wire hdp_rv151.\soc.core.exo_mwd[28] is used but has no driver.
+Warning: Wire hdp_rv151.\soc.core.exo_mwd[27] is used but has no driver.
+Warning: Wire hdp_rv151.\soc.core.exo_mwd[26] is used but has no driver.
+Warning: Wire hdp_rv151.\soc.core.exo_mwd[25] is used but has no driver.
+Warning: Wire hdp_rv151.\soc.core.exo_mwd[24] is used but has no driver.
+Warning: Wire hdp_rv151.\soc.core.exo_mwd[23] is used but has no driver.
+Warning: Wire hdp_rv151.\soc.core.exo_mwd[22] is used but has no driver.
+Warning: Wire hdp_rv151.\soc.core.exo_mwd[21] is used but has no driver.
+Warning: Wire hdp_rv151.\soc.core.exo_mwd[20] is used but has no driver.
+Warning: Wire hdp_rv151.\soc.core.exo_mwd[19] is used but has no driver.
+Warning: Wire hdp_rv151.\soc.core.exo_mwd[18] is used but has no driver.
+Warning: Wire hdp_rv151.\soc.core.exo_mwd[17] is used but has no driver.
+Warning: Wire hdp_rv151.\soc.core.exo_mwd[16] is used but has no driver.
+Warning: Wire hdp_rv151.\soc.core.exo_mwd[15] is used but has no driver.
+Warning: Wire hdp_rv151.\soc.core.exo_mwd[14] is used but has no driver.
+Warning: Wire hdp_rv151.\soc.core.exo_mwd[13] is used but has no driver.
+Warning: Wire hdp_rv151.\soc.core.exo_mwd[12] is used but has no driver.
+Warning: Wire hdp_rv151.\soc.core.exo_mwd[11] is used but has no driver.
+Warning: Wire hdp_rv151.\soc.core.exo_mwd[10] is used but has no driver.
+Warning: Wire hdp_rv151.\soc.core.exo_mwd[9] is used but has no driver.
+Warning: Wire hdp_rv151.\soc.core.exo_mwd[8] is used but has no driver.
+Warning: Wire hdp_rv151.\soc.core.bch.bch_c2[7] is used but has no driver.
+Warning: Wire hdp_rv151.\soc.core.bch.bch_c2[6] is used but has no driver.
+Warning: Wire hdp_rv151.\soc.core.bch.bch_c2[5] is used but has no driver.
+Warning: Wire hdp_rv151.\soc.core.bch.bch_c2[4] is used but has no driver.
+Warning: Wire hdp_rv151.\soc.core.bch.bch_c2[3] is used but has no driver.
+Warning: Wire hdp_rv151.\soc.core.bch.bch_c2[2] is used but has no driver.
+Warning: Wire hdp_rv151.\soc.core.bch.bch_c2[1] is used but has no driver.
+Warning: Wire hdp_rv151.\soc.core.bch.bch_c2[0] is used but has no driver.
+Warning: Wire hdp_rv151.$auto$hilomap.cc:39:hilomap_worker$36685 is used but has no driver.
+Warning: Wire hdp_rv151.$abc$17138$flatten\soc.$indirect$\csb0$/openlane/designs/hdp_rv151/src/rv151_soc.v:228$15 is used but has no driver.
+Warning: Wire hdp_rv151.$auto$hilomap.cc:47:hilomap_worker$36683 is used but has no driver.
+Warning: Wire hdp_rv151.$auto$hilomap.cc:39:hilomap_worker$36681 is used but has no driver.
+Warning: Wire hdp_rv151.$auto$hilomap.cc:39:hilomap_worker$36679 is used but has no driver.
+Warning: Wire hdp_rv151.$auto$hilomap.cc:39:hilomap_worker$36677 is used but has no driver.
+Warning: Wire hdp_rv151.$auto$hilomap.cc:39:hilomap_worker$36675 is used but has no driver.
+Warning: Wire hdp_rv151.$auto$hilomap.cc:39:hilomap_worker$36673 is used but has no driver.
+Warning: Wire hdp_rv151.$auto$hilomap.cc:39:hilomap_worker$36671 is used but has no driver.
+Warning: Wire hdp_rv151.$auto$hilomap.cc:39:hilomap_worker$36669 is used but has no driver.
+Warning: Wire hdp_rv151.$auto$hilomap.cc:39:hilomap_worker$36667 is used but has no driver.
+Warning: Wire hdp_rv151.$auto$hilomap.cc:39:hilomap_worker$36665 is used but has no driver.
+Warning: Wire hdp_rv151.$abc$17138$flatten\soc.$indirect$\csb1$/openlane/designs/hdp_rv151/src/rv151_soc.v:169$12 is used but has no driver.
+Warning: Wire hdp_rv151.$abc$17138$flatten\soc.$indirect$\csb0$/openlane/designs/hdp_rv151/src/rv151_soc.v:169$9 is used but has no driver.
+Warning: Wire hdp_rv151.\soc.bios_wmask0[3] is used but has no driver.
+Warning: Wire hdp_rv151.\soc.bios_wmask0[2] is used but has no driver.
+Warning: Wire hdp_rv151.\soc.bios_wmask0[1] is used but has no driver.
+Warning: Wire hdp_rv151.\soc.bios_wmask0[0] is used but has no driver.
+Warning: Wire hdp_rv151.\soc.bios_web0 is used but has no driver.
+Warning: Wire hdp_rv151.\soc.bios_din0[15] is used but has no driver.
+Warning: Wire hdp_rv151.\soc.bios_din0[14] is used but has no driver.
+Warning: Wire hdp_rv151.\soc.bios_din0[13] is used but has no driver.
+Warning: Wire hdp_rv151.\soc.bios_din0[12] is used but has no driver.
+Warning: Wire hdp_rv151.\soc.bios_din0[11] is used but has no driver.
+Warning: Wire hdp_rv151.\soc.bios_din0[10] is used but has no driver.
+Warning: Wire hdp_rv151.\soc.bios_din0[17] is used but has no driver.
+Warning: Wire hdp_rv151.\soc.bios_din0[0] is used but has no driver.
+Warning: Wire hdp_rv151.$abc$17138$flatten\soc.$indirect$\csb1$/openlane/designs/hdp_rv151/src/rv151_soc.v:153$6 is used but has no driver.
+Warning: Wire hdp_rv151.$abc$17138$flatten\soc.$indirect$\csb0$/openlane/designs/hdp_rv151/src/rv151_soc.v:153$3 is used but has no driver.
+Warning: Wire hdp_rv151.\soc.bspi.b2o.wck is used but has no driver.
+Warning: Wire hdp_rv151.\soc.bios_addrb[8] is used but has no driver.
+Warning: Wire hdp_rv151.\soc.bios_addrb[7] is used but has no driver.
+Warning: Wire hdp_rv151.\soc.bios_addrb[6] is used but has no driver.
+Warning: Wire hdp_rv151.\soc.bios_addrb[5] is used but has no driver.
+Warning: Wire hdp_rv151.\soc.bios_addrb[4] is used but has no driver.
+Warning: Wire hdp_rv151.\soc.bios_addrb[3] is used but has no driver.
+Warning: Wire hdp_rv151.\soc.bios_addrb[2] is used but has no driver.
+Warning: Wire hdp_rv151.\soc.bios_addrb[1] is used but has no driver.
+Warning: Wire hdp_rv151.\soc.bios_addrb[0] is used but has no driver.
+Warning: Wire hdp_rv151.\soc.bios_addra[8] is used but has no driver.
+Warning: Wire hdp_rv151.\soc.bios_addra[7] is used but has no driver.
+Warning: Wire hdp_rv151.\soc.bios_addra[6] is used but has no driver.
+Warning: Wire hdp_rv151.\soc.bios_addra[5] is used but has no driver.
+Warning: Wire hdp_rv151.\soc.bios_addra[4] is used but has no driver.
+Warning: Wire hdp_rv151.\soc.bios_addra[3] is used but has no driver.
+Warning: Wire hdp_rv151.\soc.bios_addra[2] is used but has no driver.
+Warning: Wire hdp_rv151.\soc.bios_addra[1] is used but has no driver.
+Warning: Wire hdp_rv151.\soc.bios_addra[0] is used but has no driver.
+Found and reported 130 problems.

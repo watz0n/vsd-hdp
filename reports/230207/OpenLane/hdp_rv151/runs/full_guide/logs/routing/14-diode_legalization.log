@@ -1,0 +1,22 @@
+OpenROAD c295b08a99aacb6147b9c51104627e78ac3859e3 
+This program is licensed under the BSD-3 license. See the LICENSE file for details.
+Components of this program may be licensed under more restrictive licenses which must be honored.
+[INFO]: Reading ODB at '/openlane/designs/hdp_rv151/runs/full_guide/tmp/13-hdp_rv151.odb'...
+Placement Analysis
+---------------------------------
+total displacement          0.0 u
+average displacement        0.0 u
+max displacement            0.0 u
+original HPWL          793047.4 u
+legalized HPWL         804365.0 u
+delta HPWL                    1 %
+
+[INFO DPL-0020] Mirrored 4722 instances
+[INFO DPL-0021] HPWL before          804365.0 u
+[INFO DPL-0022] HPWL after           793047.4 u
+[INFO DPL-0023] HPWL delta               -1.4 %
+Setting global connections for newly added cells...
+Writing OpenROAD database to /openlane/designs/hdp_rv151/runs/full_guide/tmp/routing/diode.odb...
+Writing netlist to /openlane/designs/hdp_rv151/runs/full_guide/tmp/routing/diode.nl.v...
+Writing powered netlist to /openlane/designs/hdp_rv151/runs/full_guide/tmp/routing/diode.pnl.v...
+Writing layout to /openlane/designs/hdp_rv151/runs/full_guide/tmp/routing/diode.def...

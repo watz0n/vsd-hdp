@@ -1,0 +1,447 @@
+
+Magic 8.3 revision 363 - Compiled on Tue Jan 24 15:11:36 UTC 2023.
+Starting magic under Tcl interpreter
+Using the terminal as the console.
+Using NULL graphics device.
+Processing system .magicrc file
+Sourcing design .magicrc for technology sky130A ...
+2 Magic internal units = 1 Lambda
+Input style sky130(): scaleFactor=2, multiplier=2
+The following types are not handled by extraction and will be treated as non-electrical types:
+    ubm 
+Scaled tech values by 2 / 1 to match internal grid scaling
+Loading sky130A Device Generator Menu ...
+Using technology "sky130A", version 1.0.387-0-ge884c4d
+Reading LEF data from file /mnt/d/project/OpenLane/pdks/sky130A/libs.ref/sky130_fd_sc_hd/techlef/sky130_fd_sc_hd__nom.tlef.
+This action cannot be undone.
+LEF read, Line 78 (Message): Unknown keyword "ANTENNAMODEL" in LEF file; ignoring.
+LEF read, Line 79 (Message): Unknown keyword "ANTENNADIFFSIDEAREARATIO" in LEF file; ignoring.
+LEF read, Line 112 (Message): Unknown keyword "MINENCLOSEDAREA" in LEF file; ignoring.
+LEF read, Line 114 (Message): Unknown keyword "ANTENNAMODEL" in LEF file; ignoring.
+LEF read, Line 115 (Message): Unknown keyword "ANTENNADIFFSIDEAREARATIO" in LEF file; ignoring.
+LEF read, Line 121 (Message): Unknown keyword "MAXIMUMDENSITY" in LEF file; ignoring.
+LEF read, Line 122 (Message): Unknown keyword "DENSITYCHECKWINDOW" in LEF file; ignoring.
+LEF read, Line 123 (Message): Unknown keyword "DENSITYCHECKSTEP" in LEF file; ignoring.
+LEF read, Line 156 (Message): Unknown keyword "MINENCLOSEDAREA" in LEF file; ignoring.
+LEF read, Line 164 (Message): Unknown keyword "ANTENNAMODEL" in LEF file; ignoring.
+LEF read, Line 165 (Message): Unknown keyword "ANTENNADIFFSIDEAREARATIO" in LEF file; ignoring.
+LEF read, Line 167 (Message): Unknown keyword "MAXIMUMDENSITY" in LEF file; ignoring.
+LEF read, Line 168 (Message): Unknown keyword "DENSITYCHECKWINDOW" in LEF file; ignoring.
+LEF read, Line 169 (Message): Unknown keyword "DENSITYCHECKSTEP" in LEF file; ignoring.
+LEF read, Line 206 (Message): Unknown keyword "ANTENNAMODEL" in LEF file; ignoring.
+LEF read, Line 207 (Message): Unknown keyword "ANTENNADIFFSIDEAREARATIO" in LEF file; ignoring.
+LEF read, Line 209 (Message): Unknown keyword "MAXIMUMDENSITY" in LEF file; ignoring.
+LEF read, Line 210 (Message): Unknown keyword "DENSITYCHECKWINDOW" in LEF file; ignoring.
+LEF read, Line 211 (Message): Unknown keyword "DENSITYCHECKSTEP" in LEF file; ignoring.
+LEF read, Line 248 (Message): Unknown keyword "ANTENNAMODEL" in LEF file; ignoring.
+LEF read, Line 249 (Message): Unknown keyword "ANTENNADIFFSIDEAREARATIO" in LEF file; ignoring.
+LEF read, Line 251 (Message): Unknown keyword "MAXIMUMDENSITY" in LEF file; ignoring.
+LEF read, Line 252 (Message): Unknown keyword "DENSITYCHECKWINDOW" in LEF file; ignoring.
+LEF read, Line 253 (Message): Unknown keyword "DENSITYCHECKSTEP" in LEF file; ignoring.
+LEF read, Line 290 (Message): Unknown keyword "ANTENNAMODEL" in LEF file; ignoring.
+LEF read, Line 291 (Message): Unknown keyword "ANTENNADIFFSIDEAREARATIO" in LEF file; ignoring.
+LEF read: Processed 797 lines.
+Reading LEF data from file /openlane/designs/hdp_rv151/../../pdks/sky130A/libs.ref/sky130_sram_macros/lef/sky130_sram_2kbyte_1rw1r_32x512_8.lef.
+This action cannot be undone.
+LEF read: Processed 1116 lines.
+Reading DEF data from file /openlane/designs/hdp_rv151/runs/full_guide/tmp/signoff/30-hdp_rv151.p.def.
+This action cannot be undone.
+  Processed 5 vias total.
+  Processed 326125 subcell instances total.
+  Processed 40 pins total.
+  Processed 2 special nets total.
+  Processed 11430 nets total.
+DEF read: Processed 566881 lines.
+Moving label "_00003_" from metal1 to via1 in cell hdp_rv151.
+Moving label "_00005_" from metal1 to via1 in cell hdp_rv151.
+Moving label "_00007_" from metal1 to via1 in cell hdp_rv151.
+Moving label "_00008_" from metal1 to via1 in cell hdp_rv151.
+Moving label "_00013_" from metal1 to via1 in cell hdp_rv151.
+Moving label "_00016_" from metal1 to via1 in cell hdp_rv151.
+Moving label "_00022_" from metal1 to via1 in cell hdp_rv151.
+Moving label "_00028_" from metal1 to via1 in cell hdp_rv151.
+Moving label "_00034_" from metal1 to via1 in cell hdp_rv151.
+Moving label "_00581_" from metal1 to via1 in cell hdp_rv151.
+Moving label "_00592_" from metal1 to via1 in cell hdp_rv151.
+Moving label "_00596_" from metal1 to via1 in cell hdp_rv151.
+Moving label "_00613_" from metal1 to via1 in cell hdp_rv151.
+Moving label "_00616_" from metal1 to via1 in cell hdp_rv151.
+Moving label "_00637_" from metal1 to via1 in cell hdp_rv151.
+Moving label "_00642_" from metal1 to via1 in cell hdp_rv151.
+Moving label "_00665_" from metal1 to via1 in cell hdp_rv151.
+Moving label "_00669_" from metal1 to via1 in cell hdp_rv151.
+Moving label "_00679_" from metal1 to via1 in cell hdp_rv151.
+Moving label "_00680_" from metal1 to via1 in cell hdp_rv151.
+Moving label "_00683_" from metal1 to via1 in cell hdp_rv151.
+Moving label "_00693_" from metal1 to via1 in cell hdp_rv151.
+Moving label "_00694_" from metal1 to via1 in cell hdp_rv151.
+Moving label "_00695_" from metal1 to via1 in cell hdp_rv151.
+Moving label "_00701_" from metal1 to via1 in cell hdp_rv151.
+Moving label "_00716_" from metal1 to via1 in cell hdp_rv151.
+Moving label "_00725_" from metal1 to via1 in cell hdp_rv151.
+Moving label "_00738_" from metal1 to via1 in cell hdp_rv151.
+Moving label "_00742_" from metal1 to via1 in cell hdp_rv151.
+Moving label "_00745_" from metal1 to via1 in cell hdp_rv151.
+Moving label "_00749_" from metal1 to via1 in cell hdp_rv151.
+Moving label "_00760_" from metal1 to via1 in cell hdp_rv151.
+Moving label "_00762_" from metal1 to via1 in cell hdp_rv151.
+Moving label "_00776_" from metal1 to via1 in cell hdp_rv151.
+Moving label "_00785_" from metal1 to via1 in cell hdp_rv151.
+Moving label "_00792_" from metal1 to via1 in cell hdp_rv151.
+Moving label "_00802_" from metal1 to via1 in cell hdp_rv151.
+Moving label "_00839_" from metal1 to via1 in cell hdp_rv151.
+Moving label "_00868_" from metal1 to via1 in cell hdp_rv151.
+Moving label "_00886_" from metal1 to via1 in cell hdp_rv151.
+Moving label "_00898_" from metal1 to via1 in cell hdp_rv151.
+Moving label "_00913_" from metal1 to via1 in cell hdp_rv151.
+Moving label "_00916_" from metal1 to via1 in cell hdp_rv151.
+Moving label "_00917_" from metal1 to via1 in cell hdp_rv151.
+Moving label "_00930_" from metal1 to via1 in cell hdp_rv151.
+Moving label "_00938_" from metal1 to via1 in cell hdp_rv151.
+Moving label "_00947_" from metal1 to via1 in cell hdp_rv151.
+Moving label "_00953_" from metal1 to via1 in cell hdp_rv151.
+Moving label "_00965_" from metal1 to via1 in cell hdp_rv151.
+Moving label "_00966_" from metal1 to via1 in cell hdp_rv151.
+Moving label "_00986_" from metal1 to via1 in cell hdp_rv151.
+Moving label "_01004_" from metal1 to via1 in cell hdp_rv151.
+Moving label "_01020_" from metal1 to via1 in cell hdp_rv151.
+Moving label "_01021_" from metal1 to via1 in cell hdp_rv151.
+Moving label "_01029_" from metal1 to via1 in cell hdp_rv151.
+Moving label "_01032_" from metal1 to via1 in cell hdp_rv151.
+Moving label "_01057_" from metal1 to via1 in cell hdp_rv151.
+Moving label "_01060_" from metal1 to via1 in cell hdp_rv151.
+Moving label "_01069_" from metal1 to via1 in cell hdp_rv151.
+Moving label "_01070_" from metal1 to via1 in cell hdp_rv151.
+Moving label "_01076_" from metal1 to via1 in cell hdp_rv151.
+Moving label "_01085_" from metal1 to via1 in cell hdp_rv151.
+Moving label "_01100_" from metal1 to via1 in cell hdp_rv151.
+Moving label "_01114_" from metal1 to via1 in cell hdp_rv151.
+Moving label "_01117_" from metal1 to via1 in cell hdp_rv151.
+Moving label "_01121_" from metal1 to via1 in cell hdp_rv151.
+Moving label "_01126_" from metal1 to via1 in cell hdp_rv151.
+Moving label "_01130_" from metal1 to via1 in cell hdp_rv151.
+Moving label "_01160_" from metal1 to via1 in cell hdp_rv151.
+Moving label "_01179_" from metal1 to via1 in cell hdp_rv151.
+Moving label "_01181_" from metal1 to viali in cell hdp_rv151.
+Moving label "_01204_" from metal1 to via1 in cell hdp_rv151.
+Moving label "_01209_" from metal1 to via1 in cell hdp_rv151.
+Moving label "_01210_" from metal1 to via1 in cell hdp_rv151.
+Moving label "_01214_" from metal1 to via1 in cell hdp_rv151.
+Moving label "_01217_" from metal1 to via1 in cell hdp_rv151.
+Moving label "_01220_" from metal1 to via1 in cell hdp_rv151.
+Moving label "_01226_" from metal1 to via1 in cell hdp_rv151.
+Moving label "_01229_" from metal1 to via1 in cell hdp_rv151.
+Moving label "_01233_" from metal1 to via1 in cell hdp_rv151.
+Moving label "_01243_" from metal1 to via1 in cell hdp_rv151.
+Moving label "_01256_" from metal1 to via1 in cell hdp_rv151.
+Moving label "_01271_" from metal1 to viali in cell hdp_rv151.
+Moving label "_01284_" from metal1 to via1 in cell hdp_rv151.
+Moving label "_01289_" from metal1 to via1 in cell hdp_rv151.
+Moving label "_01291_" from metal1 to via1 in cell hdp_rv151.
+Moving label "_01293_" from metal1 to via1 in cell hdp_rv151.
+Moving label "_01294_" from metal1 to via1 in cell hdp_rv151.
+Moving label "_01298_" from metal1 to via1 in cell hdp_rv151.
+Moving label "_01311_" from metal1 to via1 in cell hdp_rv151.
+Moving label "_01327_" from metal1 to via1 in cell hdp_rv151.
+Moving label "_01335_" from metal1 to via1 in cell hdp_rv151.
+Moving label "_01336_" from metal1 to via1 in cell hdp_rv151.
+Moving label "_01339_" from metal1 to via1 in cell hdp_rv151.
+Moving label "_01343_" from metal1 to via1 in cell hdp_rv151.
+Moving label "_01344_" from metal1 to viali in cell hdp_rv151.
+Moving label "_01345_" from metal1 to via1 in cell hdp_rv151.
+Moving label "_01364_" from metal1 to via1 in cell hdp_rv151.
+Moving label "_01378_" from metal1 to via1 in cell hdp_rv151.
+Moving label "_01385_" from metal1 to via1 in cell hdp_rv151.
+Moving label "_01386_" from metal1 to via1 in cell hdp_rv151.
+Moving label "_01397_" from metal1 to viali in cell hdp_rv151.
+Moving label "_01400_" from metal1 to via1 in cell hdp_rv151.
+Moving label "_01403_" from metal1 to via1 in cell hdp_rv151.
+Moving label "_01409_" from metal1 to via1 in cell hdp_rv151.
+Moving label "_01413_" from metal1 to via1 in cell hdp_rv151.
+Moving label "_01421_" from metal1 to via1 in cell hdp_rv151.
+Moving label "_01449_" from metal1 to via1 in cell hdp_rv151.
+Moving label "_01457_" from metal1 to via1 in cell hdp_rv151.
+Moving label "_01467_" from metal1 to viali in cell hdp_rv151.
+Moving label "_01482_" from metal1 to via1 in cell hdp_rv151.
+Moving label "_01487_" from metal1 to via1 in cell hdp_rv151.
+Moving label "_01507_" from metal1 to via1 in cell hdp_rv151.
+Moving label "_01510_" from metal1 to via1 in cell hdp_rv151.
+Moving label "_01541_" from metal1 to via1 in cell hdp_rv151.
+Moving label "_01557_" from metal1 to via1 in cell hdp_rv151.
+Moving label "_01558_" from metal1 to via1 in cell hdp_rv151.
+Moving label "_01579_" from metal1 to via1 in cell hdp_rv151.
+Moving label "_01582_" from metal1 to viali in cell hdp_rv151.
+Moving label "_01591_" from metal1 to via1 in cell hdp_rv151.
+Moving label "_01593_" from metal1 to via1 in cell hdp_rv151.
+Moving label "_01595_" from metal1 to via1 in cell hdp_rv151.
+Moving label "_01602_" from metal1 to via1 in cell hdp_rv151.
+Moving label "_01604_" from metal1 to via1 in cell hdp_rv151.
+Moving label "_01605_" from metal1 to via1 in cell hdp_rv151.
+Moving label "_01606_" from metal1 to via1 in cell hdp_rv151.
+Moving label "_01609_" from metal1 to via1 in cell hdp_rv151.
+Moving label "_01629_" from metal1 to via1 in cell hdp_rv151.
+Moving label "_01645_" from metal1 to via1 in cell hdp_rv151.
+Moving label "_01678_" from metal1 to via1 in cell hdp_rv151.
+Moving label "_01685_" from metal1 to via1 in cell hdp_rv151.
+Moving label "_01689_" from metal1 to via1 in cell hdp_rv151.
+Moving label "_01702_" from metal1 to via1 in cell hdp_rv151.
+Moving label "_01711_" from metal1 to via1 in cell hdp_rv151.
+Moving label "_01715_" from metal1 to via1 in cell hdp_rv151.
+Moving label "_01716_" from metal1 to via1 in cell hdp_rv151.
+Moving label "_01725_" from metal1 to via1 in cell hdp_rv151.
+Moving label "_01822_" from metal1 to via1 in cell hdp_rv151.
+Moving label "_01831_" from metal1 to via1 in cell hdp_rv151.
+Moving label "_01838_" from metal1 to via1 in cell hdp_rv151.
+Moving label "_01847_" from metal1 to via1 in cell hdp_rv151.
+Moving label "_01848_" from metal1 to via1 in cell hdp_rv151.
+Moving label "_01862_" from metal1 to via1 in cell hdp_rv151.
+Moving label "_01882_" from metal2 to via2 in cell hdp_rv151.
+Moving label "_01906_" from metal2 to via2 in cell hdp_rv151.
+Moving label "_01917_" from metal2 to via2 in cell hdp_rv151.
+Moving label "_01942_" from metal2 to via2 in cell hdp_rv151.
+Moving label "_01967_" from metal2 to via2 in cell hdp_rv151.
+Moving label "_02048_" from metal1 to via1 in cell hdp_rv151.
+Moving label "_02057_" from metal1 to viali in cell hdp_rv151.
+Moving label "_02131_" from metal2 to via1 in cell hdp_rv151.
+Moving label "_02252_" from metal2 to via1 in cell hdp_rv151.
+Moving label "_02322_" from metal2 to via2 in cell hdp_rv151.
+Moving label "_02333_" from metal1 to viali in cell hdp_rv151.
+Moving label "_02529_" from metal2 to via2 in cell hdp_rv151.
+Moving label "_02536_" from metal2 to via2 in cell hdp_rv151.
+Moving label "_02568_" from metal1 to via1 in cell hdp_rv151.
+Moving label "_02635_" from metal1 to viali in cell hdp_rv151.
+Moving label "_02713_" from metal2 to via2 in cell hdp_rv151.
+Moving label "_02810_" from metal1 to viali in cell hdp_rv151.
+Moving label "_02884_" from metal2 to via1 in cell hdp_rv151.
+Moving label "_02934_" from metal2 to via2 in cell hdp_rv151.
+Moving label "_02974_" from metal2 to via2 in cell hdp_rv151.
+Moving label "_03009_" from metal2 to via2 in cell hdp_rv151.
+Moving label "_03045_" from metal2 to via2 in cell hdp_rv151.
+Moving label "_03058_" from metal3 to via3 in cell hdp_rv151.
+Moving label "_03107_" from metal1 to viali in cell hdp_rv151.
+Moving label "_03112_" from metal1 to via1 in cell hdp_rv151.
+Moving label "_03245_" from metal2 to via2 in cell hdp_rv151.
+Moving label "_03274_" from metal1 to via1 in cell hdp_rv151.
+Moving label "_03311_" from metal1 to via1 in cell hdp_rv151.
+Moving label "_03377_" from metal2 to via2 in cell hdp_rv151.
+Moving label "_03423_" from metal2 to via1 in cell hdp_rv151.
+Moving label "_03617_" from metal1 to viali in cell hdp_rv151.
+Moving label "_03652_" from metal2 to via2 in cell hdp_rv151.
+Moving label "_03665_" from metal2 to via1 in cell hdp_rv151.
+Moving label "_03754_" from metal2 to via1 in cell hdp_rv151.
+Moving label "_03758_" from metal2 to via1 in cell hdp_rv151.
+Moving label "_03847_" from metal1 to via1 in cell hdp_rv151.
+Moving label "_03992_" from metal2 to via1 in cell hdp_rv151.
+Moving label "_04129_" from metal2 to via2 in cell hdp_rv151.
+Moving label "_04181_" from metal1 to via1 in cell hdp_rv151.
+Moving label "_04234_" from metal1 to viali in cell hdp_rv151.
+Moving label "_04307_" from metal2 to via2 in cell hdp_rv151.
+Moving label "_04321_" from metal1 to via1 in cell hdp_rv151.
+Moving label "_04342_" from metal2 to via2 in cell hdp_rv151.
+Moving label "_04356_" from metal2 to via2 in cell hdp_rv151.
+Moving label "_04372_" from metal3 to via3 in cell hdp_rv151.
+Moving label "_04403_" from metal3 to via3 in cell hdp_rv151.
+Moving label "_04427_" from metal2 to via1 in cell hdp_rv151.
+Moving label "_04526_" from metal1 to viali in cell hdp_rv151.
+Moving label "_04553_" from metal1 to viali in cell hdp_rv151.
+Moving label "_04586_" from metal1 to via1 in cell hdp_rv151.
+Moving label "_04632_" from metal2 to via2 in cell hdp_rv151.
+Moving label "_04653_" from metal2 to via2 in cell hdp_rv151.
+Moving label "_04654_" from metal2 to via2 in cell hdp_rv151.
+Moving label "_04781_" from metal3 to via3 in cell hdp_rv151.
+Moving label "_04806_" from metal1 to via1 in cell hdp_rv151.
+Moving label "_04814_" from metal1 to viali in cell hdp_rv151.
+Moving label "_04821_" from metal1 to via1 in cell hdp_rv151.
+Moving label "_04863_" from metal2 to via1 in cell hdp_rv151.
+Moving label "_04980_" from metal1 to via1 in cell hdp_rv151.
+Moving label "_05114_" from metal2 to via2 in cell hdp_rv151.
+Moving label "_05120_" from metal2 to via2 in cell hdp_rv151.
+Moving label "_05122_" from metal2 to via2 in cell hdp_rv151.
+Moving label "_05175_" from metal1 to via1 in cell hdp_rv151.
+Moving label "_05374_" from metal2 to via2 in cell hdp_rv151.
+Moving label "_05466_" from metal1 to via1 in cell hdp_rv151.
+Moving label "_05483_" from metal2 to via2 in cell hdp_rv151.
+Moving label "_05531_" from metal2 to via2 in cell hdp_rv151.
+Moving label "_05859_" from metal2 to via2 in cell hdp_rv151.
+Moving label "_05869_" from metal2 to via2 in cell hdp_rv151.
+Moving label "_05879_" from metal1 to via1 in cell hdp_rv151.
+Moving label "_05918_" from metal1 to via1 in cell hdp_rv151.
+Moving label "_06030_" from metal1 to via1 in cell hdp_rv151.
+Moving label "_06248_" from metal2 to via2 in cell hdp_rv151.
+Moving label "_06291_" from metal2 to via1 in cell hdp_rv151.
+Moving label "_06308_" from metal1 to viali in cell hdp_rv151.
+Moving label "_06439_" from metal2 to via2 in cell hdp_rv151.
+Moving label "_06510_" from metal1 to via1 in cell hdp_rv151.
+Moving label "_06540_" from metal1 to via1 in cell hdp_rv151.
+Moving label "_06593_" from metal1 to viali in cell hdp_rv151.
+Moving label "_06599_" from metal2 to via2 in cell hdp_rv151.
+Moving label "_06622_" from metal1 to via1 in cell hdp_rv151.
+Moving label "_06645_" from metal2 to via2 in cell hdp_rv151.
+Moving label "_06821_" from metal1 to via1 in cell hdp_rv151.
+Moving label "_06828_" from metal2 to via1 in cell hdp_rv151.
+Moving label "_06871_" from metal2 to via2 in cell hdp_rv151.
+Moving label "_06919_" from metal2 to via2 in cell hdp_rv151.
+Moving label "_06952_" from metal2 to via2 in cell hdp_rv151.
+Moving label "_06965_" from metal2 to via1 in cell hdp_rv151.
+Moving label "_07000_" from metal1 to via1 in cell hdp_rv151.
+Moving label "_07066_" from metal2 to via2 in cell hdp_rv151.
+Moving label "_07104_" from metal2 to via2 in cell hdp_rv151.
+Moving label "_07110_" from metal1 to viali in cell hdp_rv151.
+Moving label "_07122_" from metal1 to viali in cell hdp_rv151.
+Moving label "_07175_" from metal1 to viali in cell hdp_rv151.
+Moving label "_07178_" from metal2 to via2 in cell hdp_rv151.
+Moving label "_07179_" from metal2 to via2 in cell hdp_rv151.
+Moving label "_07255_" from metal1 to via1 in cell hdp_rv151.
+Moving label "_07265_" from metal2 to via2 in cell hdp_rv151.
+Moving label "_07452_" from metal2 to via1 in cell hdp_rv151.
+Moving label "_07471_" from metal2 to via1 in cell hdp_rv151.
+Moving label "_07485_" from metal2 to via2 in cell hdp_rv151.
+Moving label "_07498_" from metal2 to via2 in cell hdp_rv151.
+Moving label "_07501_" from metal2 to via2 in cell hdp_rv151.
+Moving label "_07520_" from metal1 to viali in cell hdp_rv151.
+Moving label "_07528_" from metal2 to via2 in cell hdp_rv151.
+Moving label "_07552_" from metal2 to via2 in cell hdp_rv151.
+Moving label "_07563_" from metal1 to viali in cell hdp_rv151.
+Moving label "_07598_" from metal2 to via2 in cell hdp_rv151.
+Moving label "_07696_" from metal1 to via1 in cell hdp_rv151.
+Moving label "_07725_" from metal1 to via1 in cell hdp_rv151.
+Moving label "_07762_" from metal1 to via1 in cell hdp_rv151.
+Moving label "_07874_" from metal1 to via1 in cell hdp_rv151.
+Moving label "_07875_" from metal1 to via1 in cell hdp_rv151.
+Moving label "_07911_" from metal1 to via1 in cell hdp_rv151.
+Moving label "_08048_" from metal1 to viali in cell hdp_rv151.
+Moving label "_08145_" from metal2 to via2 in cell hdp_rv151.
+Moving label "_08150_" from metal2 to via2 in cell hdp_rv151.
+Moving label "_08250_" from metal2 to via2 in cell hdp_rv151.
+Moving label "_08314_" from metal2 to via2 in cell hdp_rv151.
+Moving label "_08334_" from metal2 to via1 in cell hdp_rv151.
+Moving label "_08464_" from metal2 to via2 in cell hdp_rv151.
+Moving label "clknet_2_3_0_soc.bspi.b2o.wck" from metal2 to via2 in cell hdp_rv151.
+Moving label "clknet_3_6_0_soc.bspi.b2o.wck" from metal2 to via2 in cell hdp_rv151.
+Moving label "clknet_3_7_0_soc.bspi.b2o.wck" from metal3 to via3 in cell hdp_rv151.
+Moving label "clknet_leaf_119_soc.bspi.b2o.wck" from metal1 to via1 in cell hdp_rv151.
+Moving label "net111" from metal2 to via2 in cell hdp_rv151.
+Moving label "net122" from metal2 to via2 in cell hdp_rv151.
+Moving label "net127" from metal2 to via2 in cell hdp_rv151.
+Moving label "net129" from metal2 to via2 in cell hdp_rv151.
+Moving label "net136" from metal2 to via2 in cell hdp_rv151.
+Moving label "net138" from metal2 to via2 in cell hdp_rv151.
+Moving label "net141" from metal2 to via2 in cell hdp_rv151.
+Moving label "net148" from metal2 to via2 in cell hdp_rv151.
+Moving label "net150" from metal2 to via2 in cell hdp_rv151.
+Moving label "net153" from metal2 to via2 in cell hdp_rv151.
+Moving label "net155" from metal2 to via2 in cell hdp_rv151.
+Moving label "net170" from metal3 to via3 in cell hdp_rv151.
+Moving label "net174" from metal2 to via2 in cell hdp_rv151.
+Moving label "net183" from metal3 to via3 in cell hdp_rv151.
+Moving label "net187" from metal2 to via2 in cell hdp_rv151.
+Moving label "net189" from metal3 to via3 in cell hdp_rv151.
+Moving label "net190" from metal2 to via2 in cell hdp_rv151.
+Moving label "net226" from metal3 to via3 in cell hdp_rv151.
+Moving label "net278" from metal2 to via2 in cell hdp_rv151.
+Moving label "net288" from metal2 to via2 in cell hdp_rv151.
+Moving label "net291" from metal2 to via2 in cell hdp_rv151.
+Moving label "net334" from metal2 to via2 in cell hdp_rv151.
+Moving label "net372" from metal2 to via2 in cell hdp_rv151.
+Moving label "net431" from metal2 to via2 in cell hdp_rv151.
+Moving label "net444" from metal2 to via2 in cell hdp_rv151.
+Moving label "net473" from metal2 to via2 in cell hdp_rv151.
+Moving label "net480" from metal2 to via2 in cell hdp_rv151.
+Moving label "net496" from metal2 to via2 in cell hdp_rv151.
+Moving label "net593" from metal2 to via2 in cell hdp_rv151.
+Moving label "net599" from metal2 to via2 in cell hdp_rv151.
+Moving label "net60" from metal2 to via2 in cell hdp_rv151.
+Moving label "net604" from metal2 to via2 in cell hdp_rv151.
+Moving label "net617" from metal3 to via3 in cell hdp_rv151.
+Moving label "net620" from metal2 to via2 in cell hdp_rv151.
+Moving label "net638" from metal2 to via2 in cell hdp_rv151.
+Moving label "net71" from metal3 to via3 in cell hdp_rv151.
+Moving label "net80" from metal2 to via2 in cell hdp_rv151.
+Moving label "net95" from metal2 to via2 in cell hdp_rv151.
+Moving label "soc.bcf" from metal3 to via3 in cell hdp_rv151.
+Moving label "soc.bdto\[10\]" from metal1 to via1 in cell hdp_rv151.
+Moving label "soc.bdto\[11\]" from metal1 to via1 in cell hdp_rv151.
+Moving label "soc.bdto\[12\]" from metal1 to viali in cell hdp_rv151.
+Moving label "soc.bios_addrb\[1\]" from metal2 to via2 in cell hdp_rv151.
+Moving label "soc.bios_din0\[10\]" from metal3 to via3 in cell hdp_rv151.
+Moving label "soc.bios_din0\[11\]" from metal3 to via3 in cell hdp_rv151.
+Moving label "soc.bios_din0\[13\]" from metal3 to via3 in cell hdp_rv151.
+Moving label "soc.bios_din0\[14\]" from metal3 to via3 in cell hdp_rv151.
+Moving label "soc.bios_din0\[17\]" from metal3 to via3 in cell hdp_rv151.
+Moving label "soc.bios_dout0\[0\]\[13\]" from metal3 to via3 in cell hdp_rv151.
+Moving label "soc.bios_dout0\[0\]\[14\]" from metal3 to via3 in cell hdp_rv151.
+Moving label "soc.bios_dout0\[0\]\[18\]" from metal3 to via3 in cell hdp_rv151.
+Moving label "soc.bios_dout0\[0\]\[1\]" from metal3 to via3 in cell hdp_rv151.
+Moving label "soc.bios_dout0\[0\]\[20\]" from metal3 to via3 in cell hdp_rv151.
+Moving label "soc.bios_dout0\[0\]\[27\]" from metal3 to via3 in cell hdp_rv151.
+Moving label "soc.bios_dout0\[0\]\[28\]" from metal3 to via3 in cell hdp_rv151.
+Moving label "soc.bios_dout0\[0\]\[2\]" from metal3 to via3 in cell hdp_rv151.
+Moving label "soc.bios_dout0\[0\]\[31\]" from metal3 to via3 in cell hdp_rv151.
+Moving label "soc.bios_dout0\[0\]\[7\]" from metal3 to via3 in cell hdp_rv151.
+Moving label "soc.bios_dout0\[1\]\[0\]" from metal2 to via2 in cell hdp_rv151.
+Moving label "soc.bios_dout0\[1\]\[14\]" from metal3 to via3 in cell hdp_rv151.
+Moving label "soc.bios_dout0\[1\]\[19\]" from metal2 to via2 in cell hdp_rv151.
+Moving label "soc.bios_dout0\[1\]\[1\]" from metal3 to via3 in cell hdp_rv151.
+Moving label "soc.bios_dout0\[1\]\[23\]" from metal2 to via2 in cell hdp_rv151.
+Moving label "soc.bios_dout0\[1\]\[25\]" from metal2 to via2 in cell hdp_rv151.
+Moving label "soc.bios_dout0\[1\]\[3\]" from metal2 to via2 in cell hdp_rv151.
+Moving label "soc.bios_dout0\[1\]\[6\]" from metal2 to via2 in cell hdp_rv151.
+Moving label "soc.bios_dout0\[1\]\[9\]" from metal2 to via2 in cell hdp_rv151.
+Moving label "soc.bios_dout1\[0\]\[11\]" from metal3 to via3 in cell hdp_rv151.
+Moving label "soc.bios_dout1\[0\]\[12\]" from metal3 to via3 in cell hdp_rv151.
+Moving label "soc.bios_dout1\[0\]\[13\]" from metal3 to via3 in cell hdp_rv151.
+Moving label "soc.bios_dout1\[0\]\[15\]" from metal3 to via3 in cell hdp_rv151.
+Moving label "soc.bios_dout1\[0\]\[16\]" from metal3 to via3 in cell hdp_rv151.
+Moving label "soc.bios_dout1\[0\]\[17\]" from metal3 to via3 in cell hdp_rv151.
+Moving label "soc.bios_dout1\[0\]\[19\]" from metal2 to via2 in cell hdp_rv151.
+Moving label "soc.bios_dout1\[0\]\[22\]" from metal3 to via3 in cell hdp_rv151.
+Moving label "soc.bios_dout1\[0\]\[23\]" from metal3 to via3 in cell hdp_rv151.
+Moving label "soc.bios_dout1\[0\]\[27\]" from metal3 to via3 in cell hdp_rv151.
+Moving label "soc.bios_dout1\[0\]\[29\]" from metal3 to via3 in cell hdp_rv151.
+Moving label "soc.bios_dout1\[0\]\[3\]" from metal2 to via1 in cell hdp_rv151.
+Moving label "soc.bios_dout1\[0\]\[4\]" from metal3 to via3 in cell hdp_rv151.
+Moving label "soc.bios_dout1\[0\]\[5\]" from metal3 to via3 in cell hdp_rv151.
+Moving label "soc.bios_dout1\[0\]\[6\]" from metal3 to via3 in cell hdp_rv151.
+Moving label "soc.bios_dout1\[0\]\[7\]" from metal3 to via3 in cell hdp_rv151.
+Moving label "soc.bios_dout1\[1\]\[10\]" from metal2 to via2 in cell hdp_rv151.
+Moving label "soc.bios_dout1\[1\]\[12\]" from metal2 to via2 in cell hdp_rv151.
+Moving label "soc.bios_dout1\[1\]\[24\]" from metal2 to via2 in cell hdp_rv151.
+Moving label "soc.bios_dout1\[1\]\[26\]" from metal3 to via3 in cell hdp_rv151.
+Moving label "soc.bios_dout1\[1\]\[28\]" from metal3 to via3 in cell hdp_rv151.
+Moving label "soc.bios_dout1\[1\]\[8\]" from metal3 to via3 in cell hdp_rv151.
+Moving label "soc.bios_dout1\[1\]\[9\]" from metal2 to via2 in cell hdp_rv151.
+Moving label "soc.bios_doutb\[20\]" from metal3 to via3 in cell hdp_rv151.
+Moving label "soc.bios_doutb\[22\]" from metal2 to via2 in cell hdp_rv151.
+Moving label "soc.bios_doutb\[8\]" from metal2 to via2 in cell hdp_rv151.
+Moving label "soc.cc_cntr\[10\]" from metal1 to viali in cell hdp_rv151.
+Moving label "soc.cc_cntr\[5\]" from metal1 to via1 in cell hdp_rv151.
+Moving label "soc.core.alu.alu_ot\[0\]" from metal2 to via2 in cell hdp_rv151.
+Moving label "soc.core.exo_mwd\[29\]" from metal2 to via2 in cell hdp_rv151.
+Moving label "soc.core.pf_pcr\[30\]" from metal2 to via2 in cell hdp_rv151.
+Moving label "soc.core.pf_pcr\[31\]" from metal2 to via2 in cell hdp_rv151.
+Moving label "soc.dmem_dout\[0\]" from metal2 to via2 in cell hdp_rv151.
+Moving label "soc.dmem_dout\[27\]" from metal2 to via2 in cell hdp_rv151.
+Moving label "soc.dmem_dout\[29\]" from metal2 to via2 in cell hdp_rv151.
+Moving label "soc.imem_doutb\[2\]" from metal2 to via2 in cell hdp_rv151.
+Moving label "soc.imem_doutb\[9\]" from metal2 to via2 in cell hdp_rv151.
+Moving label "soc.ir_cntr\[1\]" from metal2 to via2 in cell hdp_rv151.
+Moving label "soc.ir_cntr\[8\]" from metal2 to via1 in cell hdp_rv151.
+Moving label "soc.rf.mem\[10\]\[0\]" from metal1 to viali in cell hdp_rv151.
+Moving label "soc.rf.mem\[15\]\[17\]" from metal2 to via1 in cell hdp_rv151.
+Moving label "soc.rf.mem\[21\]\[23\]" from metal1 to via1 in cell hdp_rv151.
+Moving label "soc.rf.mem\[21\]\[26\]" from metal2 to via1 in cell hdp_rv151.
+Moving label "soc.rf.mem\[26\]\[7\]" from metal1 to via1 in cell hdp_rv151.
+Moving label "soc.rf.mem\[28\]\[20\]" from metal1 to via1 in cell hdp_rv151.
+Moving label "soc.rf.mem\[28\]\[2\]" from metal2 to via2 in cell hdp_rv151.
+Moving label "soc.rf.mem\[28\]\[7\]" from metal1 to viali in cell hdp_rv151.
+Moving label "soc.rf.mem\[3\]\[14\]" from metal2 to via1 in cell hdp_rv151.
+Moving label "soc.uart.baud_edge\[10\]" from metal1 to via1 in cell hdp_rv151.
+[INFO]: Loading hdp_rv151
+
+DRC style is now "drc(full)"
+Loading DRC CIF style.
+[INFO]: COUNT: 1411089
+[INFO]: Should be divided by 3 or 4
+[INFO]: DRC Checking DONE (/openlane/designs/hdp_rv151/runs/full_guide/reports/signoff/drc.rpt)
+[INFO]: Saving mag view with DRC errors (/openlane/designs/hdp_rv151/runs/full_guide/results/signoff/hdp_rv151.drc.mag)
+[INFO]: Saved
