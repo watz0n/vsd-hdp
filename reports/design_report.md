@@ -92,7 +92,7 @@ Outline:<br />
 
 #### 2.2.1. Circuit Function Simulation
 
-1. Post-Synthesis 
+1. Post-Synthesis Gate-Level Simulation
 
     * cpu_tb_bmem not support gate-level simulation from the reg-file has been flattened.
 
@@ -109,7 +109,7 @@ Outline:<br />
         ![syn-gpio](images/prj-syn-sim-gpio_tb_bmem.png)<br />
 
 
-2. Post-Layout (with Delay-Information)
+2. Post-Route Gate-Level Simulation
 
     1. bspi_tb_bmem
 
