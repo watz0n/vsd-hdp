@@ -5,10 +5,10 @@
 ------
 
 Outline:<br />
-[Design Specification](#1)<br />
-[Function Consistancy](#2)<br />
-[Physical Implementation](#3)<br />
-[References](#4)<br />
+[1. Design Specification](#1-design-specification)<br />
+[2. Function Consistancy](#2-function-consistancy)<br />
+[3. Physical Implementation](3-physical-implementation)<br />
+[4. References](#4-references)<br />
 
 ------
 ## 1. Design Specification
@@ -26,21 +26,21 @@ Outline:<br />
     3. UART TX/RX interface, default target 115200bps
     4. 8-Bit GPIO interface (TBD)
 
-> [1] System Diagram
+* [1] System Diagram
 
-![sys-blk](images/prj-rv151-sys_blk.png)<br />
+    ![sys-blk](images/prj-rv151-sys_blk.png)<br />
 
-> [2] RV151 Pipeline Architecture
+* [2] RV151 Pipeline Architecture
 
-![pipe-arch](images/prj-rv151-pipeline.png)<br />
+    ![pipe-arch](images/prj-rv151-pipeline.png)<br />
 
-> [3] BIOS-configuration SPI (BSPI)
+* [3] BIOS-configuration SPI (BSPI)
 
-![pipe-arch](images/prj-rv151-bspi.png)<br />
+    ![pipe-arch](images/prj-rv151-bspi.png)<br />
 
-> [4] Memory Map
+* [4] Memory Map
 
-![pipe-arch](images/prj-rv151-mmap.png)<br />
+    ![pipe-arch](images/prj-rv151-mmap.png)<br />
 
 ### 1.2. Design Constraint 
 
