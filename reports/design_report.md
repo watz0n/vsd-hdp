@@ -137,8 +137,8 @@ Outline:<br />
 
 * EDA-Tool : Yosys Standalone
     * Report: [Logic-Area](230207/ys_util_sdcl.log), [Total-Area](230207/ys_util_full.log)
-    1. Logic Area (Standard-Cell only) : 77266.604800 (nm^2)
-    2. Total Area (Standard-Cell + SRAM-Macro) : 3388747.034800 (nm^2)
+    1. Logic Area (Standard-Cell only) : 78689.219200 (nm^2)
+    2. Total Area (Standard-Cell + SRAM-Macro) : 1785920.063200 (nm^2)
 
 * EDA-Tool : Yosys in OpenLane
     * Report: [Logic-Area](230207/OpenLane/hdp_rv151/runs/full_guide/reports/synthesis/1-synthesis.AREA_0.stat.rpt), [Total-Area](230207/OpenLane/hdp_rv151/runs/full_guide/reports/synthesis/2-syn_sta.area.rpt)
