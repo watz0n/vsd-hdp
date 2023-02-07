@@ -164,14 +164,18 @@ Outline:<br />
 * OpenRoad-GUI<br />
     ![prj-ol-pnr](230207/prj_ol_pnr_230207.png)
 
-### 3.5. Layout
+### 3.5. Layout and Sign-Off
 
 * Klayout<br />
     ![prj-ol-gds](230207/prj_ol_gds_230207.png)
 
-* LVS: Pass, [report-file](230207/OpenLane/hdp_rv151/runs/full_guide/reports/signoff/33-hdp_rv151.lvs.rpt)
+* LVS: Total Errors = 0, [report-file](230207/OpenLane/hdp_rv151/runs/full_guide/reports/signoff/33-hdp_rv151.lvs.rpt)
 
-* DRC: Pass, [MPW-Precheck Results](https://github.com/watz0n/mpw_hdp_rv151#results)
+* DRC: Errors on SRAM-Macro, [report-file](230207/OpenLane/hdp_rv151/runs/full_guide/reports/manufacturability.rpt)
+    * Pass in [MPW-Precheck Results](https://github.com/watz0n/mpw_hdp_rv151#results)
+    * [efabless/mpw_precheck: Precheck crash with SRAM DRC](https://github.com/efabless/mpw_precheck/issues/180)
+
+* Antenna Rule Check: 0 violatiors, [report-file](230207/OpenLane/hdp_rv151/runs/full_guide/reports/signoff/35-antenna_violators.rpt)
 
 ### 3.6. PVT Corners
 
