@@ -175,7 +175,7 @@ Outline:<br />
 
 ### 3.6. PVT Corners
 
-* PVT-Corner(Synthesis)
+* PVT-Corner(Synthesis-Yosys-Standalone)
 
     |PVT-CORNER  |WNS      |WHS   |TNS        |
     |------------|---------|------|-----------|
@@ -198,7 +198,7 @@ Outline:<br />
 
     ![syn-pvt-lg](230207/calc_syn_multi_corner_pvt.png)
 
-* PVT-Corner(RC-Max)
+* PVT-Corner(RC-Max, Post-Route from OpenLane)
 
     |PVT-CORNER  |WNS    |WHS   |TNS   |
     |------------|-------|------|------|
@@ -221,7 +221,7 @@ Outline:<br />
 
     ![rgl-pvt-max](230207/calc_rgl_max_multi_corner_pvt.png)
 
-* PVT-Corner(RC-Min)
+* PVT-Corner(RC-Min, Post-Route from OpenLane)
 
     |PVT-CORNER  |WNS    |WHS   |TNS   |
     |------------|-------|------|------|
