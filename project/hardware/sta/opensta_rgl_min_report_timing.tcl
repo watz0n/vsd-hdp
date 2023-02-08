@@ -36,6 +36,8 @@ set_input_delay  -clock [get_clocks ick] 15.0 -add_delay [get_ports {io_cslt}]
 set_false_path -from { io_bcf }
 set_false_path -to { io_hlt io_irc }
 
+set_propagated_clock [all_clocks]
+
 read_spef ./rgl/spef/mc/hdp_rv151.min.spef
 
 #WNS
